@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Long, Not How Much: Exposure Duration Outranks Concentration in an Eighteen-Modality Satellite and Reanalysis Fusion for United States County Life Expectancy</title>
+<meta name="description" content="Exposure duration outranks concentration in predicting United States county life expectancy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- ===================================================================== -->
+<!--  CONFIG. Edit this block to change anything on the page.              -->
+<!--  Every heading, number, figure and link below is rendered from it.    -->
+<!-- ===================================================================== -->
+<script>
+const CONFIG = {
+  "title": "How Long, Not How Much: Exposure Duration Outranks Concentration in an Eighteen-Modality Satellite and Reanalysis Fusion for United States County Life Expectancy",
+  "shortTitle": "How Long Not How Much",
+  "tagline": "Exposure duration outranks concentration in predicting United States county life expectancy",
+  "journal": "Sensors (MDPI)",
+  "year": 2026,
+  "version": "1.0.0",
+  "accent": "#E85D04",
+  "accent2": "#FFBA08",
+  "accent3": "#03071E",
+  "repoUrl": "https://github.com/albertfaiz/how-long-not-how-much",
+  "pagesUrl": "https://albertfaiz.github.io/how-long-not-how-much/",
+  "zenodoDoi": "10.5281/zenodo.XXXXXXX",
+  "pythonVersion": "3.11",
+  "hpc": "UT Dallas high-performance computing cluster",
+  "gpu": "NVIDIA H200",
+  "affiliation": "Department of Physics, The University of Texas at Dallas",
+  "address": "800 W Campbell Rd, Richardson, TX 75080, USA",
+  "lab": "Multi-Scale Integrated Intelligent Interactive Sensing (MINTS)",
+  "labUrl": "https://mints.utdallas.edu",
+  "authors": [
+    {
+      "name": "Faiz Ahmad",
+      "orcid": "0009-0006-0330-8993",
+      "email": "faiz.ahmad@utdallas.edu",
+      "corresponding": true
+    },
+    {
+      "name": "David J. Lary",
+      "orcid": "0000-0003-4265-9543",
+      "email": "david.lary@utdallas.edu",
+      "corresponding": true
+    },
+    {
+      "name": "Shisir Ruwali",
+      "orcid": "",
+      "email": "shisir.ruwali@utdallas.edu",
+      "corresponding": false
+    },
+    {
+      "name": "Samyak Shrestha",
+      "orcid": "",
+      "email": "samyak.shrestha@utdallas.edu",
+      "corresponding": false
+    },
+    {
+      "name": "Adam Aker",
+      "orcid": "",
+      "email": "adam.r.a1@utdallas.edu",
+      "corresponding": false
+    },
+    {
+      "name": "John Waczak",
+      "orcid": "0000-0002-5910-0183",
+      "email": "john.waczak@utdallas.edu",
+      "corresponding": false
+    },
+    {
+      "name": "Prabuddha Madushanka",
+      "orcid": "0000-0003-2657-3416",
+      "email": "prabuddha.madushanka@utdallas.edu",
+      "corresponding": false
+    }
+  ],
+  "headline": {
+    "value": "71x",
+    "label": "formaldehyde duration over concentration"
+  },
+  "stats": [
+    {
+      "label": "R\u00b2",
+      "value": "0.666"
+    },
+    {
+      "label": "MAE",
+      "value": "1.03 yr"
+    },
+    {
+      "label": "county-years",
+      "value": "52,309"
+    },
+    {
+      "label": "modalities",
+      "value": "18"
+    },
+    {
+      "label": "features",
+      "value": "581"
+    },
+    {
+      "label": "within 2 yr",
+      "value": "87.6%"
+    }
+  ],
+  "findings": [
+    {
+      "title": "The leading predictor is a duration, not a concentration",
+      "text": "The fraction of the year formaldehyde spends above its 75th percentile ranks #1 of 581 features, with a mean absolute attribution of 0.341 years of life expectancy."
+    },
+    {
+      "title": "The same molecule, measured two ways, differs 71-fold",
+      "text": "The annual mean column amount of formaldehyde ranks #196. The difference is the summary statistic, not the species."
+    },
+    {
+      "title": "The advantage follows atmospheric lifetime",
+      "text": "Duration wins for 7 of 8 short-lived species but only 3 of 12 longer-lived ones (Mann-Whitney p = 0.006, Spearman rho = -0.47). A numerical artefact would not sort by chemistry."
+    },
+    {
+      "title": "Coverage auditing changes the conclusions available",
+      "text": "238 features were removed because their record does not span the study window. Without that gate their importance would have rested on imputed values."
+    },
+    {
+      "title": "Model error tracks social divergence",
+      "text": "Absolute error rose 27.7% across the record while county ordering held, and annual error tracked the life-expectancy Gini coefficient at r = 0.989."
+    }
+  ],
+  "figures": [
+    {
+      "file": "A_fig1_global_ranking",
+      "caption": "Global predictor ranking coloured by physical group"
+    },
+    {
+      "file": "A_fig2_duration_vs_concentration",
+      "caption": "Duration against concentration, aggregate and per molecule"
+    },
+    {
+      "file": "A_fig10_lifetime_split",
+      "caption": "The duration advantage against atmospheric lifetime"
+    },
+    {
+      "file": "A_fig3_group_hierarchy",
+      "caption": "Attribution by physical group, total and per feature"
+    },
+    {
+      "file": "A_fig4_thermal_index_audit",
+      "caption": "Pure against composite thermal indices"
+    },
+    {
+      "file": "A_fig5_dewpoint_threshold",
+      "caption": "Moisture profile and the temperature-stratified threshold"
+    },
+    {
+      "file": "A_fig6_orthogonality",
+      "caption": "Collinear inputs, independent attributions"
+    },
+    {
+      "file": "A_fig7_dose_response",
+      "caption": "Learned dose-response curves"
+    },
+    {
+      "file": "A_fig8_stability_error",
+      "caption": "Stability, error structure, and inequality"
+    },
+    {
+      "file": "A_fig9_modality_gate",
+      "caption": "Modality contribution and the coverage gate"
+    },
+    {
+      "file": "A_fig11_cv_stability",
+      "caption": "Cross-validation and learner-tournament stability"
+    },
+    {
+      "file": "A_Map1_observed_vs_predicted",
+      "caption": "Observed and predicted life expectancy"
+    },
+    {
+      "file": "A_Map2_residual_geography",
+      "caption": "Residual geography"
+    },
+    {
+      "file": "A_Map3_leading_exposure",
+      "caption": "Geography of the leading exposure"
+    },
+    {
+      "file": "A_Map4_longitudinal_shift",
+      "caption": "Observed against predicted change"
+    }
+  ],
+  "code": [
+    {
+      "file": "engineered_features_v2.py",
+      "purpose": "Physically motivated engineered layer, all formulas documented"
+    },
+    {
+      "file": "pipeline_core_v2.py",
+      "purpose": "Coverage gate, leakage blocklist, grouped CV, learner tournament, interventional SHAP"
+    },
+    {
+      "file": "pipeline_A_moisture_v2.py",
+      "purpose": "Study A driver: environment-only model, 2003-2019"
+    },
+    {
+      "file": "studyA_analysis.py",
+      "purpose": "All statistics reported in the paper"
+    },
+    {
+      "file": "studyA_extra_analysis.py",
+      "purpose": "Lifetime-split and cross-validation stability figures"
+    },
+    {
+      "file": "studyA_plots.py",
+      "purpose": "Figures 1 to 9"
+    },
+    {
+      "file": "studyA_maps.py",
+      "purpose": "Maps 1 to 4"
+    },
+    {
+      "file": "paper_style_v2.py",
+      "purpose": "Shared palette and publication feature naming"
+    }
+  ],
+  "dataSources": [
+    {
+      "name": "IHME county life expectancy",
+      "url": "https://ghdx.healthdata.org/",
+      "role": "Outcome variable, county mean life expectancy at birth"
+    },
+    {
+      "name": "CAMS global reanalysis",
+      "url": "https://ads.atmosphere.copernicus.eu",
+      "role": "Atmospheric composition: reactive gases and speciated aerosol"
+    },
+    {
+      "name": "ERA5 reanalysis",
+      "url": "https://cds.climate.copernicus.eu",
+      "role": "Atmospheric state: temperature, humidity, wind, pressure"
+    },
+    {
+      "name": "PRISM climate",
+      "url": "https://prism.oregonstate.edu",
+      "role": "Interpolated US surface temperature, dew point, precipitation"
+    },
+    {
+      "name": "TerraClimate",
+      "url": "https://www.climatologylab.org/terraclimate.html",
+      "role": "Monthly water balance and surface climate"
+    },
+    {
+      "name": "MODIS via Google Earth Engine",
+      "url": "https://earthengine.google.com",
+      "role": "Land-surface temperature and vegetation indices"
+    },
+    {
+      "name": "Landsat via Google Earth Engine",
+      "url": "https://earthengine.google.com",
+      "role": "Surface reflectance and derived spectral indices"
+    },
+    {
+      "name": "Global Human Modification",
+      "url": "https://doi.org/10.1111/gcb.14549",
+      "role": "Cumulative landscape transformation index"
+    },
+    {
+      "name": "SoilGrids 2.0",
+      "url": "https://soilgrids.org",
+      "role": "Soil bulk density, texture, pH, organic carbon"
+    },
+    {
+      "name": "Harmonised night-time lights",
+      "url": "https://doi.org/10.1038/s41597-020-0510-y",
+      "role": "DMSP and VIIRS reconciled long series"
+    },
+    {
+      "name": "County Health Rankings",
+      "url": "https://www.countyhealthrankings.org",
+      "role": "Social determinants of health (Study B only)"
+    },
+    {
+      "name": "American Community Survey",
+      "url": "https://www.census.gov/programs-surveys/acs",
+      "role": "Demographics, income, education, housing (Study B only)"
+    }
+  ]
+};
+</script>
+
+<style>
+:root{
+  --accent:#E85D04; --accent2:#FFBA08; --ink:#03071E;
+  --bg:#FFFFFF; --soft:#F7F8FA; --line:#E4E7EC; --muted:#5B6472;
+  --radius:16px; --maxw:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);
+  line-height:1.65;-webkit-font-smoothing:antialiased}
+code,pre{font-family:'JetBrains Mono',monospace}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .brand{font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+nav .links{display:flex;gap:22px;font-size:.92rem;font-weight:500}
+nav .links a{color:var(--muted)}
+nav .links a:hover{color:var(--accent);text-decoration:none}
+@media(max-width:720px){nav .links{display:none}}
+
+/* ---------- hero ---------- */
+header{position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(135deg,var(--ink) 0%,var(--accent) 100%)}
+header::after{content:"";position:absolute;inset:0;opacity:.20;
+  background-image:radial-gradient(circle at 18% 22%,var(--accent2) 0,transparent 42%),
+                   radial-gradient(circle at 82% 72%,#fff 0,transparent 38%)}
+header .wrap{position:relative;z-index:1;padding:82px 24px 74px}
+.badge{display:inline-block;padding:6px 14px;border-radius:999px;font-size:.78rem;
+  font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.30)}
+h1{font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.14;font-weight:800;
+  letter-spacing:-.025em;margin:20px 0 14px;max-width:20ch}
+.sub{font-size:clamp(1rem,1.9vw,1.22rem);opacity:.94;max-width:60ch}
+.authors{margin-top:22px;font-size:.94rem;opacity:.9;max-width:70ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;
+  font-weight:600;font-size:.94rem;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+.btn-p{background:#fff;color:var(--ink)}
+.btn-s{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.34)}
+
+/* ---------- headline number ---------- */
+.headline{margin:-46px auto 0;position:relative;z-index:5;max-width:640px;
+  background:#fff;border-radius:var(--radius);border:1px solid var(--line);
+  box-shadow:0 18px 44px rgba(0,0,0,.12);padding:28px 32px;text-align:center}
+.headline .big{font-size:clamp(2.6rem,7vw,4rem);font-weight:800;letter-spacing:-.03em;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.headline .lbl{color:var(--muted);font-size:1rem;margin-top:6px}
+
+/* ---------- sections ---------- */
+section{padding:64px 0}
+section.alt{background:var(--soft);border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+h2 .dot{color:var(--accent)}
+.lead{color:var(--muted);max-width:68ch;margin-bottom:34px}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;text-align:center;transition:transform .15s,border-color .15s}
+.stat:hover{transform:translateY(-3px);border-color:var(--accent)}
+.stat .v{font-size:1.7rem;font-weight:800;color:var(--accent);letter-spacing:-.02em}
+.stat .l{font-size:.82rem;color:var(--muted);margin-top:4px}
+
+/* ---------- findings ---------- */
+.findings{display:grid;gap:16px}
+.finding{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:12px;padding:22px 24px;transition:box-shadow .15s}
+.finding:hover{box-shadow:0 8px 24px rgba(0,0,0,.07)}
+.finding h3{font-size:1.06rem;font-weight:700;margin-bottom:7px;display:flex;gap:11px}
+.finding .n{flex:none;width:26px;height:26px;border-radius:7px;background:var(--accent);
+  color:#fff;font-size:.82rem;display:grid;place-items:center;font-weight:700}
+.finding p{color:var(--muted);font-size:.95rem;padding-left:37px}
+
+/* ---------- figures ---------- */
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.fig{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:transform .15s,box-shadow .15s}
+.fig:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.10)}
+.fig img{width:100%;display:block;background:var(--soft);min-height:120px}
+.fig .cap{padding:14px 18px;font-size:.88rem;color:var(--muted);border-top:1px solid var(--line)}
+.fig .cap b{color:var(--ink);display:block;font-family:'JetBrains Mono',monospace;
+  font-size:.78rem;margin-bottom:3px}
+
+/* ---------- tables ---------- */
+.tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);
+  overflow:hidden;border:1px solid var(--line);font-size:.92rem}
+.tbl th{background:var(--ink);color:#fff;text-align:left;padding:13px 16px;
+  font-weight:600;font-size:.84rem;letter-spacing:.03em;text-transform:uppercase}
+.tbl td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.tbl tr:hover td{background:var(--soft)}
+.tbl code{background:var(--soft);padding:2px 7px;border-radius:5px;font-size:.85rem}
+
+/* ---------- code block ---------- */
+pre.code{background:var(--ink);color:#E8ECF1;padding:22px;border-radius:var(--radius);
+  overflow-x:auto;font-size:.87rem;line-height:1.75}
+pre.code .c{color:#7A8798}
+pre.code .k{color:var(--accent2);font-weight:600}
+
+/* ---------- pipeline steps ---------- */
+.steps{display:grid;gap:12px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px;
+  display:flex;gap:16px;align-items:flex-start}
+.step .i{flex:none;width:30px;height:30px;border-radius:9px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+  display:grid;place-items:center;font-weight:700;font-size:.86rem}
+.step b{display:block;margin-bottom:3px}
+.step p{color:var(--muted);font-size:.92rem}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#C6CDD6;padding:52px 0 30px;font-size:.92rem}
+footer h4{color:#fff;font-size:.84rem;text-transform:uppercase;letter-spacing:.07em;
+  margin-bottom:12px}
+footer a{color:var(--accent2)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px}
+.fbot{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  font-size:.85rem;color:#8B95A3}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="brand" id="navBrand"></span>
+  <div class="links">
+    <a href="#findings">Findings</a><a href="#figures">Figures</a>
+    <a href="#pipeline">Pipeline</a><a href="#reproduce">Reproduce</a>
+    <a href="#data">Data</a><a href="#cite">Cite</a>
+  </div>
+</div></nav>
+
+<header><div class="wrap">
+  <span class="badge" id="hBadge"></span>
+  <h1 id="hTitle"></h1>
+  <p class="sub" id="hTag"></p>
+  <p class="authors" id="hAuthors"></p>
+  <div class="cta" id="hCta"></div>
+</div></header>
+
+<div class="wrap"><div class="headline">
+  <div class="big" id="bigNum"></div>
+  <div class="lbl" id="bigLbl"></div>
+</div></div>
+
+<section><div class="wrap">
+  <h2>At a glance<span class="dot">.</span></h2>
+  <p class="lead">Headline quantities from the run reported in the paper. Every
+     one is produced by the code in this repository and stored in
+     <code>tables/</code>.</p>
+  <div class="stats" id="stats"></div>
+</div></section>
+
+<section class="alt" id="findings"><div class="wrap">
+  <h2>Key findings<span class="dot">.</span></h2>
+  <p class="lead">The results the paper is built on, stated plainly.</p>
+  <div class="findings" id="findings-list"></div>
+</div></section>
+
+<section id="figures"><div class="wrap">
+  <h2>Figures<span class="dot">.</span></h2>
+  <p class="lead">Every figure in the paper, at 300 dpi. Vector PDF versions of
+     each are in <code>figures/</code>.</p>
+  <div class="figs" id="figs"></div>
+</div></section>
+
+<section class="alt" id="pipeline"><div class="wrap">
+  <h2>How the pipeline works<span class="dot">.</span></h2>
+  <p class="lead">Three design choices distinguish this from a conventional
+     multi-sensor health model. Each is implemented in code you can inspect.</p>
+  <div class="steps">
+    <div class="step"><div class="i">1</div><div>
+      <b>Temporal coverage gate</b>
+      <p>A feature is admitted only if its record actually spans the study
+         window. A variable present for part of the period would otherwise be
+         imputed for the rest, and any importance it received would be partly an
+         artefact of the fill. Every admission and exclusion is written to an
+         auditable report.</p></div></div>
+    <div class="step"><div class="i">2</div><div>
+      <b>Leakage blocklist</b>
+      <p>The candidate bank contains columns that are themselves functions of
+         mortality. Including any of them would let the model predict life
+         expectancy from life expectancy. They are blocked before modelling, and
+         the block count is printed in every run log.</p></div></div>
+    <div class="step"><div class="i">3</div><div>
+      <b>County-grouped cross-validation</b>
+      <p>All years of any county fall in a single fold, so every reported number
+         describes prediction of counties never seen in training. Median
+         imputation is fitted on the training fold only. There is no global
+         imputation anywhere.</p></div></div>
+    <div class="step"><div class="i">4</div><div>
+      <b>Protected feature list</b>
+      <p>Redundancy filtering never removes a physiologically motivated variable.
+         Without this, a composite index built from its own inputs would be
+         deleted automatically and its importance could never be tested.</p></div></div>
+    <div class="step"><div class="i">5</div><div>
+      <b>Learner tournament, then interventional attribution</b>
+      <p>Several gradient-boosted families compete under the identical protocol,
+         and attribution runs on the winner. The interventional estimator credits
+         a feature only with what it adds beyond its co-variates, which is what
+         makes the ranking interpretable under heavy collinearity.</p></div></div>
+  </div>
+</div></section>
+
+<section id="reproduce"><div class="wrap">
+  <h2>Reproduce it<span class="dot">.</span></h2>
+  <p class="lead">Clone, install, download the data from Zenodo, run. Full
+     instructions with expected runtimes are in <code>docs/REPRODUCE.md</code>.</p>
+  <pre class="code" id="quickstart"></pre>
+  <h2 style="margin-top:42px;font-size:1.25rem">Code in this repository</h2>
+  <table class="tbl"><thead><tr><th>File</th><th>Purpose</th></tr></thead>
+    <tbody id="codeRows"></tbody></table>
+</div></section>
+
+<section class="alt" id="data"><div class="wrap">
+  <h2>Data<span class="dot">.</span></h2>
+  <p class="lead">The assembled panel, the fitted model, and every intermediate
+     result table are deposited on Zenodo, so a reviewer can verify any number in
+     the paper without re-running the pipeline. Primary sources are all publicly
+     available.</p>
+  <table class="tbl"><thead><tr><th>Source</th><th>Role</th><th>Link</th></tr></thead>
+    <tbody id="dataRows"></tbody></table>
+</div></section>
+
+<section id="cite"><div class="wrap">
+  <h2>Cite this work<span class="dot">.</span></h2>
+  <p class="lead">If you use this code or these results, please cite the paper.
+     A machine-readable citation is in <code>CITATION.cff</code>.</p>
+  <pre class="code" id="bibtex"></pre>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><h4>Project</h4><p id="fTitle" style="color:#fff;font-weight:600"></p>
+      <p style="margin-top:8px" id="fJournal"></p></div>
+    <div><h4>Contact</h4><p id="fContact"></p></div>
+    <div><h4>Links</h4><p id="fLinks"></p></div>
+    <div><h4>License</h4>
+      <p>Code under MIT. Figures, tables and derived data under CC BY 4.0.
+         Input datasets remain under their providers' licenses.</p></div>
+  </div>
+  <div class="fbot">
+    <span id="fCopy"></span>
+    <span id="fVer"></span>
+  </div>
+</div></footer>
+
+<script>
+/* ---- render everything from CONFIG ---------------------------------- */
+const $ = id => document.getElementById(id);
+const C = CONFIG;
+
+document.title = C.shortTitle + " | " + C.journal;
+$('navBrand').textContent = C.shortTitle;
+$('hBadge').textContent = C.journal + " \u00b7 " + C.year;
+$('hTitle').textContent = C.title;
+$('hTag').textContent = C.tagline;
+$('hAuthors').textContent = C.authors.map(a => a.name).join(", ") +
+  " \u2014 " + C.affiliation;
+
+$('hCta').innerHTML = `
+  <a class="btn btn-p" href="${C.repoUrl}">View code on GitHub</a>
+  <a class="btn btn-s" href="https://doi.org/${C.zenodoDoi}">Data on Zenodo</a>
+  <a class="btn btn-s" href="${C.repoUrl}/blob/main/docs/REPRODUCE.md">Reproduce</a>`;
+
+$('bigNum').textContent = C.headline.value;
+$('bigLbl').textContent = C.headline.label;
+
+$('stats').innerHTML = C.stats.map(s =>
+  `<div class="stat"><div class="v">${s.value}</div><div class="l">${s.label}</div></div>`
+).join("");
+
+$('findings-list').innerHTML = C.findings.map((f, i) =>
+  `<div class="finding"><h3><span class="n">${i+1}</span>${f.title}</h3>
+   <p>${f.text}</p></div>`).join("");
+
+$('figs').innerHTML = C.figures.map(f =>
+  `<figure class="fig"><img src="figures/${f.file}.png" alt="${f.caption}" loading="lazy">
+   <figcaption class="cap"><b>${f.file}</b>${f.caption}</figcaption></figure>`).join("");
+
+$('codeRows').innerHTML = C.code.map(c =>
+  `<tr><td><code>${c.file}</code></td><td>${c.purpose}</td></tr>`).join("");
+
+$('dataRows').innerHTML = C.dataSources.map(d =>
+  `<tr><td>${d.name}</td><td>${d.role}</td><td><a href="${d.url}">open</a></td></tr>`).join("");
+
+const slug = C.repoUrl.split("/").pop();
+$('quickstart').innerHTML =
+`<span class="c"># clone and install</span>
+git clone ${C.repoUrl}.git
+<span class="k">cd</span> ${slug}
+conda env create -f environment.yml
+conda activate ${slug}
+
+<span class="c"># download the panel from Zenodo into data/</span>
+<span class="c"># see data/README.md for the exact files</span>
+
+<span class="c"># run the pipeline, then rebuild every table and figure</span>
+python code/${C.code[2].file} --csv data/Final_ML_Ready_Dataset.csv --gpu
+python code/${C.code[3].file}
+python code/${C.code[C.code.length-2].file}`;
+
+$('bibtex').textContent =
+`@article{Ahmad${C.year}${slug.split("-")[0]},
+  author  = {${C.authors.map(a => {
+     const p = a.name.split(" "); return p.pop() + ", " + p.join(" ");
+  }).join(" and ")}},
+  title   = {${C.title}},
+  journal = {${C.journal.split(" (")[0]}},
+  year    = {${C.year}},
+  doi     = {${C.zenodoDoi}}
+}`;
+
+$('fTitle').textContent = C.shortTitle;
+$('fJournal').textContent = C.journal + ", " + C.year;
+const corr = C.authors.filter(a => a.corresponding);
+$('fContact').innerHTML = corr.map(a =>
+  `${a.name}<br><a href="mailto:${a.email}">${a.email}</a>` +
+  (a.orcid ? `<br><a href="https://orcid.org/${a.orcid}">ORCID ${a.orcid}</a>` : "")
+).join("<br><br>");
+$('fLinks').innerHTML =
+  `<a href="${C.repoUrl}">GitHub repository</a><br>
+   <a href="https://doi.org/${C.zenodoDoi}">Zenodo deposit</a><br>
+   <a href="${C.labUrl}">${C.lab}</a>`;
+$('fCopy').textContent = "\u00a9 " + C.year + " " +
+  C.authors.map(a => a.name).slice(0,2).join(", ") + " and colleagues";
+$('fVer').textContent = "version " + C.version;
+</script>
+</body>
+</html>

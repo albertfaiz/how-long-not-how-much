@@ -1,0 +1,8 @@
+feature,mean_abs_shap,rank,modality,protected,group,label,stat
+prism_tdmean_min,0.0565519867360371,11,PRISM climate,True,Atmospheric moisture,Dew point (annual minimum),_min
+prism_tdmean_stddev,0.0051467646903657,189,PRISM climate,True,Atmospheric moisture,Dew point (variability),_stddev
+prism_tdmean_p10,0.0045438775720866,207,PRISM climate,True,Atmospheric moisture,Dew point (10th percentile),_p10
+prism_tdmean_p90,0.0025885113779264,284,PRISM climate,True,Atmospheric moisture,Dew point (90th percentile),_p90
+prism_tdmean_p50,0.0019636764878028,331,PRISM climate,True,Atmospheric moisture,Dew point (median),_p50
+prism_tdmean_mean,0.0014280622995523,381,PRISM climate,True,Atmospheric moisture,Dew point (annual mean),_mean
+prism_tdmean_max,0.0014066642911101,386,PRISM climate,True,Atmospheric moisture,Dew point (annual maximum),_max

@@ -1,0 +1,61 @@
+{
+  "title": "Data and code for: How Long, Not How Much: Exposure Duration Outranks Concentration in an Eighteen-Modality Satellite and Reanalysis Fusion for United States County Life Expectancy",
+  "description": "<p>Exposure duration outranks concentration in predicting United States county life expectancy</p><p>This deposit contains the assembled county-year panel, the fitted model, every intermediate result table, and every figure for the study published in Sensors. The analysis code is at <a href='https://github.com/albertfaiz/how-long-not-how-much'>https://github.com/albertfaiz/how-long-not-how-much</a>.</p><p>Derived data are released under CC-BY-4.0. The original products remain under their providers' licenses.</p>",
+  "creators": [
+    {
+      "name": "Ahmad, Faiz",
+      "affiliation": "Department of Physics, The University of Texas at Dallas",
+      "orcid": "0009-0006-0330-8993"
+    },
+    {
+      "name": "Lary, David J.",
+      "affiliation": "Department of Physics, The University of Texas at Dallas",
+      "orcid": "0000-0003-4265-9543"
+    },
+    {
+      "name": "Ruwali, Shisir",
+      "affiliation": "Department of Physics, The University of Texas at Dallas"
+    },
+    {
+      "name": "Shrestha, Samyak",
+      "affiliation": "Department of Physics, The University of Texas at Dallas"
+    },
+    {
+      "name": "Aker, Adam",
+      "affiliation": "Department of Physics, The University of Texas at Dallas"
+    },
+    {
+      "name": "Waczak, John",
+      "affiliation": "Department of Physics, The University of Texas at Dallas",
+      "orcid": "0000-0002-5910-0183"
+    },
+    {
+      "name": "Madushanka, Prabuddha",
+      "affiliation": "Department of Physics, The University of Texas at Dallas",
+      "orcid": "0000-0003-2657-3416"
+    }
+  ],
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "version": "1.0.0",
+  "language": "eng",
+  "keywords": [
+    "life expectancy",
+    "remote sensing",
+    "sensor fusion",
+    "explainable machine learning",
+    "atmospheric composition",
+    "exposure assessment",
+    "public health",
+    "county-level"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/albertfaiz/how-long-not-how-much",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Generated 2026-08-09. Reproduction instructions are in docs/REPRODUCE.md in the linked repository."
+}

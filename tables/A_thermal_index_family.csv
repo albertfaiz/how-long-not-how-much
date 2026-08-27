@@ -1,0 +1,8 @@
+family,n,best_rank,best_feature,best_shap,sum_shap,per_feature,best_label
+Air composition (CAMS),68,1,cams_fot_formaldehyde_above75th_percentile,0.3406805093528017,1.0873141991637567,0.0159899146935846,Formaldehyde: time above 75th percentile
+Pure moisture (dew point),7,11,prism_tdmean_min,0.0565519867360371,0.0736295434548812,0.0105185062078401,Dew point (annual minimum)
+Composite WBGT / heat index / humidex,7,12,eng2_impervious_heat_index,0.0537757455703668,0.0736269433709113,0.010518134767273,Impervious-surface heat index (v2)
+Evaporative demand (VPD),15,107,prism_vpdmin_max,0.0125862104885662,0.0349630258822229,0.0023308683921481,Vapour-pressure deficit (min) (maximum)
+Particulates,8,127,pm25_stddev,0.0109575326813941,0.0233468623702822,0.0029183577962852,Fine particulate matter (variability)
+Pure dry heat (air temperature),11,131,prism_tmin_stddev,0.0106674210425254,0.0348543488118732,0.0031685771647157,Minimum temperature (variability)
+Composite wet-bulb,6,206,eng2_wetbulb_era5_minus_prism,0.0045910977227961,0.0187079269852449,0.0031179878308741,Wet-bulb estimate difference (ERA5 minus PRISM)

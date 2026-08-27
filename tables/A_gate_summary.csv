@@ -1,0 +1,27 @@
+modality,False,True
+CAMS atmospheric composition,0,96
+Canopy structure,20,17
+Cropland and agriculture,3,132
+ERA5 reanalysis,0,23
+Elevation and terrain,7,0
+Engineered (legacy),5,14
+Engineered (v2),1,45
+Fine particulate matter,0,7
+Health outcomes,2,0
+Human modification,0,7
+Landsat optical,82,84
+Livestock,3,28
+MODIS land-surface temperature,0,14
+MODIS vegetation,0,14
+Macro economics,7,0
+Night-time lights,0,7
+Night-time lights (raw),7,0
+PRISM climate,0,112
+Particulate matter (other),0,1
+Sentinel-1 radar,35,0
+Sentinel-2 optical,83,0
+Sentinel-5P air quality,21,0
+Socioeconomic (SDOH),327,0
+Soil profile,1,76
+Surface water,0,6
+TerraClimate,0,70
