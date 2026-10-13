@@ -1,0 +1,19 @@
+label,p,source,family,note
+"attribution census, sign test over fields",2.4904030624384177e-05,summary_statistic_census.json,headline,
+attribution census against its label-shuffle null,5e-05,null_census.json,headline,"one-sided, resolution limited by the number of label shuffles"
+"information census, sign test over fields",0.0010885382064742544,information_theory_census.json,headline,
+Moran's I on the residuals,0.01,residual_spatial_structure.json,diagnostic,
+turning point survives the gate: prism_tmin_min,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+turning point survives the gate: pm25_mean,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+turning point survives the gate: eng2_hcho_no2_ratio,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+turning point survives the gate: eng2_wetbulb_hot,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+turning point survives the gate: eng2_wetbulb_night,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+turning point survives the gate: lst_night_1km_mean,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+turning point survives the gate: eng2_night_cooling_efficiency,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+turning point survives the gate: cams_fot_formaldehyde_above75th_percentile,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+turning point survives the gate: prism_tdmean_min,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+turning point survives the gate: eng_night_cooling_eff,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+turning point survives the gate: usda_cropland_usda_corn_pct,0.025,null_crossing.json,thresholds,"one-sided, resolution limited by the number of permutations"
+"lifetime, Mann-Whitney at the published cutoff",0.03671328671328671,lifetime_literature_test.json,mechanism,
+"lifetime, rank correlation, permutation p",0.07705,lifetime_literature_test.json,mechanism,
+"era split, Fisher exact",0.8079828459452941,temporal_validation.json,diagnostic,"a large p is the desired result here, so this test is reported but is not a discovery and is marked as such"

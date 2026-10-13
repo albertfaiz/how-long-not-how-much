@@ -1,0 +1,28 @@
+{
+  "n_counties": 3077,
+  "columns_by_source": {
+    "American Community Survey": 274,
+    "County Health Rankings": 16,
+    "Summary indicators of the database": 10,
+    "Regional economic accounts": 7,
+    "Small Area Income and Poverty Estimates": 7
+  },
+  "years": [
+    2009,
+    2019
+  ],
+  "arms": {
+    "all_columns": {
+      "n_columns": 314,
+      "oof_r2": 0.4371603030998107
+    },
+    "without_county_health_rankings": {
+      "n_columns": 298,
+      "oof_r2": 0.43416798352101804
+    },
+    "american_community_survey_only": {
+      "n_columns": 274,
+      "oof_r2": 0.43201855862927785
+    }
+  }
+}

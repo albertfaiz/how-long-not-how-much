@@ -1,0 +1,61 @@
+{
+ "checks": [
+  {
+   "check": "Abstract, 3.5, 5: lifetime correlation is inverse",
+   "status": "PASS"
+  },
+  {
+   "check": "Abstract, 3.5, 5: lifetime correlation is 'not significant'",
+   "status": "PASS"
+  },
+  {
+   "check": "Abstract, 3.3: census count lies within the exchangeable range",
+   "status": "PASS"
+  },
+  {
+   "check": "Abstract, 3.3: mutual information favours the mean or median",
+   "status": "PASS"
+  },
+  {
+   "check": "3.4, 4.x: permutation counts never exceed the exchangeable range",
+   "status": "PASS"
+  },
+  {
+   "check": "3.4, 4.x: permutation count moves between splits",
+   "status": "PASS"
+  },
+  {
+   "check": "3.2: holding out whole states lowers skill",
+   "status": "PASS"
+  },
+  {
+   "check": "3.6: only 10% perturbation moves a value by more than one width",
+   "status": "PASS"
+  },
+  {
+   "check": "3.6: no null curve passes the stability rule",
+   "status": "PASS"
+  },
+  {
+   "check": "3.6, abstract: turning points 'barely move' across regions (<= 5% of range)",
+   "status": "PASS"
+  },
+  {
+   "check": "2.x, 3.6: crossings lie near the middle of each distribution (25 to 75%)",
+   "status": "PASS"
+  },
+  {
+   "check": "3.7: residuals 'weakly but significantly' clustered",
+   "status": "PASS"
+  },
+  {
+   "check": "Abstract, 3.7, 5: over half of the residual variance unexplained",
+   "status": "PASS"
+  },
+  {
+   "check": "2.x: refit configuration reproduces production skill (within 0.01)",
+   "status": "PASS"
+  }
+ ],
+ "n_warn": 0
+}

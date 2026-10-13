@@ -1,0 +1,1139 @@
+%% ====================================================
+%%  constants.tex: every generated number this paper quotes.
+%%  Merged from paper1_sensors, paper2_air.
+%%  A macro defined twice keeps its FIRST definition; the
+%%  duplicates are listed at the foot of the file.
+%% ====================================================
+
+%% ---- from paper1_sensors ----------------------------------
+%% ====================================================================
+%%  constants.tex: every generated number this paper quotes.
+%%  Merged from shared_constants.tex, v3_constants.tex, v4_constants.tex, thresholds_v5.tex, v6_constants.tex.
+%%  A macro defined twice keeps its FIRST definition, in the order
+%%  above; the dropped duplicates are listed at the end of the file.
+%% ====================================================================
+
+
+%% ---- from shared_constants.tex ------------------------------
+%% =====================================================================
+%%  shared_constants.tex  ---  SINGLE SOURCE OF TRUTH for PAPERS 1 and 2
+%%
+%%  Generated from the SUPERSET run (Study A, window 2003-2019), which adds
+%%  ERA5 reanalysis and CAMS atmospheric composition to the feature bank.
+%%  Source files: studyA_*.csv / studyA_metrics.json -> tables/A_summary.json
+%%
+%%  NOTHING here survives from either earlier run. Values that changed
+%%  materially are flagged CHANGED in the comment.
+%% =====================================================================
+
+%% ---------------------------------------------------------------------
+%%  PANEL AND PIPELINE
+%% ---------------------------------------------------------------------
+\providecommand{\Nobs}{52{,}309}          %% county-years modelled
+%% CORRECTED 2026-09-15: was 3{,}148, which is inconsistent with
+%% \Nobs. The out-of-fold prediction files cover 3,077 counties and
+%% 3,077 x 17 years = 52,309 = \Nobs exactly. 3,148 also exceeds the
+%% number of counties in the conterminous United States in any
+%% vintage. The previous file is kept as shared_constants_pre_v5.tex.
+\providecommand{\Ncounties}{3{,}077}
+\providecommand{\YearStart}{2003}         %% CHANGED: ERA5 and CAMS begin in 2003
+\providecommand{\YearEnd}{2019}
+\providecommand{\NYears}{17}
+\providecommand{\NKfolds}{8}
+\providecommand{\NrawColumns}{1{,}357}
+\providecommand{\Nadmitted}{753}
+\providecommand{\Nmodalities}{18}
+\providecommand{\Nfeatpruned}{581}        %% attributed features after filtering
+\providecommand{\Nprotected}{101}
+\providecommand{\CoverageThreshold}{95}
+\providecommand{\NexcludedCoverage}{238}
+\providecommand{\NexcludedLeakage}{13}
+\providecommand{\NexcludedDegenerate}{23}
+\providecommand{\NexcludedSDOH}{323}
+
+%% ---------------------------------------------------------------------
+%%  HEADLINE PERFORMANCE   (XGBoost won the learner tournament)
+%% ---------------------------------------------------------------------
+\providecommand{\ModelName}{XGBoost}
+\providecommand{\Rtwo}{0.666}             %% 0.66615  CHANGED from 0.641
+\providecommand{\RtwoCIlo}{0.661}
+\providecommand{\RtwoCIhi}{0.672}
+\providecommand{\MAEmodel}{1.033}         %% 1.03287
+\providecommand{\RMSEmodel}{1.419}
+\providecommand{\PearsonR}{0.816}
+\providecommand{\WithinOne}{60.4}
+\providecommand{\WithinTwo}{87.6}
+\providecommand{\MoranIResid}{0.005}      %% 0.00514
+\providecommand{\FoldSD}{0.025}
+\providecommand{\TournamentSpread}{0.006} %% XGBoost 0.6661 vs CatBoost 0.6601
+
+%% ---------------------------------------------------------------------
+%%  THE HEADLINE RESULT: EXPOSURE DURATION AGAINST CONCENTRATION
+%%  A "fraction of time above a percentile" feature leads the entire ranking.
+%% ---------------------------------------------------------------------
+\providecommand{\NDurationFeat}{48}
+\providecommand{\NConcFeat}{48}
+\providecommand{\DurPerFeat}{0.0172}      %% mean |phi| per duration feature
+\providecommand{\ConPerFeat}{0.0069}      %% mean |phi| per concentration feature
+\providecommand{\DurOverCon}{2.5}         %% 2.49x
+\providecommand{\NDurTopTen}{3}           %% duration features inside the top ten
+\providecommand{\NDurTopTwenty}{4}
+%% the single cleanest statement: same molecule, two summary statistics
+\providecommand{\HchoDurRank}{1}
+\providecommand{\HchoDurSHAP}{0.341}      %% 0.34068
+\providecommand{\HchoDurPct}{75}          %% percentile defining the duration metric
+\providecommand{\HchoConRank}{196}
+\providecommand{\HchoConSHAP}{0.0048}
+\providecommand{\HchoRatio}{71}           %% 70.5x
+\providecommand{\HchoSecondRank}{4}       %% the 90th-percentile duration variant
+\providecommand{\HchoSecondSHAP}{0.142}
+
+%% ---------------------------------------------------------------------
+%%  LEADING INDIVIDUAL PREDICTORS
+%% ---------------------------------------------------------------------
+\providecommand{\NightCoolSHAP}{0.212}    %% rank 2
+\providecommand{\NightCoolRank}{2}
+\providecommand{\GHMSHAP}{0.147}          %% rank 3
+\providecommand{\SoilBDSHAP}{0.131}       %% rank 5
+\providecommand{\PropaneSHAP}{0.084}      %% rank 7
+\providecommand{\BlackCarbonSHAP}{0.063}  %% rank 8
+\providecommand{\DPminSHAP}{0.057}        %% 0.05655  CHANGED: now rank 11
+\providecommand{\DPminRank}{11}
+
+%% ---------------------------------------------------------------------
+%%  VARIABLE-GROUP HIERARCHY
+%% ---------------------------------------------------------------------
+\providecommand{\AirSum}{1.221}  \newcommand{\AirN}{85} \newcommand{\AirPerFeat}{0.0144} \newcommand{\AirPct}{24.7} \newcommand{\AirRank}{1}
+\providecommand{\SoilSum}{1.175} \newcommand{\SoilN}{65} \newcommand{\SoilPerFeat}{0.0181} \newcommand{\SoilPct}{23.8}
+\providecommand{\AgSum}{0.694}   \newcommand{\AgN}{133}
+\providecommand{\BuiltSum}{0.392}\newcommand{\BuiltN}{12} \newcommand{\BuiltPerFeat}{0.0327} \newcommand{\BuiltPct}{7.9}
+\providecommand{\VegSum}{0.373}  \newcommand{\VegN}{56}
+\providecommand{\NoctSum}{0.297} \newcommand{\NoctN}{22} \newcommand{\NoctPerFeat}{0.0135} \newcommand{\NoctPct}{6.0} \newcommand{\NoctRank}{2}
+\providecommand{\HeatSum}{0.208} \newcommand{\HeatN}{48} \newcommand{\HeatPerFeat}{0.0043} \newcommand{\HeatPct}{4.2}
+\providecommand{\MoistSum}{0.151}\newcommand{\MoistN}{21} \newcommand{\MoistPerFeat}{0.0072} \newcommand{\MoistPct}{3.1} \newcommand{\MoistRank}{11}
+\providecommand{\VPDSum}{0.060}  \newcommand{\VPDN}{29}  \newcommand{\VPDPerFeat}{0.0021}
+\providecommand{\MoistOverHeat}{1.66}     %% CHANGED from 3.2 in the earlier run
+
+%% ---------------------------------------------------------------------
+%%  THERMAL INDEX FAMILY AUDIT
+%% ---------------------------------------------------------------------
+\providecommand{\FamCamsN}{68}   \newcommand{\FamCamsRank}{1}   \newcommand{\FamCamsBest}{0.341} \newcommand{\FamCamsPerFeat}{0.0160}
+\providecommand{\FamMoistN}{7}   \newcommand{\FamMoistRank}{11} \newcommand{\FamMoistBest}{0.057} \newcommand{\FamMoistPerFeat}{0.0105}
+\providecommand{\FamWBGTN}{7}    \newcommand{\FamWBGTRank}{12}  \newcommand{\FamWBGTBest}{0.054}
+\providecommand{\FamVPDN}{15}    \newcommand{\FamVPDRank}{107}  \newcommand{\FamVPDBest}{0.013}
+\providecommand{\FamPMN}{8}      \newcommand{\FamPMRank}{127}   \newcommand{\FamPMBest}{0.011}
+\providecommand{\FamDryN}{11}    \newcommand{\FamDryRank}{131}  \newcommand{\FamDryBest}{0.011} \newcommand{\FamDryPerFeat}{0.0032}
+\providecommand{\FamWBN}{6}      \newcommand{\FamWBRank}{206}   \newcommand{\FamWBBest}{0.0046} \newcommand{\FamWBPerFeat}{0.0031}
+\providecommand{\DPoverWB}{12.3}          %% dew-point minimum over best wet-bulb
+
+%% ---------------------------------------------------------------------
+%%  SIGNAL CONCENTRATION
+%% ---------------------------------------------------------------------
+\providecommand{\NfeatFifty}{44}
+\providecommand{\NfeatEighty}{143}
+\providecommand{\AttribGini}{0.710}
+
+%% ---------------------------------------------------------------------
+%%  MODALITY LEAVE-ONE-OUT
+%%  NOTE: two modalities have POSITIVE delta, meaning their removal improves
+%%  skill. This must be reported, not hidden.
+%% ---------------------------------------------------------------------
+\providecommand{\LOOcams}{-0.0080}        %% largest single loss, 67 features
+\providecommand{\LOOcamsN}{67}
+\providecommand{\LOOlivestock}{-0.0074}
+\providecommand{\LOOera}{-0.0051}
+\providecommand{\LOOeng}{-0.0031}
+\providecommand{\LOOghm}{-0.0031}
+\providecommand{\LOOprism}{-0.0028}
+\providecommand{\LOOsoilPos}{+0.0012}     %% removal IMPROVES skill
+\providecommand{\LOOntlPos}{+0.0001}      %% removal IMPROVES skill
+\providecommand{\NHarmfulModalities}{2}
+
+%% ---------------------------------------------------------------------
+%%  DEW-POINT PROFILE, THRESHOLD, ORTHOGONALITY   (Paper 2 core)
+%% ---------------------------------------------------------------------
+\providecommand{\DPProfileRatio}{11.0}    %% minimum over next statistic
+\providecommand{\DPtenRank}{207} \newcommand{\DPmedRank}{331}
+\providecommand{\DPmeanRank}{381} \newcommand{\DPmaxRank}{386}
+\providecommand{\DPstdRank}{189} \newcommand{\DPninetyRank}{284}
+\providecommand{\DPThreshold}{5.59}       %% 5.5896 degrees C
+\providecommand{\DPThresholdCI}{[5.58,\,5.61]}
+\providecommand{\DPPctAbove}{51.8}
+\providecommand{\AbsHumidity}{5.6}        %% grams water per kg air
+\providecommand{\RawCorr}{+0.952}
+\providecommand{\ShapCorr}{+0.022}        %% CHANGED: cleaner separation than before
+\providecommand{\DPShapRange}{0.43}
+\providecommand{\TempShapRange}{0.08}
+\providecommand{\RangeRatio}{5.4}
+
+%% ---------------------------------------------------------------------
+%%  TEMPERATURE-STRATIFIED DOSE RESPONSE
+%%  A crossing appears in only two of four quartiles. This BOUNDS the claim.
+%% ---------------------------------------------------------------------
+\providecommand{\StrataWithCrossing}{2}
+\providecommand{\StrataTotal}{4}
+\providecommand{\StrataQoneSlope}{+0.0004} %% coldest quartile: flat, no crossing
+\providecommand{\StrataQtwoCross}{5.61}
+\providecommand{\StrataQthreeCross}{5.57}
+\providecommand{\StrataQfourSlope}{-0.0039} %% warmest quartile: no crossing either
+\providecommand{\StrataN}{8{,}000}
+
+%% ---------------------------------------------------------------------
+%%  ERA STABILITY
+%%  IMPORTANT: the previous run reported a stable rank across eras. THIS RUN
+%%  DOES NOT. Minimum dew point falls 56 ranks between the early and late
+%%  sub-models. The stability claim must be dropped or reversed.
+%% ---------------------------------------------------------------------
+\providecommand{\EraEarly}{2003--2007}
+\providecommand{\EraLate}{2015--2019}
+\providecommand{\EraEarlyRank}{45}
+\providecommand{\EraLateRank}{101}
+\providecommand{\EraRankShift}{56}
+\providecommand{\EraEarlySHAP}{0.0196}
+\providecommand{\EraLateSHAP}{0.0129}
+
+%% ---------------------------------------------------------------------
+%%  ERROR STRUCTURE AND TEMPORAL BEHAVIOUR
+%% ---------------------------------------------------------------------
+\providecommand{\BrLowN}{153}       \newcommand{\BrLowMAE}{6.56}  \newcommand{\BrLowBias}{-6.56}
+\providecommand{\BrTwoN}{5{,}202}   \newcommand{\BrTwoMAE}{1.51}  \newcommand{\BrTwoBias}{-1.42}
+\providecommand{\BrCoreN}{14{,}556} \newcommand{\BrCoreMAE}{0.89}  \newcommand{\BrCoreBias}{-0.47}
+\providecommand{\BrFourN}{20{,}508} \newcommand{\BrFourMAE}{0.83}  \newcommand{\BrFourBias}{+0.11}
+\providecommand{\BrHighN}{11{,}890} \newcommand{\BrHighMAE}{1.29}  \newcommand{\BrHighBias}{+1.08}
+\providecommand{\RtwoYearLo}{0.634}
+\providecommand{\RtwoYearHi}{0.675}
+\providecommand{\MAEYearLo}{0.921}
+\providecommand{\MAEYearHi}{1.176}
+\providecommand{\MAEriseTotal}{27.7}
+\providecommand{\MKtauMAE}{1.00}          %% perfectly monotone increase
+\providecommand{\MKtauRtwo}{-0.75}
+
+%% ---------------------------------------------------------------------
+%%  INEQUALITY TRACKING
+%% ---------------------------------------------------------------------
+\providecommand{\GiniChangePc}{18.2}
+\providecommand{\PgapStart}{7.02}
+\providecommand{\PgapEnd}{8.52}
+\providecommand{\PgapChange}{1.50}
+\providecommand{\rGiniMAE}{0.989}
+
+%% ---------------------------------------------------------------------
+%%  RESIDUAL GEOGRAPHY
+%% ---------------------------------------------------------------------
+\providecommand{\WorstResid}{-11.37}
+\providecommand{\WorstFips}{46102}        %% Oglala Lakota County, South Dakota
+\providecommand{\WorstCounty}{Oglala Lakota County, South Dakota}
+\providecommand{\NResidOverThree}{109}
+
+%% ---------------------------------------------------------------------
+%%  LIFETIME-DEPENDENT EXPOSURE-METRIC RESULT   [A_lifetime_summary.json]
+%%  The duration advantage is NOT uniform. It concentrates in short-lived
+%%  species. This is the mechanism, and it is what makes the result credible.
+%% ---------------------------------------------------------------------
+\providecommand{\NPairs}{20}              %% species-percentile pairs compared
+\providecommand{\NShortLived}{8}
+\providecommand{\NLongLived}{12}
+\providecommand{\ShortWins}{7}            %% of 8 short-lived pairs
+\providecommand{\LongWins}{3}             %% of 12 longer-lived pairs
+\providecommand{\ShortMedianRatio}{2.5}   %% 2.49
+\providecommand{\LongMedianRatio}{0.5}    %% 0.51
+\providecommand{\LifetimeCutoff}{2}       %% days
+\providecommand{\MannWhitneyU}{80}
+\providecommand{\MannWhitneyP}{0.006}     %% one-sided
+\providecommand{\SpearmanRho}{-0.47}
+\providecommand{\SpearmanP}{0.036}
+%% individual species ratios worth quoting
+\providecommand{\PropaneRatio}{22.5}  \newcommand{\PropaneRank}{7}
+\providecommand{\HPeroxRatio}{10.6}   \newcommand{\HPeroxRank}{87}
+\providecommand{\EthaneRatio}{0.41}   \newcommand{\EthaneConcRank}{29}
+\providecommand{\OzoneRatio}{0.67}    \newcommand{\OzoneConcRank}{100}
+
+%% ---------------------------------------------------------------------
+%%  FOLD-LEVEL STABILITY
+%% ---------------------------------------------------------------------
+\providecommand{\FoldRtwoMin}{0.629}
+\providecommand{\FoldRtwoMax}{0.702}
+\providecommand{\CatBoostRtwo}{0.660}     %% runner-up in the tournament
+
+%% =====================================================================
+%%  PAPER 2 SPECIFIC: the atmospheric-chemistry deep dive
+%%  Source: A_shap_ranking.csv restricted to CAMS features
+%% =====================================================================
+\providecommand{\NCams}{67}               %% CAMS features attributed
+\providecommand{\CamsSum}{1.083}          %% summed attribution
+\providecommand{\CamsTopTen}{3}           %% CAMS features in the leading ten
+\providecommand{\CamsTopTwenty}{5}
+\providecommand{\CamsTopFifty}{9}
+%% duration against concentration, restricted to CAMS
+\providecommand{\CamsDurN}{25}   \newcommand{\CamsDurSum}{0.762} \newcommand{\CamsDurPerFeat}{0.0305}
+\providecommand{\CamsConN}{42}   \newcommand{\CamsConSum}{0.320} \newcommand{\CamsConPerFeat}{0.0076}
+\providecommand{\CamsDurOverCon}{4.0}     %% 4.00x within CAMS
+%% which percentile carries more
+\providecommand{\PctSevenFiveN}{8}   \newcommand{\PctSevenFivePerFeat}{0.0570}
+\providecommand{\PctNinetyN}{15}     \newcommand{\PctNinetyPerFeat}{0.0203}
+\providecommand{\PctRatio}{2.8}           %% 75th over 90th, per feature
+%% chemical families within CAMS
+\providecommand{\FamOxVOCn}{7}   \newcommand{\FamOxVOCsum}{0.509} \newcommand{\FamOxVOCperFeat}{0.0727} \newcommand{\FamOxVOCpct}{47.0}
+\providecommand{\FamAlkaneN}{8}  \newcommand{\FamAlkaneSum}{0.206} \newcommand{\FamAlkanePerFeat}{0.0257} \newcommand{\FamAlkanePct}{19.0}
+\providecommand{\FamSulphurN}{6} \newcommand{\FamSulphurSum}{0.102} \newcommand{\FamSulphurPct}{9.4}
+\providecommand{\FamRNitrogenN}{13} \newcommand{\FamRNitrogenSum}{0.097} \newcommand{\FamRNitrogenPct}{9.0}
+\providecommand{\FamOxidantN}{6} \newcommand{\FamOxidantSum}{0.049} \newcommand{\FamOxidantPct}{4.5}
+\providecommand{\FamBiogenicN}{3} \newcommand{\FamBiogenicPct}{1.1}
+\providecommand{\FamCarbAerosolN}{2} \newcommand{\FamCarbAerosolPct}{0.6}
+\providecommand{\FamNatAerosolN}{2}  \newcommand{\FamNatAerosolPct}{0.3}
+\providecommand{\VOCrelatedN}{18} \newcommand{\VOCrelatedSum}{0.727} \newcommand{\VOCrelatedPct}{67.1}
+\providecommand{\AerosolSulphurPct}{10.4}
+%% engineered chemistry indices
+\providecommand{\BlackCarbonShareRank}{8}  \newcommand{\BlackCarbonShareSHAP}{0.063}
+\providecommand{\OxidantLoadRank}{68}      \newcommand{\OxidantLoadSHAP}{0.018}
+\providecommand{\BiogenicFracRank}{178}
+\providecommand{\HchoNoTwoRank}{195}       \newcommand{\HchoNoTwoSHAP}{0.005}
+%% individual species ranks used in Paper 2 prose
+\providecommand{\SulphateAerosolRank}{20}  \newcommand{\SulphateAerosolSHAP}{0.039}
+\providecommand{\EthaneConcSHAP}{0.030}
+\providecommand{\PANconcRank}{33}          \newcommand{\PANconcSHAP}{0.028}
+\providecommand{\SOtwoConcRank}{38}        \newcommand{\SOtwoConcSHAP}{0.025}
+\providecommand{\PMoneDurRank}{48}         \newcommand{\PMoneDurSHAP}{0.022}
+
+%% ---- from v3_constants.tex ----------------------------------
+%% =====================================================================
+%%  v3_constants.tex
+%%  Numbers that are NEW in the v3 figure and table rebuild. Input this
+%%  ALONGSIDE shared_constants.tex (Papers 1 and 2) or paper3_constants.tex
+%%  (Paper 3). Anything the host file already defines is left alone.
+%%
+%%  Generated by make_tables_v3.py from the out-of-fold prediction files.
+%% =====================================================================
+
+%% ---- best-year selection, used by the headline maps ------------------
+\providecommand{\BestYearA}{2005}
+\providecommand{\BestYearB}{2015}
+\providecommand{\BestYearArtwo}{0.675}
+\providecommand{\BestYearBrtwo}{0.871}
+\providecommand{\RecentYear}{2019}
+
+%% ---- the common panel: the only like-for-like comparison -------------
+\providecommand{\CommonCounties}{3{,}077}
+\providecommand{\CommonYears}{11}
+\providecommand{\CommonObs}{33{,}847}
+\providecommand{\CommonRtwoSat}{0.656}
+\providecommand{\CommonRtwoFused}{0.860}
+\providecommand{\CommonMAESat}{1.074}
+\providecommand{\CommonMAEFused}{0.685}
+\providecommand{\CommonRMSESat}{1.471}
+\providecommand{\CommonRMSEFused}{0.939}
+\providecommand{\CommonRtwoGap}{0.204}
+
+%% ---- where fusion actually helps -------------------------------------
+\providecommand{\PctCountiesImproved}{69}
+\providecommand{\MedianErrorRemoved}{0.29}
+
+%% ---- cross-study quantities Paper 1 needs but does not define --------
+%%  providecommand: Paper 3 already defines these and its values win.
+\providecommand{\SDOHRtwoX}{0.848}
+\providecommand{\SDOHRtwo}{0.848}
+\providecommand{\FusedRtwo}{0.860}
+\providecommand{\EnvRtwo}{0.656}
+\providecommand{\UniqueEnv}{0.0115}
+\providecommand{\UniqueEnvPct}{1.3}
+\providecommand{\UniqueSDOHPct}{23.7}
+\providecommand{\RedundantPct}{75.0}
+\providecommand{\EnvBestRank}{6}
+\providecommand{\SDOHAttrPct}{60.0}
+\providecommand{\TotalFeatures}{782}
+\providecommand{\EnvFeatures}{584}
+\providecommand{\SatExponent}{-0.79}
+\providecommand{\SatDecayFactor}{45}
+\providecommand{\SatFitRtwo}{0.99}
+\providecommand{\PertSDOHdrop}{0.209}
+\providecommand{\PertEOdrop}{0.011}
+\providecommand{\PertAsymmetry}{19}
+\providecommand{\ConfNominal}{80}
+\providecommand{\DMLbar}{0.01}
+\providecommand{\NProxyFlagged}{7}
+\providecommand{\ProxyAttrShare}{5.5}
+\providecommand{\CornBetweenWithin}{14.7}
+\providecommand{\OglalaResid}{-8.43}
+\providecommand{\SDOHTopFiftyPct}{64}
+
+%% ---- new in v3 -------------------------------------------------------
+\providecommand{\FusedMinusSDOH}{0.012}
+\providecommand{\FusedMinusEnv}{0.204}
+\providecommand{\WorstResidA}{-11.37}
+\providecommand{\EnvBestSHAPlabel}{formaldehyde: time above 75th percentile}
+
+\providecommand{\DepN}{32{,}000}
+\providecommand{\CornRank}{53}
+
+%% ---- projection, stated in every map caption -------------------------
+\providecommand{\MapProjection}{EPSG:5070 (NAD83 / Conus Albers), equal area}
+
+%% ---- from v4_constants.tex ----------------------------------
+%% =====================================================================
+%%  v4_constants.tex
+%%  New in the v4 pass. \input this AFTER v3_constants.tex.
+%%
+%%  Generated by apply_v4_to_papers.py. Every value is computed, not typed:
+%%  the county scale from the projected geometry, the error counts from the
+%%  out-of-fold prediction files.
+%% =====================================================================
+
+%% ---- the analysis unit, computed from the county geometry ------------
+\providecommand{\CountyScaleMed}{40}
+\providecommand{\CountyScaleLo}{28}
+\providecommand{\CountyScaleHi}{68}
+
+%% ---- large-error counties, ONE definition for both studies -----------
+%%  |mean residual| > 3 years. The saved summaries used two different
+%%  definitions for the same key name; these are recomputed on one rule.
+\providecommand{\LargeErrCountiesSat}{109}
+\providecommand{\LargeErrCountiesFused}{23}
+\providecommand{\LargeErrRule}{a mean out-of-fold residual exceeding three
+  years in magnitude}
+
+%% ---- the county total that the prediction files actually cover -------
+%%  shared_constants.tex sets \Ncounties to 3,148, but the out-of-fold
+%%  files cover 3,077 counties and 3,077 x 17 = 52,309,
+%%  which is exactly \Nobs. Use this macro where the modelled panel is
+%%  meant, and see NOTES in apply_v4_to_papers.py.
+\providecommand{\NcountiesModelled}{3{,}077}
+
+%% ---- county-level improvement, both definitions, named ---------------
+\providecommand{\PctCountiesImprovedBias}{69}
+\providecommand{\MedianBiasRemoved}{0.29}
+\providecommand{\PctCountiesImprovedMAE}{67}
+\providecommand{\MedianMAERemoved}{0.23}
+
+%% ---- from thresholds_v5.tex ---------------------------------
+%% ====================================================================
+%%  thresholds_v5.tex
+%%  Generated by thresholds_v5.py. Threshold, inflection and
+%%  saturation points of the attribution curves, with bootstrap
+%%  intervals. These describe the fitted attribution surface, not a
+%%  causal dose-response.
+%% ====================================================================
+
+\providecommand{\TdmeanMinThr}{5.60}
+\providecommand{\TdmeanMinThrCI}{5.58--5.68}
+\providecommand{\TdmeanMinInfl}{5.42}
+\providecommand{\TdmeanMinInflCI}{5.33--5.64}
+\providecommand{\TdmeanMinSat}{6.39}
+\providecommand{\TdmeanMinSatCI}{6.30--11.30}
+\providecommand{\TdmeanMinPctAbove}{52}
+
+\providecommand{\NightCoolingEfficiencyThr}{0.48}
+\providecommand{\NightCoolingEfficiencyThrCI}{0.31--0.49}
+\providecommand{\NightCoolingEfficiencyInfl}{0.46}
+\providecommand{\NightCoolingEfficiencyInflCI}{0.34--0.48}
+\providecommand{\NightCoolingEfficiencySat}{0.53}
+\providecommand{\NightCoolingEfficiencySatCI}{0.49--0.56}
+\providecommand{\NightCoolingEfficiencyPctAbove}{68}
+
+
+\providecommand{\WetbulbNightThr}{7.64}
+\providecommand{\WetbulbNightThrCI}{7.25--7.95}
+\providecommand{\WetbulbNightInfl}{8.07}
+\providecommand{\WetbulbNightInflCI}{8.00--8.38}
+\providecommand{\WetbulbNightPctAbove}{36}
+
+
+\providecommand{\HchoNoRatioThr}{0.28}
+\providecommand{\HchoNoRatioThrCI}{0.07--0.29}
+\providecommand{\HchoNoRatioInfl}{0.28}
+\providecommand{\HchoNoRatioInflCI}{0.28--0.29}
+\providecommand{\HchoNoRatioPctAbove}{36}
+
+\providecommand{\PmMeanThr}{0.92}
+\providecommand{\PmMeanThrCI}{0.91--0.94}
+\providecommand{\PmMeanPctAbove}{30}
+
+
+\providecommand{\CamsFotFormaldehydeAbovethPercentileThr}{25.75}
+\providecommand{\CamsFotFormaldehydeAbovethPercentileThrCI}{25.36--26.17}
+\providecommand{\CamsFotFormaldehydeAbovethPercentileInfl}{33.46}
+\providecommand{\CamsFotFormaldehydeAbovethPercentileInflCI}{31.06--33.98}
+\providecommand{\CamsFotFormaldehydeAbovethPercentilePctAbove}{46}
+
+\providecommand{\UsdaCroplandUsdaCornPctThr}{0.04}
+\providecommand{\UsdaCroplandUsdaCornPctThrCI}{0.04--0.05}
+\providecommand{\UsdaCroplandUsdaCornPctPctAbove}{27}
+
+\providecommand{\ThresholdBoot}{400}
+\providecommand{\ThresholdBins}{60}
+\providecommand{\SaturationFrac}{10}
+
+%% ---- from v6_constants.tex ----------------------------------
+%% ====================================================================
+%%  v6_constants.tex  --  GENERATED by build_v6_constants.py.
+%%  Do not edit by hand: regenerate. Every ratio here is computed from
+%%  two numbers taken out of one file, and asserted at build time.
+%% ====================================================================
+
+\providecommand{\NCEpctRank}{2}
+\providecommand{\NCEpctSHAP}{0.2119}
+\providecommand{\NCEmeanRank}{133}
+\providecommand{\NCEmeanSHAP}{0.0104}
+\providecommand{\NCEratio}{20.3}
+\providecommand{\NCEcorr}{0.959}
+\providecommand{\NCEcoverage}{98.5}
+\providecommand{\NCEmaxdiffPct}{0.00000}
+\providecommand{\NCEmaxdiffMean}{5.3\times10^{-10}}
+\providecommand{\NCEthr}{0.614}
+\providecommand{\NCEthrCIlo}{0.612}
+\providecommand{\NCEthrCIhi}{0.617}
+\providecommand{\NCEpctAbove}{55}
+\providecommand{\NCEshapN}{12,000}
+\providecommand{\RefitFullRtwo}{0.6471}
+\providecommand{\RefitFullPctRank}{2}
+\providecommand{\RefitFullMeanRank}{134}
+\providecommand{\RefitFullMeanSHAP}{0.0100}
+\providecommand{\RefitDropRtwo}{0.6492}
+\providecommand{\RefitDropMeanRank}{43}
+\providecommand{\RefitDropMeanSHAP}{0.0244}
+\providecommand{\RefitRecoveredPct}{12}
+\providecommand{\RefitRiseFactor}{2.4}
+\providecommand{\RefitFolds}{3}
+\providecommand{\BaseNaiveMAE}{1.96}
+\providecommand{\BaseNaiveRtwo}{-0.0007}
+\providecommand{\BaseYearMeanRtwo}{0.0194}
+\providecommand{\BaseNtlRtwo}{0.0998}
+\providecommand{\BaseNtlN}{7}
+\providecommand{\BaseCoordRtwo}{0.5486}
+\providecommand{\BaseCoordMAE}{1.214}
+\providecommand{\BaseKnnRtwo}{0.6433}
+\providecommand{\BaseKnnMAE}{1.069}
+\providecommand{\ValPruneRtwo}{0.6675}
+\providecommand{\ValPruneKeptLo}{538}
+\providecommand{\ValPruneKeptHi}{541}
+\providecommand{\ValConstCovRtwo}{0.6659}
+\providecommand{\ValModernRtwo}{0.6537}
+\providecommand{\ValModernN}{15,385}
+\providecommand{\ValXGBRtwo}{0.6659}
+\providecommand{\ValETRtwo}{0.6602}
+\providecommand{\ValRFRtwo}{0.6293}
+\providecommand{\ValRidgeRtwo}{0.5535}
+\providecommand{\ValNonlinearGain}{0.11}
+\providecommand{\ValTempHoldA}{0.9033}
+\providecommand{\ValTempHoldB}{0.9209}
+\providecommand{\ValDriftPerDecade}{0.0279}
+\providecommand{\ValProxyMaxR}{0.627}
+\providecommand{\SpatReps}{5}
+\providecommand{\SpatTrainStates}{10}
+\providecommand{\SpatTestStates}{40}
+\providecommand{\SpatSatRtwo}{0.3013}
+\providecommand{\SpatSatSD}{0.0719}
+\providecommand{\SpatSatMAE}{1.534}
+\providecommand{\SpatKnnRtwo}{0.0992}
+\providecommand{\SpatKnnSD}{0.0878}
+\providecommand{\SpatCoordRtwo}{-0.0483}
+\providecommand{\SpatCoordSD}{0.1914}
+\providecommand{\SpatGapLo}{188}
+\providecommand{\SpatGapHi}{433}
+\providecommand{\SpatGapMed}{277}
+\providecommand{\SpatSatRetain}{45}
+\providecommand{\SpatKnnRetain}{15}
+\providecommand{\CatFrameCols}{1,364}
+\providecommand{\CatIdentifiers}{7}
+\providecommand{\CatCandidates}{1,357}
+\providecommand{\CatRawCols}{1,311}
+\providecommand{\CatEngineered}{46}
+\providecommand{\CatAdmitted}{753}
+\providecommand{\CatExcluded}{604}
+\providecommand{\CatAttributed}{581}
+\providecommand{\CatPruned}{172}
+\providecommand{\CatSdohCols}{327}
+\providecommand{\CatNewCollections}{230}
+\providecommand{\PartSharedPct}{75.0}
+\providecommand{\PartUniqueEnvPct}{1.3}
+\providecommand{\PartUniqueSdohPct}{23.7}
+\providecommand{\PartRtwoEnv}{0.656}
+\providecommand{\PartRtwoSdoh}{0.848}
+\providecommand{\PartRtwoBoth}{0.860}
+\providecommand{\PriorNightRatio}{6.16}
+\providecommand{\PriorNightThr}{7.5}
+\providecommand{\PriorHchoRank}{2}
+\providecommand{\PriorHchoOutOf}{45}
+\providecommand{\PriorHchoSHAP}{0.381}
+\providecommand{\PriorHchoPartialR}{-0.419}
+\providecommand{\PriorCvdRank}{2}
+\providecommand{\PriorCvdOutOf}{43}
+\providecommand{\PriorLstRtwo}{0.442}
+\providecommand{\PriorFusionRtwo}{0.631}
+\providecommand{\PriorEnvRtwo}{0.77}
+
+%% used by Paper 1, defined for Paper 3 in paper3_constants.tex
+
+%% duplicate definitions dropped, first kept:
+%%   HchoDurRank  (second definition was in v3_constants.tex)
+%%   HchoDurPct  (second definition was in v3_constants.tex)
+%%   Nfeatpruned  (second definition was in v3_constants.tex)
+%%   UniqueEnvPct  (second definition was in v6_constants.tex)
+%%   SDOHRtwoX  (second definition was in v6_constants.tex)
+
+%% ---- from paper2_air --------------------------------------
+%% ====================================================================
+%%  constants.tex: every generated number this paper quotes.
+%%  Merged from shared_constants.tex, v3_constants.tex, v4_constants.tex, thresholds_v5.tex, v6_constants.tex.
+%%  A macro defined twice keeps its FIRST definition, in the order
+%%  above; the dropped duplicates are listed at the end of the file.
+%% ====================================================================
+
+
+%% ---- from shared_constants.tex ------------------------------
+%% =====================================================================
+%%  shared_constants.tex  ---  SINGLE SOURCE OF TRUTH for PAPERS 1 and 2
+%%
+%%  Generated from the SUPERSET run (Study A, window 2003-2019), which adds
+%%  ERA5 reanalysis and CAMS atmospheric composition to the feature bank.
+%%  Source files: studyA_*.csv / studyA_metrics.json -> tables/A_summary.json
+%%
+%%  NOTHING here survives from either earlier run. Values that changed
+%%  materially are flagged CHANGED in the comment.
+%% =====================================================================
+
+%% ---------------------------------------------------------------------
+%%  PANEL AND PIPELINE
+%% ---------------------------------------------------------------------
+%% CORRECTED 2026-09-15: was 3{,}148, which is inconsistent with
+%% \Nobs. The out-of-fold prediction files cover 3,077 counties and
+%% 3,077 x 17 years = 52,309 = \Nobs exactly. 3,148 also exceeds the
+%% number of counties in the conterminous United States in any
+%% vintage. The previous file is kept as shared_constants_pre_v5.tex.
+
+%% ---------------------------------------------------------------------
+%%  HEADLINE PERFORMANCE   (XGBoost won the learner tournament)
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  THE HEADLINE RESULT: EXPOSURE DURATION AGAINST CONCENTRATION
+%%  A "fraction of time above a percentile" feature leads the entire ranking.
+%% ---------------------------------------------------------------------
+%% the single cleanest statement: same molecule, two summary statistics
+
+%% ---------------------------------------------------------------------
+%%  LEADING INDIVIDUAL PREDICTORS
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  VARIABLE-GROUP HIERARCHY
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  THERMAL INDEX FAMILY AUDIT
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  SIGNAL CONCENTRATION
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  MODALITY LEAVE-ONE-OUT
+%%  NOTE: two modalities have POSITIVE delta, meaning their removal improves
+%%  skill. This must be reported, not hidden.
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  DEW-POINT PROFILE, THRESHOLD, ORTHOGONALITY   (Paper 2 core)
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  TEMPERATURE-STRATIFIED DOSE RESPONSE
+%%  A crossing appears in only two of four quartiles. This BOUNDS the claim.
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  ERA STABILITY
+%%  IMPORTANT: the previous run reported a stable rank across eras. THIS RUN
+%%  DOES NOT. Minimum dew point falls 56 ranks between the early and late
+%%  sub-models. The stability claim must be dropped or reversed.
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  ERROR STRUCTURE AND TEMPORAL BEHAVIOUR
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  INEQUALITY TRACKING
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  RESIDUAL GEOGRAPHY
+%% ---------------------------------------------------------------------
+
+%% ---------------------------------------------------------------------
+%%  LIFETIME-DEPENDENT EXPOSURE-METRIC RESULT   [A_lifetime_summary.json]
+%%  The duration advantage is NOT uniform. It concentrates in short-lived
+%%  species. This is the mechanism, and it is what makes the result credible.
+%% ---------------------------------------------------------------------
+%% individual species ratios worth quoting
+
+%% ---------------------------------------------------------------------
+%%  FOLD-LEVEL STABILITY
+%% ---------------------------------------------------------------------
+
+%% =====================================================================
+%%  PAPER 2 SPECIFIC: the atmospheric-chemistry deep dive
+%%  Source: A_shap_ranking.csv restricted to CAMS features
+%% =====================================================================
+%% duration against concentration, restricted to CAMS
+%% which percentile carries more
+%% chemical families within CAMS
+%% engineered chemistry indices
+%% individual species ranks used in Paper 2 prose
+
+%% ---- from v3_constants.tex ----------------------------------
+%% =====================================================================
+%%  v3_constants.tex
+%%  Numbers that are NEW in the v3 figure and table rebuild. Input this
+%%  ALONGSIDE shared_constants.tex (Papers 1 and 2) or paper3_constants.tex
+%%  (Paper 3). Anything the host file already defines is left alone.
+%%
+%%  Generated by make_tables_v3.py from the out-of-fold prediction files.
+%% =====================================================================
+
+%% ---- best-year selection, used by the headline maps ------------------
+
+%% ---- the common panel: the only like-for-like comparison -------------
+
+%% ---- where fusion actually helps -------------------------------------
+
+%% ---- cross-study quantities Paper 1 needs but does not define --------
+%%  providecommand: Paper 3 already defines these and its values win.
+
+%% ---- new in v3 -------------------------------------------------------
+
+
+%% ---- projection, stated in every map caption -------------------------
+
+%% ---- from v4_constants.tex ----------------------------------
+%% =====================================================================
+%%  v4_constants.tex
+%%  New in the v4 pass. \input this AFTER v3_constants.tex.
+%%
+%%  Generated by apply_v4_to_papers.py. Every value is computed, not typed:
+%%  the county scale from the projected geometry, the error counts from the
+%%  out-of-fold prediction files.
+%% =====================================================================
+
+%% ---- the analysis unit, computed from the county geometry ------------
+
+%% ---- large-error counties, ONE definition for both studies -----------
+%%  |mean residual| > 3 years. The saved summaries used two different
+%%  definitions for the same key name; these are recomputed on one rule.
+  years in magnitude}
+
+%% ---- the county total that the prediction files actually cover -------
+%%  shared_constants.tex sets \Ncounties to 3,148, but the out-of-fold
+%%  files cover 3,077 counties and 3,077 x 17 = 52,309,
+%%  which is exactly \Nobs. Use this macro where the modelled panel is
+%%  meant, and see NOTES in apply_v4_to_papers.py.
+
+%% ---- county-level improvement, both definitions, named ---------------
+
+%% ---- from thresholds_v5.tex ---------------------------------
+%% ====================================================================
+%%  thresholds_v5.tex
+%%  Generated by thresholds_v5.py. Threshold, inflection and
+%%  saturation points of the attribution curves, with bootstrap
+%%  intervals. These describe the fitted attribution surface, not a
+%%  causal dose-response.
+%% ====================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+%% ---- from v6_constants.tex ----------------------------------
+%% ====================================================================
+%%  v6_constants.tex  --  GENERATED by build_v6_constants.py.
+%%  Do not edit by hand: regenerate. Every ratio here is computed from
+%%  two numbers taken out of one file, and asserted at build time.
+%% ====================================================================
+
+
+%% used by Paper 1, defined for Paper 3 in paper3_constants.tex
+
+%% duplicate definitions dropped, first kept:
+%%   HchoDurRank  (second definition was in v3_constants.tex)
+%%   HchoDurPct  (second definition was in v3_constants.tex)
+%%   Nfeatpruned  (second definition was in v3_constants.tex)
+%%   UniqueEnvPct  (second definition was in v6_constants.tex)
+%%   SDOHRtwoX  (second definition was in v6_constants.tex)
+
+
+%% ---- duplicate definitions dropped -----------------
+%%  \Nobs from paper2_air (kept paper1_sensors's)
+%%  \Ncounties from paper2_air (kept paper1_sensors's)
+%%  \YearStart from paper2_air (kept paper1_sensors's)
+%%  \YearEnd from paper2_air (kept paper1_sensors's)
+%%  \NYears from paper2_air (kept paper1_sensors's)
+%%  \NKfolds from paper2_air (kept paper1_sensors's)
+%%  \NrawColumns from paper2_air (kept paper1_sensors's)
+%%  \Nadmitted from paper2_air (kept paper1_sensors's)
+%%  \Nmodalities from paper2_air (kept paper1_sensors's)
+%%  \Nfeatpruned from paper2_air (kept paper1_sensors's)
+%%  \Nprotected from paper2_air (kept paper1_sensors's)
+%%  \CoverageThreshold from paper2_air (kept paper1_sensors's)
+%%  \NexcludedCoverage from paper2_air (kept paper1_sensors's)
+%%  \NexcludedLeakage from paper2_air (kept paper1_sensors's)
+%%  \NexcludedDegenerate from paper2_air (kept paper1_sensors's)
+%%  \NexcludedSDOH from paper2_air (kept paper1_sensors's)
+%%  \ModelName from paper2_air (kept paper1_sensors's)
+%%  \Rtwo from paper2_air (kept paper1_sensors's)
+%%  \RtwoCIlo from paper2_air (kept paper1_sensors's)
+%%  \RtwoCIhi from paper2_air (kept paper1_sensors's)
+%%  \MAEmodel from paper2_air (kept paper1_sensors's)
+%%  \RMSEmodel from paper2_air (kept paper1_sensors's)
+%%  \PearsonR from paper2_air (kept paper1_sensors's)
+%%  \WithinOne from paper2_air (kept paper1_sensors's)
+%%  \WithinTwo from paper2_air (kept paper1_sensors's)
+%%  \MoranIResid from paper2_air (kept paper1_sensors's)
+%%  \FoldSD from paper2_air (kept paper1_sensors's)
+%%  \TournamentSpread from paper2_air (kept paper1_sensors's)
+%%  \NDurationFeat from paper2_air (kept paper1_sensors's)
+%%  \NConcFeat from paper2_air (kept paper1_sensors's)
+%%  \DurPerFeat from paper2_air (kept paper1_sensors's)
+%%  \ConPerFeat from paper2_air (kept paper1_sensors's)
+%%  \DurOverCon from paper2_air (kept paper1_sensors's)
+%%  \NDurTopTen from paper2_air (kept paper1_sensors's)
+%%  \NDurTopTwenty from paper2_air (kept paper1_sensors's)
+%%  \HchoDurRank from paper2_air (kept paper1_sensors's)
+%%  \HchoDurSHAP from paper2_air (kept paper1_sensors's)
+%%  \HchoDurPct from paper2_air (kept paper1_sensors's)
+%%  \HchoConRank from paper2_air (kept paper1_sensors's)
+%%  \HchoConSHAP from paper2_air (kept paper1_sensors's)
+%%  \HchoRatio from paper2_air (kept paper1_sensors's)
+%%  \HchoSecondRank from paper2_air (kept paper1_sensors's)
+%%  \HchoSecondSHAP from paper2_air (kept paper1_sensors's)
+%%  \NightCoolSHAP from paper2_air (kept paper1_sensors's)
+%%  \NightCoolRank from paper2_air (kept paper1_sensors's)
+%%  \GHMSHAP from paper2_air (kept paper1_sensors's)
+%%  \SoilBDSHAP from paper2_air (kept paper1_sensors's)
+%%  \PropaneSHAP from paper2_air (kept paper1_sensors's)
+%%  \BlackCarbonSHAP from paper2_air (kept paper1_sensors's)
+%%  \DPminSHAP from paper2_air (kept paper1_sensors's)
+%%  \DPminRank from paper2_air (kept paper1_sensors's)
+%%  \AirSum from paper2_air (kept paper1_sensors's)
+%%  \SoilSum from paper2_air (kept paper1_sensors's)
+%%  \AgSum from paper2_air (kept paper1_sensors's)
+%%  \BuiltSum from paper2_air (kept paper1_sensors's)
+%%  \VegSum from paper2_air (kept paper1_sensors's)
+%%  \NoctSum from paper2_air (kept paper1_sensors's)
+%%  \HeatSum from paper2_air (kept paper1_sensors's)
+%%  \MoistSum from paper2_air (kept paper1_sensors's)
+%%  \VPDSum from paper2_air (kept paper1_sensors's)
+%%  \MoistOverHeat from paper2_air (kept paper1_sensors's)
+%%  \FamCamsN from paper2_air (kept paper1_sensors's)
+%%  \FamMoistN from paper2_air (kept paper1_sensors's)
+%%  \FamWBGTN from paper2_air (kept paper1_sensors's)
+%%  \FamVPDN from paper2_air (kept paper1_sensors's)
+%%  \FamPMN from paper2_air (kept paper1_sensors's)
+%%  \FamDryN from paper2_air (kept paper1_sensors's)
+%%  \FamWBN from paper2_air (kept paper1_sensors's)
+%%  \DPoverWB from paper2_air (kept paper1_sensors's)
+%%  \NfeatFifty from paper2_air (kept paper1_sensors's)
+%%  \NfeatEighty from paper2_air (kept paper1_sensors's)
+%%  \AttribGini from paper2_air (kept paper1_sensors's)
+%%  \LOOcams from paper2_air (kept paper1_sensors's)
+%%  \LOOcamsN from paper2_air (kept paper1_sensors's)
+%%  \LOOlivestock from paper2_air (kept paper1_sensors's)
+%%  \LOOera from paper2_air (kept paper1_sensors's)
+%%  \LOOeng from paper2_air (kept paper1_sensors's)
+%%  \LOOghm from paper2_air (kept paper1_sensors's)
+%%  \LOOprism from paper2_air (kept paper1_sensors's)
+%%  \LOOsoilPos from paper2_air (kept paper1_sensors's)
+%%  \LOOntlPos from paper2_air (kept paper1_sensors's)
+%%  \NHarmfulModalities from paper2_air (kept paper1_sensors's)
+%%  \DPProfileRatio from paper2_air (kept paper1_sensors's)
+%%  \DPtenRank from paper2_air (kept paper1_sensors's)
+%%  \DPmeanRank from paper2_air (kept paper1_sensors's)
+%%  \DPstdRank from paper2_air (kept paper1_sensors's)
+%%  \DPThreshold from paper2_air (kept paper1_sensors's)
+%%  \DPThresholdCI from paper2_air (kept paper1_sensors's)
+%%  \DPPctAbove from paper2_air (kept paper1_sensors's)
+%%  \AbsHumidity from paper2_air (kept paper1_sensors's)
+%%  \RawCorr from paper2_air (kept paper1_sensors's)
+%%  \ShapCorr from paper2_air (kept paper1_sensors's)
+%%  \DPShapRange from paper2_air (kept paper1_sensors's)
+%%  \TempShapRange from paper2_air (kept paper1_sensors's)
+%%  \RangeRatio from paper2_air (kept paper1_sensors's)
+%%  \StrataWithCrossing from paper2_air (kept paper1_sensors's)
+%%  \StrataTotal from paper2_air (kept paper1_sensors's)
+%%  \StrataQoneSlope from paper2_air (kept paper1_sensors's)
+%%  \StrataQtwoCross from paper2_air (kept paper1_sensors's)
+%%  \StrataQthreeCross from paper2_air (kept paper1_sensors's)
+%%  \StrataQfourSlope from paper2_air (kept paper1_sensors's)
+%%  \StrataN from paper2_air (kept paper1_sensors's)
+%%  \EraEarly from paper2_air (kept paper1_sensors's)
+%%  \EraLate from paper2_air (kept paper1_sensors's)
+%%  \EraEarlyRank from paper2_air (kept paper1_sensors's)
+%%  \EraLateRank from paper2_air (kept paper1_sensors's)
+%%  \EraRankShift from paper2_air (kept paper1_sensors's)
+%%  \EraEarlySHAP from paper2_air (kept paper1_sensors's)
+%%  \EraLateSHAP from paper2_air (kept paper1_sensors's)
+%%  \BrLowN from paper2_air (kept paper1_sensors's)
+%%  \BrTwoN from paper2_air (kept paper1_sensors's)
+%%  \BrCoreN from paper2_air (kept paper1_sensors's)
+%%  \BrFourN from paper2_air (kept paper1_sensors's)
+%%  \BrHighN from paper2_air (kept paper1_sensors's)
+%%  \RtwoYearLo from paper2_air (kept paper1_sensors's)
+%%  \RtwoYearHi from paper2_air (kept paper1_sensors's)
+%%  \MAEYearLo from paper2_air (kept paper1_sensors's)
+%%  \MAEYearHi from paper2_air (kept paper1_sensors's)
+%%  \MAEriseTotal from paper2_air (kept paper1_sensors's)
+%%  \MKtauMAE from paper2_air (kept paper1_sensors's)
+%%  \MKtauRtwo from paper2_air (kept paper1_sensors's)
+%%  \GiniChangePc from paper2_air (kept paper1_sensors's)
+%%  \PgapStart from paper2_air (kept paper1_sensors's)
+%%  \PgapEnd from paper2_air (kept paper1_sensors's)
+%%  \PgapChange from paper2_air (kept paper1_sensors's)
+%%  \rGiniMAE from paper2_air (kept paper1_sensors's)
+%%  \WorstResid from paper2_air (kept paper1_sensors's)
+%%  \WorstFips from paper2_air (kept paper1_sensors's)
+%%  \WorstCounty from paper2_air (kept paper1_sensors's)
+%%  \NResidOverThree from paper2_air (kept paper1_sensors's)
+%%  \NPairs from paper2_air (kept paper1_sensors's)
+%%  \NShortLived from paper2_air (kept paper1_sensors's)
+%%  \NLongLived from paper2_air (kept paper1_sensors's)
+%%  \ShortWins from paper2_air (kept paper1_sensors's)
+%%  \LongWins from paper2_air (kept paper1_sensors's)
+%%  \ShortMedianRatio from paper2_air (kept paper1_sensors's)
+%%  \LongMedianRatio from paper2_air (kept paper1_sensors's)
+%%  \LifetimeCutoff from paper2_air (kept paper1_sensors's)
+%%  \MannWhitneyU from paper2_air (kept paper1_sensors's)
+%%  \MannWhitneyP from paper2_air (kept paper1_sensors's)
+%%  \SpearmanRho from paper2_air (kept paper1_sensors's)
+%%  \SpearmanP from paper2_air (kept paper1_sensors's)
+%%  \PropaneRatio from paper2_air (kept paper1_sensors's)
+%%  \HPeroxRatio from paper2_air (kept paper1_sensors's)
+%%  \EthaneRatio from paper2_air (kept paper1_sensors's)
+%%  \OzoneRatio from paper2_air (kept paper1_sensors's)
+%%  \FoldRtwoMin from paper2_air (kept paper1_sensors's)
+%%  \FoldRtwoMax from paper2_air (kept paper1_sensors's)
+%%  \CatBoostRtwo from paper2_air (kept paper1_sensors's)
+%%  \NCams from paper2_air (kept paper1_sensors's)
+%%  \CamsSum from paper2_air (kept paper1_sensors's)
+%%  \CamsTopTen from paper2_air (kept paper1_sensors's)
+%%  \CamsTopTwenty from paper2_air (kept paper1_sensors's)
+%%  \CamsTopFifty from paper2_air (kept paper1_sensors's)
+%%  \CamsDurN from paper2_air (kept paper1_sensors's)
+%%  \CamsConN from paper2_air (kept paper1_sensors's)
+%%  \CamsDurOverCon from paper2_air (kept paper1_sensors's)
+%%  \PctSevenFiveN from paper2_air (kept paper1_sensors's)
+%%  \PctNinetyN from paper2_air (kept paper1_sensors's)
+%%  \PctRatio from paper2_air (kept paper1_sensors's)
+%%  \FamOxVOCn from paper2_air (kept paper1_sensors's)
+%%  \FamAlkaneN from paper2_air (kept paper1_sensors's)
+%%  \FamSulphurN from paper2_air (kept paper1_sensors's)
+%%  \FamRNitrogenN from paper2_air (kept paper1_sensors's)
+%%  \FamOxidantN from paper2_air (kept paper1_sensors's)
+%%  \FamBiogenicN from paper2_air (kept paper1_sensors's)
+%%  \FamCarbAerosolN from paper2_air (kept paper1_sensors's)
+%%  \FamNatAerosolN from paper2_air (kept paper1_sensors's)
+%%  \VOCrelatedN from paper2_air (kept paper1_sensors's)
+%%  \AerosolSulphurPct from paper2_air (kept paper1_sensors's)
+%%  \BlackCarbonShareRank from paper2_air (kept paper1_sensors's)
+%%  \OxidantLoadRank from paper2_air (kept paper1_sensors's)
+%%  \BiogenicFracRank from paper2_air (kept paper1_sensors's)
+%%  \HchoNoTwoRank from paper2_air (kept paper1_sensors's)
+%%  \SulphateAerosolRank from paper2_air (kept paper1_sensors's)
+%%  \EthaneConcSHAP from paper2_air (kept paper1_sensors's)
+%%  \PANconcRank from paper2_air (kept paper1_sensors's)
+%%  \SOtwoConcRank from paper2_air (kept paper1_sensors's)
+%%  \PMoneDurRank from paper2_air (kept paper1_sensors's)
+%%  \BestYearA from paper2_air (kept paper1_sensors's)
+%%  \BestYearB from paper2_air (kept paper1_sensors's)
+%%  \BestYearArtwo from paper2_air (kept paper1_sensors's)
+%%  \BestYearBrtwo from paper2_air (kept paper1_sensors's)
+%%  \RecentYear from paper2_air (kept paper1_sensors's)
+%%  \CommonCounties from paper2_air (kept paper1_sensors's)
+%%  \CommonYears from paper2_air (kept paper1_sensors's)
+%%  \CommonObs from paper2_air (kept paper1_sensors's)
+%%  \CommonRtwoSat from paper2_air (kept paper1_sensors's)
+%%  \CommonRtwoFused from paper2_air (kept paper1_sensors's)
+%%  \CommonMAESat from paper2_air (kept paper1_sensors's)
+%%  \CommonMAEFused from paper2_air (kept paper1_sensors's)
+%%  \CommonRMSESat from paper2_air (kept paper1_sensors's)
+%%  \CommonRMSEFused from paper2_air (kept paper1_sensors's)
+%%  \CommonRtwoGap from paper2_air (kept paper1_sensors's)
+%%  \PctCountiesImproved from paper2_air (kept paper1_sensors's)
+%%  \MedianErrorRemoved from paper2_air (kept paper1_sensors's)
+%%  \SDOHRtwoX from paper2_air (kept paper1_sensors's)
+%%  \SDOHRtwo from paper2_air (kept paper1_sensors's)
+%%  \FusedRtwo from paper2_air (kept paper1_sensors's)
+%%  \EnvRtwo from paper2_air (kept paper1_sensors's)
+%%  \UniqueEnv from paper2_air (kept paper1_sensors's)
+%%  \UniqueEnvPct from paper2_air (kept paper1_sensors's)
+%%  \UniqueSDOHPct from paper2_air (kept paper1_sensors's)
+%%  \RedundantPct from paper2_air (kept paper1_sensors's)
+%%  \EnvBestRank from paper2_air (kept paper1_sensors's)
+%%  \SDOHAttrPct from paper2_air (kept paper1_sensors's)
+%%  \TotalFeatures from paper2_air (kept paper1_sensors's)
+%%  \EnvFeatures from paper2_air (kept paper1_sensors's)
+%%  \SatExponent from paper2_air (kept paper1_sensors's)
+%%  \SatDecayFactor from paper2_air (kept paper1_sensors's)
+%%  \SatFitRtwo from paper2_air (kept paper1_sensors's)
+%%  \PertSDOHdrop from paper2_air (kept paper1_sensors's)
+%%  \PertEOdrop from paper2_air (kept paper1_sensors's)
+%%  \PertAsymmetry from paper2_air (kept paper1_sensors's)
+%%  \ConfNominal from paper2_air (kept paper1_sensors's)
+%%  \DMLbar from paper2_air (kept paper1_sensors's)
+%%  \NProxyFlagged from paper2_air (kept paper1_sensors's)
+%%  \ProxyAttrShare from paper2_air (kept paper1_sensors's)
+%%  \CornBetweenWithin from paper2_air (kept paper1_sensors's)
+%%  \OglalaResid from paper2_air (kept paper1_sensors's)
+%%  \SDOHTopFiftyPct from paper2_air (kept paper1_sensors's)
+%%  \FusedMinusSDOH from paper2_air (kept paper1_sensors's)
+%%  \FusedMinusEnv from paper2_air (kept paper1_sensors's)
+%%  \WorstResidA from paper2_air (kept paper1_sensors's)
+%%  \EnvBestSHAPlabel from paper2_air (kept paper1_sensors's)
+%%  \DepN from paper2_air (kept paper1_sensors's)
+%%  \CornRank from paper2_air (kept paper1_sensors's)
+%%  \MapProjection from paper2_air (kept paper1_sensors's)
+%%  \CountyScaleMed from paper2_air (kept paper1_sensors's)
+%%  \CountyScaleLo from paper2_air (kept paper1_sensors's)
+%%  \CountyScaleHi from paper2_air (kept paper1_sensors's)
+%%  \LargeErrCountiesSat from paper2_air (kept paper1_sensors's)
+%%  \LargeErrCountiesFused from paper2_air (kept paper1_sensors's)
+%%  \LargeErrRule from paper2_air (kept paper1_sensors's)
+%%  \NcountiesModelled from paper2_air (kept paper1_sensors's)
+%%  \PctCountiesImprovedBias from paper2_air (kept paper1_sensors's)
+%%  \MedianBiasRemoved from paper2_air (kept paper1_sensors's)
+%%  \PctCountiesImprovedMAE from paper2_air (kept paper1_sensors's)
+%%  \MedianMAERemoved from paper2_air (kept paper1_sensors's)
+%%  \TdmeanMinThr from paper2_air (kept paper1_sensors's)
+%%  \TdmeanMinThrCI from paper2_air (kept paper1_sensors's)
+%%  \TdmeanMinInfl from paper2_air (kept paper1_sensors's)
+%%  \TdmeanMinInflCI from paper2_air (kept paper1_sensors's)
+%%  \TdmeanMinSat from paper2_air (kept paper1_sensors's)
+%%  \TdmeanMinSatCI from paper2_air (kept paper1_sensors's)
+%%  \TdmeanMinPctAbove from paper2_air (kept paper1_sensors's)
+%%  \NightCoolingEfficiencyThr from paper2_air (kept paper1_sensors's)
+%%  \NightCoolingEfficiencyThrCI from paper2_air (kept paper1_sensors's)
+%%  \NightCoolingEfficiencyInfl from paper2_air (kept paper1_sensors's)
+%%  \NightCoolingEfficiencyInflCI from paper2_air (kept paper1_sensors's)
+%%  \NightCoolingEfficiencySat from paper2_air (kept paper1_sensors's)
+%%  \NightCoolingEfficiencySatCI from paper2_air (kept paper1_sensors's)
+%%  \NightCoolingEfficiencyPctAbove from paper2_air (kept paper1_sensors's)
+%%  \WetbulbNightThr from paper2_air (kept paper1_sensors's)
+%%  \WetbulbNightThrCI from paper2_air (kept paper1_sensors's)
+%%  \WetbulbNightInfl from paper2_air (kept paper1_sensors's)
+%%  \WetbulbNightInflCI from paper2_air (kept paper1_sensors's)
+%%  \WetbulbNightPctAbove from paper2_air (kept paper1_sensors's)
+%%  \HchoNoRatioThr from paper2_air (kept paper1_sensors's)
+%%  \HchoNoRatioThrCI from paper2_air (kept paper1_sensors's)
+%%  \HchoNoRatioInfl from paper2_air (kept paper1_sensors's)
+%%  \HchoNoRatioInflCI from paper2_air (kept paper1_sensors's)
+%%  \HchoNoRatioPctAbove from paper2_air (kept paper1_sensors's)
+%%  \PmMeanThr from paper2_air (kept paper1_sensors's)
+%%  \PmMeanThrCI from paper2_air (kept paper1_sensors's)
+%%  \PmMeanPctAbove from paper2_air (kept paper1_sensors's)
+%%  \CamsFotFormaldehydeAbovethPercentileThr from paper2_air (kept paper1_sensors's)
+%%  \CamsFotFormaldehydeAbovethPercentileThrCI from paper2_air (kept paper1_sensors's)
+%%  \CamsFotFormaldehydeAbovethPercentileInfl from paper2_air (kept paper1_sensors's)
+%%  \CamsFotFormaldehydeAbovethPercentileInflCI from paper2_air (kept paper1_sensors's)
+%%  \CamsFotFormaldehydeAbovethPercentilePctAbove from paper2_air (kept paper1_sensors's)
+%%  \UsdaCroplandUsdaCornPctThr from paper2_air (kept paper1_sensors's)
+%%  \UsdaCroplandUsdaCornPctThrCI from paper2_air (kept paper1_sensors's)
+%%  \UsdaCroplandUsdaCornPctPctAbove from paper2_air (kept paper1_sensors's)
+%%  \ThresholdBoot from paper2_air (kept paper1_sensors's)
+%%  \ThresholdBins from paper2_air (kept paper1_sensors's)
+%%  \SaturationFrac from paper2_air (kept paper1_sensors's)
+%%  \NCEpctRank from paper2_air (kept paper1_sensors's)
+%%  \NCEpctSHAP from paper2_air (kept paper1_sensors's)
+%%  \NCEmeanRank from paper2_air (kept paper1_sensors's)
+%%  \NCEmeanSHAP from paper2_air (kept paper1_sensors's)
+%%  \NCEratio from paper2_air (kept paper1_sensors's)
+%%  \NCEcorr from paper2_air (kept paper1_sensors's)
+%%  \NCEcoverage from paper2_air (kept paper1_sensors's)
+%%  \NCEmaxdiffPct from paper2_air (kept paper1_sensors's)
+%%  \NCEmaxdiffMean from paper2_air (kept paper1_sensors's)
+%%  \NCEthr from paper2_air (kept paper1_sensors's)
+%%  \NCEthrCIlo from paper2_air (kept paper1_sensors's)
+%%  \NCEthrCIhi from paper2_air (kept paper1_sensors's)
+%%  \NCEpctAbove from paper2_air (kept paper1_sensors's)
+%%  \NCEshapN from paper2_air (kept paper1_sensors's)
+%%  \RefitFullRtwo from paper2_air (kept paper1_sensors's)
+%%  \RefitFullPctRank from paper2_air (kept paper1_sensors's)
+%%  \RefitFullMeanRank from paper2_air (kept paper1_sensors's)
+%%  \RefitFullMeanSHAP from paper2_air (kept paper1_sensors's)
+%%  \RefitDropRtwo from paper2_air (kept paper1_sensors's)
+%%  \RefitDropMeanRank from paper2_air (kept paper1_sensors's)
+%%  \RefitDropMeanSHAP from paper2_air (kept paper1_sensors's)
+%%  \RefitRecoveredPct from paper2_air (kept paper1_sensors's)
+%%  \RefitRiseFactor from paper2_air (kept paper1_sensors's)
+%%  \RefitFolds from paper2_air (kept paper1_sensors's)
+%%  \BaseNaiveMAE from paper2_air (kept paper1_sensors's)
+%%  \BaseNaiveRtwo from paper2_air (kept paper1_sensors's)
+%%  \BaseYearMeanRtwo from paper2_air (kept paper1_sensors's)
+%%  \BaseNtlRtwo from paper2_air (kept paper1_sensors's)
+%%  \BaseNtlN from paper2_air (kept paper1_sensors's)
+%%  \BaseCoordRtwo from paper2_air (kept paper1_sensors's)
+%%  \BaseCoordMAE from paper2_air (kept paper1_sensors's)
+%%  \BaseKnnRtwo from paper2_air (kept paper1_sensors's)
+%%  \BaseKnnMAE from paper2_air (kept paper1_sensors's)
+%%  \ValPruneRtwo from paper2_air (kept paper1_sensors's)
+%%  \ValPruneKeptLo from paper2_air (kept paper1_sensors's)
+%%  \ValPruneKeptHi from paper2_air (kept paper1_sensors's)
+%%  \ValConstCovRtwo from paper2_air (kept paper1_sensors's)
+%%  \ValModernRtwo from paper2_air (kept paper1_sensors's)
+%%  \ValModernN from paper2_air (kept paper1_sensors's)
+%%  \ValXGBRtwo from paper2_air (kept paper1_sensors's)
+%%  \ValETRtwo from paper2_air (kept paper1_sensors's)
+%%  \ValRFRtwo from paper2_air (kept paper1_sensors's)
+%%  \ValRidgeRtwo from paper2_air (kept paper1_sensors's)
+%%  \ValNonlinearGain from paper2_air (kept paper1_sensors's)
+%%  \ValTempHoldA from paper2_air (kept paper1_sensors's)
+%%  \ValTempHoldB from paper2_air (kept paper1_sensors's)
+%%  \ValDriftPerDecade from paper2_air (kept paper1_sensors's)
+%%  \ValProxyMaxR from paper2_air (kept paper1_sensors's)
+%%  \SpatReps from paper2_air (kept paper1_sensors's)
+%%  \SpatTrainStates from paper2_air (kept paper1_sensors's)
+%%  \SpatTestStates from paper2_air (kept paper1_sensors's)
+%%  \SpatSatRtwo from paper2_air (kept paper1_sensors's)
+%%  \SpatSatSD from paper2_air (kept paper1_sensors's)
+%%  \SpatSatMAE from paper2_air (kept paper1_sensors's)
+%%  \SpatKnnRtwo from paper2_air (kept paper1_sensors's)
+%%  \SpatKnnSD from paper2_air (kept paper1_sensors's)
+%%  \SpatCoordRtwo from paper2_air (kept paper1_sensors's)
+%%  \SpatCoordSD from paper2_air (kept paper1_sensors's)
+%%  \SpatGapLo from paper2_air (kept paper1_sensors's)
+%%  \SpatGapHi from paper2_air (kept paper1_sensors's)
+%%  \SpatGapMed from paper2_air (kept paper1_sensors's)
+%%  \SpatSatRetain from paper2_air (kept paper1_sensors's)
+%%  \SpatKnnRetain from paper2_air (kept paper1_sensors's)
+%%  \CatFrameCols from paper2_air (kept paper1_sensors's)
+%%  \CatIdentifiers from paper2_air (kept paper1_sensors's)
+%%  \CatCandidates from paper2_air (kept paper1_sensors's)
+%%  \CatRawCols from paper2_air (kept paper1_sensors's)
+%%  \CatEngineered from paper2_air (kept paper1_sensors's)
+%%  \CatAdmitted from paper2_air (kept paper1_sensors's)
+%%  \CatExcluded from paper2_air (kept paper1_sensors's)
+%%  \CatAttributed from paper2_air (kept paper1_sensors's)
+%%  \CatPruned from paper2_air (kept paper1_sensors's)
+%%  \CatSdohCols from paper2_air (kept paper1_sensors's)
+%%  \CatNewCollections from paper2_air (kept paper1_sensors's)
+%%  \PartSharedPct from paper2_air (kept paper1_sensors's)
+%%  \PartUniqueEnvPct from paper2_air (kept paper1_sensors's)
+%%  \PartUniqueSdohPct from paper2_air (kept paper1_sensors's)
+%%  \PartRtwoEnv from paper2_air (kept paper1_sensors's)
+%%  \PartRtwoSdoh from paper2_air (kept paper1_sensors's)
+%%  \PartRtwoBoth from paper2_air (kept paper1_sensors's)
+%%  \PriorNightRatio from paper2_air (kept paper1_sensors's)
+%%  \PriorNightThr from paper2_air (kept paper1_sensors's)
+%%  \PriorHchoRank from paper2_air (kept paper1_sensors's)
+%%  \PriorHchoOutOf from paper2_air (kept paper1_sensors's)
+%%  \PriorHchoSHAP from paper2_air (kept paper1_sensors's)
+%%  \PriorHchoPartialR from paper2_air (kept paper1_sensors's)
+%%  \PriorCvdRank from paper2_air (kept paper1_sensors's)
+%%  \PriorCvdOutOf from paper2_air (kept paper1_sensors's)
+%%  \PriorLstRtwo from paper2_air (kept paper1_sensors's)
+%%  \PriorFusionRtwo from paper2_air (kept paper1_sensors's)
+%%  \PriorEnvRtwo from paper2_air (kept paper1_sensors's)

@@ -1,0 +1,48 @@
+{
+ "n_rows": 52309,
+ "min_life_expectancy": 65.1762734483588,
+ "max_life_expectancy": 92.2538583558184,
+ "n_below_70": 153,
+ "counties_below_70": 22,
+ "brackets": [
+  {
+   "bracket": "60-70",
+   "n": 153,
+   "mae": 6.55675586261614,
+   "mean_resid": -6.55675586261614,
+   "mae_se": 0.26962436800595435
+  },
+  {
+   "bracket": "70-74",
+   "n": 5202,
+   "mae": 1.5093073160769823,
+   "mean_resid": -1.4155394989858785,
+   "mae_se": 0.017384301019857346
+  },
+  {
+   "bracket": "74-76.5",
+   "n": 14556,
+   "mae": 0.8860335828041811,
+   "mean_resid": -0.4681704888327899,
+   "mae_se": 0.006159828787286444
+  },
+  {
+   "bracket": "76.5-79",
+   "n": 20508,
+   "mae": 0.8278694657694959,
+   "mean_resid": 0.10788571884279989,
+   "mae_se": 0.004624890508889846
+  },
+  {
+   "bracket": "79-95",
+   "n": 11890,
+   "mae": 1.2866756142554403,
+   "mean_resid": 1.0788836945789353,
+   "mae_se": 0.010249162323581367
+  }
+ ],
+ "reproduces_stored_file": true,
+ "thin_bracket_warnings": [
+  "bracket 60-70 holds 153 county-years; its MAE of 6.56 carries a standard error of 0.27"
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "script": "/Users/faizahmad/Desktop/satellite_sdoh/paper_final/analysis/03_baselines_five_reference_models.py",
+ "written_utc": "2026-10-11 00:37:43Z",
+ "root": "/Users/faizahmad/Desktop/satellite_sdoh",
+ "settings": {
+  "SEED": 0,
+  "N_FOLDS": 8,
+  "SHAP_SAMPLE": 20000,
+  "SHAP_BACKGROUND": 500,
+  "N_BOOT": 5000,
+  "N_BINS": 45,
+  "GATE_MIN_FOUND": 0.6,
+  "GATE_MAX_WIDTH": 0.4,
+  "XGB_PARAMS": {
+   "n_estimators": 1200,
+   "learning_rate": 0.03,
+   "max_depth": 8,
+   "min_child_weight": 10,
+   "subsample": 0.8,
+   "colsample_bytree": 0.7,
+   "reg_lambda": 1.0,
+   "random_state": 0,
+   "tree_method": "hist",
+   "enable_categorical": false
+  },
+  "threads": 10,
+  "KNN_NEIGHBOURS": 4,
+  "KNN_SAME_YEAR": true
+ },
+ "versions": {
+  "python": "3.11.13",
+  "platform": "Darwin arm64",
+  "numpy": "2.2.6",
+  "pandas": "2.2.3",
+  "scipy": "1.16.1",
+  "sklearn": "1.7.1",
+  "xgboost": "3.0.2",
+  "catboost": "1.2.8",
+  "shap": "0.48.0",
+  "pyarrow": "21.0.0",
+  "matplotlib": "3.10.5",
+  "joblib": "1.3.2"
+ },
+ "git": "none",
+ "inputs": {
+  "studyA_reference_frame.parquet": "3599487115877e62",
+  "studyA_final_model.joblib": "0d0325eefa53e888"
+ },
+ "outputs": {
+  "baselines.json": "8ee25a9e696cbe5a",
+  "baselines.csv": "2ab42736e85a795b"
+ },
+ "notes": "ran: ['naive', 'ntl', 'coords', 'knn']"
+}

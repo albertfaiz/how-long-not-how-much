@@ -1,0 +1,138 @@
+{
+ "per_variable": {
+  "prism_tdmean_min": {
+   "feature": "prism_tdmean_min",
+   "n_draws": 40,
+   "permuted_crossing_found": 9,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "permuted_point_spread": 6.878656781560395,
+   "published_stable": true,
+   "published_point": 5.536248405109824
+  },
+  "eng2_night_cooling_efficiency": {
+   "feature": "eng2_night_cooling_efficiency",
+   "n_draws": 40,
+   "permuted_crossing_found": 0,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "published_stable": true,
+   "published_point": 0.4918577209651455
+  },
+  "eng_night_cooling_eff": {
+   "feature": "eng_night_cooling_eff",
+   "n_draws": 40,
+   "permuted_crossing_found": 0,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "published_stable": true,
+   "published_point": 0.6109113907677689
+  },
+  "lst_night_1km_mean": {
+   "feature": "lst_night_1km_mean",
+   "n_draws": 40,
+   "permuted_crossing_found": 0,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "published_stable": false,
+   "published_point": 5.199157859829659
+  },
+  "eng2_wetbulb_night": {
+   "feature": "eng2_wetbulb_night",
+   "n_draws": 40,
+   "permuted_crossing_found": 0,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "published_stable": true,
+   "published_point": 7.410216908954014
+  },
+  "eng2_wetbulb_hot": {
+   "feature": "eng2_wetbulb_hot",
+   "n_draws": 40,
+   "permuted_crossing_found": 40,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "permuted_point_spread": 5.830170213404082,
+   "published_stable": true,
+   "published_point": 12.273878757759606
+  },
+  "eng2_hcho_no2_ratio": {
+   "feature": "eng2_hcho_no2_ratio",
+   "n_draws": 40,
+   "permuted_crossing_found": 0,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "published_stable": true,
+   "published_point": 0.2912747803937547
+  },
+  "pm25_mean": {
+   "feature": "pm25_mean",
+   "n_draws": 40,
+   "permuted_crossing_found": 30,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "permuted_point_spread": 0.3516977529501009,
+   "published_stable": true,
+   "published_point": 0.5106443214902884
+  },
+  "prism_tmin_min": {
+   "feature": "prism_tmin_min",
+   "n_draws": 40,
+   "permuted_crossing_found": 0,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "published_stable": true,
+   "published_point": 4.460397503844483
+  },
+  "cams_fot_formaldehyde_above75th_percentile": {
+   "feature": "cams_fot_formaldehyde_above75th_percentile",
+   "n_draws": 40,
+   "permuted_crossing_found": 0,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "published_stable": true,
+   "published_point": 27.540298734266887
+  },
+  "usda_cropland_usda_corn_pct": {
+   "feature": "usda_cropland_usda_corn_pct",
+   "n_draws": 40,
+   "permuted_crossing_found": 0,
+   "permuted_gate_passed": 0,
+   "permuted_pass_rate": 0.0,
+   "shifted_crossing_found": false,
+   "shifted_gate_passed": false,
+   "published_stable": true,
+   "published_point": 0.0122992336863892
+  }
+ },
+ "overall": {
+  "n_variables": 11,
+  "n_draws_each": 40,
+  "total_permutations": 440,
+  "total_gate_passes": 0,
+  "pass_rate": 0.0,
+  "shifted_any_pass": 0,
+  "n_boot_per_draw": 120
+ },
+ "note": "Permuted and shifted attribution. Null distributions, not results."
+}

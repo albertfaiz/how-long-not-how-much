@@ -1,0 +1,41 @@
+{
+ "arms": {
+  "all_admitted": {
+   "label": "modality_all_admitted",
+   "n_features": 581,
+   "r2": 0.6679618364294673,
+   "mae": 1.0288565441766637,
+   "arm": "all_admitted"
+  },
+  "satellite_only": {
+   "label": "modality_satellite_only",
+   "n_features": 239,
+   "r2": 0.6222727162252073,
+   "mae": 1.1099843467278334,
+   "arm": "satellite_only"
+  },
+  "non_satellite": {
+   "label": "modality_non_satellite",
+   "n_features": 342,
+   "r2": 0.6630658229172108,
+   "mae": 1.037802796253276,
+   "arm": "non_satellite"
+  }
+ },
+ "census_within_satellite": {
+  "n_pairs": 18,
+  "noncentral_wins": 13,
+  "sign_test_p": 0.048126220703125,
+  "agreement_with_full_model": 15,
+  "attribution": "path dependent TreeSHAP on a satellite-only refit",
+  "note": "Both the column set and the attribution estimator differ from the published ranking."
+ },
+ "column_counts": {
+  "all_admitted": 581,
+  "satellite_only": 239,
+  "non_satellite": 342
+ },
+ "n_non_physical_columns_in_model": 0,
+ "n_folds": 8,
+ "smoke_test": false
+}

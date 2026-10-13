@@ -1,0 +1,53 @@
+{
+ "params": {
+  "XGB": {
+   "n_estimators": 1500,
+   "max_depth": 8,
+   "learning_rate": 0.013832442448846112,
+   "subsample": 0.7311989040672405,
+   "colsample_bytree": 0.7116167224336398,
+   "min_child_weight": 9,
+   "reg_alpha": 0.2537815508265665,
+   "reg_lambda": 0.679657809075816
+  },
+  "CB": {
+   "iterations": 2000,
+   "depth": 8,
+   "learning_rate": 0.051178145982369534,
+   "l2_leaf_reg": 2.7970640394252375,
+   "random_strength": 0.11400863701127326
+  },
+  "RF": {
+   "n_estimators": 1000,
+   "max_depth": 25,
+   "min_samples_leaf": 2,
+   "max_features": 0.3
+  },
+  "LGB": {
+   "n_estimators": 1500,
+   "num_leaves": 127,
+   "learning_rate": 0.02,
+   "subsample": 0.8,
+   "colsample_bytree": 0.8,
+   "reg_lambda": 1.0
+  }
+ },
+ "scores": {
+  "LightGBM": {
+   "failed": "No OpenCL device found (Skipping)"
+  },
+  "XGBoost": {
+   "r2": 0.6661,
+   "mae": 1.0329,
+   "rmse": 1.4191,
+   "seconds": 60
+  },
+  "CatBoost": {
+   "r2": 0.6601,
+   "mae": 1.0455,
+   "rmse": 1.4319,
+   "seconds": 522
+  }
+ },
+ "winner": "XGBoost"
+}

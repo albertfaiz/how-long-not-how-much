@@ -1,0 +1,50 @@
+\begin{table}[H]
+\caption{Every candidate turning point, with the stability gate's verdict and, where the verdict is positive, the located value. Intervals are percentile bootstrap over county-years, 5,000 resamples. A candidate passes only if a crossing is found in at least 60\,\% of resamples, the interval is narrower than 40\,\% of the observed range, and the point estimate lies inside its own interval. The failing candidate is reported as having no locatable crossing rather than fitted quietly. Both cut values were swept over 81 combinations. The number passing never leaves 9--10, and Mean night land-surface temperature fails in every cell. The found-in-resamples cut is never binding: the least often located candidate was found in 100\,\% of resamples, above every cut swept. Only the width cut moves the count, and only for Annual mean fine particulate matter.}
+\label{tab:thresholds}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrlrrl}
+\toprule
+Variable & Group & Threshold & 95\,\% CI & Above (\%) & Width (\%) & Verdict \\
+\midrule
+\multicolumn{7}{l}{\textit{Crossing located and stable}} \\
+Annual minimum dew point & Moisture & 5.536~\textdegree C & 5.511--5.603 & 52.7 & 0.3 & stable \\
+Night-time cooling efficiency, mean form & Thermal & 0.492~-- & 0.490--0.498 & 65.4 & 0.8 & stable \\
+Night-time cooling efficiency, tail form & Thermal & 0.611~-- & 0.608--0.613 & 54.8 & 0.5 & stable \\
+Nocturnal wet-bulb temperature & Thermal & 7.410~\textdegree C & 7.226--7.485 & 38.5 & 1.2 & stable \\
+Warm-hour wet-bulb temperature & Thermal & 12.274~\textdegree C & 12.042--12.553 & 46.9 & 3.1 & stable \\
+Formaldehyde to nitrogen dioxide ratio & Composition & 0.291~-- & 0.288--0.297 & 34.4 & 1.3 & stable \\
+Annual mean fine particulate matter & Composition & 0.511~\textmu g\,m$^{-3}$ & 0.509--0.870 & 88.0 & 33.8 & stable \\
+Annual minimum daily minimum temperature & Thermal & 4.460~\textdegree C & 4.283--4.681 & 60.2 & 1.7 & stable \\
+Formaldehyde hours above the 75th percentile & Composition & 27.540~\% & 27.433--27.781 & 43.3 & 0.7 & stable \\
+Cropland in corn & Land cover & 0.012~fraction & 0.009--0.016 & 41.0 & 1.4 & stable \\
+\addlinespace
+\multicolumn{7}{l}{\textit{No crossing survives resampling}} \\
+Mean night land-surface temperature & Thermal & none & 5.231--7.843 & -- & 13.2 & fails: estimate inside interval \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}[H]
+\caption{Candidates admitted by the stability gate at every combination of its two cut values. The declared cuts are 60\,\% and 40\,\%. Across all 81 cells the count stays between 9 and 10. Rows are identical because the found-in-resamples condition never binds: every candidate was located in 100\,\% of resamples. The third condition, that the point estimate lie inside its own interval, is not swept, because it has no cut value to place.}
+\label{tab:gate_sweep}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Crossing found in at least & \multicolumn{9}{c}{Interval narrower than (\% of observed range)} \\
+\cmidrule(l){2-10}
+ & 20 & 25 & 30 & 35 & 40 & 45 & 50 & 55 & 60 \\
+\midrule
+50\,\% of resamples & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 \\
+55\,\% of resamples & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 \\
+60\,\% of resamples & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 \\
+65\,\% of resamples & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 \\
+70\,\% of resamples & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 \\
+75\,\% of resamples & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 \\
+80\,\% of resamples & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 \\
+85\,\% of resamples & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 \\
+90\,\% of resamples & 9 & 9 & 9 & 10 & 10 & 10 & 10 & 10 & 10 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

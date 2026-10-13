@@ -1,0 +1,23 @@
+{
+ "observed": 38,
+ "n_comparable": 47,
+ "n_draws": 20000,
+ "null_mean": 23.4999,
+ "null_sd": 3.448535919778131,
+ "null_quantiles": {
+  "q02": 17.0,
+  "q25": 21.0,
+  "q50": 24.0,
+  "q75": 26.0,
+  "q97": 30.0
+ },
+ "empirical_p_one_sided": 0.0,
+ "note": "Label-shuffle null for the attribution census count.",
+ "information_census": {
+  "observed": 12,
+  "n_fields": 47,
+  "empirical_p_one_sided_high": 0.99975,
+  "empirical_p_one_sided_low": 0.0006,
+  "null_mean": 23.46775
+ }
+}

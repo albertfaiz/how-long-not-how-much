@@ -1,0 +1,60 @@
+{
+  "hits": {
+    "eng_night_cooling_eff": [
+      {
+        "form": "(a-b)/a",
+        "a": "lst_day_1km_p90",
+        "b": "lst_night_1km_p10",
+        "n": 52309,
+        "maxdiff": 3.779479119225826e-06,
+        "max_rel": 2.238389677362572e-06,
+        "kelvin": 6.372237245422241e-06,
+        "r": 0.9999999999998523,
+        "source_a": "lst",
+        "source_b": "lst",
+        "exact": true
+      }
+    ],
+    "eng2_night_cooling_efficiency": [
+      {
+        "form": "(a-b)/a",
+        "a": "lst_day_1km_mean",
+        "b": "lst_night_1km_mean",
+        "n": 52309,
+        "maxdiff": 5.296141303290369e-10,
+        "max_rel": 3.0671129708451406e-10,
+        "kelvin": 5.613314257857382e-10,
+        "r": 1.0,
+        "source_a": "lst",
+        "source_b": "lst",
+        "exact": true
+      }
+    ]
+  },
+  "verdict": {
+    "single_source": true,
+    "sources": {
+      "eng_night_cooling_eff": [
+        "lst"
+      ],
+      "eng2_night_cooling_efficiency": [
+        "lst"
+      ]
+    }
+  },
+  "search": {
+    "n_rows": 53107,
+    "n_columns": 100,
+    "n_sources": 5,
+    "by_source": {
+      "era5": 10,
+      "prism": 70,
+      "lst": 14,
+      "eng": 4,
+      "eng2": 2
+    },
+    "n_forms": 5,
+    "near": 0.01,
+    "exact_rel": 1e-05
+  }
+}

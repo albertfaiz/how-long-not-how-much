@@ -1,0 +1,545 @@
+{
+ "n_pairs": 20,
+ "n_species": 13,
+ "published_cutoff": 2.0,
+ "unit_comparison": {
+  "pair_level": {
+   "cutoff_days": 2.0,
+   "n_short": 8,
+   "n_long": 12,
+   "short_wins": 7,
+   "long_wins": 3,
+   "short_median_ratio": 2.4859925420057367,
+   "long_median_ratio": 0.508803224998468,
+   "mannwhitney_u": 80.0,
+   "mannwhitney_p": 0.006199888862427562
+  },
+  "species_level": {
+   "cutoff_days": 2.0,
+   "n_short": 6,
+   "n_long": 7,
+   "short_wins": 5,
+   "long_wins": 2,
+   "short_median_ratio": 2.41915613590833,
+   "long_median_ratio": 0.4584741942076308,
+   "mannwhitney_u": 34.0,
+   "mannwhitney_p": 0.03671328671328671
+  }
+ },
+ "cutoff_sweep": {
+  "levels": [
+   0.25,
+   0.5,
+   1.0,
+   2.0,
+   3.0,
+   5.0,
+   7.0
+  ],
+  "published_cutoff": {
+   "cutoff_days": 2.0,
+   "n_short": 6,
+   "n_long": 7,
+   "short_wins": 5,
+   "long_wins": 2,
+   "short_median_ratio": 2.41915613590833,
+   "long_median_ratio": 0.4584741942076308,
+   "mannwhitney_u": 34.0,
+   "mannwhitney_p": 0.03671328671328671
+  },
+  "n_species_level_significant": 1,
+  "n_species_level_direction_correct": 7,
+  "n_cutoffs": 7,
+  "rows": [
+   {
+    "cutoff_days": 0.25,
+    "n_short": 5,
+    "n_long": 15,
+    "short_wins": 4,
+    "long_wins": 6,
+    "short_median_ratio": 3.2421770314273695,
+    "long_median_ratio": 0.6716559936108834,
+    "mannwhitney_u": 60.0,
+    "mannwhitney_p": 0.02631578947368421,
+    "unit": "pair",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 0.25,
+    "n_short": 4,
+    "n_long": 9,
+    "short_wins": 3,
+    "long_wins": 4,
+    "short_median_ratio": 2.1910705213928705,
+    "long_median_ratio": 0.8965121061139416,
+    "mannwhitney_u": 26.0,
+    "mannwhitney_p": 0.13006993006993006,
+    "unit": "species",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 0.5,
+    "n_short": 7,
+    "n_long": 13,
+    "short_wins": 6,
+    "long_wins": 4,
+    "short_median_ratio": 1.7298080525841044,
+    "long_median_ratio": 0.6109973973882616,
+    "mannwhitney_u": 72.0,
+    "mannwhitney_p": 0.01847265221878225,
+    "unit": "pair",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 0.5,
+    "n_short": 5,
+    "n_long": 8,
+    "short_wins": 4,
+    "long_wins": 3,
+    "short_median_ratio": 1.5961352403892906,
+    "long_median_ratio": 0.6774931501607862,
+    "mannwhitney_u": 29.0,
+    "mannwhitney_p": 0.1111111111111111,
+    "unit": "species",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 1.0,
+    "n_short": 7,
+    "n_long": 13,
+    "short_wins": 6,
+    "long_wins": 4,
+    "short_median_ratio": 1.7298080525841044,
+    "long_median_ratio": 0.6109973973882616,
+    "mannwhitney_u": 72.0,
+    "mannwhitney_p": 0.01847265221878225,
+    "unit": "pair",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 1.0,
+    "n_short": 5,
+    "n_long": 8,
+    "short_wins": 4,
+    "long_wins": 3,
+    "short_median_ratio": 1.5961352403892906,
+    "long_median_ratio": 0.6774931501607862,
+    "mannwhitney_u": 29.0,
+    "mannwhitney_p": 0.1111111111111111,
+    "unit": "species",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 2.0,
+    "n_short": 8,
+    "n_long": 12,
+    "short_wins": 7,
+    "long_wins": 3,
+    "short_median_ratio": 2.4859925420057367,
+    "long_median_ratio": 0.508803224998468,
+    "mannwhitney_u": 80.0,
+    "mannwhitney_p": 0.006199888862427562,
+    "unit": "pair",
+    "is_published_cutoff": true
+   },
+   {
+    "cutoff_days": 2.0,
+    "n_short": 6,
+    "n_long": 7,
+    "short_wins": 5,
+    "long_wins": 2,
+    "short_median_ratio": 2.41915613590833,
+    "long_median_ratio": 0.4584741942076308,
+    "mannwhitney_u": 34.0,
+    "mannwhitney_p": 0.03671328671328671,
+    "unit": "species",
+    "is_published_cutoff": true
+   },
+   {
+    "cutoff_days": 3.0,
+    "n_short": 10,
+    "n_long": 10,
+    "short_wins": 7,
+    "long_wins": 3,
+    "short_median_ratio": 1.5961352403892906,
+    "long_median_ratio": 0.6413266954995724,
+    "mannwhitney_u": 65.0,
+    "mannwhitney_p": 0.13651816987559418,
+    "unit": "pair",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 3.0,
+    "n_short": 7,
+    "n_long": 6,
+    "short_wins": 5,
+    "long_wins": 2,
+    "short_median_ratio": 1.5961352403892906,
+    "long_median_ratio": 0.6774931501607862,
+    "mannwhitney_u": 28.0,
+    "mannwhitney_p": 0.18298368298368298,
+    "unit": "species",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 5.0,
+    "n_short": 10,
+    "n_long": 10,
+    "short_wins": 7,
+    "long_wins": 3,
+    "short_median_ratio": 1.5961352403892906,
+    "long_median_ratio": 0.6413266954995724,
+    "mannwhitney_u": 65.0,
+    "mannwhitney_p": 0.13651816987559418,
+    "unit": "pair",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 5.0,
+    "n_short": 7,
+    "n_long": 6,
+    "short_wins": 5,
+    "long_wins": 2,
+    "short_median_ratio": 1.5961352403892906,
+    "long_median_ratio": 0.6774931501607862,
+    "mannwhitney_u": 28.0,
+    "mannwhitney_p": 0.18298368298368298,
+    "unit": "species",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 7.0,
+    "n_short": 11,
+    "n_long": 9,
+    "short_wins": 7,
+    "long_wins": 3,
+    "short_median_ratio": 1.4624624281944767,
+    "long_median_ratio": 0.6109973973882616,
+    "mannwhitney_u": 63.0,
+    "mannwhitney_p": 0.16166000456695756,
+    "unit": "pair",
+    "is_published_cutoff": false
+   },
+   {
+    "cutoff_days": 7.0,
+    "n_short": 8,
+    "n_long": 5,
+    "short_wins": 5,
+    "long_wins": 2,
+    "short_median_ratio": 1.368049625873831,
+    "long_median_ratio": 0.4584741942076308,
+    "mannwhitney_u": 25.0,
+    "mannwhitney_p": 0.2618492618492618,
+    "unit": "species",
+    "is_published_cutoff": false
+   }
+  ]
+ },
+ "verdict": {
+  "direction_robust": true,
+  "significance_at_species_level": "marginal",
+  "headline_to_quote": "Spearman -0.42 across 13 species, permutation p = 0.077",
+  "do_not_quote": "the pair-level Mann-Whitney p of 0.0062, which treats 20 nested rows as independent",
+  "how_to_frame": "consistent with the published exposure-metric literature rather than an independent establishment of it"
+ },
+ "rank_free_test": {
+  "unit": "species",
+  "n": 13,
+  "spearman_rho": -0.42090823862875804,
+  "asymptotic_p": 0.15206975314768006,
+  "permutation_p": 0.07705,
+  "n_permutations": 20000,
+  "null_mean": -0.002480607573670269,
+  "null_sd": 0.28787868934278943,
+  "note": "One-sided for a negative correlation: the hypothesis is that the duration advantage falls as lifetime rises.",
+  "pair_level_rho": -0.47094674936579517,
+  "pair_level_asymptotic_p": 0.03609311705904251
+ },
+ "value_sensitivity": {
+  "n_draws": 4000,
+  "spread_dex": 0.5,
+  "share_rho_negative": 1.0,
+  "median_rho": -0.41208791208791207,
+  "rho_ci": [
+   -0.5549450549450549,
+   -0.25274725274725274
+  ],
+  "share_split_significant": 0.36875,
+  "note": "A perturbation of the literature values, not of the data."
+ },
+ "jackknife": {
+  "n_replicates": 13,
+  "rho_min": -0.5534159099872935,
+  "rho_max": -0.30472901372718064,
+  "worst_p": 0.0744949494949495,
+  "worst_left_out": "formaldehyde",
+  "all_negative": true,
+  "per_species": [
+   {
+    "left_out": "ethane",
+    "spearman_rho": -0.3117342784105641,
+    "mannwhitney_p": 0.06601731601731602,
+    "short_wins": 5,
+    "n_short": 6,
+    "long_wins": 2,
+    "n_long": 6
+   },
+   {
+    "left_out": "formaldehyde",
+    "spearman_rho": -0.3636363636363637,
+    "mannwhitney_p": 0.0744949494949495,
+    "short_wins": 4,
+    "n_short": 5,
+    "long_wins": 2,
+    "n_long": 7
+   },
+   {
+    "left_out": "hydrogen peroxide",
+    "spearman_rho": -0.42732114568639123,
+    "mannwhitney_p": 0.05303030303030303,
+    "short_wins": 4,
+    "n_short": 5,
+    "long_wins": 2,
+    "n_long": 7
+   },
+   {
+    "left_out": "hydroxyl radical",
+    "spearman_rho": -0.4798606308117672,
+    "mannwhitney_p": 0.036616161616161616,
+    "short_wins": 4,
+    "n_short": 5,
+    "long_wins": 2,
+    "n_long": 7
+   },
+   {
+    "left_out": "isoprene",
+    "spearman_rho": -0.4798606308117672,
+    "mannwhitney_p": 0.036616161616161616,
+    "short_wins": 5,
+    "n_short": 5,
+    "long_wins": 2,
+    "n_long": 7
+   },
+   {
+    "left_out": "nitric acid",
+    "spearman_rho": -0.3817869252443988,
+    "mannwhitney_p": 0.06601731601731602,
+    "short_wins": 5,
+    "n_short": 6,
+    "long_wins": 2,
+    "n_long": 6
+   },
+   {
+    "left_out": "nitrogen dioxide",
+    "spearman_rho": -0.43782904271146644,
+    "mannwhitney_p": 0.036616161616161616,
+    "short_wins": 4,
+    "n_short": 5,
+    "long_wins": 2,
+    "n_long": 7
+   },
+   {
+    "left_out": "nitrogen monoxide",
+    "spearman_rho": -0.41958041958041964,
+    "mannwhitney_p": 0.05303030303030303,
+    "short_wins": 4,
+    "n_short": 5,
+    "long_wins": 2,
+    "n_long": 7
+   },
+   {
+    "left_out": "ozone",
+    "spearman_rho": -0.30472901372718064,
+    "mannwhitney_p": 0.06601731601731602,
+    "short_wins": 5,
+    "n_short": 6,
+    "long_wins": 2,
+    "n_long": 6
+   },
+   {
+    "left_out": "peroxyacetyl nitrate",
+    "spearman_rho": -0.3117342784105641,
+    "mannwhitney_p": 0.06601731601731602,
+    "short_wins": 5,
+    "n_short": 6,
+    "long_wins": 2,
+    "n_long": 6
+   },
+   {
+    "left_out": "pm2 5",
+    "spearman_rho": -0.49387116017853416,
+    "mannwhitney_p": 0.020562770562770564,
+    "short_wins": 5,
+    "n_short": 6,
+    "long_wins": 1,
+    "n_long": 6
+   },
+   {
+    "left_out": "propane",
+    "spearman_rho": -0.5534159099872935,
+    "mannwhitney_p": 0.007575757575757576,
+    "short_wins": 5,
+    "n_short": 6,
+    "long_wins": 1,
+    "n_long": 6
+   },
+   {
+    "left_out": "sulphur dioxide",
+    "spearman_rho": -0.46585010144500033,
+    "mannwhitney_p": 0.06601731601731602,
+    "short_wins": 5,
+    "n_short": 6,
+    "long_wins": 2,
+    "n_long": 6
+   }
+  ]
+ },
+ "species_table": [
+  {
+   "species": "ethane",
+   "lifetime_days": 60.0,
+   "n_rows": 2,
+   "median_ratio": 0.33456442200983527,
+   "geometric_mean_ratio": 0.326715355740516,
+   "duration_wins_any": false,
+   "duration_wins_all": false,
+   "duration_wins": false
+  },
+  {
+   "species": "formaldehyde",
+   "lifetime_days": 0.2,
+   "n_rows": 2,
+   "median_ratio": 49.97447009440701,
+   "geometric_mean_ratio": 45.54907126175918,
+   "duration_wins_any": true,
+   "duration_wins_all": true,
+   "duration_wins": true
+  },
+  {
+   "species": "hydrogen peroxide",
+   "lifetime_days": 1.0,
+   "n_rows": 1,
+   "median_ratio": 10.56661162559896,
+   "geometric_mean_ratio": 10.566611625598958,
+   "duration_wins_any": true,
+   "duration_wins_all": true,
+   "duration_wins": true
+  },
+  {
+   "species": "hydroxyl radical",
+   "lifetime_days": 1e-05,
+   "n_rows": 1,
+   "median_ratio": 1.1399640113583718,
+   "geometric_mean_ratio": 1.1399640113583718,
+   "duration_wins_any": true,
+   "duration_wins_all": true,
+   "duration_wins": true
+  },
+  {
+   "species": "isoprene",
+   "lifetime_days": 0.1,
+   "n_rows": 1,
+   "median_ratio": 0.9556099658900856,
+   "geometric_mean_ratio": 0.9556099658900856,
+   "duration_wins_any": false,
+   "duration_wins_all": false,
+   "duration_wins": false
+  },
+  {
+   "species": "nitric acid",
+   "lifetime_days": 5.0,
+   "n_rows": 1,
+   "median_ratio": 0.8965121061139416,
+   "geometric_mean_ratio": 0.8965121061139416,
+   "duration_wins_any": false,
+   "duration_wins_all": false,
+   "duration_wins": false
+  },
+  {
+   "species": "nitrogen dioxide",
+   "lifetime_days": 0.25,
+   "n_rows": 2,
+   "median_ratio": 1.5961352403892906,
+   "geometric_mean_ratio": 1.5905279893458362,
+   "duration_wins_any": true,
+   "duration_wins_all": true,
+   "duration_wins": true
+  },
+  {
+   "species": "nitrogen monoxide",
+   "lifetime_days": 0.2,
+   "n_rows": 1,
+   "median_ratio": 3.2421770314273695,
+   "geometric_mean_ratio": 3.242177031427369,
+   "duration_wins_any": true,
+   "duration_wins_all": true,
+   "duration_wins": true
+  },
+  {
+   "species": "ozone",
+   "lifetime_days": 22.0,
+   "n_rows": 2,
+   "median_ratio": 0.4584741942076308,
+   "geometric_mean_ratio": 0.4058966705425505,
+   "duration_wins_any": false,
+   "duration_wins_all": false,
+   "duration_wins": false
+  },
+  {
+   "species": "peroxyacetyl nitrate",
+   "lifetime_days": 30.0,
+   "n_rows": 1,
+   "median_ratio": 0.2175220122465458,
+   "geometric_mean_ratio": 0.2175220122465458,
+   "duration_wins_any": false,
+   "duration_wins_all": false,
+   "duration_wins": false
+  },
+  {
+   "species": "pm2 5",
+   "lifetime_days": 7.0,
+   "n_rows": 2,
+   "median_ratio": 1.600424166906842,
+   "geometric_mean_ratio": 1.2579317079156107,
+   "duration_wins_any": true,
+   "duration_wins_all": false,
+   "duration_wins": true
+  },
+  {
+   "species": "propane",
+   "lifetime_days": 11.0,
+   "n_rows": 2,
+   "median_ratio": 18.39360239038635,
+   "geometric_mean_ratio": 17.930333172576752,
+   "duration_wins_any": true,
+   "duration_wins_all": true,
+   "duration_wins": true
+  },
+  {
+   "species": "sulphur dioxide",
+   "lifetime_days": 2.0,
+   "n_rows": 2,
+   "median_ratio": 0.2163906157213548,
+   "geometric_mean_ratio": 0.2153365701952026,
+   "duration_wins_any": false,
+   "duration_wins_all": false,
+   "duration_wins": false
+  }
+ ],
+ "lifetime_days": {
+  "hydroxyl radical": 1e-05,
+  "isoprene": 0.1,
+  "formaldehyde": 0.2,
+  "nitrogen monoxide": 0.2,
+  "nitrogen dioxide": 0.25,
+  "hydrogen peroxide": 1.0,
+  "sulphur dioxide": 2.0,
+  "nitric acid": 5.0,
+  "pm2 5": 7.0,
+  "propane": 11.0,
+  "ozone": 22.0,
+  "peroxyacetyl nitrate": 30.0,
+  "ethane": 60.0
+ },
+ "note": "The duration-against-lifetime mechanism, tested at the species level, with the cutoff swept, the literature values perturbed, and the species jackknifed."
+}

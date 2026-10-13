@@ -1,25 +1,17 @@
-# Conda environment for how-long-not-how-much
-# Regenerate with: python build_repos.py
-name: how-long-not-how-much
+# The environment that produced the paper's numbers (macOS arm64, 11 to 13 October 2026).
+name: satsdoh
 channels:
   - conda-forge
-  - defaults
 dependencies:
-  - python=3.11
-  - numpy>=1.26
-  - pandas>=2.1
-  - scikit-learn>=1.4
-  - xgboost>=2.0
-  - lightgbm>=4.3
-  - catboost>=1.2
-  - shap>=0.44
-  - scipy>=1.11
-  - statsmodels>=0.14
-  - geopandas>=0.14
-  - rasterio>=1.3
-  - matplotlib>=3.8
-  - pyarrow>=15.0
-  - joblib>=1.3
+  - python=3.11.13
+  - numpy=2.2.6
+  - pandas=2.2.3
+  - scipy=1.16.1
+  - scikit-learn=1.7.1
+  - xgboost=3.0.2
+  - shap=0.48.0
+  - pyarrow=21.0.0
+  - matplotlib=3.10.5
+  - joblib=1.3.2
+  - catboost=1.2.8
   - pip
-  - pip:
-      - openpyxl

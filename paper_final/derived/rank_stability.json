@@ -1,0 +1,475 @@
+{
+ "topk_overlap": {
+  "n_rows_attributed": 20000,
+  "n_counties": 3076,
+  "n_draws": 1000,
+  "attribution": "path dependent TreeSHAP, model held fixed",
+  "topk_overlap": {
+   "top5": {
+    "mean_share": 1.0,
+    "min_share": 1.0,
+    "share_fully_identical": 1.0
+   },
+   "top10": {
+    "mean_share": 0.9785,
+    "min_share": 0.9,
+    "share_fully_identical": 0.785
+   },
+   "top15": {
+    "mean_share": 0.9957333333333334,
+    "min_share": 0.9333333333333333,
+    "share_fully_identical": 0.936
+   },
+   "top25": {
+    "mean_share": 0.9998400000000001,
+    "min_share": 0.96,
+    "share_fully_identical": 0.996
+   }
+  },
+  "leading": [
+   {
+    "arm": "county_bootstrap",
+    "feature": "cams_fot_formaldehyde_above75th_percentile",
+    "point_rank": 1,
+    "point_value": 0.45257025957107544,
+    "rank_median": 1.0,
+    "rank_p025": 1.0,
+    "rank_p975": 1.0,
+    "share_in_top10": 1.0,
+    "share_rank_1": 1.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "eng_night_cooling_eff",
+    "point_rank": 2,
+    "point_value": 0.2933497428894043,
+    "rank_median": 2.0,
+    "rank_p025": 2.0,
+    "rank_p975": 2.0,
+    "share_in_top10": 1.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "cams_fot_formaldehyde_above_90th_percentile",
+    "point_rank": 3,
+    "point_value": 0.182308629155159,
+    "rank_median": 3.0,
+    "rank_p025": 3.0,
+    "rank_p975": 3.0,
+    "share_in_top10": 1.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "soil_bulk_density_30cm_p90",
+    "point_rank": 4,
+    "point_value": 0.14100147783756256,
+    "rank_median": 4.0,
+    "rank_p025": 4.0,
+    "rank_p975": 4.0,
+    "share_in_top10": 1.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "ghm_p90",
+    "point_rank": 5,
+    "point_value": 0.13103629648685455,
+    "rank_median": 5.0,
+    "rank_p025": 5.0,
+    "rank_p975": 5.0,
+    "share_in_top10": 1.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "soil_bulk_density_30cm_mean",
+    "point_rank": 6,
+    "point_value": 0.10047726333141327,
+    "rank_median": 6.0,
+    "rank_p025": 6.0,
+    "rank_p975": 7.0,
+    "share_in_top10": 1.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "cams_fot_propane_above75th_percentile",
+    "point_rank": 7,
+    "point_value": 0.09660005569458008,
+    "rank_median": 7.0,
+    "rank_p025": 6.0,
+    "rank_p975": 7.0,
+    "share_in_top10": 1.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "eng2_black_carbon_share",
+    "point_rank": 8,
+    "point_value": 0.0707450732588768,
+    "rank_median": 8.0,
+    "rank_p025": 8.0,
+    "rank_p975": 8.0,
+    "share_in_top10": 1.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "eng_wetland_flood_risk",
+    "point_rank": 9,
+    "point_value": 0.06899295002222061,
+    "rank_median": 9.0,
+    "rank_p025": 9.0,
+    "rank_p975": 9.0,
+    "share_in_top10": 1.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "era5_leaf_area_index_high_vegetation",
+    "point_rank": 10,
+    "point_value": 0.06313062459230423,
+    "rank_median": 10.0,
+    "rank_p025": 10.0,
+    "rank_p975": 11.0,
+    "share_in_top10": 0.785,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "prism_tdmean_min",
+    "point_rank": 11,
+    "point_value": 0.06228264048695564,
+    "rank_median": 11.0,
+    "rank_p025": 10.0,
+    "rank_p975": 11.0,
+    "share_in_top10": 0.215,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "ghm_max",
+    "point_rank": 12,
+    "point_value": 0.05581725016236305,
+    "rank_median": 12.0,
+    "rank_p025": 12.0,
+    "rank_p975": 12.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "cams_fot_propane_above_90th_percentile",
+    "point_rank": 13,
+    "point_value": 0.0527559332549572,
+    "rank_median": 13.0,
+    "rank_p025": 13.0,
+    "rank_p975": 13.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "eng2_impervious_heat_index",
+    "point_rank": 14,
+    "point_value": 0.04776609688997269,
+    "rank_median": 14.0,
+    "rank_p025": 14.0,
+    "rank_p975": 14.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "ghm_p10",
+    "point_rank": 15,
+    "point_value": 0.044402964413166046,
+    "rank_median": 15.0,
+    "rank_p025": 15.0,
+    "rank_p975": 16.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "usda_cropland_usda_dev_med_pct",
+    "point_rank": 16,
+    "point_value": 0.0428285077214241,
+    "rank_median": 16.0,
+    "rank_p025": 15.0,
+    "rank_p975": 17.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "live_mean_horse",
+    "point_rank": 17,
+    "point_value": 0.041885875165462494,
+    "rank_median": 17.0,
+    "rank_p025": 16.0,
+    "rank_p975": 19.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "usda_cropland_usda_forest_evergreen_pct",
+    "point_rank": 18,
+    "point_value": 0.040689270943403244,
+    "rank_median": 18.0,
+    "rank_p025": 17.0,
+    "rank_p975": 20.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "live_sum_horse",
+    "point_rank": 19,
+    "point_value": 0.040334172546863556,
+    "rank_median": 19.0,
+    "rank_p025": 18.0,
+    "rank_p975": 20.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "cams_sulphate_aerosol_mixing_ratio_x1e9_ppb",
+    "point_rank": 20,
+    "point_value": 0.039379190653562546,
+    "rank_median": 20.0,
+    "rank_p025": 18.0,
+    "rank_p975": 21.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "era5_leaf_area_index_low_vegetation",
+    "point_rank": 21,
+    "point_value": 0.03785848990082741,
+    "rank_median": 21.0,
+    "rank_p025": 19.0,
+    "rank_p975": 24.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "soil_bulk_density_30cm_p10",
+    "point_rank": 22,
+    "point_value": 0.03682495653629303,
+    "rank_median": 22.0,
+    "rank_p025": 21.0,
+    "rank_p975": 24.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "ghm_min",
+    "point_rank": 23,
+    "point_value": 0.036349792033433914,
+    "rank_median": 23.0,
+    "rank_p025": 21.0,
+    "rank_p975": 24.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "live_mean_sheep",
+    "point_rank": 24,
+    "point_value": 0.03565121814608574,
+    "rank_median": 24.0,
+    "rank_p025": 22.0,
+    "rank_p975": 25.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   },
+   {
+    "arm": "county_bootstrap",
+    "feature": "soil_clay_0cm_stddev",
+    "point_rank": 25,
+    "point_value": 0.03428885340690613,
+    "rank_median": 25.0,
+    "rank_p025": 24.0,
+    "rank_p975": 25.0,
+    "share_in_top10": 0.0,
+    "share_rank_1": 0.0
+   }
+  ],
+  "note": "Resamples which counties are attributed, not which were trained on."
+ },
+ "reseed": {
+  "seeds": {
+   "seed_plus_1": {
+    "top5_shared": 5,
+    "top5": 5,
+    "top10_shared": 9,
+    "top10": 10,
+    "top15_shared": 14,
+    "top15": 15,
+    "top25_shared": 22,
+    "top25": 25,
+    "first": "cams_fot_formaldehyde_above75th_percentile",
+    "first_matches_published": true
+   },
+   "seed_plus_2": {
+    "top5_shared": 5,
+    "top5": 5,
+    "top10_shared": 9,
+    "top10": 10,
+    "top15_shared": 14,
+    "top15": 15,
+    "top25_shared": 22,
+    "top25": 25,
+    "first": "cams_fot_formaldehyde_above75th_percentile",
+    "first_matches_published": true
+   },
+   "seed_plus_3": {
+    "top5_shared": 5,
+    "top5": 5,
+    "top10_shared": 8,
+    "top10": 10,
+    "top15_shared": 13,
+    "top15": 15,
+    "top25_shared": 24,
+    "top25": 25,
+    "first": "cams_fot_formaldehyde_above75th_percentile",
+    "first_matches_published": true
+   }
+  },
+  "published_top": {
+   "5": [
+    "cams_fot_formaldehyde_above75th_percentile",
+    "eng_night_cooling_eff",
+    "ghm_p90",
+    "cams_fot_formaldehyde_above_90th_percentile",
+    "soil_bulk_density_30cm_p90"
+   ],
+   "10": [
+    "cams_fot_formaldehyde_above75th_percentile",
+    "eng_night_cooling_eff",
+    "ghm_p90",
+    "cams_fot_formaldehyde_above_90th_percentile",
+    "soil_bulk_density_30cm_p90",
+    "soil_bulk_density_30cm_mean",
+    "cams_fot_propane_above75th_percentile",
+    "eng2_black_carbon_share",
+    "era5_leaf_area_index_high_vegetation",
+    "eng_wetland_flood_risk"
+   ],
+   "15": [
+    "cams_fot_formaldehyde_above75th_percentile",
+    "eng_night_cooling_eff",
+    "ghm_p90",
+    "cams_fot_formaldehyde_above_90th_percentile",
+    "soil_bulk_density_30cm_p90",
+    "soil_bulk_density_30cm_mean",
+    "cams_fot_propane_above75th_percentile",
+    "eng2_black_carbon_share",
+    "era5_leaf_area_index_high_vegetation",
+    "eng_wetland_flood_risk",
+    "prism_tdmean_min",
+    "eng2_impervious_heat_index",
+    "cams_fot_propane_above_90th_percentile",
+    "ghm_p10",
+    "ghm_max"
+   ],
+   "25": [
+    "cams_fot_formaldehyde_above75th_percentile",
+    "eng_night_cooling_eff",
+    "ghm_p90",
+    "cams_fot_formaldehyde_above_90th_percentile",
+    "soil_bulk_density_30cm_p90",
+    "soil_bulk_density_30cm_mean",
+    "cams_fot_propane_above75th_percentile",
+    "eng2_black_carbon_share",
+    "era5_leaf_area_index_high_vegetation",
+    "eng_wetland_flood_risk",
+    "prism_tdmean_min",
+    "eng2_impervious_heat_index",
+    "cams_fot_propane_above_90th_percentile",
+    "ghm_p10",
+    "ghm_max",
+    "ghm_min",
+    "usda_cropland_usda_forest_evergreen_pct",
+    "live_mean_horse",
+    "live_sum_horse",
+    "cams_sulphate_aerosol_mixing_ratio_x1e9_ppb",
+    "usda_cropland_usda_dev_med_pct",
+    "soil_clay_0cm_stddev",
+    "live_mean_sheep",
+    "soil_sand_0cm_mean",
+    "era5_specific_humidity"
+   ]
+  },
+  "attribution": "path dependent TreeSHAP on each refit, compared with the published interventional ranking, so the comparison is a direction check"
+ },
+ "learning_curve": {
+  "010pct": {
+   "label": "curve_010_f4",
+   "n_features": 581,
+   "r2": 0.4757712377652936,
+   "mae": 1.2738655056057968,
+   "arm": "learning_curve",
+   "county_share": 0.1,
+   "n_counties": 308,
+   "n_rows": 5236,
+   "n_folds": 4
+  },
+  "025pct": {
+   "label": "curve_025_f4",
+   "n_features": 581,
+   "r2": 0.5591233015948609,
+   "mae": 1.2010045489562962,
+   "arm": "learning_curve",
+   "county_share": 0.25,
+   "n_counties": 769,
+   "n_rows": 13073,
+   "n_folds": 4
+  },
+  "050pct": {
+   "label": "curve_050_f4",
+   "n_features": 581,
+   "r2": 0.6487516356584749,
+   "mae": 1.0701001488811193,
+   "arm": "learning_curve",
+   "county_share": 0.5,
+   "n_counties": 1538,
+   "n_rows": 26146,
+   "n_folds": 4
+  },
+  "075pct": {
+   "label": "curve_075_f4",
+   "n_features": 581,
+   "r2": 0.636893254560247,
+   "mae": 1.0672462938884446,
+   "arm": "learning_curve",
+   "county_share": 0.75,
+   "n_counties": 2308,
+   "n_rows": 39236,
+   "n_folds": 4
+  },
+  "100pct": {
+   "label": "curve_100_f4",
+   "n_features": 581,
+   "r2": 0.6604608740518363,
+   "mae": 1.0444092727815038,
+   "arm": "learning_curve",
+   "county_share": 1.0,
+   "n_counties": 3077,
+   "n_rows": 52309,
+   "n_folds": 4
+  },
+  "slope_r2_per_log_row": 0.08192279388480556,
+  "last_step_r2": 0.023567619491589253,
+  "n_folds": 4,
+  "note": "Fitted at 4 folds, not the paper's 8. Read for shape only."
+ }
+}

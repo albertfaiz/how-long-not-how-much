@@ -1,0 +1,46 @@
+\begin{table}[H]
+\caption{Master attribution matrix. Summed attribution rewards a group for having many variables; attribution per variable does not, and the two orderings differ. Best rank is the position of the group's leading variable in that study's full ranking (581 variables in Study A, 782 in Study B). Values are mean absolute interventional SHAP in years of life expectancy.}
+\label{tab:attribution}
+\begin{adjustwidth}{-\extralength}{0cm}
+\begin{tabularx}{\fulllength}{lrrrrrrrrrr}
+\toprule
+ & \multicolumn{5}{c}{\textbf{Study A (satellite only)}} & \multicolumn{5}{c}{\textbf{Study B (satellite + SDOH)}} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-11}
+\textbf{Physical group} & $n$ & Sum & Per var. & \% & Rank & $n$ & Sum & Per var. & \% & Rank \\
+\midrule
+Air quality and composition & 85 & 1.221 & 0.0144 & 24.7 & 1.0 & 84 & 0.454 & 0.0054 & 9.4 & 6 \\
+Soil and terrain & 65 & 1.175 & 0.0181 & 23.8 & 5.0 & 70 & 0.440 & 0.0063 & 9.1 & 24 \\
+Agriculture and livestock & 133 & 0.694 & 0.0052 & 14.0 & 17.0 & 134 & 0.458 & 0.0034 & 9.5 & 15 \\
+Built environment & 12 & 0.392 & 0.0327 & 7.9 & 3.0 & 12 & 0.038 & 0.0032 & 0.8 & 87 \\
+Vegetation & 56 & 0.373 & 0.0067 & 7.6 & 9.0 & 56 & 0.090 & 0.0016 & 1.9 & 71 \\
+Nocturnal thermal & 22 & 0.297 & 0.0135 & 6.0 & 2.0 & 22 & 0.044 & 0.0020 & 0.9 & 125 \\
+Other & 61 & 0.253 & 0.0042 & 5.1 & 10.0 & 64 & 0.069 & 0.0011 & 1.4 & 47 \\
+Heat and temperature & 48 & 0.208 & 0.0043 & 4.2 & 12.0 & 44 & 0.117 & 0.0027 & 2.4 & 27 \\
+Atmospheric moisture & 21 & 0.151 & 0.0072 & 3.1 & 11.0 & 21 & 0.191 & 0.0091 & 4.0 & 13 \\
+Water and hydrology & 27 & 0.072 & 0.0026 & 1.4 & 130.0 & 27 & 0.016 & 0.0006 & 0.3 & 172 \\
+Evaporative demand & 29 & 0.060 & 0.0021 & 1.2 & 107.0 & 29 & 0.008 & 0.0003 & 0.2 & 372 \\
+Precipitation & 14 & 0.023 & 0.0016 & 0.5 & 182.0 & 14 & 0.004 & 0.0003 & 0.1 & 292 \\
+Drought & 7 & 0.021 & 0.0030 & 0.4 & 158.0 & 6 & 0.001 & 0.0001 & 0.0 & 546 \\
+Wind & 1 & 0.005 & 0.0048 & 0.1 & 197.0 & 1 & 0.000 & 0.0001 & 0.0 & 662 \\
+Socioeconomic (SDOH) & -- & -- & -- & -- & nan & 198 & 2.894 & 0.0146 & 60.0 & 1 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}
+
+% Leading variable per group:
+%   Air quality and composition: A = Formaldehyde: time above 75th percentile | B = Formaldehyde: time above 75th percentile
+%   Soil and terrain: A = Soil bulk density 30cm (90th pct) | B = Soil bulk density 30cm (mean)
+%   Agriculture and livestock: A = Land cover: forest evergreen (share) | B = Livestock density: pig
+%   Built environment: A = Human modification (90th percentile) | B = Night-time lights (10th pct)
+%   Vegetation: A = Leaf area index, tall vegetation | B = Leaf area index, tall vegetation
+%   Nocturnal thermal: A = Night-time cooling efficiency | B = Night surface temperature 1km (10th pct)
+%   Other: A = Wetland flood-risk index | B = ERA5 fot temperature below 10th percentile
+%   Heat and temperature: A = Impervious-surface heat index (v2) | B = Impervious-surface heat index
+%   Atmospheric moisture: A = Dew point (annual minimum) | B = Specific humidity (ERA5)
+%   Water and hydrology: A = Permanent surface water | B = Snow water equivalent (variability)
+%   Evaporative demand: A = Vapour-pressure deficit (min) (maximum) | B = Potential evapotranspiration (variability)
+%   Precipitation: A = Winter climate ppt sum (minimum) | B = Winter climate ppt sum (minimum)
+%   Drought: A = Drought severity best month (maximum) | B = Drought severity best month (mean)
+%   Wind: A = Wind speed at 10 m | B = Wind speed at 10 m
+%   Socioeconomic (SDOH): A =  | B = Households on food assistance, below poverty (%)

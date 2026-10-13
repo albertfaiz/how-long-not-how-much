@@ -1,0 +1,36 @@
+sid,tier,status,new,title,attack,command,minutes
+S01,0,done,0,Inputs present and readable,You are reporting numbers from files nobody can find.,python3 01_check_environment_and_inputs.py,3
+S02,0,done,0,Outcome distribution and the error brackets,An R-squared of 0.67 on a variable with a narrow range is not an achievement.,python3 02_outcome_distribution_and_error_brackets.py,1
+S03,0,done,0,Census of every multi-statistic field,You found one striking pair and wrote a paper about it.,python3 12_summary_statistic_census_and_matched_refit.py,1
+S04,0,done,0,Learner and hyperparameter table,You do not say what model this is or why it was chosen.,python3 07_learner_and_hyperparameter_table.py,1
+S05,0,done,0,The two night-cooling constructions are not the same column,Your two night-cooling variables are the same thing and you have counted it twice.,python3 11_verify_nce_identity_by_search.py,3
+S06,0,done,0,Frozen panels: what the model actually saw,Nobody can reproduce this because nobody knows which columns survived your filters.,python3 16_export_frozen_panels_and_gate_audit.py --skip-audit,4
+S07,0,done,0,The formaldehyde pair before any model is fitted,"Everything you say about that pair is a property of your model, not of the air.",python3 17_formaldehyde_pair_anatomy.py --only none,4
+S08,1,done,0,"The located crossings, west and east",Your thresholds are an average over two different climates and mean nothing in either.,python3 14_information_theory_and_regional_invariance.py --skip-mi,2
+S09,0,done,1,Does the duration advantage follow atmospheric lifetime?,"You split twenty species at two days, which you chose, and got one-sided p = 0.006. Choose three days and tell me again.",python3 25_lifetime_literature_test.py,2
+S11,0,done,1,Where the admission rules were placed,Ninety-five per cent coverage and a cut at 0.98 are arbitrary and were chosen after you saw the result.,python3 24_admission_rule_sensitivity.py,8
+S12,1,done,0,Five reference models,You have not shown that any of this beats a regression.,python3 03_baselines_five_reference_models.py,30
+S13,1,done,0,Attribution surface for the threshold candidates,You cannot locate a threshold without showing the curve.,python3 05_recompute_shap_for_threshold_candidates.py,40
+S14,1,done,0,"Turning points, their intervals, and the gate swept","Your stability gate is a rule you invented, placed where it gives the answer you wanted.",python3 06_bootstrap_turning_points_and_gate.py,45
+S15,1,done,0,Whole-state holdout,County-grouped folds still let the model learn the state it is predicting.,python3 13_spatial_holdout_and_attribution_structure.py --only holdout,35
+S16,1,done,0,Residual spatial structure,"Your residuals are spatially autocorrelated, so your effective sample size is far smaller than three thousand counties.",python3 13_spatial_holdout_and_attribution_structure.py --only moran,6
+S17,1,done,0,Collinearity and interaction among the leading variables,Eight of your fifteen leading variables have a variance inflation factor above ten.,"python3 13_spatial_holdout_and_attribution_structure.py --only vif,interact",25
+S18,1,done,0,Mutual information census: the same question with no model,Your central finding is a TreeSHAP artefact.,python3 14_information_theory_and_regional_invariance.py,18
+S19,1,done,1,Rank stability and the learning curve,Your ranking is one draw. Resample and the top ten will be a different top ten.,python3 26_rank_stability_and_learning_curve.py,40
+S20,1,done,1,Temporal validation: year holdout and forward chaining,Every fold of yours contains the year it predicts. This is interpolation in time dressed as prediction.,python3 19_temporal_validation.py,50
+S21,1,done,1,Null calibration of the model's skill,"With 581 columns and repeated counties, 0.67 may be what your protocol returns on noise.",python3 20_null_calibration_and_multiplicity.py --only skill,45
+S22,1,done,1,Does the crossing estimator find thresholds in noise?,A smoothing spline will cross zero somewhere in anything. Your eleven thresholds are an artefact of the estimator.,python3 20_null_calibration_and_multiplicity.py --only crossing,30
+S23,1,done,1,Null for the census count,Thirty-eight of forty-seven sounds impressive until you know what the null is.,python3 20_null_calibration_and_multiplicity.py --only census,10
+S24,1,done,1,The census under five attribution estimators,Interventional TreeSHAP with a 500-row background is one choice among several and the result is a property of that choice.,python3 21_attribution_estimator_invariance.py,60
+S25,1,done,1,"Satellite only, environment only, everything admitted","This is a socioeconomic model with satellite decoration, and you have not separated the two.",python3 22_modality_arms.py,55
+S26,1,done,1,Leave-one-state-out jackknife of the census count,Drop California and your 38 of 47 is 20 of 47.,python3 23_influence_and_perturbation.py --only jackknife,35
+S27,1,done,1,Influence: drop the counties the model relies on most,A hundred unusual counties are driving this.,python3 23_influence_and_perturbation.py --only influence,30
+S28,1,done,1,Predictor perturbation and the located crossings,"These are reanalysis fields with their own error, and you report thresholds to three decimals.",python3 23_influence_and_perturbation.py --only perturb,25
+S29,1,done,0,What the admission gate is worth,Your gate is a filter you tuned until the score looked right.,python3 16_export_frozen_panels_and_gate_audit.py --audit-only,90
+S30,1,missing,0,Formaldehyde pair: removal and inheritance,Two columns correlated at 0.99 are one column. Drop either and nothing happens.,python3 17_formaldehyde_pair_anatomy.py --only removal,70
+S31,1,blocked,0,The band test,"If the pair is doing something a difference captures, say so and use the difference.",python3 17_formaldehyde_pair_anatomy.py --only band,45
+S32,1,missing,0,Every other pair above the correlation cut,You have one anecdote and a mechanism invented to fit it.,python3 17_formaldehyde_pair_anatomy.py --only peers,80
+S33,2,done,0,Matched refit of the summary-statistic arms,A ranking is not a prediction. Fit both and show me.,python3 12_summary_statistic_census_and_matched_refit.py --refit,240
+S34,2,done,0,Drop one night-cooling construction and refit,You kept both halves of a correlated pair. Show the cost of keeping only one.,python3 04_refit_drop_one_nce_construction.py,480
+S35,2,missing,0,Reproducibility by rerunning,Gradient boosting is not deterministic and you have not shown this reproduces.,python3 10_verify_reproducibility_by_rerunning.py,120
+S10,2,done,1,Multiplicity over the declared family,You ran a great many tests and reported the ones that worked.,python3 20_null_calibration_and_multiplicity.py --only fdr,3

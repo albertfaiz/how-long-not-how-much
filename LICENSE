@@ -1,6 +1,7 @@
 MIT License
 
-Copyright (c) 2026 Faiz Ahmad, David J. Lary, Shisir Ruwali, Samyak Shrestha, Adam Aker, John Waczak, Prabuddha Madushanka
+Copyright (c) 2026 Faiz Ahmad, David J. Lary, Shisir Ruwali, Samyak Shrestha,
+Adam Aker, John Waczak, Md Shaid Hasan Niloy, Rittik Patra and Tunde Dare Awoyinka
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,10 +20,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Figures, tables, and derived data in this repository are released under
-Creative Commons Attribution 4.0 International (CC BY 4.0).
-Input datasets remain under the licenses of their original providers, listed
-in README.md.

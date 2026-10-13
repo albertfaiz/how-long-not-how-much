@@ -1,0 +1,7 @@
+key,label,note,r2,mae
+naive_mean,Training-fold mean,no features,-0.0004745561314321023,1.9605693783872757
+naive_year_mean,Training-fold mean for that year,no features,0.019566358747894697,1.9410837295040007
+ntl_only,Night-time lights only,7 features,0.10246921040125234,1.8335096724454492
+coords_only,"Latitude, longitude, year","3 features, not observations",0.5539100309705228,1.2010452769715374
+knn4_spatial,Four-nearest-neighbour interpolation,needs the outcome next door,0.642484148274785,1.070272603755368
+satellite_model,Satellite model,581 features,0.666147355295764,1.03286671880572

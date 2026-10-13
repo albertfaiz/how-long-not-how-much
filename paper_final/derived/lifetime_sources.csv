@@ -1,0 +1,14 @@
+species,lifetime_days,order_of_magnitude,reference,in_analysis
+hydroxyl radical,1e-05,"seconds. Lifetime set by reaction with ambient CO, CH4 and VOCs.","Lelieveld, Gromov, Pozzer and Taraborrelli, Global tropospheric hydroxyl distribution, budget and reactivity, Atmos. Chem. Phys. 16:12477, 2016",True
+isoprene,0.1,hours. Dominated by OH addition during daylight.,"Atkinson and Arey, Atmospheric degradation of volatile organic compounds, Chem. Rev. 103:4605, 2003",True
+formaldehyde,0.2,"hours. Photolysis and OH reaction, both fast in daylight.","Atkinson and Arey, Chem. Rev. 103:4605, 2003; Seinfeld and Pandis, Atmospheric Chemistry and Physics, 3rd edition, 2016",True
+nitrogen monoxide,0.2,minutes to hours in the photostationary state with NO2 and O3; the value here is for the NOx family rather than for NO alone.,"Seinfeld and Pandis, Atmospheric Chemistry and Physics, 3rd edition, 2016",True
+nitrogen dioxide,0.25,"hours. OH reaction to HNO3 in daylight, heterogeneous loss at night.","Seinfeld and Pandis, Atmospheric Chemistry and Physics, 3rd edition, 2016",True
+hydrogen peroxide,1.0,"about a day. Photolysis, OH reaction and efficient wet removal.","Finlayson-Pitts and Pitts, Chemistry of the Upper and Lower Atmosphere, 2000",True
+sulphur dioxide,2.0,one to two days in the boundary layer. Oxidation to sulphate plus dry and wet deposition.,"Seinfeld and Pandis, Atmospheric Chemistry and Physics, 3rd edition, 2016",True
+nitric acid,5.0,days. Removal dominated by wet and dry deposition rather than chemistry.,"Seinfeld and Pandis, Atmospheric Chemistry and Physics, 3rd edition, 2016",True
+pm2 5,7.0,"about a week for submicron aerosol in the lower troposphere, set by wet removal.","Textor et al., Analysis and quantification of the diversities of aerosol life cycles within AeroCom, Atmos. Chem. Phys. 6:1777, 2006",True
+propane,11.0,about ten days against OH at typical mid-latitude oxidant levels.,"Atkinson and Arey, Chem. Rev. 103:4605, 2003",True
+ozone,22.0,"weeks in the free troposphere, much shorter in a polluted boundary layer. The value here is the tropospheric burden lifetime.","Young et al., Pre-industrial to end 21st century projections of tropospheric ozone, Atmos. Chem. Phys. 13:2063, 2013",True
+peroxyacetyl nitrate,30.0,"weeks in the cold free troposphere, hours in a warm boundary layer; the value here is the reservoir lifetime that makes PAN a long-range NOx carrier.","Fischer et al., Atmospheric peroxyacetyl nitrate (PAN): a global budget and source attribution, Atmos. Chem. Phys. 14:2679, 2014",True
+ethane,60.0,about two months against OH. The longest-lived species here.,"Atkinson and Arey, Chem. Rev. 103:4605, 2003",True

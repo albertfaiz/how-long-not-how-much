@@ -1,0 +1,58 @@
+{
+ "script": "/sessions/rcw-015fvw8vykvncjwj5kajtost/mnt/satellite_sdoh/submission_v9/paper4_merged_sensors/analysis/figures_build_all.py",
+ "written_utc": "2026-10-04 14:20:30Z",
+ "root": "/sessions/rcw-015fvw8vykvncjwj5kajtost/mnt/satellite_sdoh",
+ "settings": {
+  "SEED": 0,
+  "N_FOLDS": 8,
+  "SHAP_SAMPLE": 20000,
+  "SHAP_BACKGROUND": 500,
+  "N_BOOT": 5000,
+  "N_BINS": 45,
+  "GATE_MIN_FOUND": 0.6,
+  "GATE_MAX_WIDTH": 0.4,
+  "XGB_PARAMS": {
+   "n_estimators": 1200,
+   "learning_rate": 0.03,
+   "max_depth": 8,
+   "min_child_weight": 10,
+   "subsample": 0.8,
+   "colsample_bytree": 0.7,
+   "reg_lambda": 1.0,
+   "random_state": 0,
+   "tree_method": "hist",
+   "enable_categorical": false
+  },
+  "threads": 4
+ },
+ "versions": {
+  "python": "3.10.12",
+  "platform": "Linux aarch64",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2",
+  "xgboost": "3.2.0",
+  "catboost": "absent",
+  "shap": "0.49.1",
+  "pyarrow": "25.0.1",
+  "matplotlib": "3.10.9",
+  "joblib": "1.6.0"
+ },
+ "git": "none",
+ "inputs": {},
+ "outputs": {
+  "P1_data_provenance.png": "d62e469c2c2e16ef",
+  "F2_performance_and_baselines.png": "cf57ac0c7e6cacf9",
+  "M1_A_satellite_observed_vs_predicted_2019.png": "a116b04dc04409eb",
+  "P1F2_same_molecule.png": "cc25167cd6d64977",
+  "F5_duration_and_lifetime.png": "d6116e470a184648",
+  "P1F5_thermal_analogue.png": "88fcaa848c467588",
+  "P1F6_drop_experiment.png": "9a1f76500a9108f1",
+  "P1F10_statistic_census.png": "e11bf6f80cd46c92",
+  "P2F2_stability_gate.png": "968a83ad957235f8",
+  "P2F3_triplet.png": "9de8f01d3c8ba53e",
+  "M3S_failure_satellite.png": "44094d9022fdd024"
+ },
+ "notes": "built: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11']"
+}

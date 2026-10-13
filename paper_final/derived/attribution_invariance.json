@@ -1,0 +1,259 @@
+{
+ "n_pairs": 47,
+ "n_pair_columns": 94,
+ "estimators": {
+  "interventional_published": {
+   "label": "interventional SHAP, published",
+   "kind": "conditional",
+   "n_comparable": 47,
+   "noncentral_wins": 38,
+   "share": 0.8085106382978723,
+   "sign_test_p": 1.2452015312192088e-05
+  },
+  "path_dependent": {
+   "label": "TreeSHAP, path dependent",
+   "kind": "conditional",
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "share": 0.7446808510638298,
+   "sign_test_p": 0.0005442691032371272,
+   "n_rows_attributed": 6000
+  },
+  "total_gain": {
+   "label": "total split gain",
+   "kind": "not an attribution",
+   "n_comparable": 47,
+   "noncentral_wins": 32,
+   "share": 0.6808510638297872,
+   "sign_test_p": 0.00931191830750322
+  },
+  "mutual_information": {
+   "label": "mutual information",
+   "kind": "marginal",
+   "n_comparable": 47,
+   "noncentral_wins": 12,
+   "share": 0.2553191489361702,
+   "sign_test_p": 0.9998269994298425,
+   "source": "information_theory_census.csv, script 14"
+  },
+  "permutation_second_learner": {
+   "label": "permutation, second learner",
+   "kind": "conditional, loss based",
+   "n_comparable": 47,
+   "noncentral_wins": 36,
+   "share": 0.7659574468085106,
+   "sign_test_p": 0.0001730005701574555,
+   "heldout_r2": 0.6696813634603758,
+   "n_heldout": 12000,
+   "repeats": 5,
+   "learner": "sklearn HistGradientBoostingRegressor"
+  },
+  "permutation_published_in_sample": {
+   "label": "permutation, published model",
+   "kind": "in sample",
+   "n_comparable": 47,
+   "noncentral_wins": 37,
+   "share": 0.7872340425531915,
+   "sign_test_p": 4.924439246423162e-05,
+   "r2_on_those_rows": 0.9966214702984219,
+   "n_rows": 12000,
+   "repeats": 5,
+   "median_repeat_sd": 4.197057693362698e-06,
+   "warning": "The published model was fitted on every row, so these rows are not held out and this importance is in sample. Kept for comparison and excluded from the conditional verdict."
+  },
+  "permutation_production_heldout": {
+   "label": "permutation, production learner",
+   "kind": "conditional, loss based",
+   "n_comparable": 47,
+   "noncentral_wins": 30,
+   "share": 0.6382978723404256,
+   "sign_test_p": 0.03947034684074424,
+   "heldout_r2": 0.6715206908787649,
+   "n_heldout": 12000,
+   "repeats": 5,
+   "median_repeat_sd": 3.307033583147046e-05,
+   "learner": "xgboost, production settings, refitted on the training split"
+  },
+  "oof_path_dependent": {
+   "label": "TreeSHAP, out of fold",
+   "kind": "conditional",
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "share": 0.7446808510638298,
+   "sign_test_p": 0.0005442691032371272,
+   "n_rows_attributed": 52309,
+   "n_folds": 8,
+   "attribution": "path dependent TreeSHAP, per fold, on held-out rows only"
+  },
+  "interventional_recomputed": {
+   "label": "interventional SHAP, here",
+   "kind": "conditional",
+   "n_comparable": 47,
+   "noncentral_wins": 33,
+   "share": 0.7021276595744681,
+   "sign_test_p": 0.003971363254741789,
+   "n_rows_attributed": 6000,
+   "background": 500
+  }
+ },
+ "agreement": {
+  "interventional_published|interventional_recomputed": {
+   "n": 47,
+   "agree_share": 0.8936170212765957
+  },
+  "interventional_published|oof_path_dependent": {
+   "n": 47,
+   "agree_share": 0.9361702127659575
+  },
+  "interventional_published|path_dependent": {
+   "n": 47,
+   "agree_share": 0.8936170212765957
+  },
+  "interventional_published|permutation_production_heldout": {
+   "n": 47,
+   "agree_share": 0.7021276595744681
+  },
+  "interventional_published|permutation_published_in_sample": {
+   "n": 47,
+   "agree_share": 0.851063829787234
+  },
+  "interventional_published|permutation_second_learner": {
+   "n": 47,
+   "agree_share": 0.8297872340425532
+  },
+  "interventional_published|total_gain": {
+   "n": 47,
+   "agree_share": 0.7872340425531915
+  },
+  "interventional_recomputed|oof_path_dependent": {
+   "n": 47,
+   "agree_share": 0.9148936170212766
+  },
+  "interventional_recomputed|path_dependent": {
+   "n": 47,
+   "agree_share": 0.9148936170212766
+  },
+  "interventional_recomputed|permutation_production_heldout": {
+   "n": 47,
+   "agree_share": 0.723404255319149
+  },
+  "interventional_recomputed|permutation_published_in_sample": {
+   "n": 47,
+   "agree_share": 0.8297872340425532
+  },
+  "interventional_recomputed|permutation_second_learner": {
+   "n": 47,
+   "agree_share": 0.8085106382978723
+  },
+  "interventional_recomputed|total_gain": {
+   "n": 47,
+   "agree_share": 0.8085106382978723
+  },
+  "oof_path_dependent|path_dependent": {
+   "n": 47,
+   "agree_share": 0.8723404255319149
+  },
+  "oof_path_dependent|permutation_production_heldout": {
+   "n": 47,
+   "agree_share": 0.723404255319149
+  },
+  "oof_path_dependent|permutation_published_in_sample": {
+   "n": 47,
+   "agree_share": 0.8723404255319149
+  },
+  "oof_path_dependent|permutation_second_learner": {
+   "n": 47,
+   "agree_share": 0.8085106382978723
+  },
+  "oof_path_dependent|total_gain": {
+   "n": 47,
+   "agree_share": 0.7659574468085106
+  },
+  "path_dependent|permutation_production_heldout": {
+   "n": 47,
+   "agree_share": 0.6382978723404256
+  },
+  "path_dependent|permutation_published_in_sample": {
+   "n": 47,
+   "agree_share": 0.8723404255319149
+  },
+  "path_dependent|permutation_second_learner": {
+   "n": 47,
+   "agree_share": 0.8085106382978723
+  },
+  "path_dependent|total_gain": {
+   "n": 47,
+   "agree_share": 0.8936170212765957
+  },
+  "permutation_production_heldout|permutation_published_in_sample": {
+   "n": 47,
+   "agree_share": 0.6382978723404256
+  },
+  "permutation_production_heldout|permutation_second_learner": {
+   "n": 47,
+   "agree_share": 0.7446808510638298
+  },
+  "permutation_production_heldout|total_gain": {
+   "n": 47,
+   "agree_share": 0.574468085106383
+  },
+  "permutation_published_in_sample|permutation_second_learner": {
+   "n": 47,
+   "agree_share": 0.8085106382978723
+  },
+  "permutation_published_in_sample|total_gain": {
+   "n": 47,
+   "agree_share": 0.8085106382978723
+  },
+  "permutation_second_learner|total_gain": {
+   "n": 47,
+   "agree_share": 0.7446808510638298
+  }
+ },
+ "not_run": {},
+ "instruments_in_this_call": [
+  "interventional_published",
+  "interventional_recomputed",
+  "oof_path_dependent",
+  "path_dependent",
+  "permutation_production_heldout",
+  "permutation_published_in_sample",
+  "permutation_second_learner",
+  "total_gain"
+ ],
+ "verdict": {
+  "decomposition": [
+   "interventional_published",
+   "interventional_recomputed",
+   "oof_path_dependent",
+   "path_dependent"
+  ],
+  "decomposition_significant": [
+   "interventional_published",
+   "interventional_recomputed",
+   "oof_path_dependent",
+   "path_dependent"
+  ],
+  "loss_based": [
+   "permutation_production_heldout",
+   "permutation_published_in_sample",
+   "permutation_second_learner"
+  ],
+  "out_of_fold": {
+   "n": 47,
+   "wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  "share_min": 0.7021276595744681,
+  "share_max": 0.8085106382978723,
+  "reading": "Decomposition instruments agree, including out of fold. Loss-based importance disagrees and is deflated for near-duplicate columns, which is every pair here. Marginal mutual information points the other way and is a different quantity."
+ },
+ "smoke_test_max_fields": 0,
+ "settings": {
+  "PERM_ROWS": 12000,
+  "PERM_REPEATS": 5,
+  "SHAP_ROWS": 6000,
+  "HELDOUT_FRACTION": 0.25
+ },
+ "note": "The same census question asked with several attribution instruments. Conditional and marginal instruments measure different quantities and are labelled."
+}

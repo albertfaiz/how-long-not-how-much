@@ -1,0 +1,50 @@
+{
+ "script": "34_library_version_sensitivity.py",
+ "written_utc": "2026-10-13 04:55:09Z",
+ "root": "/sessions/rcw-015fvw8vykvncjwj5kajtost/mnt/satellite_sdoh",
+ "settings": {
+  "SEED": 0,
+  "N_FOLDS": 8,
+  "SHAP_SAMPLE": 20000,
+  "SHAP_BACKGROUND": 500,
+  "N_BOOT": 5000,
+  "N_BINS": 45,
+  "GATE_MIN_FOUND": 0.6,
+  "GATE_MAX_WIDTH": 0.4,
+  "XGB_PARAMS": {
+   "n_estimators": 1200,
+   "learning_rate": 0.03,
+   "max_depth": 8,
+   "min_child_weight": 10,
+   "subsample": 0.8,
+   "colsample_bytree": 0.7,
+   "reg_lambda": 1.0,
+   "random_state": 0,
+   "tree_method": "hist",
+   "enable_categorical": false
+  },
+  "threads": 4
+ },
+ "versions": {
+  "python": "3.10.12",
+  "platform": "Linux aarch64",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2",
+  "xgboost": "3.2.0",
+  "catboost": "absent",
+  "shap": "0.49.1",
+  "pyarrow": "25.0.1",
+  "matplotlib": "3.10.9",
+  "joblib": "1.6.0"
+ },
+ "git": "none",
+ "inputs": {
+  "spatial_holdout.json": "72b4070e63d9f01f"
+ },
+ "outputs": {
+  "library_version_sensitivity.json": "b41bb53581f8d9fe"
+ },
+ "notes": ""
+}

@@ -1,0 +1,91 @@
+{
+ "arms": {
+  "worst_residual_1pct": {
+   "label": "influence_worst_residual_1pct",
+   "n_features": 581,
+   "r2": 0.7087377245184876,
+   "mae": 0.9780369387419854,
+   "arm": "worst_residual_1pct",
+   "why": "counties with the largest mean absolute out-of-fold residual",
+   "n_counties_dropped": 31,
+   "n_rows_dropped": 527
+  },
+  "extreme_outcome_1pct": {
+   "label": "influence_extreme_outcome_1pct",
+   "n_features": 581,
+   "r2": 0.6854581757449836,
+   "mae": 0.9895965615560742,
+   "arm": "extreme_outcome_1pct",
+   "why": "counties in the lowest and highest tails of mean life expectancy",
+   "n_counties_dropped": 30,
+   "n_rows_dropped": 510
+  },
+  "worst_residual_5pct": {
+   "label": "influence_worst_residual_5pct",
+   "n_features": 581,
+   "r2": 0.7614912211961333,
+   "mae": 0.8796292776272521,
+   "arm": "worst_residual_5pct",
+   "why": "counties with the largest mean absolute out-of-fold residual",
+   "n_counties_dropped": 154,
+   "n_rows_dropped": 2618
+  },
+  "extreme_outcome_5pct": {
+   "label": "influence_extreme_outcome_5pct",
+   "n_features": 581,
+   "r2": 0.6598028958222104,
+   "mae": 0.9504283057438064,
+   "arm": "extreme_outcome_5pct",
+   "why": "counties in the lowest and highest tails of mean life expectancy",
+   "n_counties_dropped": 154,
+   "n_rows_dropped": 2618
+  }
+ },
+ "topk_overlap": {
+  "arm": "worst_residual_5pct",
+  "topk": 15,
+  "shared": 14,
+  "published_top": [
+   "cams_fot_formaldehyde_above75th_percentile",
+   "eng_night_cooling_eff",
+   "ghm_p90",
+   "cams_fot_formaldehyde_above_90th_percentile",
+   "soil_bulk_density_30cm_p90",
+   "soil_bulk_density_30cm_mean",
+   "cams_fot_propane_above75th_percentile",
+   "eng2_black_carbon_share",
+   "era5_leaf_area_index_high_vegetation",
+   "eng_wetland_flood_risk",
+   "prism_tdmean_min",
+   "eng2_impervious_heat_index",
+   "cams_fot_propane_above_90th_percentile",
+   "ghm_p10",
+   "ghm_max"
+  ],
+  "refit_top": [
+   "eng_night_cooling_eff",
+   "cams_fot_formaldehyde_above75th_percentile",
+   "cams_fot_formaldehyde_above_90th_percentile",
+   "soil_bulk_density_30cm_p90",
+   "ghm_p90",
+   "soil_bulk_density_30cm_mean",
+   "eng_wetland_flood_risk",
+   "cams_fot_propane_above75th_percentile",
+   "eng2_black_carbon_share",
+   "cams_fot_propane_above_90th_percentile",
+   "era5_leaf_area_index_high_vegetation",
+   "eng2_impervious_heat_index",
+   "prism_tdmean_min",
+   "ntl_harmonized_mean",
+   "ghm_max"
+  ],
+  "attribution": "path dependent TreeSHAP on the refit, so the comparison with the published interventional ranking crosses two estimators and is a direction check, not a value check"
+ },
+ "drop_shares": [
+  0.01,
+  0.05
+ ],
+ "n_folds": 8,
+ "smoke_test": false,
+ "note": "Dropping the hardest counties raises the score by construction. The ranking overlap is the test."
+}

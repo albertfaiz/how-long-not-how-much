@@ -1,0 +1,35 @@
+{
+ "full": {
+  "label": "null_skill_full_seed20",
+  "n_features": 581,
+  "r2": -0.043411641947694424,
+  "mae": 2.001585635822659
+ },
+ "within_county": {
+  "label": "null_skill_within_county_seed20",
+  "n_features": 581,
+  "r2": 0.6321648591231765,
+  "mae": 1.092440926759856
+ },
+ "between_county": {
+  "label": "null_skill_between_county_seed20",
+  "n_features": 581,
+  "r2": -0.06551461320697727,
+  "mae": 2.022845011663833
+ },
+ "note": "Permuted outcomes. These are null distributions and are not results about life expectancy.",
+ "n_folds": 8,
+ "seed_offset": 20,
+ "published_for_comparison": {
+  "satellite_model": {
+   "r2": 0.666147355295764,
+   "mae": 1.03286671880572,
+   "n_features": 581
+  },
+  "naive_mean": {
+   "r2": -0.0004745561314321023,
+   "mae": 1.9605693783872757,
+   "n_features": 0
+  }
+ }
+}

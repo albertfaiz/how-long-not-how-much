@@ -1,0 +1,318 @@
+{
+ "leave_one_year_out": {
+  "n_years": 17,
+  "pooled": {
+   "r2": 0.974350314246794,
+   "mae": 0.29835911533881787,
+   "n": 52309
+  },
+  "r2_mean": 0.9736655941747836,
+  "r2_min": 0.9477056219912386,
+  "r2_max": 0.986689515898287,
+  "worst_year": 2003,
+  "folds": [
+   {
+    "r2": 0.9477056219912386,
+    "mae": 0.4216329113960062,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2003,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9800064326328585,
+    "mae": 0.2410059826880736,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2004,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9738455130691186,
+    "mae": 0.2767183400121501,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2005,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9690489991639676,
+    "mae": 0.2930325454047557,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2006,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9683151075119958,
+    "mae": 0.3194705887817481,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2007,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9632359709325129,
+    "mae": 0.36915129441068284,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2008,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9846789742109133,
+    "mae": 0.22444511264518632,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2009,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.978818457341309,
+    "mae": 0.266999344332087,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2010,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9844227521356456,
+    "mae": 0.22475392022447216,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2011,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9677999821773201,
+    "mae": 0.34102759366334645,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2012,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9824660273091389,
+    "mae": 0.2465674623942782,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2013,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9820996636930089,
+    "mae": 0.25745195325015796,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2014,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.986689515898287,
+    "mae": 0.22041191606545657,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2015,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9800947102659137,
+    "mae": 0.2854311880779578,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2016,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.974035675951403,
+    "mae": 0.33557615353690723,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2017,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.9768293544222718,
+    "mae": 0.3025534974072797,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2018,
+    "n_train": 49232
+   },
+   {
+    "r2": 0.952222342264415,
+    "mae": 0.4458751564693575,
+    "n": 3077,
+    "arm": "leave_one_year_out",
+    "held_out": 2019,
+    "n_train": 49232
+   }
+  ]
+ },
+ "forward_chaining": {
+  "n_steps": 14,
+  "pooled": {
+   "r2": 0.9413207984753723,
+   "mae": 0.45444352175431146,
+   "n": 43078
+  },
+  "r2_first": 0.9118183877113195,
+  "r2_last": 0.952222342264415,
+  "r2_mean": 0.9399610060498381,
+  "slope_r2_per_train_year": 0.002550764110930175,
+  "folds": [
+   {
+    "r2": 0.9118183877113195,
+    "mae": 0.5256375405147456,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2006,
+    "n_train": 9231,
+    "train_years": 3
+   },
+   {
+    "r2": 0.9405963884715399,
+    "mae": 0.44075368472795784,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2007,
+    "n_train": 12308,
+    "train_years": 4
+   },
+   {
+    "r2": 0.9304121228571987,
+    "mae": 0.4510686013703706,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2008,
+    "n_train": 15385,
+    "train_years": 5
+   },
+   {
+    "r2": 0.9258794591736068,
+    "mae": 0.5086235229436445,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2009,
+    "n_train": 18462,
+    "train_years": 6
+   },
+   {
+    "r2": 0.9416695759132527,
+    "mae": 0.44111594733535403,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2010,
+    "n_train": 21539,
+    "train_years": 7
+   },
+   {
+    "r2": 0.9371054487456383,
+    "mae": 0.44758175278154766,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2011,
+    "n_train": 24616,
+    "train_years": 8
+   },
+   {
+    "r2": 0.9269935311856423,
+    "mae": 0.5052024600912741,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2012,
+    "n_train": 27693,
+    "train_years": 9
+   },
+   {
+    "r2": 0.948265918395965,
+    "mae": 0.42282567885689926,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2013,
+    "n_train": 30770,
+    "train_years": 10
+   },
+   {
+    "r2": 0.9284180805438327,
+    "mae": 0.48636044564925685,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2014,
+    "n_train": 33847,
+    "train_years": 11
+   },
+   {
+    "r2": 0.952704371184076,
+    "mae": 0.40800439127581783,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2015,
+    "n_train": 36924,
+    "train_years": 12
+   },
+   {
+    "r2": 0.9486449735849347,
+    "mae": 0.45492285452648057,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2016,
+    "n_train": 40001,
+    "train_years": 13
+   },
+   {
+    "r2": 0.9580427754915282,
+    "mae": 0.41285324657673395,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2017,
+    "n_train": 43078,
+    "train_years": 14
+   },
+   {
+    "r2": 0.9566807091747855,
+    "mae": 0.41138402144092034,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2018,
+    "n_train": 46155,
+    "train_years": 15
+   },
+   {
+    "r2": 0.952222342264415,
+    "mae": 0.4458751564693575,
+    "n": 3077,
+    "arm": "forward_chaining",
+    "held_out": 2019,
+    "n_train": 49232,
+    "train_years": 16
+   }
+  ]
+ },
+ "era_split": {
+  "split_at": 2011.0,
+  "eras": {
+   "early": {
+    "n_rows": 20000,
+    "n_fields": 47,
+    "noncentral_wins": 10,
+    "share": 0.2127659574468085
+   },
+   "late": {
+    "n_rows": 20000,
+    "n_fields": 47,
+    "noncentral_wins": 12,
+    "share": 0.2553191489361702
+   }
+  },
+  "fisher_odds": 0.7882882882882883,
+  "fisher_p": 0.8079828459452941,
+  "share_difference": -0.04255319148936168
+ },
+ "window": [
+  2003,
+  2019
+ ],
+ "n_rows": 52309,
+ "n_features": 581
+}

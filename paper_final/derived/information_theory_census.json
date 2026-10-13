@@ -1,0 +1,11 @@
+{
+ "n_fields": 47,
+ "n_noncentral_wins_mi": 12,
+ "n_noncentral_wins_shap": 38,
+ "n_agree": 19,
+ "sign_test_p": 0.0010885382064742544,
+ "median_mi_ratio": 0.7576144800700996,
+ "mi_sample": 52309,
+ "mi_neighbours": 3,
+ "skipped": []
+}

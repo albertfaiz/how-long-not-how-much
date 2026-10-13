@@ -1,0 +1,45 @@
+{
+ "split": "median",
+ "cut_degrees_east": -90.1341227273157,
+ "estimator": {
+  "rule": "steepest",
+  "bin_statistic": "median",
+  "n_bins": 45,
+  "trim_pct": [
+   1,
+   99
+  ]
+ },
+ "results": {
+  "prism_tdmean_min": {
+   "national": 5.534653134327244,
+   "west": 5.672920663799318,
+   "east": 5.491848751063524,
+   "n_west": 9993,
+   "n_east": 10002,
+   "delta": 0.18107191273579382,
+   "delta_pct_of_range": 0.6676498457539902,
+   "span": 27.120790020000037
+  },
+  "eng2_wetbulb_night": {
+   "national": 7.421609347511417,
+   "west": 7.533879327575066,
+   "east": 7.306325724984334,
+   "n_west": 9993,
+   "n_east": 10002,
+   "delta": 0.22755360259073232,
+   "delta_pct_of_range": 1.0646445512952836,
+   "span": 21.373669016000004
+  },
+  "eng_night_cooling_eff": {
+   "national": 0.6103376225838568,
+   "west": 0.60686878754386,
+   "east": 0.6126759161118012,
+   "n_west": 9993,
+   "n_east": 10002,
+   "delta": 0.005807128567941189,
+   "delta_pct_of_range": 0.6431883968766854,
+   "span": 0.9028658782000003
+  }
+ }
+}

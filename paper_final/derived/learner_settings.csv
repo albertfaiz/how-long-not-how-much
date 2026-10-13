@@ -1,0 +1,5 @@
+learner,settings,r2,mae,rmse,seconds,failed,winner
+XGBoost,n_estimators=1500; max_depth=8; learning_rate=0.01383; subsample=0.7312; colsample_bytree=0.7116; min_child_weight=9; reg_alpha=0.2538; reg_lambda=0.6797,0.6661,1.0329,1.4191,60.0,,True
+CatBoost,iterations=2000; depth=8; learning_rate=0.05118; l2_leaf_reg=2.797; random_strength=0.114,0.6601,1.0455,1.4319,522.0,,False
+Random forest,n_estimators=1000; max_depth=25; min_samples_leaf=2; max_features=0.3,,,,,,False
+LightGBM,n_estimators=1500; learning_rate=0.02; subsample=0.8; colsample_bytree=0.8; num_leaves=127; reg_lambda=1,,,,,No OpenCL device found (Skipping),False

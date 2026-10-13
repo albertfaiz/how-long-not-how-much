@@ -1,0 +1,92 @@
+% tables_generated.tex -- written by analysis/build_paper_constants.py
+% Do not edit by hand.
+
+\begin{table}[H]
+\caption{Every candidate turning point. The interval is the 2.5th to 97.5th percentile of the located value over the bootstrap resamples, and its width is given as a share of the variable's observed range. A candidate is stable when a crossing is found in at least 60\% of resamples, the width is below 40\% and the full-sample value lies inside the interval. A crossing was found in every resample for every candidate.\label{tab:turning}}
+\centering\footnotesize
+\begin{tabular}{@{}llrrrl@{}}
+\toprule
+Variable & Unit & Value & 95\% interval & Width (\%) & Stable \\
+\midrule
+Minimum dew point & $^{\circ}$C & 5.54 & 5.51 to 5.60 & 0.3 & yes \\
+NCE, tail form & dimensionless & 0.611 & 0.608 to 0.613 & 0.5 & yes \\
+Formaldehyde, time above 75th percentile & \% of year & 27.54 & 27.43 to 27.78 & 0.7 & yes \\
+NCE, mean form & dimensionless & 0.492 & 0.490 to 0.498 & 0.8 & yes \\
+Nocturnal wet-bulb temperature & $^{\circ}$C & 7.41 & 7.23 to 7.48 & 1.2 & yes \\
+Formaldehyde to nitrogen dioxide ratio & dimensionless & 0.291 & 0.288 to 0.297 & 1.3 & yes \\
+Cropland in corn & dimensionless & 0.012 & 0.009 to 0.016 & 1.4 & yes \\
+Minimum daily minimum temperature & $^{\circ}$C & 4.46 & 4.28 to 4.68 & 1.7 & yes \\
+Warm-hour wet-bulb temperature & $^{\circ}$C & 12.27 & 12.04 to 12.55 & 3.1 & yes \\
+Mean night LST & $^{\circ}$C & 5.20 & 5.23 to 7.84 & 13.2 & no \\
+Annual mean PM$_{2.5}$ & 10\,$\mu$g\,m$^{-3}$ & 0.511 & 0.509 to 0.870 & 33.8 & yes \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{The census count under each instrument: the number of the 47 comparable fields in which the non-central summary is credited with more than the central one. If every summary of a field were equally likely to lead, the expected count would be 34.9, with a 95\% range of 29 to 40. Mutual information compares the two summaries the main attribution selected. Permutation importance is given as its range over five county-disjoint held-out splits.\label{tab:instruments}}
+\centering\small
+\begin{tabular}{@{}llr@{}}
+\toprule
+Instrument & What it measures & Non-central leads \\
+\midrule
+Interventional SHAP, main run & decomposes the prediction & 38 of 47 \\
+Interventional SHAP, recomputed & decomposes the prediction & 33 of 47 \\
+Path-dependent TreeSHAP & decomposes the prediction & 35 of 47 \\
+Path-dependent TreeSHAP, out of fold & decomposes the prediction & 35 of 47 \\
+Total split gain & counts tree use & 32 of 47 \\
+Mutual information & marginal, no model & 12 of 47 \\
+Permutation, production learner & loss when one column is broken & 25 to 31 of 47 \\
+Permutation, second learner & loss when one column is broken & 24 to 30 of 47 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{The species of the lifetime test, ordered by the tropospheric lifetime taken from the literature, with the number of duration and concentration pairs admitted for each, the median ratio of duration to concentration importance and whether duration was credited more. All series are from the atmospheric composition reanalysis.\label{tab:species}}
+\centering\footnotesize
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+Species & Lifetime (days) & Pairs & Median ratio & Duration favoured \\
+\midrule
+Hydroxyl radical & 1$\times 10^{-5}$ & 1 & 1.14 & yes \\
+Isoprene & 0.1 & 1 & 0.96 & no \\
+Formaldehyde & 0.2 & 2 & 49.97 & yes \\
+Nitric oxide & 0.2 & 1 & 3.24 & yes \\
+Nitrogen dioxide & 0.25 & 2 & 1.60 & yes \\
+Hydrogen peroxide & 1 & 1 & 10.57 & yes \\
+Sulphur dioxide & 2 & 2 & 0.22 & no \\
+Nitric acid & 5 & 1 & 0.90 & no \\
+Fine particulate matter (reanalysis) & 7 & 2 & 1.60 & yes \\
+Propane & 11 & 2 & 18.39 & yes \\
+Ozone & 22 & 2 & 0.46 & no \\
+Peroxyacetyl nitrate & 30 & 1 & 0.22 & no \\
+Ethane & 60 & 2 & 0.33 & no \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{The fitted learner. Settings of the XGBoost model and the out-of-fold skill of each learner compared on identical county-grouped folds.\label{tab:learner}}
+\centering\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+Setting & Value \\
+\midrule
+Number of trees & 1500 \\
+Maximum depth & 8 \\
+Learning rate & 0.0138 \\
+Row subsample & 0.731 \\
+Column subsample per tree & 0.712 \\
+Minimum child weight & 9 \\
+L1 regularisation & 0.254 \\
+L2 regularisation & 0.68 \\
+\midrule
+Learner & Out-of-fold $R^{2}$ (mean absolute error, years) \\
+\midrule
+XGBoost & 0.666 (1.033) \\
+CatBoost & 0.660 (1.046) \\
+\bottomrule
+\end{tabular}
+\end{table}
+

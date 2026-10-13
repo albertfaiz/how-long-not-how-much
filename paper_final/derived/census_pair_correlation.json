@@ -1,0 +1,295 @@
+{
+ "n_fields": 47,
+ "n_measured": 47,
+ "median_abs_r": 0.41241578890425584,
+ "q25_abs_r": 0.20945807746041292,
+ "q75_abs_r": 0.9247153372709187,
+ "min_abs_r": 0.011704506012662211,
+ "max_abs_r": 0.9820885837645027,
+ "share_above_0_8": 0.3617021276595745,
+ "collinear_cut": 0.98,
+ "pairs": [
+  {
+   "field": "soil_bulk_density_30cm",
+   "central": "soil_bulk_density_30cm_mean",
+   "noncentral": "soil_bulk_density_30cm_p90",
+   "r": 0.9256744706397495
+  },
+  {
+   "field": "prism_tdmean",
+   "central": "prism_tdmean_p50",
+   "noncentral": "prism_tdmean_min",
+   "r": 0.9635483091049645
+  },
+  {
+   "field": "soil_clay_0cm",
+   "central": "soil_clay_0cm_mean",
+   "noncentral": "soil_clay_0cm_stddev",
+   "r": 0.12995608710244536
+  },
+  {
+   "field": "soil_sand_0cm",
+   "central": "soil_sand_0cm_mean",
+   "noncentral": "soil_sand_0cm_max",
+   "r": 0.7758301978725068
+  },
+  {
+   "field": "soil_org_carbon_0cm",
+   "central": "soil_org_carbon_0cm_mean",
+   "noncentral": "soil_org_carbon_0cm_p10",
+   "r": 0.8784129143666601
+  },
+  {
+   "field": "soil_org_carbon_30cm",
+   "central": "soil_org_carbon_30cm_mean",
+   "noncentral": "soil_org_carbon_30cm_stddev",
+   "r": 0.8287896051489954
+  },
+  {
+   "field": "soil_bulk_density_0cm",
+   "central": "soil_bulk_density_0cm_mean",
+   "noncentral": "soil_bulk_density_0cm_p10",
+   "r": 0.9637391326512336
+  },
+  {
+   "field": "ntl_harmonized",
+   "central": "ntl_harmonized_mean",
+   "noncentral": "ntl_harmonized_stddev",
+   "r": 0.7172815636254459
+  },
+  {
+   "field": "terra_vs",
+   "central": "terra_vs_mean",
+   "noncentral": "terra_vs_stddev",
+   "r": -0.011704506012662211
+  },
+  {
+   "field": "soil_ph_0cm",
+   "central": "soil_ph_0cm_mean",
+   "noncentral": "soil_ph_0cm_stddev",
+   "r": -0.04440295977153361
+  },
+  {
+   "field": "meta_canopy_height",
+   "central": "meta_canopy_height_mean",
+   "noncentral": "meta_canopy_height_p70",
+   "r": 0.9696877851173047
+  },
+  {
+   "field": "meta_canopy_cover_1m",
+   "central": "meta_canopy_cover_1m_mean",
+   "noncentral": "meta_canopy_cover_1m_stddev",
+   "r": 0.6366703155797343
+  },
+  {
+   "field": "soil",
+   "central": "soil_mean",
+   "noncentral": "soil_stddev",
+   "r": -0.34190680159469555
+  },
+  {
+   "field": "soil_clay_30cm",
+   "central": "soil_clay_30cm_mean",
+   "noncentral": "soil_clay_30cm_max",
+   "r": 0.4819176729563966
+  },
+  {
+   "field": "prism_vpdmin",
+   "central": "prism_vpdmin_p50",
+   "noncentral": "prism_vpdmin_max",
+   "r": 0.9183744786303293
+  },
+  {
+   "field": "pm25",
+   "central": "pm25_mean",
+   "noncentral": "pm25_stddev",
+   "r": -0.07518225432838993
+  },
+  {
+   "field": "prism_tmin",
+   "central": "prism_tmin_mean",
+   "noncentral": "prism_tmin_stddev",
+   "r": -0.18492255501492938
+  },
+  {
+   "field": "prism_winter_tmin",
+   "central": "prism_winter_tmin_mean",
+   "noncentral": "prism_winter_tmin_stddev",
+   "r": -0.02805085994123016
+  },
+  {
+   "field": "terra_pdsi_best_month",
+   "central": "terra_pdsi_best_month_mean",
+   "noncentral": "terra_pdsi_best_month_max",
+   "r": 0.9792363257222881
+  },
+  {
+   "field": "ls57_sr_b1",
+   "central": "ls57_sr_b1_p50",
+   "noncentral": "ls57_sr_b1_stddev",
+   "r": 0.2907379324683258
+  },
+  {
+   "field": "terra_soil",
+   "central": "terra_soil_mean",
+   "noncentral": "terra_soil_stddev",
+   "r": 0.36027502903312847
+  },
+  {
+   "field": "prism_winter_ppt_sum",
+   "central": "prism_winter_ppt_sum_mean",
+   "noncentral": "prism_winter_ppt_sum_min",
+   "r": 0.9252355867449304
+  },
+  {
+   "field": "prism_summer_tmean",
+   "central": "prism_summer_tmean_mean",
+   "noncentral": "prism_summer_tmean_stddev",
+   "r": -0.4118074411314212
+  },
+  {
+   "field": "terra_ro",
+   "central": "terra_ro_mean",
+   "noncentral": "terra_ro_min",
+   "r": 0.924195087796907
+  },
+  {
+   "field": "jrc",
+   "central": "jrc_mean",
+   "noncentral": "jrc_stddev",
+   "r": 0.16516097252986764
+  },
+  {
+   "field": "lst_night_1km",
+   "central": "lst_night_1km_p50",
+   "noncentral": "lst_night_1km_p10",
+   "r": 0.9820885837645027
+  },
+  {
+   "field": "prism_days_tmin_under_0c",
+   "central": "prism_days_tmin_under_0c_mean",
+   "noncentral": "prism_days_tmin_under_0c_p90",
+   "r": 0.975783057226636
+  },
+  {
+   "field": "lst_day_1km",
+   "central": "lst_day_1km_mean",
+   "noncentral": "lst_day_1km_p10",
+   "r": 0.9551480180965177
+  },
+  {
+   "field": "terra_pet",
+   "central": "terra_pet_mean",
+   "noncentral": "terra_pet_stddev",
+   "r": 0.04738952971052091
+  },
+  {
+   "field": "terra_pdsi_worst_month",
+   "central": "terra_pdsi_worst_month_mean",
+   "noncentral": "terra_pdsi_worst_month_max",
+   "r": 0.9793153336615773
+  },
+  {
+   "field": "ls57_sr_b7",
+   "central": "ls57_sr_b7_mean",
+   "noncentral": "ls57_sr_b7_stddev",
+   "r": 0.41241578890425584
+  },
+  {
+   "field": "prism_ppt_sum",
+   "central": "prism_ppt_sum_mean",
+   "noncentral": "prism_ppt_sum_p90",
+   "r": 0.9638332229941403
+  },
+  {
+   "field": "ls57_sr_b2",
+   "central": "ls57_sr_b2_p50",
+   "noncentral": "ls57_sr_b2_max",
+   "r": 0.2053893185631669
+  },
+  {
+   "field": "ls57_sr_b4",
+   "central": "ls57_sr_b4_mean",
+   "noncentral": "ls57_sr_b4_stddev",
+   "r": -0.25604070843943144
+  },
+  {
+   "field": "ls57_ndmi",
+   "central": "ls57_ndmi_mean",
+   "noncentral": "ls57_ndmi_max",
+   "r": 0.2946548357944651
+  },
+  {
+   "field": "prism_days_tmin_over_20c",
+   "central": "prism_days_tmin_over_20c_mean",
+   "noncentral": "prism_days_tmin_over_20c_stddev",
+   "r": 0.4473336877929996
+  },
+  {
+   "field": "prism_days_tmax_over_35c",
+   "central": "prism_days_tmax_over_35c_mean",
+   "noncentral": "prism_days_tmax_over_35c_stddev",
+   "r": 0.5040012356673502
+  },
+  {
+   "field": "ls57_sr_b5",
+   "central": "ls57_sr_b5_mean",
+   "noncentral": "ls57_sr_b5_stddev",
+   "r": -0.21352683635765896
+  },
+  {
+   "field": "ls57_ndwi",
+   "central": "ls57_ndwi_p50",
+   "noncentral": "ls57_ndwi_max",
+   "r": 0.2918067783115745
+  },
+  {
+   "field": "prism_summer_tmax",
+   "central": "prism_summer_tmax_mean",
+   "noncentral": "prism_summer_tmax_stddev",
+   "r": -0.30719035462684396
+  },
+  {
+   "field": "prism_vpdmax",
+   "central": "prism_vpdmax_p50",
+   "noncentral": "prism_vpdmax_stddev",
+   "r": 0.2561448157084971
+  },
+  {
+   "field": "ls57_evi",
+   "central": "ls57_evi_p50",
+   "noncentral": "ls57_evi_min",
+   "r": 0.07348644821615105
+  },
+  {
+   "field": "ls57_ndvi",
+   "central": "ls57_ndvi_mean",
+   "noncentral": "ls57_ndvi_stddev",
+   "r": -0.10595259772875533
+  },
+  {
+   "field": "terra_swe",
+   "central": "terra_swe_p50",
+   "noncentral": "terra_swe_min",
+   "r": 0.896733677455513
+  },
+  {
+   "field": "prism_summer_ppt_sum",
+   "central": "prism_summer_ppt_sum_mean",
+   "noncentral": "prism_summer_ppt_sum_max",
+   "r": 0.9599544030045558
+  },
+  {
+   "field": "ls57_savi",
+   "central": "ls57_savi_mean",
+   "noncentral": "ls57_savi_min",
+   "r": 0.2637469529811791
+  },
+  {
+   "field": "ls57_bsi",
+   "central": "ls57_bsi_mean",
+   "noncentral": "ls57_bsi_min",
+   "r": 0.14442435649493052
+  }
+ ]
+}

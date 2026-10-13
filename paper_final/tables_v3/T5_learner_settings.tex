@@ -1,0 +1,18 @@
+\begin{table}[H]
+\caption{Learner settings and out-of-fold performance. All four learners were fitted on the identical county-grouped folds of the same panel. The hyperparameter values were selected in an earlier tuning run and then held fixed for every learner, so the tournament measures the learners and not the effort spent tuning each one. LightGBM did not complete on the run platform and is reported as not evaluated rather than omitted.}
+\label{tab:learners}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrr}
+\toprule
+Learner & Settings & $R^{2}$ & MAE (yr) & RMSE (yr) \\
+\midrule
+XGBoost\,$^{\ast}$ & n\_estimators=1500; max\_depth=8; learning\_rate=0.01383; subsample=0.7312; colsample=0.7116; min child wt=9; reg\_alpha=0.2538; reg\_lambda=0.6797 & 0.6661 & 1.0329 & 1.4191 \\
+CatBoost & iterations=2000; depth=8; learning\_rate=0.05118; l2\_leaf\_reg=2.797; random\_strength=0.114 & 0.6601 & 1.0455 & 1.4319 \\
+Random forest & n\_estimators=1000; max\_depth=25; min\_samples\_leaf=2; max\_features=0.3 & nan & nan & nan \\
+LightGBM & n\_estimators=1500; learning\_rate=0.02; subsample=0.8; colsample=0.8; num\_leaves=127; reg\_lambda=1 & \multicolumn{3}{l}{not evaluated: No OpenCL device found (Skipping)} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\vspace{2pt}
+\footnotesize $^{\ast}$ the learner carried forward. All scores are out of fold on county-grouped splits.
+\end{table}

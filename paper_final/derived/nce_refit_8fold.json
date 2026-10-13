@@ -1,0 +1,184 @@
+{
+ "protocol": {
+  "folds": 8,
+  "nshap": 12000,
+  "nbg": 100,
+  "n_rows": 52309,
+  "n_features": 581,
+  "window": [
+   2003,
+   2019
+  ],
+  "learner": "xgboost",
+  "n_estimators": 1200,
+  "learning_rate": 0.03,
+  "max_depth": 8,
+  "min_child_weight": 10,
+  "subsample": 0.8,
+  "colsample_bytree": 0.7,
+  "reg_lambda": 1.0,
+  "random_state": 0,
+  "n_jobs": 9,
+  "enable_categorical": false,
+  "tree_method": "hist",
+  "device": "cpu"
+ },
+ "conditions": {
+  "FULL": {
+   "r2": 0.6679618364294673,
+   "mae": 1.0288565441766637,
+   "n_features": 581,
+   "seconds": 1473,
+   "pct_rank": 2,
+   "pct_shap": 0.22259236505946958,
+   "mean_rank": 139,
+   "mean_shap": 0.009815311041896629,
+   "top10": [
+    [
+     "cams_fot_formaldehyde_above75th_percentile",
+     0.2466
+    ],
+    [
+     "eng_night_cooling_eff",
+     0.2226
+    ],
+    [
+     "cams_fot_formaldehyde_above_90th_percentile",
+     0.1679
+    ],
+    [
+     "ghm_p90",
+     0.1489
+    ],
+    [
+     "soil_bulk_density_30cm_mean",
+     0.1464
+    ],
+    [
+     "soil_bulk_density_30cm_p90",
+     0.0905
+    ],
+    [
+     "cams_fot_propane_above_90th_percentile",
+     0.086
+    ],
+    [
+     "cams_fot_propane_above75th_percentile",
+     0.0713
+    ],
+    [
+     "soil_bulk_density_0cm_p10",
+     0.0683
+    ],
+    [
+     "eng_wetland_flood_risk",
+     0.0679
+    ]
+   ]
+  },
+  "DROP_P": {
+   "r2": 0.6668860133767447,
+   "mae": 1.0316721243549019,
+   "n_features": 580,
+   "seconds": 9057,
+   "pct_rank": null,
+   "pct_shap": null,
+   "mean_rank": 32,
+   "mean_shap": 0.031593896978650116,
+   "top10": [
+    [
+     "cams_fot_formaldehyde_above75th_percentile",
+     0.3064
+    ],
+    [
+     "cams_fot_formaldehyde_above_90th_percentile",
+     0.198
+    ],
+    [
+     "soil_bulk_density_30cm_mean",
+     0.156
+    ],
+    [
+     "ghm_p90",
+     0.1157
+    ],
+    [
+     "cams_fot_propane_above_90th_percentile",
+     0.1142
+    ],
+    [
+     "soil_bulk_density_30cm_p90",
+     0.103
+    ],
+    [
+     "era5_specific_humidity",
+     0.1018
+    ],
+    [
+     "cams_fot_propane_above75th_percentile",
+     0.0737
+    ],
+    [
+     "eng2_impervious_heat_index",
+     0.0677
+    ],
+    [
+     "era5_leaf_area_index_high_vegetation",
+     0.0642
+    ]
+   ]
+  },
+  "DROP_M": {
+   "r2": 0.6694711194567762,
+   "mae": 1.0246716731404992,
+   "n_features": 580,
+   "seconds": 1083,
+   "pct_rank": 1,
+   "pct_shap": 0.23283813662642286,
+   "mean_rank": null,
+   "mean_shap": null,
+   "top10": [
+    [
+     "eng_night_cooling_eff",
+     0.2328
+    ],
+    [
+     "cams_fot_formaldehyde_above75th_percentile",
+     0.2208
+    ],
+    [
+     "cams_fot_formaldehyde_above_90th_percentile",
+     0.1847
+    ],
+    [
+     "soil_bulk_density_30cm_mean",
+     0.1615
+    ],
+    [
+     "ghm_p90",
+     0.1379
+    ],
+    [
+     "cams_fot_propane_above_90th_percentile",
+     0.0914
+    ],
+    [
+     "soil_bulk_density_30cm_p90",
+     0.08
+    ],
+    [
+     "era5_leaf_area_index_high_vegetation",
+     0.0749
+    ],
+    [
+     "cams_fot_propane_above75th_percentile",
+     0.0715
+    ],
+    [
+     "soil_bulk_density_0cm_p10",
+     0.0666
+    ]
+   ]
+  }
+ }
+}

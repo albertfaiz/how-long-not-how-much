@@ -1,0 +1,9 @@
+{
+ "morans_i": 0.035272346725408965,
+ "p_value": 0.003,
+ "n_counties": 3076,
+ "neighbours": 4,
+ "permutations": 999,
+ "null_mean": -0.00010802664950984588,
+ "null_sd": 0.012371278357941549
+}

@@ -1,0 +1,186 @@
+{
+ "n_p_values": 18,
+ "n_in_family": 17,
+ "families": [
+  "diagnostic",
+  "headline",
+  "mechanism",
+  "thresholds"
+ ],
+ "control": {
+  "q_0.05": {
+   "n_rejected": 16,
+   "n_tests": 17
+  },
+  "q_0.1": {
+   "n_rejected": 17,
+   "n_tests": 17
+  }
+ },
+ "not_corrected": [
+  {
+   "label": "era split, Fisher exact",
+   "p": 0.8079828459452941,
+   "source": "temporal_validation.json",
+   "family": "diagnostic",
+   "note": "a large p is the desired result here, so this test is reported but is not a discovery and is marked as such"
+  }
+ ],
+ "tests": [
+  {
+   "label": "attribution census, sign test over fields",
+   "p": 2.4904030624384177e-05,
+   "source": "summary_statistic_census.json",
+   "family": "headline",
+   "note": "",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "attribution census against its label-shuffle null",
+   "p": 5e-05,
+   "source": "null_census.json",
+   "family": "headline",
+   "note": "one-sided, resolution limited by the number of label shuffles",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "information census, sign test over fields",
+   "p": 0.0010885382064742544,
+   "source": "information_theory_census.json",
+   "family": "headline",
+   "note": "",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "Moran's I on the residuals",
+   "p": 0.01,
+   "source": "residual_spatial_structure.json",
+   "family": "diagnostic",
+   "note": "",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: prism_tmin_min",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: pm25_mean",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: eng2_hcho_no2_ratio",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: eng2_wetbulb_hot",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: eng2_wetbulb_night",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: lst_night_1km_mean",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: eng2_night_cooling_efficiency",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: cams_fot_formaldehyde_above75th_percentile",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: prism_tdmean_min",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: eng_night_cooling_eff",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "turning point survives the gate: usda_cropland_usda_corn_pct",
+   "p": 0.025,
+   "source": "null_crossing.json",
+   "family": "thresholds",
+   "note": "one-sided, resolution limited by the number of permutations",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "lifetime, Mann-Whitney at the published cutoff",
+   "p": 0.03671328671328671,
+   "source": "lifetime_literature_test.json",
+   "family": "mechanism",
+   "note": "",
+   "survives_q0.05": true,
+   "survives_q0.1": true
+  },
+  {
+   "label": "lifetime, rank correlation, permutation p",
+   "p": 0.07705,
+   "source": "lifetime_literature_test.json",
+   "family": "mechanism",
+   "note": "",
+   "survives_q0.05": false,
+   "survives_q0.1": true
+  }
+ ],
+ "absent_result_files": [],
+ "note": "Benjamini-Hochberg over the family assembled by reading result files."
+}

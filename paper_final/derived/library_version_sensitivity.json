@@ -1,0 +1,47 @@
+{
+ "versions_final": {
+  "python": "3.11.13",
+  "platform": "Darwin arm64",
+  "numpy": "2.2.6",
+  "pandas": "2.2.3",
+  "scipy": "1.16.1",
+  "sklearn": "1.7.1",
+  "xgboost": "3.0.2",
+  "catboost": "1.2.8",
+  "shap": "0.48.0",
+  "pyarrow": "21.0.0",
+  "matplotlib": "3.10.5",
+  "joblib": "1.3.2"
+ },
+ "versions_reference": {
+  "python": "3.10.12",
+  "platform": "Linux aarch64",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2",
+  "xgboost": "3.2.0",
+  "catboost": "absent",
+  "shap": "0.49.1",
+  "pyarrow": "25.0.1",
+  "matplotlib": "3.10.9",
+  "joblib": "1.6.0"
+ },
+ "spatial_holdout_r2": {
+  "final": 0.5090339268770574,
+  "reference": 0.5041982133544416
+ },
+ "residual_morans_i": {
+  "final": 0.031928646387822425,
+  "reference": 0.035272346725408965,
+  "p_final": 0.01,
+  "p_reference": 0.003
+ },
+ "permutation_count_shift": {
+  "production_max": 6,
+  "second_max": 0,
+  "production_splits_identical": 2,
+  "n_splits": 5
+ },
+ "note": "Same seeds and settings in both runs; only library versions differ."
+}

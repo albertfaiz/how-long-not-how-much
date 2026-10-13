@@ -1,0 +1,14 @@
+{
+ "prism_tdmean_min": {
+  "national_threshold": 5.660192857274944,
+  "west_threshold": 6.0082406693759305,
+  "east_threshold": 5.726996016862538,
+  "regional_delta": 0.2812446525133927
+ },
+ "eng_night_cooling_eff": {
+  "national_threshold": 0.6274329552996049,
+  "west_threshold": 0.5929595136441125,
+  "east_threshold": 0.6238647372672264,
+  "regional_delta": 0.030905223623113875
+ }
+}

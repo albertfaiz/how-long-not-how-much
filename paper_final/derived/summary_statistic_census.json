@@ -1,0 +1,18 @@
+{
+ "n_fields": 55,
+ "n_comparable": 47,
+ "n_noncentral_wins": 38,
+ "sign_test_p": 2.4904030624384177e-05,
+ "median_ratio": 1.5514688622307355,
+ "median_ratio_ci": [
+  1.303067734373759,
+  2.266284484916977
+ ],
+ "best_class_counts": {
+  "extreme": 27,
+  "dispersion": 19,
+  "central": 9
+ },
+ "median_spread": 3.3536613674529754,
+ "max_spread": 92.77446289688675
+}

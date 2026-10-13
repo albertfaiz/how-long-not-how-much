@@ -1,0 +1,49 @@
+{
+ "script": "/sessions/rcw-015fvw8vykvncjwj5kajtost/mnt/satellite_sdoh/submission_v9/paper4_merged_sensors/analysis/15_build_visual_abstract_and_methodology.py",
+ "written_utc": "2026-10-04 14:19:50Z",
+ "root": "/sessions/rcw-015fvw8vykvncjwj5kajtost/mnt/satellite_sdoh",
+ "settings": {
+  "SEED": 0,
+  "N_FOLDS": 8,
+  "SHAP_SAMPLE": 20000,
+  "SHAP_BACKGROUND": 500,
+  "N_BOOT": 5000,
+  "N_BINS": 45,
+  "GATE_MIN_FOUND": 0.6,
+  "GATE_MAX_WIDTH": 0.4,
+  "XGB_PARAMS": {
+   "n_estimators": 1200,
+   "learning_rate": 0.03,
+   "max_depth": 8,
+   "min_child_weight": 10,
+   "subsample": 0.8,
+   "colsample_bytree": 0.7,
+   "reg_lambda": 1.0,
+   "random_state": 0,
+   "tree_method": "hist",
+   "enable_categorical": false
+  },
+  "threads": 4
+ },
+ "versions": {
+  "python": "3.10.12",
+  "platform": "Linux aarch64",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2",
+  "xgboost": "3.2.0",
+  "catboost": "absent",
+  "shap": "0.49.1",
+  "pyarrow": "25.0.1",
+  "matplotlib": "3.10.9",
+  "joblib": "1.6.0"
+ },
+ "git": "none",
+ "inputs": {},
+ "outputs": {
+  "visual_abstract_spec.txt": "bea751c5ddd48ab4",
+  "visual_methodology_spec.txt": "31f2819735b6ac66"
+ },
+ "notes": "only=all"
+}

@@ -1,0 +1,30 @@
+\begin{table}[H]
+\caption{Attribution structure. How the attributed signal is distributed across variables, and the duration against concentration comparison. This manuscript's scope is the environment-only run, so the fused-study column and the blocks reporting it are not reproduced here; they belong to the companion study.}
+\label{tab:masterC}
+\begin{adjustwidth}{-\extralength}{0cm}
+\begin{tabularx}{\fulllength}{lcX}
+\toprule
+\textbf{Quantity} & \textbf{Study A} & \textbf{Note} \\
+\midrule
+\multicolumn{3}{l}{\textbf{SIGNAL CONCENTRATION}} \\
+Variables carrying 50\% of attribution & 44 & \\
+Variables carrying 80\% of attribution & 143 & \\
+Attribution Gini & 0.710 & 1 = all signal in one variable \\
+Socioeconomic share of attribution (\%) & 0 & \\
+Environmental share of attribution (\%) & 100 & \\
+Best environmental rank & 1 & Formaldehyde: time above 75th percentile \\
+\multicolumn{3}{l}{\textbf{EXPOSURE DURATION AGAINST CONCENTRATION}} \\
+Duration variables & 48 & fraction of year above a percentile \\
+Concentration variables & 48 & column or mixing ratio \\
+Mean |SHAP| per duration variable & 0.0172 & \\
+Mean |SHAP| per concentration variable & 0.0069 & \\
+Duration advantage & 2.49$\times$ & per variable \\
+Formaldehyde duration / concentration & 70.5$\times$ & ranks 1 against 196 \\
+Short-lived species, median ratio & 2.49 & $n$ = 8 pairs \\
+Longer-lived species, median ratio & 0.51 & $n$ = 12 pairs \\
+Mann--Whitney $p$ (one sided) & 0.006 & short-lived against longer-lived \\
+Spearman $\rho$, ratio against lifetime & -0.47 & $p$ = 0.036 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

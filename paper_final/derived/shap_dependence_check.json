@@ -1,0 +1,62 @@
+{
+ "n_rows": 20000,
+ "sample": 20000,
+ "background": 500,
+ "seed": 0,
+ "candidates": [
+  "prism_tdmean_min",
+  "eng2_night_cooling_efficiency",
+  "eng_night_cooling_eff",
+  "lst_night_1km_mean",
+  "eng2_wetbulb_night",
+  "eng2_wetbulb_hot",
+  "eng2_hcho_no2_ratio",
+  "pm25_mean",
+  "prism_tmin_min",
+  "cams_fot_formaldehyde_above75th_percentile",
+  "usda_cropland_usda_corn_pct"
+ ],
+ "missing": [],
+ "binned_correlation_vs_stored": {
+  "prism_tdmean_min": {
+   "r": 0.9977467454546247,
+   "rms_over_range": 0.03502176089873731,
+   "curve_range": 0.14274729107912298
+  },
+  "eng2_night_cooling_efficiency": {
+   "r": 0.9905770458334847,
+   "rms_over_range": 0.10807774168215392,
+   "curve_range": 0.03137823536389946
+  },
+  "lst_night_1km_mean": {
+   "r": 0.461987450477524,
+   "rms_over_range": 1.0251921281206053,
+   "curve_range": 0.0023244728145333246
+  },
+  "eng2_wetbulb_night": {
+   "r": 0.9448232051476184,
+   "rms_over_range": 0.10978005404744302,
+   "curve_range": 0.010341717448285884
+  },
+  "eng2_wetbulb_hot": {
+   "r": 0.8379708252658947,
+   "rms_over_range": 0.20429357896889383,
+   "curve_range": 0.006231050464025134
+  },
+  "eng2_hcho_no2_ratio": {
+   "r": 0.9203650549521212,
+   "rms_over_range": 0.15936005740334863,
+   "curve_range": 0.010299922867729908
+  },
+  "pm25_mean": {
+   "r": 0.958988448809971,
+   "rms_over_range": 0.10433366391811727,
+   "curve_range": 0.009817033985323475
+  },
+  "prism_tmin_min": {
+   "r": 0.29479035837678025,
+   "rms_over_range": 0.3314436170907295,
+   "curve_range": 0.003026450267246554
+  }
+ }
+}

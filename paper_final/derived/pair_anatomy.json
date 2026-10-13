@@ -1,0 +1,52 @@
+{
+ "pre_model": {
+  "correlation": 0.9907742818166336,
+  "mi_low": 0.27388812027360565,
+  "mi_high": 0.265795361713848,
+  "mi_band": 0.11072077034813432,
+  "r_outcome_low": -0.5752549803252813,
+  "r_outcome_high": -0.5788946468264637,
+  "r_outcome_band": -0.3649333720199275,
+  "band_negative_rows": 11,
+  "band_residual_fraction": 1.9448082627210976e-08
+ },
+ "removal": {
+  "correlation": 0.9907742818166336,
+  "both": {
+   "label": "both_present",
+   "r2": 0.6679618364294673,
+   "mae": 1.0288565441766637,
+   "n_features": 581
+  },
+  "without_p75": {
+   "label": "without_p75",
+   "r2": 0.6657305081050302,
+   "mae": 1.0276178571905341,
+   "n_features": 580
+  },
+  "without_p90": {
+   "label": "without_p90",
+   "r2": 0.6677509412345379,
+   "mae": 1.0271955327487772,
+   "n_features": 580
+  },
+  "without_both": {
+   "label": "without_both",
+   "r2": 0.6635197728485716,
+   "mae": 1.0326593885462831,
+   "n_features": 579
+  },
+  "inherit_p90_of_p75": 0.7235573260549295,
+  "inherit_p75_of_p90": 0.7175284098097433
+ },
+ "band": {
+  "fraction_recovered": 0.4093902833793213,
+  "negative_band_rows": 11,
+  "band_only_r2": 0.6653383105167434,
+  "band_with_pair_r2": 0.6685643640333829,
+  "band_attribution_alone": 0.0044711213119986585,
+  "band_rank_alone": 210,
+  "band_attribution_with_pair": 0.0027818647789614077,
+  "band_rank_with_pair": 281
+ }
+}

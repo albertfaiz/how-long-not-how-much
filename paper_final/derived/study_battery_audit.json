@@ -1,0 +1,985 @@
+{
+ "run_label": "independent_run",
+ "n_studies": 35,
+ "counts": {
+  "done": 31,
+  "partial": 0,
+  "missing": 3,
+  "blocked": 1
+ },
+ "stale_builds": [
+  {
+   "id": "B1",
+   "script": "08_build_manuscript_constants.py",
+   "why": "older than rank_stability_draws.csv"
+  },
+  {
+   "id": "B3",
+   "script": "_supplementary_builder.py",
+   "why": "older than rank_stability_draws.csv"
+  },
+  {
+   "id": "B4",
+   "script": "figures_build_all.py",
+   "why": "older than rank_stability_draws.csv"
+  },
+  {
+   "id": "B5",
+   "script": "15_build_visual_abstract_and_methodology.py",
+   "why": "older than rank_stability_draws.csv"
+  }
+ ],
+ "studies": [
+  {
+   "sid": "S01",
+   "title": "Inputs present and readable",
+   "tier": 0,
+   "script": "01_check_environment_and_inputs.py",
+   "args": [],
+   "command": "python3 01_check_environment_and_inputs.py",
+   "status": "done",
+   "question": "Will any of the rest of this run at all?",
+   "attack": "You are reporting numbers from files nobody can find.",
+   "needs": [],
+   "minutes": 3,
+   "new": false,
+   "note": "Writes no result. It is the precondition for everything else.",
+   "outputs": []
+  },
+  {
+   "sid": "S02",
+   "title": "Outcome distribution and the error brackets",
+   "tier": 0,
+   "script": "02_outcome_distribution_and_error_brackets.py",
+   "args": [],
+   "command": "python3 02_outcome_distribution_and_error_brackets.py",
+   "status": "done",
+   "question": "How is life expectancy distributed, and where does the model's error sit against that spread?",
+   "attack": "An R-squared of 0.67 on a variable with a narrow range is not an achievement.",
+   "needs": [],
+   "minutes": 1,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "outcome_distribution.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "bracket_error.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "bracket_error_check.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S03",
+   "title": "Census of every multi-statistic field",
+   "tier": 0,
+   "script": "12_summary_statistic_census_and_matched_refit.py",
+   "args": [],
+   "command": "python3 12_summary_statistic_census_and_matched_refit.py",
+   "status": "done",
+   "question": "Across every field described by more than one summary statistic, which description takes the attribution?",
+   "attack": "You found one striking pair and wrote a paper about it.",
+   "needs": [],
+   "minutes": 1,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "summary_statistic_census.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "summary_statistic_census.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S04",
+   "title": "Learner and hyperparameter table",
+   "tier": 0,
+   "script": "07_learner_and_hyperparameter_table.py",
+   "args": [],
+   "command": "python3 07_learner_and_hyperparameter_table.py",
+   "status": "done",
+   "question": "What exactly was fitted, with which settings, against which alternatives?",
+   "attack": "You do not say what model this is or why it was chosen.",
+   "needs": [],
+   "minutes": 1,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "learner_settings.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "learner_settings.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S05",
+   "title": "The two night-cooling constructions are not the same column",
+   "tier": 0,
+   "script": "11_verify_nce_identity_by_search.py",
+   "args": [],
+   "command": "python3 11_verify_nce_identity_by_search.py",
+   "status": "done",
+   "question": "Are the two night-cooling variables a duplicate under two names?",
+   "attack": "Your two night-cooling variables are the same thing and you have counted it twice.",
+   "needs": [],
+   "minutes": 3,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "nce_identity.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S06",
+   "title": "Frozen panels: what the model actually saw",
+   "tier": 0,
+   "script": "16_export_frozen_panels_and_gate_audit.py",
+   "args": [
+    "--skip-audit"
+   ],
+   "command": "python3 16_export_frozen_panels_and_gate_audit.py --skip-audit",
+   "status": "done",
+   "question": "Which columns are in the model, and can the exact modelling table be exported so an outside analyst starts where we did?",
+   "attack": "Nobody can reproduce this because nobody knows which columns survived your filters.",
+   "needs": [],
+   "minutes": 4,
+   "new": false,
+   "note": "Also the guard against the mistake of starting from the master CSV and skipping the gate, which inflates the score.",
+   "outputs": [
+    {
+     "file": "panel_manifest.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "panel_all_admitted.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "panel_satellite_only.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S07",
+   "title": "The formaldehyde pair before any model is fitted",
+   "tier": 0,
+   "script": "17_formaldehyde_pair_anatomy.py",
+   "args": [
+    "--only",
+    "none"
+   ],
+   "command": "python3 17_formaldehyde_pair_anatomy.py --only none",
+   "status": "done",
+   "question": "What is true about the pair from the data alone, with no model in the way?",
+   "attack": "Everything you say about that pair is a property of your model, not of the air.",
+   "needs": [],
+   "minutes": 4,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "pair_anatomy.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S08",
+   "title": "The located crossings, west and east",
+   "tier": 1,
+   "script": "14_information_theory_and_regional_invariance.py",
+   "args": [
+    "--skip-mi"
+   ],
+   "command": "python3 14_information_theory_and_regional_invariance.py --skip-mi",
+   "status": "done",
+   "question": "Do the turning points land in the same place in the arid half of the country and the humid half?",
+   "attack": "Your thresholds are an average over two different climates and mean nothing in either.",
+   "needs": [
+    "S13"
+   ],
+   "minutes": 2,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "threshold_regional_invariance.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S09",
+   "title": "Does the duration advantage follow atmospheric lifetime?",
+   "tier": 0,
+   "script": "25_lifetime_literature_test.py",
+   "args": [],
+   "command": "python3 25_lifetime_literature_test.py",
+   "status": "done",
+   "question": "Is the advantage of a duration metric concentrated in the short-lived species, as atmospheric chemistry predicts?",
+   "attack": "You split twenty species at two days, which you chose, and got one-sided p = 0.006. Choose three days and tell me again.",
+   "needs": [],
+   "minutes": 2,
+   "new": true,
+   "note": "Sweeps the cutoff, gives a cutoff-free rank test with a permutation p, perturbs every lifetime value by an order of magnitude, and jackknifes over species.",
+   "outputs": [
+    {
+     "file": "lifetime_literature_test.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "lifetime_cutoff_sweep.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "lifetime_sources.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S11",
+   "title": "Where the admission rules were placed",
+   "tier": 0,
+   "script": "24_admission_rule_sensitivity.py",
+   "args": [],
+   "command": "python3 24_admission_rule_sensitivity.py",
+   "status": "done",
+   "question": "Does the admitted set, and the survival of the central comparison, depend on where the coverage gate and the correlation cut were put?",
+   "attack": "Ninety-five per cent coverage and a cut at 0.98 are arbitrary and were chosen after you saw the result.",
+   "needs": [],
+   "minutes": 8,
+   "new": true,
+   "note": "",
+   "outputs": [
+    {
+     "file": "admission_rule_sensitivity.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "admission_rule_grid.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S12",
+   "title": "Five reference models",
+   "tier": 1,
+   "script": "03_baselines_five_reference_models.py",
+   "args": [],
+   "command": "python3 03_baselines_five_reference_models.py",
+   "status": "done",
+   "question": "What does a mean, a linear model, a single tree, a random forest and the production model each score?",
+   "attack": "You have not shown that any of this beats a regression.",
+   "needs": [],
+   "minutes": 30,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "baselines.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "baselines.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S13",
+   "title": "Attribution surface for the threshold candidates",
+   "tier": 1,
+   "script": "05_recompute_shap_for_threshold_candidates.py",
+   "args": [],
+   "command": "python3 05_recompute_shap_for_threshold_candidates.py",
+   "status": "done",
+   "question": "What is the per-row attribution against the predictor value, for every variable a turning point is read off?",
+   "attack": "You cannot locate a threshold without showing the curve.",
+   "needs": [],
+   "minutes": 40,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "shap_dependence_candidates.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "shap_dependence_check.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S14",
+   "title": "Turning points, their intervals, and the gate swept",
+   "tier": 1,
+   "script": "06_bootstrap_turning_points_and_gate.py",
+   "args": [],
+   "command": "python3 06_bootstrap_turning_points_and_gate.py",
+   "status": "done",
+   "question": "Where does each curve cross zero, how wide is the interval, and does the stability verdict depend on where the gate was placed?",
+   "attack": "Your stability gate is a rule you invented, placed where it gives the answer you wanted.",
+   "needs": [
+    "S13"
+   ],
+   "minutes": 45,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "turning_points.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "turning_points.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "gate_sensitivity.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "turning_points_alt_rule.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S15",
+   "title": "Whole-state holdout",
+   "tier": 1,
+   "script": "13_spatial_holdout_and_attribution_structure.py",
+   "args": [
+    "--only",
+    "holdout"
+   ],
+   "command": "python3 13_spatial_holdout_and_attribution_structure.py --only holdout",
+   "status": "done",
+   "question": "Can the model predict counties in states it has never seen?",
+   "attack": "County-grouped folds still let the model learn the state it is predicting.",
+   "needs": [],
+   "minutes": 35,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "spatial_holdout.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S16",
+   "title": "Residual spatial structure",
+   "tier": 1,
+   "script": "13_spatial_holdout_and_attribution_structure.py",
+   "args": [
+    "--only",
+    "moran"
+   ],
+   "command": "python3 13_spatial_holdout_and_attribution_structure.py --only moran",
+   "status": "done",
+   "question": "Is what the model fails to explain spatially random?",
+   "attack": "Your residuals are spatially autocorrelated, so your effective sample size is far smaller than three thousand counties.",
+   "needs": [],
+   "minutes": 6,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "residual_spatial_structure.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S17",
+   "title": "Collinearity and interaction among the leading variables",
+   "tier": 1,
+   "script": "13_spatial_holdout_and_attribution_structure.py",
+   "args": [
+    "--only",
+    "vif,interact"
+   ],
+   "command": "python3 13_spatial_holdout_and_attribution_structure.py --only vif,interact",
+   "status": "done",
+   "question": "How correlated are the leading variables, and how much of the attribution is interaction rather than main effect?",
+   "attack": "Eight of your fifteen leading variables have a variance inflation factor above ten.",
+   "needs": [],
+   "minutes": 25,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "multicollinearity.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "attribution_interactions.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S18",
+   "title": "Mutual information census: the same question with no model",
+   "tier": 1,
+   "script": "14_information_theory_and_regional_invariance.py",
+   "args": [],
+   "command": "python3 14_information_theory_and_regional_invariance.py",
+   "status": "done",
+   "question": "Taken one column at a time against the outcome, with no model involved, which description carries more information?",
+   "attack": "Your central finding is a TreeSHAP artefact.",
+   "needs": [
+    "S03"
+   ],
+   "minutes": 18,
+   "new": false,
+   "note": "This one answers the other way from the attribution census and is the reason the paper's claim is stated as conditional attribution rather than as informativeness.",
+   "outputs": [
+    {
+     "file": "information_theory_census.csv",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "information_theory_census.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S19",
+   "title": "Rank stability and the learning curve",
+   "tier": 1,
+   "script": "26_rank_stability_and_learning_curve.py",
+   "args": [],
+   "command": "python3 26_rank_stability_and_learning_curve.py",
+   "status": "done",
+   "question": "How much does the attribution ranking move when the counties are resampled, and is the model still short of data?",
+   "attack": "Your ranking is one draw. Resample and the top ten will be a different top ten.",
+   "needs": [],
+   "minutes": 40,
+   "new": true,
+   "note": "",
+   "outputs": [
+    {
+     "file": "rank_stability.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "rank_stability_draws.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S20",
+   "title": "Temporal validation: year holdout and forward chaining",
+   "tier": 1,
+   "script": "19_temporal_validation.py",
+   "args": [],
+   "command": "python3 19_temporal_validation.py",
+   "status": "done",
+   "question": "Can the model predict a year it has never seen, and can it predict forward in time rather than across counties?",
+   "attack": "Every fold of yours contains the year it predicts. This is interpolation in time dressed as prediction.",
+   "needs": [],
+   "minutes": 50,
+   "new": true,
+   "note": "",
+   "outputs": [
+    {
+     "file": "temporal_validation.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "temporal_validation_folds.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S21",
+   "title": "Null calibration of the model's skill",
+   "tier": 1,
+   "script": "20_null_calibration_and_multiplicity.py",
+   "args": [
+    "--only",
+    "skill"
+   ],
+   "command": "python3 20_null_calibration_and_multiplicity.py --only skill",
+   "status": "done",
+   "question": "What score does this protocol return when the outcome is permuted and there is nothing to learn?",
+   "attack": "With 581 columns and repeated counties, 0.67 may be what your protocol returns on noise.",
+   "needs": [],
+   "minutes": 45,
+   "new": true,
+   "note": "Two permutations. Shuffling within county destroys the year signal and keeps the county mean; shuffling county labels destroys both. The gap between them is how much of the score is county identity.",
+   "outputs": [
+    {
+     "file": "null_skill.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S22",
+   "title": "Does the crossing estimator find thresholds in noise?",
+   "tier": 1,
+   "script": "20_null_calibration_and_multiplicity.py",
+   "args": [
+    "--only",
+    "crossing"
+   ],
+   "command": "python3 20_null_calibration_and_multiplicity.py --only crossing",
+   "status": "done",
+   "question": "Run the whole crossing and gate procedure on permuted attribution. How often does it return a stable crossing?",
+   "attack": "A smoothing spline will cross zero somewhere in anything. Your eleven thresholds are an artefact of the estimator.",
+   "needs": [
+    "S13"
+   ],
+   "minutes": 30,
+   "new": true,
+   "note": "The single most useful defence of the threshold half of the paper, and the one a methods referee will ask for first.",
+   "outputs": [
+    {
+     "file": "null_crossing.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S23",
+   "title": "Null for the census count",
+   "tier": 1,
+   "script": "20_null_calibration_and_multiplicity.py",
+   "args": [
+    "--only",
+    "census"
+   ],
+   "command": "python3 20_null_calibration_and_multiplicity.py --only census",
+   "status": "done",
+   "question": "If the central and non-central labels are shuffled within each field, how often does a count of 38 of 47 appear?",
+   "attack": "Thirty-eight of forty-seven sounds impressive until you know what the null is.",
+   "needs": [
+    "S03"
+   ],
+   "minutes": 10,
+   "new": true,
+   "note": "",
+   "outputs": [
+    {
+     "file": "null_census.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S24",
+   "title": "The census under five attribution estimators",
+   "tier": 1,
+   "script": "21_attribution_estimator_invariance.py",
+   "args": [],
+   "command": "python3 21_attribution_estimator_invariance.py",
+   "status": "done",
+   "question": "Does the non-central lead survive changing the attribution method and the learner?",
+   "attack": "Interventional TreeSHAP with a 500-row background is one choice among several and the result is a property of that choice.",
+   "needs": [
+    "S03"
+   ],
+   "minutes": 60,
+   "new": true,
+   "note": "Interventional SHAP, tree-path-dependent SHAP, split gain, permutation importance, and the same census on a second learner. If the count survives all five the artefact objection is closed.",
+   "outputs": [
+    {
+     "file": "attribution_invariance.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "attribution_invariance_per_field.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S25",
+   "title": "Satellite only, environment only, everything admitted",
+   "tier": 1,
+   "script": "22_modality_arms.py",
+   "args": [],
+   "command": "python3 22_modality_arms.py",
+   "status": "done",
+   "question": "How much of the skill is satellite-borne, and does the central finding hold inside the satellite-only panel?",
+   "attack": "This is a socioeconomic model with satellite decoration, and you have not separated the two.",
+   "needs": [
+    "S06"
+   ],
+   "minutes": 55,
+   "new": true,
+   "note": "",
+   "outputs": [
+    {
+     "file": "modality_arms.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "modality_arms.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S26",
+   "title": "Leave-one-state-out jackknife of the census count",
+   "tier": 1,
+   "script": "23_influence_and_perturbation.py",
+   "args": [
+    "--only",
+    "jackknife"
+   ],
+   "command": "python3 23_influence_and_perturbation.py --only jackknife",
+   "status": "done",
+   "question": "Is the census count carried by one state?",
+   "attack": "Drop California and your 38 of 47 is 20 of 47.",
+   "needs": [
+    "S03"
+   ],
+   "minutes": 35,
+   "new": true,
+   "note": "",
+   "outputs": [
+    {
+     "file": "census_jackknife.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "census_jackknife.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S27",
+   "title": "Influence: drop the counties the model relies on most",
+   "tier": 1,
+   "script": "23_influence_and_perturbation.py",
+   "args": [
+    "--only",
+    "influence"
+   ],
+   "command": "python3 23_influence_and_perturbation.py --only influence",
+   "status": "done",
+   "question": "Does the ranking hold when the most influential counties are removed?",
+   "attack": "A hundred unusual counties are driving this.",
+   "needs": [],
+   "minutes": 30,
+   "new": true,
+   "note": "",
+   "outputs": [
+    {
+     "file": "influence_drop.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S28",
+   "title": "Predictor perturbation and the located crossings",
+   "tier": 1,
+   "script": "23_influence_and_perturbation.py",
+   "args": [
+    "--only",
+    "perturb"
+   ],
+   "command": "python3 23_influence_and_perturbation.py --only perturb",
+   "status": "done",
+   "question": "If the predictors are perturbed at the magnitude of the reanalysis spread, how far do the turning points move?",
+   "attack": "These are reanalysis fields with their own error, and you report thresholds to three decimals.",
+   "needs": [
+    "S13",
+    "S14"
+   ],
+   "minutes": 25,
+   "new": true,
+   "note": "A sensitivity analysis on real values, reported as such. No perturbed column is written to any exported panel.",
+   "outputs": [
+    {
+     "file": "perturbation_thresholds.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "perturbation_thresholds.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S29",
+   "title": "What the admission gate is worth",
+   "tier": 1,
+   "script": "16_export_frozen_panels_and_gate_audit.py",
+   "args": [
+    "--audit-only"
+   ],
+   "command": "python3 16_export_frozen_panels_and_gate_audit.py --audit-only",
+   "status": "done",
+   "question": "What does the score do if the gate is skipped, and what does it do if the protected columns are dropped?",
+   "attack": "Your gate is a filter you tuned until the score looked right.",
+   "needs": [
+    "S06"
+   ],
+   "minutes": 90,
+   "new": false,
+   "note": "This is the arm that answers the question the whole package was rebuilt around: a run that skips the gate scores higher and the higher score means nothing.",
+   "outputs": [
+    {
+     "file": "gate_audit.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S30",
+   "title": "Formaldehyde pair: removal and inheritance",
+   "tier": 1,
+   "script": "17_formaldehyde_pair_anatomy.py",
+   "args": [
+    "--only",
+    "removal"
+   ],
+   "command": "python3 17_formaldehyde_pair_anatomy.py --only removal",
+   "status": "missing",
+   "question": "When one of the pair is removed, does the other inherit its attribution, and what does the model lose?",
+   "attack": "Two columns correlated at 0.99 are one column. Drop either and nothing happens.",
+   "needs": [],
+   "minutes": 70,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "pair_anatomy.json",
+     "ok": false,
+     "why": "missing removal"
+    }
+   ]
+  },
+  {
+   "sid": "S31",
+   "title": "The band test",
+   "tier": 1,
+   "script": "17_formaldehyde_pair_anatomy.py",
+   "args": [
+    "--only",
+    "band"
+   ],
+   "command": "python3 17_formaldehyde_pair_anatomy.py --only band",
+   "status": "blocked",
+   "question": "Can the difference between the two thresholds stand in for the pair?",
+   "attack": "If the pair is doing something a difference captures, say so and use the difference.",
+   "needs": [
+    "S30"
+   ],
+   "minutes": 45,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "pair_anatomy.json",
+     "ok": false,
+     "why": "missing band"
+    }
+   ]
+  },
+  {
+   "sid": "S32",
+   "title": "Every other pair above the correlation cut",
+   "tier": 1,
+   "script": "17_formaldehyde_pair_anatomy.py",
+   "args": [
+    "--only",
+    "peers"
+   ],
+   "command": "python3 17_formaldehyde_pair_anatomy.py --only peers",
+   "status": "missing",
+   "question": "Is the pair's behaviour particular to formaldehyde or general to protected pairs?",
+   "attack": "You have one anecdote and a mechanism invented to fit it.",
+   "needs": [],
+   "minutes": 80,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "pair_anatomy_arms.csv",
+     "ok": false,
+     "why": "not written"
+    }
+   ]
+  },
+  {
+   "sid": "S33",
+   "title": "Matched refit of the summary-statistic arms",
+   "tier": 2,
+   "script": "12_summary_statistic_census_and_matched_refit.py",
+   "args": [
+    "--refit"
+   ],
+   "command": "python3 12_summary_statistic_census_and_matched_refit.py --refit",
+   "status": "done",
+   "question": "With the column count held equal, does a panel of central summaries predict worse than a panel of non-central ones?",
+   "attack": "A ranking is not a prediction. Fit both and show me.",
+   "needs": [
+    "S03"
+   ],
+   "minutes": 240,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "summary_statistic_refit.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S34",
+   "title": "Drop one night-cooling construction and refit",
+   "tier": 2,
+   "script": "04_refit_drop_one_nce_construction.py",
+   "args": [],
+   "command": "python3 04_refit_drop_one_nce_construction.py",
+   "status": "done",
+   "question": "What does the model lose when one of the two night-cooling variables is removed?",
+   "attack": "You kept both halves of a correlated pair. Show the cost of keeping only one.",
+   "needs": [],
+   "minutes": 480,
+   "new": false,
+   "note": "",
+   "outputs": [
+    {
+     "file": "nce_refit.json",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  {
+   "sid": "S35",
+   "title": "Reproducibility by rerunning",
+   "tier": 2,
+   "script": "10_verify_reproducibility_by_rerunning.py",
+   "args": [],
+   "command": "python3 10_verify_reproducibility_by_rerunning.py",
+   "status": "missing",
+   "question": "Does a second run of the same script give the same numbers?",
+   "attack": "Gradient boosting is not deterministic and you have not shown this reproduces.",
+   "needs": [],
+   "minutes": 120,
+   "new": false,
+   "note": "Compares manifests rather than writing a result of its own, so the runner reports it as run only when its own manifest exists.",
+   "outputs": []
+  },
+  {
+   "sid": "S10",
+   "title": "Multiplicity over the declared family",
+   "tier": 2,
+   "script": "20_null_calibration_and_multiplicity.py",
+   "args": [
+    "--only",
+    "fdr"
+   ],
+   "command": "python3 20_null_calibration_and_multiplicity.py --only fdr",
+   "status": "done",
+   "question": "How many of the reported results survive control of the false discovery rate over every test this paper runs?",
+   "attack": "You ran a great many tests and reported the ones that worked.",
+   "needs": [
+    "S03",
+    "S18"
+   ],
+   "minutes": 3,
+   "new": true,
+   "note": "Cheap, but it has to run last: the family is assembled by reading the files the other studies write, and a correction over half of a family is not a correction.",
+   "outputs": [
+    {
+     "file": "multiplicity_control.json",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "file": "multiplicity_per_field.csv",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  }
+ ]
+}

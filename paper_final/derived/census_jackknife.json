@@ -1,0 +1,409 @@
+{
+ "n_rows_attributed": 30000,
+ "n_states": 49,
+ "n_comparable": 47,
+ "baseline_wins": 34,
+ "attribution": "path dependent TreeSHAP, model held fixed",
+ "range": [
+  33,
+  35
+ ],
+ "worst_state": "47",
+ "worst_count": 33,
+ "worst_sign_test_p": 0.003971363254741789,
+ "per_state": [
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "01",
+   "n_rows_dropped": 647,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "04",
+   "n_rows_dropped": 149,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "05",
+   "n_rows_dropped": 720,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "06",
+   "n_rows_dropped": 585,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "08",
+   "n_rows_dropped": 614,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "09",
+   "n_rows_dropped": 77,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "10",
+   "n_rows_dropped": 32,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "11",
+   "n_rows_dropped": 14,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "12",
+   "n_rows_dropped": 655,
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "13",
+   "n_rows_dropped": 1534,
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "16",
+   "n_rows_dropped": 436,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "17",
+   "n_rows_dropped": 1016,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "18",
+   "n_rows_dropped": 886,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "19",
+   "n_rows_dropped": 976,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "20",
+   "n_rows_dropped": 1035,
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "21",
+   "n_rows_dropped": 1155,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "22",
+   "n_rows_dropped": 623,
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "23",
+   "n_rows_dropped": 147,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "24",
+   "n_rows_dropped": 247,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "25",
+   "n_rows_dropped": 130,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "26",
+   "n_rows_dropped": 791,
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "27",
+   "n_rows_dropped": 861,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "28",
+   "n_rows_dropped": 800,
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "29",
+   "n_rows_dropped": 1105,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "30",
+   "n_rows_dropped": 513,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "31",
+   "n_rows_dropped": 767,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "32",
+   "n_rows_dropped": 139,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "33",
+   "n_rows_dropped": 104,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "34",
+   "n_rows_dropped": 206,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "35",
+   "n_rows_dropped": 296,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "36",
+   "n_rows_dropped": 601,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "37",
+   "n_rows_dropped": 995,
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "38",
+   "n_rows_dropped": 495,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "39",
+   "n_rows_dropped": 855,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "40",
+   "n_rows_dropped": 755,
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "41",
+   "n_rows_dropped": 368,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "42",
+   "n_rows_dropped": 665,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "44",
+   "n_rows_dropped": 50,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "45",
+   "n_rows_dropped": 459,
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "46",
+   "n_rows_dropped": 652,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "47",
+   "n_rows_dropped": 938,
+   "n_comparable": 47,
+   "noncentral_wins": 33,
+   "sign_test_p": 0.003971363254741789
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "48",
+   "n_rows_dropped": 2379,
+   "n_comparable": 47,
+   "noncentral_wins": 35,
+   "sign_test_p": 0.0005442691032371272
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "49",
+   "n_rows_dropped": 267,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "50",
+   "n_rows_dropped": 131,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "51",
+   "n_rows_dropped": 1317,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "53",
+   "n_rows_dropped": 370,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "54",
+   "n_rows_dropped": 558,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "55",
+   "n_rows_dropped": 668,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  },
+  {
+   "arm": "leave_one_state_out",
+   "state_fips": "56",
+   "n_rows_dropped": 217,
+   "n_comparable": 47,
+   "noncentral_wins": 34,
+   "sign_test_p": 0.0015438382307593201
+  }
+ ],
+ "note": "The fitted model is held fixed; only the attributed rows change."
+}

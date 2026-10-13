@@ -1,0 +1,351 @@
+{
+ "n_fields": 47,
+ "observed": 38,
+ "expected": 34.94761904761905,
+ "range95_lo": 29,
+ "range95_hi": 40,
+ "p_at_least_observed": 0.19503293377407718,
+ "p_at_most_observed": 0.8889134497202053,
+ "p_two_sided": 0.39006586754815437,
+ "mean_share_noncentral": 0.743566362715299,
+ "share_counts": {
+  "0.5": 2,
+  "0.667": 6,
+  "0.714": 15,
+  "0.75": 6,
+  "0.8": 8,
+  "0.833": 10
+ },
+ "fields": [
+  {
+   "field": "jrc",
+   "n_central": 1,
+   "n_noncentral": 1,
+   "p_noncentral": 0.5,
+   "noncentral_wins": false
+  },
+  {
+   "field": "ls57_bsi",
+   "n_central": 1,
+   "n_noncentral": 5,
+   "p_noncentral": 0.8333333333333334,
+   "noncentral_wins": true
+  },
+  {
+   "field": "ls57_evi",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "ls57_ndmi",
+   "n_central": 1,
+   "n_noncentral": 4,
+   "p_noncentral": 0.8,
+   "noncentral_wins": true
+  },
+  {
+   "field": "ls57_ndvi",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "ls57_ndwi",
+   "n_central": 2,
+   "n_noncentral": 4,
+   "p_noncentral": 0.6666666666666666,
+   "noncentral_wins": true
+  },
+  {
+   "field": "ls57_savi",
+   "n_central": 1,
+   "n_noncentral": 5,
+   "p_noncentral": 0.8333333333333334,
+   "noncentral_wins": true
+  },
+  {
+   "field": "ls57_sr_b1",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "ls57_sr_b2",
+   "n_central": 2,
+   "n_noncentral": 4,
+   "p_noncentral": 0.6666666666666666,
+   "noncentral_wins": false
+  },
+  {
+   "field": "ls57_sr_b4",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "ls57_sr_b5",
+   "n_central": 1,
+   "n_noncentral": 5,
+   "p_noncentral": 0.8333333333333334,
+   "noncentral_wins": true
+  },
+  {
+   "field": "ls57_sr_b7",
+   "n_central": 1,
+   "n_noncentral": 5,
+   "p_noncentral": 0.8333333333333334,
+   "noncentral_wins": true
+  },
+  {
+   "field": "lst_day_1km",
+   "n_central": 1,
+   "n_noncentral": 3,
+   "p_noncentral": 0.75,
+   "noncentral_wins": true
+  },
+  {
+   "field": "lst_night_1km",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "meta_canopy_cover_1m",
+   "n_central": 1,
+   "n_noncentral": 1,
+   "p_noncentral": 0.5,
+   "noncentral_wins": false
+  },
+  {
+   "field": "meta_canopy_height",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "ntl_harmonized",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": false
+  },
+  {
+   "field": "pm25",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_days_tmax_over_35c",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_days_tmin_over_20c",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_days_tmin_under_0c",
+   "n_central": 1,
+   "n_noncentral": 4,
+   "p_noncentral": 0.8,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_ppt_sum",
+   "n_central": 1,
+   "n_noncentral": 4,
+   "p_noncentral": 0.8,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_summer_ppt_sum",
+   "n_central": 1,
+   "n_noncentral": 3,
+   "p_noncentral": 0.75,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_summer_tmax",
+   "n_central": 1,
+   "n_noncentral": 4,
+   "p_noncentral": 0.8,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_summer_tmean",
+   "n_central": 1,
+   "n_noncentral": 4,
+   "p_noncentral": 0.8,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_tdmean",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_tmin",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_vpdmax",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_vpdmin",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_winter_ppt_sum",
+   "n_central": 1,
+   "n_noncentral": 4,
+   "p_noncentral": 0.8,
+   "noncentral_wins": true
+  },
+  {
+   "field": "prism_winter_tmin",
+   "n_central": 1,
+   "n_noncentral": 2,
+   "p_noncentral": 0.6666666666666666,
+   "noncentral_wins": false
+  },
+  {
+   "field": "soil",
+   "n_central": 2,
+   "n_noncentral": 5,
+   "p_noncentral": 0.7142857142857143,
+   "noncentral_wins": false
+  },
+  {
+   "field": "soil_bulk_density_0cm",
+   "n_central": 1,
+   "n_noncentral": 5,
+   "p_noncentral": 0.8333333333333334,
+   "noncentral_wins": true
+  },
+  {
+   "field": "soil_bulk_density_30cm",
+   "n_central": 1,
+   "n_noncentral": 5,
+   "p_noncentral": 0.8333333333333334,
+   "noncentral_wins": true
+  },
+  {
+   "field": "soil_clay_0cm",
+   "n_central": 1,
+   "n_noncentral": 5,
+   "p_noncentral": 0.8333333333333334,
+   "noncentral_wins": true
+  },
+  {
+   "field": "soil_clay_30cm",
+   "n_central": 1,
+   "n_noncentral": 5,
+   "p_noncentral": 0.8333333333333334,
+   "noncentral_wins": true
+  },
+  {
+   "field": "soil_org_carbon_0cm",
+   "n_central": 1,
+   "n_noncentral": 5,
+   "p_noncentral": 0.8333333333333334,
+   "noncentral_wins": true
+  },
+  {
+   "field": "soil_org_carbon_30cm",
+   "n_central": 2,
+   "n_noncentral": 4,
+   "p_noncentral": 0.6666666666666666,
+   "noncentral_wins": false
+  },
+  {
+   "field": "soil_ph_0cm",
+   "n_central": 1,
+   "n_noncentral": 5,
+   "p_noncentral": 0.8333333333333334,
+   "noncentral_wins": true
+  },
+  {
+   "field": "soil_sand_0cm",
+   "n_central": 1,
+   "n_noncentral": 3,
+   "p_noncentral": 0.75,
+   "noncentral_wins": false
+  },
+  {
+   "field": "terra_pdsi_best_month",
+   "n_central": 1,
+   "n_noncentral": 2,
+   "p_noncentral": 0.6666666666666666,
+   "noncentral_wins": true
+  },
+  {
+   "field": "terra_pdsi_worst_month",
+   "n_central": 1,
+   "n_noncentral": 3,
+   "p_noncentral": 0.75,
+   "noncentral_wins": true
+  },
+  {
+   "field": "terra_pet",
+   "n_central": 1,
+   "n_noncentral": 3,
+   "p_noncentral": 0.75,
+   "noncentral_wins": true
+  },
+  {
+   "field": "terra_ro",
+   "n_central": 1,
+   "n_noncentral": 4,
+   "p_noncentral": 0.8,
+   "noncentral_wins": true
+  },
+  {
+   "field": "terra_soil",
+   "n_central": 1,
+   "n_noncentral": 3,
+   "p_noncentral": 0.75,
+   "noncentral_wins": false
+  },
+  {
+   "field": "terra_swe",
+   "n_central": 2,
+   "n_noncentral": 4,
+   "p_noncentral": 0.6666666666666666,
+   "noncentral_wins": true
+  },
+  {
+   "field": "terra_vs",
+   "n_central": 1,
+   "n_noncentral": 4,
+   "p_noncentral": 0.8,
+   "noncentral_wins": true
+  }
+ ],
+ "note": "Null in which every summary of a field is equally likely to be the most attributed. The fair-coin sign test is the special case of one central and one non-central summary."
+}

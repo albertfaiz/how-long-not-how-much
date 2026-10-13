@@ -1,0 +1,56 @@
+{
+ "script": "27_permutation_importance_across_splits.py",
+ "written_utc": "2026-10-05 07:42:30Z",
+ "root": "/sessions/rcw-015fvw8vykvncjwj5kajtost/mnt/satellite_sdoh",
+ "settings": {
+  "SEED": 0,
+  "N_FOLDS": 8,
+  "SHAP_SAMPLE": 20000,
+  "SHAP_BACKGROUND": 500,
+  "N_BOOT": 5000,
+  "N_BINS": 45,
+  "GATE_MIN_FOUND": 0.6,
+  "GATE_MAX_WIDTH": 0.4,
+  "XGB_PARAMS": {
+   "n_estimators": 1200,
+   "learning_rate": 0.03,
+   "max_depth": 8,
+   "min_child_weight": 10,
+   "subsample": 0.8,
+   "colsample_bytree": 0.7,
+   "reg_lambda": 1.0,
+   "random_state": 0,
+   "tree_method": "hist",
+   "enable_categorical": false
+  },
+  "threads": 4,
+  "N_SPLITS": 5,
+  "HELDOUT_FRACTION": 0.25,
+  "PERM_ROWS": 12000,
+  "PERM_REPEATS": 5
+ },
+ "versions": {
+  "python": "3.10.12",
+  "platform": "Linux aarch64",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2",
+  "xgboost": "3.2.0",
+  "catboost": "absent",
+  "shap": "0.49.1",
+  "pyarrow": "25.0.1",
+  "matplotlib": "3.10.9",
+  "joblib": "1.6.0"
+ },
+ "git": "none",
+ "inputs": {
+  "studyA_reference_frame.parquet": "3599487115877e62",
+  "studyA_final_model.joblib": "0d0325eefa53e888"
+ },
+ "outputs": {
+  "permutation_across_splits.json": "c937366ab16da2f2",
+  "permutation_across_splits.csv": "54c1eb510b491cf8"
+ },
+ "notes": ""
+}

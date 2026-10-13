@@ -1,0 +1,93 @@
+{
+ "n_counties": 3077,
+ "n_sdoh_columns": 314,
+ "n_env_columns": 581,
+ "oof_r2_residual_from_sdoh": 0.4371603030998107,
+ "oof_r2_residual_from_environment": -0.170041606953103,
+ "residual_sd": 1.3818935181008825,
+ "indicators": [
+  {
+   "column": "sdoh_saipe_pct_pov",
+   "label": "Population below the poverty line (%)",
+   "rho": -0.33720892741379105,
+   "p": 1.0640522620482011e-82,
+   "n": 3077,
+   "p_holm": 5.320261310241005e-82
+  },
+  {
+   "column": "sdoh_saipe_median_hh_income",
+   "label": "Median household income (USD)",
+   "rho": 0.3460168456019071,
+   "p": 2.9280489001673498e-87,
+   "n": 3077,
+   "p_holm": 1.75682934010041e-86
+  },
+  {
+   "column": "sdoh_unemployment_rate",
+   "label": "Unemployment rate (%)",
+   "rho": -0.2927626908905615,
+   "p": 1.4758262445991582e-61,
+   "n": 3061,
+   "p_holm": 2.9516524891983163e-61
+  },
+  {
+   "column": "sdoh_acs_pct_uninsured",
+   "label": "Without health insurance (%)",
+   "rho": -0.1897881250704713,
+   "p": 2.4039457321180552e-26,
+   "n": 3077,
+   "p_holm": 2.4039457321180552e-26
+  },
+  {
+   "column": "sdoh_bachelor's_degree_or_higher_%",
+   "label": "Bachelor's degree or higher (%)",
+   "rho": 0.3300120590297542,
+   "p": 1.111717396544619e-78,
+   "n": 3061,
+   "p_holm": 4.446869586178476e-78
+  },
+  {
+   "column": "sdoh_disability_rate",
+   "label": "Disability rate (%)",
+   "rho": -0.29986902621478684,
+   "p": 1.2357084120395781e-64,
+   "n": 3061,
+   "p_holm": 3.707125236118734e-64
+  }
+ ],
+ "large_miss_threshold": 3.0,
+ "n_large_miss": 52,
+ "large_miss_profile": {
+  "sdoh_saipe_pct_pov": {
+   "label": "Population below the poverty line (%)",
+   "median_percentile_large_miss": 90.15274618134546,
+   "median_percentile_rest": 49.28501787455314
+  },
+  "sdoh_saipe_median_hh_income": {
+   "label": "Median household income (USD)",
+   "median_percentile_large_miss": 17.09457263568411,
+   "median_percentile_rest": 50.73123171920702
+  },
+  "sdoh_unemployment_rate": {
+   "label": "Unemployment rate (%)",
+   "median_percentile_large_miss": 92.86180986605684,
+   "median_percentile_rest": 49.39562234563868
+  },
+  "sdoh_acs_pct_uninsured": {
+   "label": "Without health insurance (%)",
+   "median_percentile_large_miss": 79.82612934676632,
+   "median_percentile_rest": 49.30126746831329
+  },
+  "sdoh_bachelor's_degree_or_higher_%": {
+   "label": "Bachelor's degree or higher (%)",
+   "median_percentile_large_miss": 33.763475988239136,
+   "median_percentile_rest": 50.31852335837961
+  },
+  "sdoh_disability_rate": {
+   "label": "Disability rate (%)",
+   "median_percentile_large_miss": 56.46847435478601,
+   "median_percentile_rest": 50.024501796798425
+  }
+ },
+ "note": "County means. Folds grouped by state. Residual is observed minus predicted out of fold."
+}

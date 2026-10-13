@@ -1,0 +1,78 @@
+{
+ "n_counties": 3077,
+ "indicators": [
+  {
+   "indicator": "poverty_pct",
+   "label": "Population below the poverty line (%)",
+   "rho": -0.33720892741379105,
+   "rho_script28": -0.33720892741379105,
+   "n": 3077,
+   "years": [
+    2009,
+    2019
+   ],
+   "matches": true
+  },
+  {
+   "indicator": "median_household_income_usd",
+   "label": "Median household income (USD)",
+   "rho": 0.3460168456019071,
+   "rho_script28": 0.3460168456019071,
+   "n": 3077,
+   "years": [
+    2009,
+    2019
+   ],
+   "matches": true
+  },
+  {
+   "indicator": "unemployment_pct",
+   "label": "Unemployment rate (%)",
+   "rho": -0.2927626908905615,
+   "rho_script28": -0.2927626908905615,
+   "n": 3061,
+   "years": [
+    2012,
+    2019
+   ],
+   "matches": true
+  },
+  {
+   "indicator": "uninsured_pct",
+   "label": "Without health insurance (%)",
+   "rho": -0.1897881250704713,
+   "rho_script28": -0.1897881250704713,
+   "n": 3077,
+   "years": [
+    2013,
+    2019
+   ],
+   "matches": true
+  },
+  {
+   "indicator": "bachelors_or_higher_pct",
+   "label": "Bachelor's degree or higher (%)",
+   "rho": 0.3300120590297542,
+   "rho_script28": 0.3300120590297542,
+   "n": 3061,
+   "years": [
+    2012,
+    2019
+   ],
+   "matches": true
+  },
+  {
+   "indicator": "disability_pct",
+   "label": "Disability rate (%)",
+   "rho": -0.29986902621478684,
+   "rho_script28": -0.29986902621478684,
+   "n": 3061,
+   "years": [
+    2012,
+    2019
+   ],
+   "matches": true
+  }
+ ],
+ "note": "County means; residual is observed minus predicted out of fold. Reproduces Figure 10C."
+}

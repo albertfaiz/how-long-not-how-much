@@ -1,0 +1,377 @@
+field,central_col,noncentral_col,central_value,noncentral_value,noncentral_wins,ratio,estimator,estimator_label,kind
+soil_bulk_density_30cm,soil_bulk_density_30cm_mean,soil_bulk_density_30cm_p90,0.101789389284427,0.1314919169165259,True,1.2918037709127228,interventional_published,"interventional SHAP, published",conditional
+prism_tdmean,prism_tdmean_p50,prism_tdmean_min,0.0019636764878028,0.0565519867360371,True,28.799034406789854,interventional_published,"interventional SHAP, published",conditional
+soil_clay_0cm,soil_clay_0cm_mean,soil_clay_0cm_stddev,0.0120860043071908,0.0363266066582422,True,3.0056754684944957,interventional_published,"interventional SHAP, published",conditional
+soil_sand_0cm,soil_sand_0cm_mean,soil_sand_0cm_max,0.0346200997411253,0.0172867859795571,False,0.4993280235707145,interventional_published,"interventional SHAP, published",conditional
+soil_org_carbon_0cm,soil_org_carbon_0cm_mean,soil_org_carbon_0cm_p10,0.0235358081312707,0.029994341708725,True,1.2744130790594443,interventional_published,"interventional SHAP, published",conditional
+soil_org_carbon_30cm,soil_org_carbon_30cm_mean,soil_org_carbon_30cm_stddev,0.0284680030905249,0.0172861630286277,False,0.6072137541105267,interventional_published,"interventional SHAP, published",conditional
+soil_bulk_density_0cm,soil_bulk_density_0cm_mean,soil_bulk_density_0cm_p10,0.0145996411165081,0.0272234862302663,True,1.8646681800612326,interventional_published,"interventional SHAP, published",conditional
+ntl_harmonized,ntl_harmonized_mean,ntl_harmonized_stddev,0.0265261293104025,0.0225713801811756,False,0.8509111871185818,interventional_published,"interventional SHAP, published",conditional
+terra_vs,terra_vs_mean,terra_vs_stddev,0.0032208852875771,0.0262716347622346,True,8.156650242578912,interventional_published,"interventional SHAP, published",conditional
+soil_ph_0cm,soil_ph_0cm_mean,soil_ph_0cm_stddev,0.0172356935491951,0.0251437858631822,True,1.4588206614033474,interventional_published,"interventional SHAP, published",conditional
+meta_canopy_height,meta_canopy_height_mean,meta_canopy_height_p70,0.0118042369072814,0.0249801926047447,True,2.116205630313617,interventional_published,"interventional SHAP, published",conditional
+meta_canopy_cover_1m,meta_canopy_cover_1m_mean,meta_canopy_cover_1m_stddev,0.0244590971322357,0.0158300436786159,False,0.6472047432099529,interventional_published,"interventional SHAP, published",conditional
+soil,soil_mean,soil_stddev,0.022403493711021,0.0157283799177413,False,0.7020503195001235,interventional_published,"interventional SHAP, published",conditional
+soil_clay_30cm,soil_clay_30cm_mean,soil_clay_30cm_max,0.0119074432747279,0.0167187685971436,True,1.4040603185259048,interventional_published,"interventional SHAP, published",conditional
+prism_vpdmin,prism_vpdmin_p50,prism_vpdmin_max,0.0012330144668485,0.0125862104885662,True,10.2076746274808,interventional_published,"interventional SHAP, published",conditional
+pm25,pm25_mean,pm25_stddev,0.0019413754012233,0.0109575326813941,True,5.644211147668574,interventional_published,"interventional SHAP, published",conditional
+prism_tmin,prism_tmin_mean,prism_tmin_stddev,0.0009759999118103,0.0106674210425254,True,10.929735662310973,interventional_published,"interventional SHAP, published",conditional
+prism_winter_tmin,prism_winter_tmin_mean,prism_winter_tmin_stddev,0.0079661135837259,0.0055401706641659,False,0.6954671943774443,interventional_published,"interventional SHAP, published",conditional
+terra_pdsi_best_month,terra_pdsi_best_month_mean,terra_pdsi_best_month_max,0.0045053681767825,0.0069039391393831,True,1.532380677557308,interventional_published,"interventional SHAP, published",conditional
+ls57_sr_b1,ls57_sr_b1_p50,ls57_sr_b1_stddev,0.0009920953547333,0.0068905107645578,True,6.945411780917109,interventional_published,"interventional SHAP, published",conditional
+terra_soil,terra_soil_mean,terra_soil_stddev,0.0065372654326465,0.004049892792328,False,0.619508697337454,interventional_published,"interventional SHAP, published",conditional
+prism_winter_ppt_sum,prism_winter_ppt_sum_mean,prism_winter_ppt_sum_min,0.0012051794183772,0.0053852849756057,True,4.468450832704313,interventional_published,"interventional SHAP, published",conditional
+prism_summer_tmean,prism_summer_tmean_mean,prism_summer_tmean_stddev,0.0010160169673793,0.0051190630432179,True,5.038363735619436,interventional_published,"interventional SHAP, published",conditional
+terra_ro,terra_ro_mean,terra_ro_min,0.0035740383824232,0.0047036175825071,True,1.3160512225159833,interventional_published,"interventional SHAP, published",conditional
+jrc,jrc_mean,jrc_stddev,0.0046669590827119,0.0022152858682223,False,0.47467437124711853,interventional_published,"interventional SHAP, published",conditional
+lst_night_1km,lst_night_1km_p50,lst_night_1km_p10,0.0027854505254021,0.0043215397574456,True,1.5514688622307355,interventional_published,"interventional SHAP, published",conditional
+prism_days_tmin_under_0c,prism_days_tmin_under_0c_mean,prism_days_tmin_under_0c_p90,0.0041517110604868,0.0042937815662418,True,1.0342197478786834,interventional_published,"interventional SHAP, published",conditional
+lst_day_1km,lst_day_1km_mean,lst_day_1km_p10,0.0029804914942016,0.0036024408071425,True,1.2086734064334261,interventional_published,"interventional SHAP, published",conditional
+terra_pet,terra_pet_mean,terra_pet_stddev,0.0010845848293066,0.003568515381094,True,3.290213254573581,interventional_published,"interventional SHAP, published",conditional
+terra_pdsi_worst_month,terra_pdsi_worst_month_mean,terra_pdsi_worst_month_max,0.0022619025173932,0.003509074411444,True,1.5513818055643451,interventional_published,"interventional SHAP, published",conditional
+ls57_sr_b7,ls57_sr_b7_mean,ls57_sr_b7_stddev,0.0008329416236239,0.0034201747206084,True,4.106139762505997,interventional_published,"interventional SHAP, published",conditional
+prism_ppt_sum,prism_ppt_sum_mean,prism_ppt_sum_p90,0.0009634561427565,0.0031304670400909,True,3.249205543632183,interventional_published,"interventional SHAP, published",conditional
+ls57_sr_b2,ls57_sr_b2_p50,ls57_sr_b2_max,0.0027663082540424,0.0024683908591486,False,0.8923050623666202,interventional_published,"interventional SHAP, published",conditional
+ls57_sr_b4,ls57_sr_b4_mean,ls57_sr_b4_stddev,0.0011834932894819,0.0026887522673329,True,2.2718779153449704,interventional_published,"interventional SHAP, published",conditional
+ls57_ndmi,ls57_ndmi_mean,ls57_ndmi_max,0.0005890539951143,0.0025661958979821,True,4.356469728185369,interventional_published,"interventional SHAP, published",conditional
+prism_days_tmin_over_20c,prism_days_tmin_over_20c_mean,prism_days_tmin_over_20c_stddev,0.0009392178790982,0.0023730642297698,True,2.526638687977621,interventional_published,"interventional SHAP, published",conditional
+prism_days_tmax_over_35c,prism_days_tmax_over_35c_mean,prism_days_tmax_over_35c_stddev,0.0012181476036917,0.0023086529017012,True,1.8952160597817789,interventional_published,"interventional SHAP, published",conditional
+ls57_sr_b5,ls57_sr_b5_mean,ls57_sr_b5_stddev,0.0017616149681336,0.0022851074745158,True,1.2971662456619741,interventional_published,"interventional SHAP, published",conditional
+ls57_ndwi,ls57_ndwi_p50,ls57_ndwi_max,0.0010023403564354,0.0022715883983957,True,2.266284484916977,interventional_published,"interventional SHAP, published",conditional
+prism_summer_tmax,prism_summer_tmax_mean,prism_summer_tmax_stddev,0.0011548556503259,0.002240618061681,True,1.9401715366320438,interventional_published,"interventional SHAP, published",conditional
+prism_vpdmax,prism_vpdmax_p50,prism_vpdmax_stddev,0.0007038878809846,0.0021229582642645,True,3.0160460516736003,interventional_published,"interventional SHAP, published",conditional
+ls57_evi,ls57_evi_p50,ls57_evi_min,0.0006887695126593,0.0014362090706405,True,2.085180955665965,interventional_published,"interventional SHAP, published",conditional
+ls57_ndvi,ls57_ndvi_mean,ls57_ndvi_stddev,0.0010276932263037,0.0014107189086137,True,1.3727042978454054,interventional_published,"interventional SHAP, published",conditional
+terra_swe,terra_swe_p50,terra_swe_min,0.0011437061571313,0.0014025496163364,True,1.2263198965845772,interventional_published,"interventional SHAP, published",conditional
+prism_summer_ppt_sum,prism_summer_ppt_sum_mean,prism_summer_ppt_sum_max,0.0011115308045783,0.0013442372663359,True,1.2093567364926838,interventional_published,"interventional SHAP, published",conditional
+ls57_savi,ls57_savi_mean,ls57_savi_min,0.0005746326491526,0.0012295741901316,True,2.139756924610584,interventional_published,"interventional SHAP, published",conditional
+ls57_bsi,ls57_bsi_mean,ls57_bsi_min,0.0008761072899923,0.0011416271414386,True,1.303067734373759,interventional_published,"interventional SHAP, published",conditional
+soil_bulk_density_30cm,soil_bulk_density_30cm_mean,soil_bulk_density_30cm_p90,0.09960472583770752,0.14049823582172394,True,1.4105579292557553,path_dependent,"TreeSHAP, path dependent",conditional
+prism_tdmean,prism_tdmean_p50,prism_tdmean_min,0.0016142369713634253,0.06298709660768509,True,39.019733611035186,path_dependent,"TreeSHAP, path dependent",conditional
+soil_clay_0cm,soil_clay_0cm_mean,soil_clay_0cm_stddev,0.010427995584905148,0.03451796993613243,True,3.3101251007526584,path_dependent,"TreeSHAP, path dependent",conditional
+soil_sand_0cm,soil_sand_0cm_mean,soil_sand_0cm_max,0.03224740922451019,0.019927600398659706,False,0.6179597331345736,path_dependent,"TreeSHAP, path dependent",conditional
+soil_org_carbon_0cm,soil_org_carbon_0cm_mean,soil_org_carbon_0cm_p10,0.024069467559456825,0.027480382472276688,True,1.1417112740194257,path_dependent,"TreeSHAP, path dependent",conditional
+soil_org_carbon_30cm,soil_org_carbon_30cm_mean,soil_org_carbon_30cm_stddev,0.03149896860122681,0.01346451323479414,False,0.4274588608044052,path_dependent,"TreeSHAP, path dependent",conditional
+soil_bulk_density_0cm,soil_bulk_density_0cm_mean,soil_bulk_density_0cm_p10,0.01151522807776928,0.021373078227043152,True,1.8560707684379212,path_dependent,"TreeSHAP, path dependent",conditional
+ntl_harmonized,ntl_harmonized_mean,ntl_harmonized_stddev,0.03010440617799759,0.021968912333250046,False,0.7297573718396899,path_dependent,"TreeSHAP, path dependent",conditional
+terra_vs,terra_vs_mean,terra_vs_stddev,0.0020395054016262293,0.025315314531326294,True,12.412477314912115,path_dependent,"TreeSHAP, path dependent",conditional
+soil_ph_0cm,soil_ph_0cm_mean,soil_ph_0cm_stddev,0.011566397733986378,0.026713121682405472,True,2.309545486570325,path_dependent,"TreeSHAP, path dependent",conditional
+meta_canopy_height,meta_canopy_height_mean,meta_canopy_height_p70,0.007848366163671017,0.02049124985933304,True,2.610893711124763,path_dependent,"TreeSHAP, path dependent",conditional
+meta_canopy_cover_1m,meta_canopy_cover_1m_mean,meta_canopy_cover_1m_stddev,0.02621118165552616,0.009746498428285122,False,0.37184506049273236,path_dependent,"TreeSHAP, path dependent",conditional
+soil,soil_mean,soil_stddev,0.022184336557984352,0.016158800572156906,False,0.7283878212865105,path_dependent,"TreeSHAP, path dependent",conditional
+soil_clay_30cm,soil_clay_30cm_mean,soil_clay_30cm_max,0.008271264843642712,0.01570572331547737,True,1.8988296968327376,path_dependent,"TreeSHAP, path dependent",conditional
+prism_vpdmin,prism_vpdmin_p50,prism_vpdmin_max,0.0007948243874125183,0.014394475147128105,True,18.11025853646498,path_dependent,"TreeSHAP, path dependent",conditional
+pm25,pm25_mean,pm25_stddev,0.000854872225318104,0.01047888770699501,True,12.25784087568846,path_dependent,"TreeSHAP, path dependent",conditional
+prism_tmin,prism_tmin_mean,prism_tmin_stddev,0.0002483546268194914,0.008618728257715702,True,34.70331263037008,path_dependent,"TreeSHAP, path dependent",conditional
+prism_winter_tmin,prism_winter_tmin_mean,prism_winter_tmin_stddev,0.009651154279708862,0.0025274541694670916,False,0.26188102440564603,path_dependent,"TreeSHAP, path dependent",conditional
+terra_pdsi_best_month,terra_pdsi_best_month_mean,terra_pdsi_best_month_max,0.005338301416486502,0.006745609454810619,True,1.2636246866798995,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_sr_b1,ls57_sr_b1_p50,ls57_sr_b1_stddev,0.0008195993723347783,0.008873545564711094,True,10.82668662792308,path_dependent,"TreeSHAP, path dependent",conditional
+terra_soil,terra_soil_mean,terra_soil_stddev,0.007181026041507721,0.0031298408284783363,False,0.43584869493401784,path_dependent,"TreeSHAP, path dependent",conditional
+prism_winter_ppt_sum,prism_winter_ppt_sum_mean,prism_winter_ppt_sum_min,0.0007027080864645541,0.00706935441121459,True,10.060158047677714,path_dependent,"TreeSHAP, path dependent",conditional
+prism_summer_tmean,prism_summer_tmean_mean,prism_summer_tmean_stddev,0.0011654079426079988,0.004140326287597418,True,3.552684117058634,path_dependent,"TreeSHAP, path dependent",conditional
+terra_ro,terra_ro_mean,terra_ro_min,0.0041767568327486515,0.0031277283560484648,False,0.7488413813140663,path_dependent,"TreeSHAP, path dependent",conditional
+jrc,jrc_mean,jrc_stddev,0.003836791031062603,0.002392581896856427,False,0.6235893165632738,path_dependent,"TreeSHAP, path dependent",conditional
+lst_night_1km,lst_night_1km_p50,lst_night_1km_p10,0.003945960197597742,0.003844014834612608,False,0.9741646246084293,path_dependent,"TreeSHAP, path dependent",conditional
+prism_days_tmin_under_0c,prism_days_tmin_under_0c_mean,prism_days_tmin_under_0c_p90,0.0021555398125201464,0.0042968313209712505,True,1.993389913753259,path_dependent,"TreeSHAP, path dependent",conditional
+lst_day_1km,lst_day_1km_mean,lst_day_1km_p10,0.005201236344873905,0.0009011768270283937,False,0.17326204142146923,path_dependent,"TreeSHAP, path dependent",conditional
+terra_pet,terra_pet_mean,terra_pet_stddev,0.0004211851046420634,0.002532666316255927,True,6.013190609882247,path_dependent,"TreeSHAP, path dependent",conditional
+terra_pdsi_worst_month,terra_pdsi_worst_month_mean,terra_pdsi_worst_month_max,0.0016517103649675846,0.0037871336098760366,True,2.2928557513473984,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_sr_b7,ls57_sr_b7_mean,ls57_sr_b7_stddev,0.00047855396405793726,0.004241692367941141,True,8.863561241815585,path_dependent,"TreeSHAP, path dependent",conditional
+prism_ppt_sum,prism_ppt_sum_mean,prism_ppt_sum_p90,0.0011987261241301894,0.00538608618080616,True,4.493174939950834,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_sr_b2,ls57_sr_b2_p50,ls57_sr_b2_max,0.0011616703122854233,0.001212228205986321,True,1.043521723131094,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_sr_b4,ls57_sr_b4_mean,ls57_sr_b4_stddev,0.0013056552270427346,0.0015810076147317886,True,1.210892111474725,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_ndmi,ls57_ndmi_mean,ls57_ndmi_max,0.0004832229169551283,0.0015406053280457854,True,3.188187633470299,path_dependent,"TreeSHAP, path dependent",conditional
+prism_days_tmin_over_20c,prism_days_tmin_over_20c_mean,prism_days_tmin_over_20c_stddev,0.0009391810745000839,0.001383633934892714,True,1.4732344725208688,path_dependent,"TreeSHAP, path dependent",conditional
+prism_days_tmax_over_35c,prism_days_tmax_over_35c_mean,prism_days_tmax_over_35c_stddev,0.0016159116057679057,0.0028579693753272295,True,1.7686421491905053,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_sr_b5,ls57_sr_b5_mean,ls57_sr_b5_stddev,0.0023740327451378107,0.0022214483469724655,False,0.9357277617683037,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_ndwi,ls57_ndwi_p50,ls57_ndwi_max,0.001096832798793912,0.0016861993353813887,True,1.537334894831327,path_dependent,"TreeSHAP, path dependent",conditional
+prism_summer_tmax,prism_summer_tmax_mean,prism_summer_tmax_stddev,0.000354886578861624,0.0026315858121961355,True,7.415286936568636,path_dependent,"TreeSHAP, path dependent",conditional
+prism_vpdmax,prism_vpdmax_p50,prism_vpdmax_stddev,0.0007311214576475322,0.0019677639938890934,True,2.691432419752255,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_evi,ls57_evi_p50,ls57_evi_min,0.00045916810631752014,0.0011069829342886806,True,2.410844566637189,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_ndvi,ls57_ndvi_mean,ls57_ndvi_stddev,0.0013724160380661488,0.001468698843382299,True,1.0701556981597364,path_dependent,"TreeSHAP, path dependent",conditional
+terra_swe,terra_swe_p50,terra_swe_min,0.0007022012723609805,0.0008844019612297416,True,1.2594707472633249,path_dependent,"TreeSHAP, path dependent",conditional
+prism_summer_ppt_sum,prism_summer_ppt_sum_mean,prism_summer_ppt_sum_max,0.0009856440592557192,0.0010061180219054222,True,1.0207721666431626,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_savi,ls57_savi_mean,ls57_savi_min,0.00018599609029479325,0.0014914004132151604,True,8.018450338667739,path_dependent,"TreeSHAP, path dependent",conditional
+ls57_bsi,ls57_bsi_mean,ls57_bsi_min,0.0009061317541636527,0.000988541985861957,True,1.0909472947169454,path_dependent,"TreeSHAP, path dependent",conditional
+soil_bulk_density_30cm,soil_bulk_density_30cm_mean,soil_bulk_density_30cm_p90,61822.62109375,103163.8203125,True,1.6687066722075525,total_gain,total split gain,not an attribution
+prism_tdmean,prism_tdmean_p50,prism_tdmean_min,878.916015625,24721.193359375,True,28.126911923200854,total_gain,total split gain,not an attribution
+soil_clay_0cm,soil_clay_0cm_mean,soil_clay_0cm_stddev,15140.7138671875,33441.92578125,True,2.208741679857271,total_gain,total split gain,not an attribution
+soil_sand_0cm,soil_sand_0cm_mean,soil_sand_0cm_max,20906.306640625,10783.7734375,False,0.5158143723265324,total_gain,total split gain,not an attribution
+soil_org_carbon_0cm,soil_org_carbon_0cm_mean,soil_org_carbon_0cm_p10,19363.919921875,21930.04296875,True,1.1325208458425873,total_gain,total split gain,not an attribution
+soil_org_carbon_30cm,soil_org_carbon_30cm_mean,soil_org_carbon_30cm_stddev,24399.669921875,16998.08203125,False,0.6966521303638922,total_gain,total split gain,not an attribution
+soil_bulk_density_0cm,soil_bulk_density_0cm_mean,soil_bulk_density_0cm_p10,11842.6044921875,8942.35546875,False,0.7551004067263432,total_gain,total split gain,not an attribution
+ntl_harmonized,ntl_harmonized_mean,ntl_harmonized_stddev,10055.24609375,8935.1533203125,False,0.8886061302732599,total_gain,total split gain,not an attribution
+terra_vs,terra_vs_mean,terra_vs_stddev,1163.245849609375,15040.8056640625,True,12.930031660214643,total_gain,total split gain,not an attribution
+soil_ph_0cm,soil_ph_0cm_mean,soil_ph_0cm_stddev,13657.9599609375,30403.0078125,True,2.22602847712647,total_gain,total split gain,not an attribution
+meta_canopy_height,meta_canopy_height_mean,meta_canopy_height_p70,5983.8603515625,6435.63671875,True,1.0754991494862565,total_gain,total split gain,not an attribution
+meta_canopy_cover_1m,meta_canopy_cover_1m_mean,meta_canopy_cover_1m_stddev,16947.55859375,11753.908203125,False,0.693545807091038,total_gain,total split gain,not an attribution
+soil,soil_mean,soil_stddev,22273.78125,24130.044921875,True,1.0833385068767791,total_gain,total split gain,not an attribution
+soil_clay_30cm,soil_clay_30cm_mean,soil_clay_30cm_max,10347.4736328125,15290.646484375,True,1.4777178494939462,total_gain,total split gain,not an attribution
+prism_vpdmin,prism_vpdmin_p50,prism_vpdmin_max,612.2828979492188,2376.4287109375,True,3.8812593310986045,total_gain,total split gain,not an attribution
+pm25,pm25_mean,pm25_stddev,346.90008544921875,2362.468994140625,True,6.8102289196076224,total_gain,total split gain,not an attribution
+prism_tmin,prism_tmin_mean,prism_tmin_stddev,160.2351837158203,4657.2548828125,True,29.065120248947427,total_gain,total split gain,not an attribution
+prism_winter_tmin,prism_winter_tmin_mean,prism_winter_tmin_stddev,5731.865234375,1829.0723876953125,False,0.31910596514482664,total_gain,total split gain,not an attribution
+terra_pdsi_best_month,terra_pdsi_best_month_mean,terra_pdsi_best_month_max,504.0330810546875,550.633056640625,True,1.0924542006021256,total_gain,total split gain,not an attribution
+ls57_sr_b1,ls57_sr_b1_p50,ls57_sr_b1_stddev,492.77490234375,11454.294921875,True,23.24447707745617,total_gain,total split gain,not an attribution
+terra_soil,terra_soil_mean,terra_soil_stddev,1986.412353515625,1938.0810546875,False,0.9756690504151434,total_gain,total split gain,not an attribution
+prism_winter_ppt_sum,prism_winter_ppt_sum_mean,prism_winter_ppt_sum_min,190.1381072998047,877.9279174804688,True,4.617317012082041,total_gain,total split gain,not an attribution
+prism_summer_tmean,prism_summer_tmean_mean,prism_summer_tmean_stddev,604.0338745117188,2114.3740234375,True,3.5004229276821452,total_gain,total split gain,not an attribution
+terra_ro,terra_ro_mean,terra_ro_min,550.784423828125,501.3349304199219,False,0.9102198768358161,total_gain,total split gain,not an attribution
+jrc,jrc_mean,jrc_stddev,3908.593017578125,1834.142578125,False,0.4692590325665287,total_gain,total split gain,not an attribution
+lst_night_1km,lst_night_1km_p50,lst_night_1km_p10,2397.973876953125,2363.802490234375,False,0.9857498920037576,total_gain,total split gain,not an attribution
+prism_days_tmin_under_0c,prism_days_tmin_under_0c_mean,prism_days_tmin_under_0c_p90,896.9481201171875,6960.61767578125,True,7.760334761470748,total_gain,total split gain,not an attribution
+lst_day_1km,lst_day_1km_mean,lst_day_1km_p10,2984.199462890625,576.914794921875,False,0.1933231347622623,total_gain,total split gain,not an attribution
+terra_pet,terra_pet_mean,terra_pet_stddev,188.59677124023438,2267.548828125,True,12.023264307301416,total_gain,total split gain,not an attribution
+terra_pdsi_worst_month,terra_pdsi_worst_month_mean,terra_pdsi_worst_month_max,229.19134521484375,388.3338317871094,True,1.6943651664642294,total_gain,total split gain,not an attribution
+ls57_sr_b7,ls57_sr_b7_mean,ls57_sr_b7_stddev,486.64739990234375,3306.3466796875,True,6.794132014988654,total_gain,total split gain,not an attribution
+prism_ppt_sum,prism_ppt_sum_mean,prism_ppt_sum_p90,153.94451904296875,340.48992919921875,True,2.2117703918005795,total_gain,total split gain,not an attribution
+ls57_sr_b2,ls57_sr_b2_p50,ls57_sr_b2_max,725.91845703125,1183.636474609375,True,1.630536409626544,total_gain,total split gain,not an attribution
+ls57_sr_b4,ls57_sr_b4_mean,ls57_sr_b4_stddev,962.0016479492188,1094.35791015625,True,1.137584236460703,total_gain,total split gain,not an attribution
+ls57_ndmi,ls57_ndmi_mean,ls57_ndmi_max,238.21151733398438,709.8573608398438,True,2.979945591146999,total_gain,total split gain,not an attribution
+prism_days_tmin_over_20c,prism_days_tmin_over_20c_mean,prism_days_tmin_over_20c_stddev,691.3675537109375,404.20965576171875,False,0.5846523366509037,total_gain,total split gain,not an attribution
+prism_days_tmax_over_35c,prism_days_tmax_over_35c_mean,prism_days_tmax_over_35c_stddev,816.5347900390625,243.68637084960938,False,0.29843966702012975,total_gain,total split gain,not an attribution
+ls57_sr_b5,ls57_sr_b5_mean,ls57_sr_b5_stddev,2859.556640625,1793.8779296875,False,0.6273272940994868,total_gain,total split gain,not an attribution
+ls57_ndwi,ls57_ndwi_p50,ls57_ndwi_max,1224.396728515625,1215.554443359375,False,0.9927782515664103,total_gain,total split gain,not an attribution
+prism_summer_tmax,prism_summer_tmax_mean,prism_summer_tmax_stddev,74.46176147460938,1693.2991943359375,True,22.74052024559389,total_gain,total split gain,not an attribution
+prism_vpdmax,prism_vpdmax_p50,prism_vpdmax_stddev,179.9560089111328,1529.5943603515625,True,8.499823760299762,total_gain,total split gain,not an attribution
+ls57_evi,ls57_evi_p50,ls57_evi_min,222.70343017578125,608.257080078125,True,2.7312425300231062,total_gain,total split gain,not an attribution
+ls57_ndvi,ls57_ndvi_mean,ls57_ndvi_stddev,583.23681640625,1137.639892578125,True,1.950562551225691,total_gain,total split gain,not an attribution
+terra_swe,terra_swe_p50,terra_swe_min,190.1781005859375,244.07669067382812,True,1.283411128420304,total_gain,total split gain,not an attribution
+prism_summer_ppt_sum,prism_summer_ppt_sum_mean,prism_summer_ppt_sum_max,116.4248046875,726.562255859375,True,6.2406139122119795,total_gain,total split gain,not an attribution
+ls57_savi,ls57_savi_mean,ls57_savi_min,72.47911834716797,800.1773071289062,True,11.040108177035686,total_gain,total split gain,not an attribution
+ls57_bsi,ls57_bsi_mean,ls57_bsi_min,365.62005615234375,495.1706237792969,True,1.3543311299448326,total_gain,total split gain,not an attribution
+soil_bulk_density_30cm,soil_bulk_density_30cm_mean,soil_bulk_density_30cm_p90,0.11064519295105252,0.14563074687256822,True,1.3161958779085206,interventional_recomputed,"interventional SHAP, here",conditional
+prism_tdmean,prism_tdmean_p50,prism_tdmean_min,0.002102107288144103,0.054049499749340243,True,25.71205573292083,interventional_recomputed,"interventional SHAP, here",conditional
+soil_clay_0cm,soil_clay_0cm_mean,soil_clay_0cm_stddev,0.012012246508556809,0.038659126134080894,True,3.218309423349116,interventional_recomputed,"interventional SHAP, here",conditional
+soil_sand_0cm,soil_sand_0cm_mean,soil_sand_0cm_max,0.03827329554768729,0.02292751352256569,False,0.5990472781210792,interventional_recomputed,"interventional SHAP, here",conditional
+soil_org_carbon_0cm,soil_org_carbon_0cm_mean,soil_org_carbon_0cm_p10,0.02387412440698337,0.0289884175552076,True,1.2142190876214192,interventional_recomputed,"interventional SHAP, here",conditional
+soil_org_carbon_30cm,soil_org_carbon_30cm_mean,soil_org_carbon_30cm_stddev,0.0330252666003427,0.014745498321430487,False,0.4464914242744516,interventional_recomputed,"interventional SHAP, here",conditional
+soil_bulk_density_0cm,soil_bulk_density_0cm_mean,soil_bulk_density_0cm_p10,0.01442748420650908,0.028710432392781777,True,1.9899818971784995,interventional_recomputed,"interventional SHAP, here",conditional
+ntl_harmonized,ntl_harmonized_mean,ntl_harmonized_stddev,0.028678139030825365,0.0205827472875726,False,0.7177155834780198,interventional_recomputed,"interventional SHAP, here",conditional
+terra_vs,terra_vs_mean,terra_vs_stddev,0.0024044239813055387,0.029434451105429735,True,12.24178902484894,interventional_recomputed,"interventional SHAP, here",conditional
+soil_ph_0cm,soil_ph_0cm_mean,soil_ph_0cm_stddev,0.014110045846914622,0.030188378347074593,True,2.1394954116095763,interventional_recomputed,"interventional SHAP, here",conditional
+meta_canopy_height,meta_canopy_height_mean,meta_canopy_height_p70,0.01209116536757923,0.034948128421877896,True,2.890385447509172,interventional_recomputed,"interventional SHAP, here",conditional
+meta_canopy_cover_1m,meta_canopy_cover_1m_mean,meta_canopy_cover_1m_stddev,0.030227883073777544,0.010903659144490208,False,0.36071527463162145,interventional_recomputed,"interventional SHAP, here",conditional
+soil,soil_mean,soil_stddev,0.02388999517074829,0.015881917215174252,False,0.6647936553214796,interventional_recomputed,"interventional SHAP, here",conditional
+soil_clay_30cm,soil_clay_30cm_mean,soil_clay_30cm_max,0.009889004181115284,0.018904779736963785,True,1.911697011218343,interventional_recomputed,"interventional SHAP, here",conditional
+prism_vpdmin,prism_vpdmin_p50,prism_vpdmin_max,0.0008874969401832255,0.01633112293492572,True,18.401328720698604,interventional_recomputed,"interventional SHAP, here",conditional
+pm25,pm25_mean,pm25_stddev,0.0010429264397298322,0.012998187775411429,True,12.463187508007353,interventional_recomputed,"interventional SHAP, here",conditional
+prism_tmin,prism_tmin_mean,prism_tmin_stddev,0.00032725148165660325,0.011138428828849842,True,34.036297627944116,interventional_recomputed,"interventional SHAP, here",conditional
+prism_winter_tmin,prism_winter_tmin_mean,prism_winter_tmin_stddev,0.008880836279691936,0.002933870287761008,False,0.33035968633606877,interventional_recomputed,"interventional SHAP, here",conditional
+terra_pdsi_best_month,terra_pdsi_best_month_mean,terra_pdsi_best_month_max,0.005035261616414626,0.006756635059747469,True,1.3418637549479608,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_sr_b1,ls57_sr_b1_p50,ls57_sr_b1_stddev,0.0009438239722416398,0.007608115900870697,True,8.060947935875113,interventional_recomputed,"interventional SHAP, here",conditional
+terra_soil,terra_soil_mean,terra_soil_stddev,0.007328891677049788,0.003340280193066026,False,0.45576880383237434,interventional_recomputed,"interventional SHAP, here",conditional
+prism_winter_ppt_sum,prism_winter_ppt_sum_mean,prism_winter_ppt_sum_min,0.000706849623871743,0.007390861619269821,True,10.456059350766358,interventional_recomputed,"interventional SHAP, here",conditional
+prism_summer_tmean,prism_summer_tmean_mean,prism_summer_tmean_stddev,0.0012978654323928549,0.006153879663108473,True,4.741539076021663,interventional_recomputed,"interventional SHAP, here",conditional
+terra_ro,terra_ro_mean,terra_ro_min,0.004811807224376127,0.0038809894427289885,False,0.8065554711062177,interventional_recomputed,"interventional SHAP, here",conditional
+jrc,jrc_mean,jrc_stddev,0.0036708730535911964,0.002559403295397914,False,0.6972192331451132,interventional_recomputed,"interventional SHAP, here",conditional
+lst_night_1km,lst_night_1km_p50,lst_night_1km_p10,0.004432057354141995,0.0041875816630203835,False,0.9448392311771111,interventional_recomputed,"interventional SHAP, here",conditional
+prism_days_tmin_under_0c,prism_days_tmin_under_0c_mean,prism_days_tmin_under_0c_p90,0.002477372794260574,0.004743980525859776,True,1.9149239617268505,interventional_recomputed,"interventional SHAP, here",conditional
+lst_day_1km,lst_day_1km_mean,lst_day_1km_p10,0.0044904048951825825,0.0009463243646825753,False,0.21074366048768017,interventional_recomputed,"interventional SHAP, here",conditional
+terra_pet,terra_pet_mean,terra_pet_stddev,0.0005365871183861244,0.0029468290940430596,True,5.491799920404615,interventional_recomputed,"interventional SHAP, here",conditional
+terra_pdsi_worst_month,terra_pdsi_worst_month_mean,terra_pdsi_worst_month_max,0.001626926257566571,0.003716434555692762,True,2.2843288307679748,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_sr_b7,ls57_sr_b7_mean,ls57_sr_b7_stddev,0.000568266485013411,0.004672159654902333,True,8.221775836018326,interventional_recomputed,"interventional SHAP, here",conditional
+prism_ppt_sum,prism_ppt_sum_mean,prism_ppt_sum_p90,0.0018646857451428812,0.0066274627681118725,True,3.554198226363362,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_sr_b2,ls57_sr_b2_p50,ls57_sr_b2_max,0.001396569524016531,0.0013304175241852171,False,0.9526325050821238,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_sr_b4,ls57_sr_b4_mean,ls57_sr_b4_stddev,0.001328692765200231,0.0017473693659560109,True,1.3151041472651401,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_ndmi,ls57_ndmi_mean,ls57_ndmi_max,0.0006944813224466365,0.001863498328147706,True,2.68329509796269,interventional_recomputed,"interventional SHAP, here",conditional
+prism_days_tmin_over_20c,prism_days_tmin_over_20c_mean,prism_days_tmin_over_20c_stddev,0.001100670882340301,0.0015170280341301934,True,1.3782757938545744,interventional_recomputed,"interventional SHAP, here",conditional
+prism_days_tmax_over_35c,prism_days_tmax_over_35c_mean,prism_days_tmax_over_35c_stddev,0.0016360104486129142,0.0032336322190177386,True,1.9765351876324277,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_sr_b5,ls57_sr_b5_mean,ls57_sr_b5_stddev,0.0019859691711656413,0.0023829112906088366,True,1.1998732534252858,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_ndwi,ls57_ndwi_p50,ls57_ndwi_max,0.0012618063523946147,0.0017462708520011956,True,1.383945205765671,interventional_recomputed,"interventional SHAP, here",conditional
+prism_summer_tmax,prism_summer_tmax_mean,prism_summer_tmax_stddev,0.0005278337906695717,0.003061632237379274,True,5.800371805479731,interventional_recomputed,"interventional SHAP, here",conditional
+prism_vpdmax,prism_vpdmax_p50,prism_vpdmax_stddev,0.0008131570870287141,0.0020037670311402935,True,2.4641819681632273,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_evi,ls57_evi_p50,ls57_evi_min,0.0005547377448460118,0.001226355369744913,True,2.2106939380613695,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_ndvi,ls57_ndvi_mean,ls57_ndvi_stddev,0.0020245973607491063,0.0016048305751930657,False,0.7926665352360601,interventional_recomputed,"interventional SHAP, here",conditional
+terra_swe,terra_swe_p50,terra_swe_min,0.0012314930985156067,0.0009761991857202509,False,0.7926956203789717,interventional_recomputed,"interventional SHAP, here",conditional
+prism_summer_ppt_sum,prism_summer_ppt_sum_mean,prism_summer_ppt_sum_max,0.0010270723549246651,0.0010688880040883772,True,1.0407134404535494,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_savi,ls57_savi_mean,ls57_savi_min,0.0002834976969762966,0.001612676821074555,True,5.688500606089198,interventional_recomputed,"interventional SHAP, here",conditional
+ls57_bsi,ls57_bsi_mean,ls57_bsi_min,0.0009659782909376941,0.0011349773302228709,True,1.1749511773407724,interventional_recomputed,"interventional SHAP, here",conditional
+soil_bulk_density_30cm,soil_bulk_density_30cm_mean,soil_bulk_density_30cm_p90,0.09699213489978123,0.14521864081370736,True,1.4972207897450343,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_tdmean,prism_tdmean_p50,prism_tdmean_min,0.0014899974228576487,0.059417411026659935,True,39.877526038067884,oof_path_dependent,"TreeSHAP, out of fold",conditional
+soil_clay_0cm,soil_clay_0cm_mean,soil_clay_0cm_stddev,0.011458040174819604,0.029862262009913446,True,2.606227727804559,oof_path_dependent,"TreeSHAP, out of fold",conditional
+soil_sand_0cm,soil_sand_0cm_mean,soil_sand_0cm_max,0.03465691999120274,0.016795200409960596,False,0.48461318588679736,oof_path_dependent,"TreeSHAP, out of fold",conditional
+soil_org_carbon_0cm,soil_org_carbon_0cm_mean,soil_org_carbon_0cm_p10,0.02538225394588452,0.024700691540956967,False,0.9731480739897781,oof_path_dependent,"TreeSHAP, out of fold",conditional
+soil_org_carbon_30cm,soil_org_carbon_30cm_mean,soil_org_carbon_30cm_stddev,0.03418525381197099,0.014288089246599833,False,0.4179606015268616,oof_path_dependent,"TreeSHAP, out of fold",conditional
+soil_bulk_density_0cm,soil_bulk_density_0cm_mean,soil_bulk_density_0cm_p10,0.010354298662333965,0.020796208980650512,True,2.008461380035452,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ntl_harmonized,ntl_harmonized_mean,ntl_harmonized_stddev,0.025477003327871624,0.02148652340622924,False,0.8433693370335736,oof_path_dependent,"TreeSHAP, out of fold",conditional
+terra_vs,terra_vs_mean,terra_vs_stddev,0.0028963552253024657,0.021569085942942046,True,7.4469753414619895,oof_path_dependent,"TreeSHAP, out of fold",conditional
+soil_ph_0cm,soil_ph_0cm_mean,soil_ph_0cm_stddev,0.01629264604159037,0.023677936702651625,True,1.4532898242684928,oof_path_dependent,"TreeSHAP, out of fold",conditional
+meta_canopy_height,meta_canopy_height_mean,meta_canopy_height_p70,0.008204913325760893,0.017054908301903263,True,2.078621385110324,oof_path_dependent,"TreeSHAP, out of fold",conditional
+meta_canopy_cover_1m,meta_canopy_cover_1m_mean,meta_canopy_cover_1m_stddev,0.01940206033890111,0.015536163037789864,False,0.8007481043979578,oof_path_dependent,"TreeSHAP, out of fold",conditional
+soil,soil_mean,soil_stddev,0.01706590090751666,0.015051077414434986,False,0.8819386386924204,oof_path_dependent,"TreeSHAP, out of fold",conditional
+soil_clay_30cm,soil_clay_30cm_mean,soil_clay_30cm_max,0.009152205650505925,0.014314779365371967,True,1.5640797324719926,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_vpdmin,prism_vpdmin_p50,prism_vpdmin_max,0.0011506485914869072,0.010570143260429647,True,9.186247946273978,oof_path_dependent,"TreeSHAP, out of fold",conditional
+pm25,pm25_mean,pm25_stddev,0.0013713724181238624,0.010732582534363858,True,7.826161874428548,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_tmin,prism_tmin_mean,prism_tmin_stddev,0.0004937638381208035,0.010248055890430131,True,20.754974542957232,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_winter_tmin,prism_winter_tmin_mean,prism_winter_tmin_stddev,0.008458380921673822,0.003922581989441694,False,0.4637509265384867,oof_path_dependent,"TreeSHAP, out of fold",conditional
+terra_pdsi_best_month,terra_pdsi_best_month_mean,terra_pdsi_best_month_max,0.004094222090172233,0.007223916875559233,True,1.764417444012018,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_sr_b1,ls57_sr_b1_p50,ls57_sr_b1_stddev,0.00090207245292956,0.0082733344488438,True,9.171474444181744,oof_path_dependent,"TreeSHAP, out of fold",conditional
+terra_soil,terra_soil_mean,terra_soil_stddev,0.004533943415905067,0.003516692209490812,False,0.7756365456953567,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_winter_ppt_sum,prism_winter_ppt_sum_mean,prism_winter_ppt_sum_min,0.0011235168589173547,0.006922359291894455,True,6.161331035624148,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_summer_tmean,prism_summer_tmean_mean,prism_summer_tmean_stddev,0.0004864782633356,0.004731417171733003,True,9.725855250533579,oof_path_dependent,"TreeSHAP, out of fold",conditional
+terra_ro,terra_ro_mean,terra_ro_min,0.0031333536119885308,0.004229492885841414,True,1.34982941907959,oof_path_dependent,"TreeSHAP, out of fold",conditional
+jrc,jrc_mean,jrc_stddev,0.005489235892047251,0.001982917983274568,False,0.3612375241784379,oof_path_dependent,"TreeSHAP, out of fold",conditional
+lst_night_1km,lst_night_1km_p50,lst_night_1km_p10,0.002906208030672826,0.0043024437477064996,True,1.4804321309064812,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_days_tmin_under_0c,prism_days_tmin_under_0c_mean,prism_days_tmin_under_0c_p90,0.0032826915368240925,0.004090848961125143,True,1.2461874395554446,oof_path_dependent,"TreeSHAP, out of fold",conditional
+lst_day_1km,lst_day_1km_mean,lst_day_1km_p10,0.0036250776629161794,0.0023879024070829155,False,0.6587175859735862,oof_path_dependent,"TreeSHAP, out of fold",conditional
+terra_pet,terra_pet_mean,terra_pet_stddev,0.0006898299630733979,0.0026795798517211967,True,3.8844062959846952,oof_path_dependent,"TreeSHAP, out of fold",conditional
+terra_pdsi_worst_month,terra_pdsi_worst_month_mean,terra_pdsi_worst_month_max,0.0018815539567758471,0.0036183082142863276,True,1.923042494346806,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_sr_b7,ls57_sr_b7_mean,ls57_sr_b7_stddev,0.0010043305593551604,0.002994282202928573,True,2.981371197995886,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_ppt_sum,prism_ppt_sum_mean,prism_ppt_sum_p90,0.0012311691987990567,0.005001080257448807,True,4.06205764595728,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_sr_b2,ls57_sr_b2_p50,ls57_sr_b2_max,0.0018089955837880787,0.0016150264703162498,False,0.8927752421232267,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_sr_b4,ls57_sr_b4_mean,ls57_sr_b4_stddev,0.0009527248444628567,0.0031964777304885577,True,3.3550901386335967,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_ndmi,ls57_ndmi_mean,ls57_ndmi_max,0.0005842799127071133,0.002251055525544701,True,3.8527005234785574,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_days_tmin_over_20c,prism_days_tmin_over_20c_mean,prism_days_tmin_over_20c_stddev,0.000883347480972431,0.001708645131373807,True,1.934284263190346,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_days_tmax_over_35c,prism_days_tmax_over_35c_mean,prism_days_tmax_over_35c_stddev,0.001178570734813948,0.0022378058080661004,True,1.8987454396781418,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_sr_b5,ls57_sr_b5_mean,ls57_sr_b5_stddev,0.0018713212969945383,0.0019661540154113227,True,1.05067687658399,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_ndwi,ls57_ndwi_p50,ls57_ndwi_max,0.00064217105356016,0.0021429260066631733,True,3.337001870113754,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_summer_tmax,prism_summer_tmax_mean,prism_summer_tmax_stddev,0.0019336862536192638,0.0022843804893894018,True,1.1813604637845185,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_vpdmax,prism_vpdmax_p50,prism_vpdmax_stddev,0.0006272035705336543,0.002297522321651934,True,3.663120603247035,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_evi,ls57_evi_p50,ls57_evi_min,0.0004489396001255759,0.001329698888784557,True,2.961865891119024,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_ndvi,ls57_ndvi_mean,ls57_ndvi_stddev,0.00105661682622325,0.0012456778460472014,True,1.1789305405060861,oof_path_dependent,"TreeSHAP, out of fold",conditional
+terra_swe,terra_swe_p50,terra_swe_min,0.0014755156762662526,0.001329751687362628,False,0.9012114942265637,oof_path_dependent,"TreeSHAP, out of fold",conditional
+prism_summer_ppt_sum,prism_summer_ppt_sum_mean,prism_summer_ppt_sum_max,0.0010430689544814835,0.0012925355175392931,True,1.2391659362365177,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_savi,ls57_savi_mean,ls57_savi_min,0.0004558310998883335,0.0012720341724275497,True,2.7905822414029324,oof_path_dependent,"TreeSHAP, out of fold",conditional
+ls57_bsi,ls57_bsi_mean,ls57_bsi_min,0.0007068444233618523,0.0011419079564407087,True,1.6155011183502483,oof_path_dependent,"TreeSHAP, out of fold",conditional
+soil_bulk_density_30cm,soil_bulk_density_30cm_mean,soil_bulk_density_30cm_p90,0.01307600683572685,0.018840220853113054,True,1.4408237231596546,permutation_published_in_sample,"permutation, published model",in sample
+prism_tdmean,prism_tdmean_p50,prism_tdmean_min,4.1219527307445605e-05,0.002766070340676574,True,67.10582389859019,permutation_published_in_sample,"permutation, published model",in sample
+soil_clay_0cm,soil_clay_0cm_mean,soil_clay_0cm_stddev,0.001123746642322021,0.0033833731441971658,True,3.0107971109982867,permutation_published_in_sample,"permutation, published model",in sample
+soil_sand_0cm,soil_sand_0cm_mean,soil_sand_0cm_max,0.0036536803268368834,0.0011773744969233667,False,0.3222434344557616,permutation_published_in_sample,"permutation, published model",in sample
+soil_org_carbon_0cm,soil_org_carbon_0cm_mean,soil_org_carbon_0cm_p10,0.002202157002240401,0.0018240596663785524,False,0.828305913031094,permutation_published_in_sample,"permutation, published model",in sample
+soil_org_carbon_30cm,soil_org_carbon_30cm_mean,soil_org_carbon_30cm_stddev,0.0027722040106501035,0.0013485748891590265,False,0.48646307558106994,permutation_published_in_sample,"permutation, published model",in sample
+soil_bulk_density_0cm,soil_bulk_density_0cm_mean,soil_bulk_density_0cm_p10,0.0007348641974163073,0.0014042980030419371,True,1.9109626077570214,permutation_published_in_sample,"permutation, published model",in sample
+ntl_harmonized,ntl_harmonized_mean,ntl_harmonized_stddev,0.0013928133107955708,0.0014472779897850118,True,1.0391040770268996,permutation_published_in_sample,"permutation, published model",in sample
+terra_vs,terra_vs_mean,terra_vs_stddev,8.091500553868425e-05,0.0011581091801775134,True,14.31266268187844,permutation_published_in_sample,"permutation, published model",in sample
+soil_ph_0cm,soil_ph_0cm_mean,soil_ph_0cm_stddev,0.0007025187866047001,0.0072739390138237825,True,10.354084691427264,permutation_published_in_sample,"permutation, published model",in sample
+meta_canopy_height,meta_canopy_height_mean,meta_canopy_height_p70,0.0006324070306715557,0.001198713217404257,True,1.8954773733798287,permutation_published_in_sample,"permutation, published model",in sample
+meta_canopy_cover_1m,meta_canopy_cover_1m_mean,meta_canopy_cover_1m_stddev,0.002184245689258124,0.0008650642865163372,False,0.39604715292360493,permutation_published_in_sample,"permutation, published model",in sample
+soil,soil_mean,soil_stddev,0.001292600311613601,0.0016685081144908187,True,1.290815188190662,permutation_published_in_sample,"permutation, published model",in sample
+soil_clay_30cm,soil_clay_30cm_mean,soil_clay_30cm_max,0.0007085592883517399,0.001088461168030208,True,1.5361610325682145,permutation_published_in_sample,"permutation, published model",in sample
+prism_vpdmin,prism_vpdmin_p50,prism_vpdmin_max,2.425587265888485e-05,0.0004130427121678881,True,17.028565328347067,permutation_published_in_sample,"permutation, published model",in sample
+pm25,pm25_mean,pm25_stddev,2.919537349774792e-05,0.00039668855457253294,True,13.587377280963121,permutation_published_in_sample,"permutation, published model",in sample
+prism_tmin,prism_tmin_mean,prism_tmin_stddev,7.67976385958047e-06,0.0003375965866618591,True,43.95924052283313,permutation_published_in_sample,"permutation, published model",in sample
+prism_winter_tmin,prism_winter_tmin_mean,prism_winter_tmin_stddev,0.00028052272697123295,6.720787330420919e-05,False,0.23958084975803484,permutation_published_in_sample,"permutation, published model",in sample
+terra_pdsi_best_month,terra_pdsi_best_month_mean,terra_pdsi_best_month_max,0.0002238320545467465,0.00020641909679948168,False,0.922205254370177,permutation_published_in_sample,"permutation, published model",in sample
+ls57_sr_b1,ls57_sr_b1_p50,ls57_sr_b1_stddev,2.481447667568304e-05,0.0008060129089140667,True,32.48155983494584,permutation_published_in_sample,"permutation, published model",in sample
+terra_soil,terra_soil_mean,terra_soil_stddev,0.0002187822638686665,0.00011799278338908703,False,0.539316036422026,permutation_published_in_sample,"permutation, published model",in sample
+prism_winter_ppt_sum,prism_winter_ppt_sum_mean,prism_winter_ppt_sum_min,2.0980110021429076e-05,0.00021704330813314686,True,10.345193991426113,permutation_published_in_sample,"permutation, published model",in sample
+prism_summer_tmean,prism_summer_tmean_mean,prism_summer_tmean_stddev,2.1724848248760865e-05,0.00015922341575698163,True,7.32909219589432,permutation_published_in_sample,"permutation, published model",in sample
+terra_ro,terra_ro_mean,terra_ro_min,8.162654811059156e-05,5.3850713051328826e-05,False,0.65972057250748,permutation_published_in_sample,"permutation, published model",in sample
+jrc,jrc_mean,jrc_stddev,0.00021905690314194537,7.610019546451241e-05,False,0.3473992116797191,permutation_published_in_sample,"permutation, published model",in sample
+lst_night_1km,lst_night_1km_p50,lst_night_1km_p10,5.3662230884143905e-05,0.00010510608265617006,True,1.9586603263493236,permutation_published_in_sample,"permutation, published model",in sample
+prism_days_tmin_under_0c,prism_days_tmin_under_0c_mean,prism_days_tmin_under_0c_p90,4.369888951714085e-05,9.805806595639677e-05,True,2.243948691600815,permutation_published_in_sample,"permutation, published model",in sample
+lst_day_1km,lst_day_1km_mean,lst_day_1km_p10,0.00020387076353396428,2.188110976772961e-05,False,0.10732833579683082,permutation_published_in_sample,"permutation, published model",in sample
+terra_pet,terra_pet_mean,terra_pet_stddev,1.236243031597084e-05,0.00012766778099073672,True,10.327077906825862,permutation_published_in_sample,"permutation, published model",in sample
+terra_pdsi_worst_month,terra_pdsi_worst_month_mean,terra_pdsi_worst_month_max,5.444750422722855e-05,0.0001502929143074372,True,2.7603269688948844,permutation_published_in_sample,"permutation, published model",in sample
+ls57_sr_b7,ls57_sr_b7_mean,ls57_sr_b7_stddev,2.045895437861045e-05,0.00019126563828797405,True,9.348749439899999,permutation_published_in_sample,"permutation, published model",in sample
+prism_ppt_sum,prism_ppt_sum_mean,prism_ppt_sum_p90,3.0300618181522408e-05,0.0001238401989968274,True,4.087051896266139,permutation_published_in_sample,"permutation, published model",in sample
+ls57_sr_b2,ls57_sr_b2_p50,ls57_sr_b2_max,2.8738723769605733e-05,7.09215604361546e-05,True,2.4678047990134386,permutation_published_in_sample,"permutation, published model",in sample
+ls57_sr_b4,ls57_sr_b4_mean,ls57_sr_b4_stddev,3.998598891004068e-05,4.969751977252912e-05,True,1.242873344569198,permutation_published_in_sample,"permutation, published model",in sample
+ls57_ndmi,ls57_ndmi_mean,ls57_ndmi_max,2.1791957847128174e-05,6.21455125874304e-05,True,2.851763619560239,permutation_published_in_sample,"permutation, published model",in sample
+prism_days_tmin_over_20c,prism_days_tmin_over_20c_mean,prism_days_tmin_over_20c_stddev,2.6053871555986598e-05,3.533952136949292e-05,True,1.3564019187533258,permutation_published_in_sample,"permutation, published model",in sample
+prism_days_tmax_over_35c,prism_days_tmax_over_35c_mean,prism_days_tmax_over_35c_stddev,2.7412935477189037e-05,7.791494943722998e-05,True,2.8422694644309394,permutation_published_in_sample,"permutation, published model",in sample
+ls57_sr_b5,ls57_sr_b5_mean,ls57_sr_b5_stddev,6.6610043353732e-05,0.00011242585845727682,True,1.6878214274721361,permutation_published_in_sample,"permutation, published model",in sample
+ls57_ndwi,ls57_ndwi_p50,ls57_ndwi_max,3.24530267187706e-05,8.497931256743474e-05,True,2.6185327274353525,permutation_published_in_sample,"permutation, published model",in sample
+prism_summer_tmax,prism_summer_tmax_mean,prism_summer_tmax_stddev,1.1252916901360877e-05,0.0001127743182778751,True,10.021785397192144,permutation_published_in_sample,"permutation, published model",in sample
+prism_vpdmax,prism_vpdmax_p50,prism_vpdmax_stddev,1.9698082021779583e-05,7.814289881293845e-05,True,3.96703083714131,permutation_published_in_sample,"permutation, published model",in sample
+ls57_evi,ls57_evi_p50,ls57_evi_min,1.3008285962268218e-05,5.80102347571998e-05,True,4.4594833574126564,permutation_published_in_sample,"permutation, published model",in sample
+ls57_ndvi,ls57_ndvi_mean,ls57_ndvi_stddev,2.5820388281871943e-05,8.232589411028002e-05,True,3.1884065108377797,permutation_published_in_sample,"permutation, published model",in sample
+terra_swe,terra_swe_p50,terra_swe_min,1.2334557749182906e-05,2.717912271961165e-05,True,2.2034938967643254,permutation_published_in_sample,"permutation, published model",in sample
+prism_summer_ppt_sum,prism_summer_ppt_sum_mean,prism_summer_ppt_sum_max,3.7204657321843194e-05,3.806453632217988e-05,True,1.0231121333250888,permutation_published_in_sample,"permutation, published model",in sample
+ls57_savi,ls57_savi_mean,ls57_savi_min,4.834353506888434e-06,5.181476784299477e-05,True,10.718034535365339,permutation_published_in_sample,"permutation, published model",in sample
+ls57_bsi,ls57_bsi_mean,ls57_bsi_min,1.6665117521719174e-05,3.729366107845245e-05,True,2.2378276678726494,permutation_published_in_sample,"permutation, published model",in sample
+soil_bulk_density_30cm,soil_bulk_density_30cm_mean,soil_bulk_density_30cm_p90,0.008883108389900252,0.015558775062485774,True,1.7515012065118438,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_tdmean,prism_tdmean_p50,prism_tdmean_min,2.5073780351858586e-05,0.002492671163209459,True,99.4134561374464,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+soil_clay_0cm,soil_clay_0cm_mean,soil_clay_0cm_stddev,0.0005453493736260028,0.0009735596342352659,True,1.7852035434864677,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+soil_sand_0cm,soil_sand_0cm_mean,soil_sand_0cm_max,0.005082336523137165,0.00020718207055074877,False,0.04076512242106743,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+soil_org_carbon_0cm,soil_org_carbon_0cm_mean,soil_org_carbon_0cm_p10,0.001209084004821226,0.0013313613573442628,True,1.1011322224390163,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+soil_org_carbon_30cm,soil_org_carbon_30cm_mean,soil_org_carbon_30cm_stddev,0.001065080236564131,-0.00041022731093771637,False,-0.38516094548996505,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+soil_bulk_density_0cm,soil_bulk_density_0cm_mean,soil_bulk_density_0cm_p10,0.0005630913635183754,0.0008372881909517238,True,1.4869490906770062,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ntl_harmonized,ntl_harmonized_mean,ntl_harmonized_stddev,0.0005583641213061207,0.0016195266765808957,True,2.900484853490429,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+terra_vs,terra_vs_mean,terra_vs_stddev,0.0005098402732482743,0.0011203529386796473,True,2.1974586894473807,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+soil_ph_0cm,soil_ph_0cm_mean,soil_ph_0cm_stddev,1.4467532072770517e-05,0.00650305543672296,True,449.4930720742913,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+meta_canopy_height,meta_canopy_height_mean,meta_canopy_height_p70,-0.00015880309215710042,0.0003217991368278161,True,-2.0264034689542902,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+meta_canopy_cover_1m,meta_canopy_cover_1m_mean,meta_canopy_cover_1m_stddev,1.9161556313473937e-05,-0.0005639973460635605,False,-29.433796338712394,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+soil,soil_mean,soil_stddev,0.002758235170097101,0.0006732182959130917,False,0.24407574205842344,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+soil_clay_30cm,soil_clay_30cm_mean,soil_clay_30cm_max,0.00024524007318396104,-0.0001240887684694103,False,-0.5059889554686604,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_vpdmin,prism_vpdmin_p50,prism_vpdmin_max,6.6559595354998e-05,0.0006811451755017073,True,10.233613528880321,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+pm25,pm25_mean,pm25_stddev,0.000147969426360528,0.0006019003421195767,True,4.067734510594401,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_tmin,prism_tmin_mean,prism_tmin_stddev,4.237964199969024e-05,0.00024073463624811885,True,5.680431095899262,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_winter_tmin,prism_winter_tmin_mean,prism_winter_tmin_stddev,-0.00015313866415793685,4.8470692408275615e-05,True,-0.3165150530390302,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+terra_pdsi_best_month,terra_pdsi_best_month_mean,terra_pdsi_best_month_max,0.00016757411453109937,0.0003184478014584879,True,1.9003400516216873,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_sr_b1,ls57_sr_b1_p50,ls57_sr_b1_stddev,4.7848378796477854e-05,5.1883529556229214e-05,True,1.0843320267320822,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+terra_soil,terra_soil_mean,terra_soil_stddev,4.5874673287116253e-05,0.00032212684653472047,True,7.021888625094332,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_winter_ppt_sum,prism_winter_ppt_sum_mean,prism_winter_ppt_sum_min,4.634322383423317e-06,1.1470836508897797e-05,True,2.4751917453840213,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_summer_tmean,prism_summer_tmean_mean,prism_summer_tmean_stddev,3.593334963691852e-05,0.0004335847590285935,True,12.066360732012617,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+terra_ro,terra_ro_mean,terra_ro_min,9.224801561507068e-05,0.00012702308317493748,True,1.3769736110636244,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+jrc,jrc_mean,jrc_stddev,0.0002463166716460963,0.00017866281294636187,False,0.7253378821351631,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+lst_night_1km,lst_night_1km_p50,lst_night_1km_p10,-3.350444469176761e-05,6.772038445790329e-05,True,-2.0212358414208516,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_days_tmin_under_0c,prism_days_tmin_under_0c_mean,prism_days_tmin_under_0c_p90,0.000801930545209828,0.0003805476638081062,False,0.4745394299808527,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+lst_day_1km,lst_day_1km_mean,lst_day_1km_p10,0.00012089274238713532,2.2058013795112074e-05,False,0.18245937150201794,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+terra_pet,terra_pet_mean,terra_pet_stddev,2.9507565261432945e-06,-0.00020063250121185038,False,-67.99358043751634,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+terra_pdsi_worst_month,terra_pdsi_worst_month_mean,terra_pdsi_worst_month_max,3.3245898310108047e-06,0.0001978142424485574,True,59.500345156387056,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_sr_b7,ls57_sr_b7_mean,ls57_sr_b7_stddev,-4.327298785733458e-05,5.8954789631382455e-05,True,-1.3623923965164768,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_ppt_sum,prism_ppt_sum_mean,prism_ppt_sum_p90,-5.299186372376141e-07,1.6522371337757136e-06,True,-3.1179071987137053,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_sr_b2,ls57_sr_b2_p50,ls57_sr_b2_max,0.00014120244544768568,2.7405664233315362e-06,False,0.019408774505586684,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_sr_b4,ls57_sr_b4_mean,ls57_sr_b4_stddev,0.0001122914318111068,8.499535113519752e-05,False,0.7569175115530996,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_ndmi,ls57_ndmi_mean,ls57_ndmi_max,-4.024229072197016e-06,-2.293225268283905e-05,False,5.698545552805534,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_days_tmin_over_20c,prism_days_tmin_over_20c_mean,prism_days_tmin_over_20c_stddev,1.7095893467078403e-05,5.2543387171333224e-05,True,3.07345078351805,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_days_tmax_over_35c,prism_days_tmax_over_35c_mean,prism_days_tmax_over_35c_stddev,9.436310013861693e-05,5.018867996402499e-05,False,0.5318676462547238,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_sr_b5,ls57_sr_b5_mean,ls57_sr_b5_stddev,7.268857888975688e-05,0.0002885525414139778,True,3.969709489734432,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_ndwi,ls57_ndwi_p50,ls57_ndwi_max,-2.965909056613647e-05,2.4232356722508897e-05,True,-0.8170296613941496,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_summer_tmax,prism_summer_tmax_mean,prism_summer_tmax_stddev,-3.536841119831102e-05,-5.707633102669529e-05,False,1.6137657613927794,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_vpdmax,prism_vpdmax_p50,prism_vpdmax_stddev,-6.601788479307925e-05,0.00011886514336318932,True,-1.800499118318467,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_evi,ls57_evi_p50,ls57_evi_min,-3.142581177040249e-06,1.5369609047954923e-05,True,-4.890759596043388,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_ndvi,ls57_ndvi_mean,ls57_ndvi_stddev,7.668840161152435e-05,-6.913094298677258e-06,False,-0.09014523908969298,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+terra_swe,terra_swe_p50,terra_swe_min,8.904325679595093e-05,-9.355029594335651e-05,False,-1.0506162881905117,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+prism_summer_ppt_sum,prism_summer_ppt_sum_mean,prism_summer_ppt_sum_max,4.0192692626694894e-05,4.640931944495108e-05,True,1.1546705734795004,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_savi,ls57_savi_mean,ls57_savi_min,-2.868935739819278e-06,3.171199463225527e-05,True,-11.053574394194305,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+ls57_bsi,ls57_bsi_mean,ls57_bsi_min,5.495072562742287e-05,-2.6724400247690738e-05,False,-0.486333891728521,permutation_production_heldout,"permutation, production learner","conditional, loss based"
+soil_bulk_density_30cm,soil_bulk_density_30cm_mean,soil_bulk_density_30cm_p90,0.009293137665748219,0.010842393742050094,True,1.1667096875161957,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_tdmean,prism_tdmean_p50,prism_tdmean_min,1.8162347362116193e-05,0.011428742606114085,True,629.2547091105993,permutation_second_learner,"permutation, second learner","conditional, loss based"
+soil_clay_0cm,soil_clay_0cm_mean,soil_clay_0cm_stddev,-0.00023997088567970782,0.0013499592501197365,True,-5.625512637902017,permutation_second_learner,"permutation, second learner","conditional, loss based"
+soil_sand_0cm,soil_sand_0cm_mean,soil_sand_0cm_max,0.0036874637489025643,0.0008203793591819997,False,0.222477945559778,permutation_second_learner,"permutation, second learner","conditional, loss based"
+soil_org_carbon_0cm,soil_org_carbon_0cm_mean,soil_org_carbon_0cm_p10,0.001726949573493597,0.002389607985702602,True,1.3837161329896017,permutation_second_learner,"permutation, second learner","conditional, loss based"
+soil_org_carbon_30cm,soil_org_carbon_30cm_mean,soil_org_carbon_30cm_stddev,-0.0005193366618322593,0.00048569103871043406,True,-0.9352142346293811,permutation_second_learner,"permutation, second learner","conditional, loss based"
+soil_bulk_density_0cm,soil_bulk_density_0cm_mean,soil_bulk_density_0cm_p10,-0.0001194982967190672,0.0004199832482020494,True,-3.514554263391745,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ntl_harmonized,ntl_harmonized_mean,ntl_harmonized_stddev,0.0006337084136274429,0.0034259293706272896,True,5.406160462690957,permutation_second_learner,"permutation, second learner","conditional, loss based"
+terra_vs,terra_vs_mean,terra_vs_stddev,0.0001255587889842813,0.0007196381072491099,True,5.731483339961183,permutation_second_learner,"permutation, second learner","conditional, loss based"
+soil_ph_0cm,soil_ph_0cm_mean,soil_ph_0cm_stddev,-0.0018747598245975271,0.01528879212285339,True,-8.15506707699776,permutation_second_learner,"permutation, second learner","conditional, loss based"
+meta_canopy_height,meta_canopy_height_mean,meta_canopy_height_p70,-0.0015730679727257169,0.0007503375653561406,True,-0.47698991929509643,permutation_second_learner,"permutation, second learner","conditional, loss based"
+meta_canopy_cover_1m,meta_canopy_cover_1m_mean,meta_canopy_cover_1m_stddev,0.0011256457892382167,-0.000296795175345399,False,-0.2636665798272615,permutation_second_learner,"permutation, second learner","conditional, loss based"
+soil,soil_mean,soil_stddev,0.00188015757735569,0.0018061531648520645,False,0.9606392499251538,permutation_second_learner,"permutation, second learner","conditional, loss based"
+soil_clay_30cm,soil_clay_30cm_mean,soil_clay_30cm_max,0.00103010079408965,0.0010022545636184654,False,0.972967470143741,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_vpdmin,prism_vpdmin_p50,prism_vpdmin_max,4.6479926992648576e-05,5.841983986099031e-05,True,1.2568832104712684,permutation_second_learner,"permutation, second learner","conditional, loss based"
+pm25,pm25_mean,pm25_stddev,2.000795361702945e-05,0.0009322097003905405,True,46.59195629067757,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_tmin,prism_tmin_mean,prism_tmin_stddev,2.3451473327695814e-05,0.0004743171868831775,True,20.225474973592235,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_winter_tmin,prism_winter_tmin_mean,prism_winter_tmin_stddev,-0.00022721626725970002,-0.0003233647463581235,False,1.4231584307673237,permutation_second_learner,"permutation, second learner","conditional, loss based"
+terra_pdsi_best_month,terra_pdsi_best_month_mean,terra_pdsi_best_month_max,7.679579635002653e-05,0.00045039027676070377,True,5.864777737415157,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_sr_b1,ls57_sr_b1_p50,ls57_sr_b1_stddev,-4.99069293165233e-05,0.0003714329467496835,True,-7.442512529551856,permutation_second_learner,"permutation, second learner","conditional, loss based"
+terra_soil,terra_soil_mean,terra_soil_stddev,0.00018138021438502961,9.448762258670306e-05,False,0.5209367675910173,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_winter_ppt_sum,prism_winter_ppt_sum_mean,prism_winter_ppt_sum_min,2.878214137358448e-06,6.263289206229761e-05,True,21.76102578655961,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_summer_tmean,prism_summer_tmean_mean,prism_summer_tmean_stddev,1.353769808809524e-05,0.00036161077231864345,True,26.711392879756726,permutation_second_learner,"permutation, second learner","conditional, loss based"
+terra_ro,terra_ro_mean,terra_ro_min,7.583124556351795e-05,0.00013416867713280655,True,1.769305991689453,permutation_second_learner,"permutation, second learner","conditional, loss based"
+jrc,jrc_mean,jrc_stddev,0.0001389602299885384,-0.00010549264787593771,False,-0.7591571191602005,permutation_second_learner,"permutation, second learner","conditional, loss based"
+lst_night_1km,lst_night_1km_p50,lst_night_1km_p10,-0.00016532594816454083,1.1710959522082121e-05,True,-0.07083558057339417,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_days_tmin_under_0c,prism_days_tmin_under_0c_mean,prism_days_tmin_under_0c_p90,-0.0002819319458380987,4.232188022932348e-05,True,-0.15011381595481593,permutation_second_learner,"permutation, second learner","conditional, loss based"
+lst_day_1km,lst_day_1km_mean,lst_day_1km_p10,0.00018836588065449523,-0.00012175961112523837,False,-0.6463995002819671,permutation_second_learner,"permutation, second learner","conditional, loss based"
+terra_pet,terra_pet_mean,terra_pet_stddev,-1.1349558184869934e-05,-7.64854905533241e-05,False,6.739072068486922,permutation_second_learner,"permutation, second learner","conditional, loss based"
+terra_pdsi_worst_month,terra_pdsi_worst_month_mean,terra_pdsi_worst_month_max,1.6216145041125786e-05,0.0001607664916331908,True,9.91397716445374,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_sr_b7,ls57_sr_b7_mean,ls57_sr_b7_stddev,-4.1416510170244616e-05,0.00057197353413323,True,-13.810278359574585,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_ppt_sum,prism_ppt_sum_mean,prism_ppt_sum_p90,-4.100770605375281e-06,7.582089132607272e-06,True,-1.8489425189179534,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_sr_b2,ls57_sr_b2_p50,ls57_sr_b2_max,3.8474696990320464e-05,0.0002097589793050636,True,5.451868259231129,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_sr_b4,ls57_sr_b4_mean,ls57_sr_b4_stddev,-7.12895032587202e-05,9.603412046457204e-05,True,-1.3471004295828792,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_ndmi,ls57_ndmi_mean,ls57_ndmi_max,2.3377516708222856e-05,4.556173883252246e-05,True,1.9489554601193582,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_days_tmin_over_20c,prism_days_tmin_over_20c_mean,prism_days_tmin_over_20c_stddev,0.00014552595114523115,-5.123279414136484e-05,False,-0.3520526321125765,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_days_tmax_over_35c,prism_days_tmax_over_35c_mean,prism_days_tmax_over_35c_stddev,-1.4847870160461519e-05,-2.180047745969915e-06,True,0.1468256202680959,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_sr_b5,ls57_sr_b5_mean,ls57_sr_b5_stddev,9.364249703460725e-05,0.00026033273071950357,True,2.7800703629602377,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_ndwi,ls57_ndwi_p50,ls57_ndwi_max,-1.0855211679672294e-05,5.474712400641568e-05,True,-5.043395340593527,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_summer_tmax,prism_summer_tmax_mean,prism_summer_tmax_stddev,2.969619763648623e-07,0.0005498165749127093,True,1851.4712948878587,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_vpdmax,prism_vpdmax_p50,prism_vpdmax_stddev,-1.2035441652380463e-05,5.804685640486973e-06,True,-0.48229934622622483,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_evi,ls57_evi_p50,ls57_evi_min,2.4516738844448937e-05,5.113088215946693e-05,True,2.085549896496285,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_ndvi,ls57_ndvi_mean,ls57_ndvi_stddev,-3.723054282276372e-05,-9.738779721104595e-05,False,2.61580384886305,permutation_second_learner,"permutation, second learner","conditional, loss based"
+terra_swe,terra_swe_p50,terra_swe_min,1.6254692985384622e-06,5.1958788389661056e-05,True,31.96540742810689,permutation_second_learner,"permutation, second learner","conditional, loss based"
+prism_summer_ppt_sum,prism_summer_ppt_sum_mean,prism_summer_ppt_sum_max,2.1625727014984442e-05,2.7830973291931292e-05,True,1.286938158085841,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_savi,ls57_savi_mean,ls57_savi_min,2.6894543174771356e-05,7.829856510928046e-05,True,2.9113179056608427,permutation_second_learner,"permutation, second learner","conditional, loss based"
+ls57_bsi,ls57_bsi_mean,ls57_bsi_min,9.023850687572832e-06,4.05596154258614e-05,True,4.494712604422627,permutation_second_learner,"permutation, second learner","conditional, loss based"

@@ -1,0 +1,86 @@
+{
+ "variables": [
+  "cams_fot_formaldehyde_above75th_percentile",
+  "eng_night_cooling_eff",
+  "ghm_p90",
+  "cams_fot_formaldehyde_above_90th_percentile",
+  "soil_bulk_density_30cm_p90",
+  "soil_bulk_density_30cm_mean",
+  "prism_tdmean_min",
+  "eng2_wetbulb_night"
+ ],
+ "n_rows": 800,
+ "reduced_model": true,
+ "n_columns_in_model": 8,
+ "main_effect_total": 3.206148386001587,
+ "interaction_total": 2.7945030070841312,
+ "interaction_share": 0.46569994222695754,
+ "strongest_pair": {
+  "a": "ghm_p90",
+  "b": "soil_bulk_density_30cm_p90",
+  "strength": 0.25024089217185974
+ },
+ "pairs": [
+  {
+   "a": "ghm_p90",
+   "b": "soil_bulk_density_30cm_p90",
+   "strength": 0.25024089217185974
+  },
+  {
+   "a": "ghm_p90",
+   "b": "soil_bulk_density_30cm_mean",
+   "strength": 0.21007688343524933
+  },
+  {
+   "a": "soil_bulk_density_30cm_p90",
+   "b": "soil_bulk_density_30cm_mean",
+   "strength": 0.16852521896362305
+  },
+  {
+   "a": "eng_night_cooling_eff",
+   "b": "cams_fot_formaldehyde_above_90th_percentile",
+   "strength": 0.1258503943681717
+  },
+  {
+   "a": "eng_night_cooling_eff",
+   "b": "ghm_p90",
+   "strength": 0.10861726850271225
+  },
+  {
+   "a": "cams_fot_formaldehyde_above75th_percentile",
+   "b": "ghm_p90",
+   "strength": 0.10546916723251343
+  },
+  {
+   "a": "eng_night_cooling_eff",
+   "b": "soil_bulk_density_30cm_mean",
+   "strength": 0.1041368693113327
+  },
+  {
+   "a": "cams_fot_formaldehyde_above_90th_percentile",
+   "b": "soil_bulk_density_30cm_p90",
+   "strength": 0.09831938147544861
+  },
+  {
+   "a": "soil_bulk_density_30cm_mean",
+   "b": "prism_tdmean_min",
+   "strength": 0.09605579078197479
+  },
+  {
+   "a": "cams_fot_formaldehyde_above75th_percentile",
+   "b": "prism_tdmean_min",
+   "strength": 0.09331412613391876
+  }
+ ],
+ "main_effects": {
+  "cams_fot_formaldehyde_above75th_percentile": 0.5221949815750122,
+  "eng_night_cooling_eff": 0.45938992500305176,
+  "ghm_p90": 0.43820956349372864,
+  "cams_fot_formaldehyde_above_90th_percentile": 0.6192100048065186,
+  "soil_bulk_density_30cm_p90": 0.2705502212047577,
+  "soil_bulk_density_30cm_mean": 0.3069685399532318,
+  "prism_tdmean_min": 0.357477068901062,
+  "eng2_wetbulb_night": 0.23214830458164215
+ },
+ "seconds": 19.7
+}

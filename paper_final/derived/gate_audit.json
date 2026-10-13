@@ -1,0 +1,26 @@
+{
+ "arms": {
+  "gated": {
+   "label": "gated",
+   "n_features": 581,
+   "r2": 0.6679618364294673,
+   "mae": 1.0288565441766637
+  },
+  "ungated": {
+   "label": "ungated",
+   "n_features": 1360,
+   "r2": 0.8328166917995831,
+   "mae": 0.6918163887878209
+  },
+  "gated_no_protected": {
+   "label": "gated_no_protected",
+   "n_features": 480,
+   "r2": 0.6637553017847155,
+   "mae": 1.0332316957819772
+  }
+ },
+ "n_candidates_in_frame": 1361,
+ "n_modelled": 581,
+ "n_protected_modelled": 101,
+ "n_folds": 8
+}
