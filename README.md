@@ -11,7 +11,7 @@ Every number, table and figure in the paper is produced by the scripts here, fro
 
 ## Data (Zenodo)
 
-Data DOI: https://doi.org/10.5281/zenodo.XXXXXXX  <!-- replace once the record is published -->
+Data DOI: https://doi.org/10.5281/zenodo.23353493
 
 Download and place:
 
