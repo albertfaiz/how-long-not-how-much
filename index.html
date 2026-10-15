@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Predictive Multiplicity in Environmental Health</title>
+<meta name="description" content="Code, data and results for a study of how the summary statistic of a satellite or reanalysis field shapes machine learning attribution in a model of United States county life expectancy.">
+<style>
+:root{--bg:#fbfbf9;--panel:#ffffff;--ink:#1d2433;--muted:#5b6475;--rule:#e3e5ea;--accent:#1f5f99;--accent2:#c2601a;--tint:#eef3f8;--code:#f3f4f6;--maxw:1080px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11151c;--panel:#171c25;--ink:#e6e9ef;--muted:#a3abba;--rule:#2a313d;--accent:#7fb2e5;--accent2:#f0a36b;--tint:#1b2430;--code:#1e2530}}
+:root[data-theme="dark"]{--bg:#11151c;--panel:#171c25;--ink:#e6e9ef;--muted:#a3abba;--rule:#2a313d;--accent:#7fb2e5;--accent2:#f0a36b;--tint:#1b2430;--code:#1e2530}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.62}
+a{color:var(--accent)}
+header.hero{background:linear-gradient(135deg,#0f2a44,#1f5f99);color:#fff;padding:56px 16px 40px}
+.hero .inner,.wrap{max-width:var(--maxw);margin:0 auto}
+.hero h1{font-size:clamp(1.55rem,3.2vw,2.35rem);line-height:1.22;margin:0 0 16px;font-weight:600}
+.hero .authors{opacity:.95;margin:0 0 4px}
+.hero .aff{opacity:.8;font-size:.92rem;margin:0 0 18px}
+.hero .status{display:inline-block;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:3px 12px;font-size:.85rem;margin-bottom:20px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:9px 16px;border-radius:8px;background:rgba(255,255,255,.14);color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.35);font-size:.95rem}
+.btn:hover{background:rgba(255,255,255,.26)}
+nav.toc{position:sticky;top:0;z-index:5;background:var(--panel);border-bottom:1px solid var(--rule)}
+nav.toc .wrap{display:flex;gap:18px;overflow-x:auto;padding:10px 16px;white-space:nowrap;font-size:.92rem}
+nav.toc a{text-decoration:none;color:var(--muted)}
+nav.toc a:hover{color:var(--accent)}
+main .wrap{padding:0 16px}
+section{padding:34px 0 10px;border-bottom:1px solid var(--rule)}
+h2{font-size:1.55rem;margin:0 0 14px;font-weight:600}
+h3{font-size:1.15rem;margin:26px 0 8px;font-weight:600}
+p{margin:0 0 14px}
+.lede{font-size:1.06rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}
+@media (max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.grid{grid-template-columns:1fr}}
+.tile{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px}
+.tbig{font-size:1.5rem;color:var(--accent);font-weight:600}
+.tlabel{font-size:.95rem}
+.tnote{font-size:.82rem;color:var(--muted)}
+.fig{margin:22px 0;background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:12px}
+.fig img{width:100%;height:auto;display:block;border-radius:6px;background:#fff}
+figcaption{font-size:.9rem;color:var(--muted);margin-top:10px}
+.fignum{color:var(--ink);font-weight:600}
+.box-note{background:var(--tint);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0}
+.box-note.warn{border-left-color:var(--accent2)}
+.box-note h4{margin:0 0 6px;font-size:1rem;font-weight:600}
+.eq{overflow-x:auto;background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:8px 14px;margin:12px 0}
+.eqlabel{font-size:.82rem;color:var(--muted)}
+.tablewrap{overflow-x:auto;margin:16px 0}
+table{border-collapse:collapse;width:100%;font-size:.9rem;background:var(--panel)}
+caption{caption-side:top;text-align:left;color:var(--muted);font-size:.88rem;padding:0 0 8px}
+th,td{border-bottom:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
+th{font-weight:600}
+pre{background:var(--code);border-radius:8px;padding:12px;overflow-x:auto;font-size:.86rem}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;overflow-wrap:anywhere}
+pre code{overflow-wrap:normal}
+dl.gloss dt{font-weight:600;margin-top:12px}
+dl.gloss dd{margin:2px 0 0 0;color:var(--ink)}
+.diagram{width:100%;height:auto;max-width:760px;display:block;margin:10px auto}
+.diagram .box{fill:var(--panel);stroke:var(--rule);stroke-width:1.5}
+.diagram .acc1{stroke:var(--accent2)}
+.diagram .acc2{stroke:var(--accent)}
+.diagram .ln{stroke:var(--muted);stroke-width:1.6;fill:none}
+.diagram .arrhead{fill:var(--muted)}
+.diagram .t1{fill:var(--ink);font-size:15px;font-weight:600}
+.diagram .t2{fill:var(--muted);font-size:12.5px}
+.diagram .t3{fill:var(--muted);font-size:11.5px}
+footer{padding:30px 16px 50px;color:var(--muted);font-size:.88rem}
+.small{font-size:.88rem;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.two>div,.grid>div{min-width:0}
+mjx-container[display="true"]{max-width:100%;overflow-x:auto;overflow-y:hidden}
+@media (max-width:760px){.two{grid-template-columns:1fr}body{font-size:16px}}
+</style>
+<script>
+window.MathJax = { tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] }, chtml: { scale: 0.98 } };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+<header class="hero"><div class="inner">
+  <span class="status">Manuscript submitted to <em>Sensors</em> (MDPI), 2026</span>
+  <h1>Predictive Multiplicity in Environmental Health: Information Theory Exposes How Summary Statistics Shape Machine Learning Attribution</h1>
+  <p class="authors">Faiz Ahmad, David J. Lary<sup>*</sup>, Shisir Ruwali, Samyak Shrestha, Adam Aker, John Waczak, Md Shaid Hasan Niloy, Rittik Patra and Tunde Dare Awoyinka</p>
+  <p class="aff">Department of Physics, The University of Texas at Dallas, Richardson, Texas, USA. <sup>*</sup>Correspondence: david.lary@utdallas.edu</p>
+  <div class="btns">
+    <a class="btn" href="https://github.com/albertfaiz/how-long-not-how-much">Code and results (GitHub)</a>
+    <a class="btn" href="https://doi.org/10.5281/zenodo.23353493">Data (Zenodo)</a>
+    <a class="btn" href="#reproduce">Reproduce</a>
+    <a class="btn" href="#cite">Cite</a>
+  </div>
+</div></header>
+
+<nav class="toc" aria-label="Sections"><div class="wrap">
+  <a href="#glance">At a glance</a><a href="#abstract">Abstract</a><a href="#idea">The idea</a><a href="#design">Data and design</a>
+  <a href="#methods">Methods and equations</a><a href="#results">Results</a><a href="#survives">What survives</a>
+  <a href="#practice">Practice and limits</a><a href="#reproduce">Reproduce</a><a href="#glossary">Glossary</a><a href="#cite">Cite</a>
+</div></nav>
+
+<main><div class="wrap">
+
+<section id="glance">
+  <h2>At a glance</h2>
+  <p class="lede">A machine learning model of United States county life expectancy, built only from satellite and gridded environmental data, is used to ask a question about method: when the model ranks its inputs, how much of the ranking reflects the environment, and how much reflects the summary statistic chosen to describe each field?</p>
+  <div class="grid"><div class="tile"><span class="tbig">52,309</span><span class="tlabel">county-years</span><span class="tnote">3,077 counties, 2003 to 2019</span></div><div class="tile"><span class="tbig">\(R^2\) = 0.666</span><span class="tlabel">on unseen counties</span><span class="tnote">95% interval 0.661 to 0.672; mean absolute error 1.033 years</span></div><div class="tile"><span class="tbig">1st vs 196th</span><span class="tlabel">one formaldehyde field, two summaries</span><span class="tnote">time above the 75th percentile against the annual mean: 70.5-fold</span></div><div class="tile"><span class="tbig">38 of 47</span><span class="tlabel">fields where SHAP favours a non-central summary</span><span class="tnote">34.9 expected if summaries were interchangeable (95% range 29 to 40)</span></div><div class="tile"><span class="tbig">35 of 47</span><span class="tlabel">fields where mutual information favours the mean or median</span><span class="tnote">two-sided sign test \(p\) = 0.001</span></div><div class="tile"><span class="tbig">0.0112</span><span class="tlabel">difference in \(R^2\)</span><span class="tnote">central-only against non-central-only models of the same fields</span></div><div class="tile"><span class="tbig">\(\rho\) = −0.42</span><span class="tlabel">lifetime against the duration advantage</span><span class="tnote">13 species; one-sided permutation \(p\) = 0.077</span></div><div class="tile"><span class="tbig">&le; 1.7%</span><span class="tlabel">shift of three turning points across the 100th meridian</span><span class="tnote">minimum dew point, night-time wet-bulb temperature, night cooling efficiency</span></div><div class="tile"><span class="tbig">\(R^2\) = 0.44</span><span class="tlabel">socioeconomic columns never used, predicting the model's error</span><span class="tnote">over half of the residual variance remains unexplained</span></div></div>
+  <p class="small">Every number on this page is read from the files that generate the manuscript's numbers (<code>paper_final/constants_*.tex</code>), and every figure caption is taken from the manuscript.</p>
+  <figure class="fig"><img src="site/figures/GraphicalAbstract.png" alt="Graphical abstract of the study" loading="lazy"></figure>
+</section>
+
+<section id="abstract">
+  <h2>Abstract</h2>
+  <p>Machine learning attribution rankings in environmental health are widely interpreted as physical discoveries; in practice, they also reflect unstated choices of summary statistics. Across 52,309 county-years in 3,077 counties of the contiguous United States (2003 to 2019), gradient-boosted trees given only satellite and gridded environmental data predicted life expectancy in unseen counties with a coefficient of determination of 0.666, yet one formaldehyde field ranked first as time above a reference level and 196th as its annual mean. Across 47 fields offering both a mean or median and another summary, Shapley additive explanations favoured the other summary in 38, about as often as a random choice among each field's summaries would (34.9 expected), whereas mutual information, which needs no model, favoured the mean or median in 35. Models built from either kind differed by 0.0112 in that coefficient: equally accurate models with different explanations. Some physical structure survives. The duration advantage correlated inversely, though not significantly, with atmospheric lifetime across 13 species, and turning points in dew point, night-time wet-bulb temperature and night cooling moved by at most 1.7% of their range across the 100th meridian. Socioeconomic variables the model never saw predicted its errors (coefficient of determination 0.44).</p>
+</section>
+
+<section id="idea">
+  <h2>The idea in one picture</h2>
+  <p>A satellite or reanalysis product describes each county with many values per year. A model needs one number per county and year, so the record is summarised, usually by its annual mean. The same record can also be summarised by a percentile, a spread or the share of time spent above a reference level. These are different descriptions of one measurement, not different measurements.</p>
+  
+<svg class="diagram" viewBox="0 0 760 300" role="img" aria-labelledby="ideaTitle ideaDesc">
+  <title id="ideaTitle">One field, several descriptions</title>
+  <desc id="ideaDesc">The sub-annual formaldehyde record of a county is reduced in two ways. The time above the national 75th percentile ranks first of 581 inputs; the annual mean of the same record ranks 196th.</desc>
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="arrhead"/></marker></defs>
+  <rect x="20" y="95" width="190" height="110" rx="10" class="box"/>
+  <text x="115" y="125" class="t1" text-anchor="middle">One field</text>
+  <text x="115" y="148" class="t2" text-anchor="middle">CAMS formaldehyde,</text>
+  <text x="115" y="166" class="t2" text-anchor="middle">every time step of the year,</text>
+  <text x="115" y="184" class="t2" text-anchor="middle">one county</text>
+  <path d="M210 130 L300 80" class="ln" marker-end="url(#arr)"/>
+  <path d="M210 170 L300 220" class="ln" marker-end="url(#arr)"/>
+  <rect x="305" y="40" width="210" height="80" rx="10" class="box acc1"/>
+  <text x="410" y="70" class="t1" text-anchor="middle">Duration</text>
+  <text x="410" y="92" class="t2" text-anchor="middle">% of the year above the</text>
+  <text x="410" y="109" class="t2" text-anchor="middle">national 75th percentile</text>
+  <rect x="305" y="180" width="210" height="80" rx="10" class="box acc2"/>
+  <text x="410" y="212" class="t1" text-anchor="middle">Concentration</text>
+  <text x="410" y="236" class="t2" text-anchor="middle">annual mean</text>
+  <path d="M515 80 L590 80" class="ln" marker-end="url(#arr)"/>
+  <path d="M515 220 L590 220" class="ln" marker-end="url(#arr)"/>
+  <rect x="595" y="45" width="150" height="70" rx="10" class="box"/>
+  <text x="670" y="74" class="t1" text-anchor="middle">rank 1 of 581</text>
+  <text x="670" y="96" class="t2" text-anchor="middle">0.3407 years</text>
+  <rect x="595" y="185" width="150" height="70" rx="10" class="box"/>
+  <text x="670" y="214" class="t1" text-anchor="middle">rank 196 of 581</text>
+  <text x="670" y="236" class="t2" text-anchor="middle">0.004830 years</text>
+  <text x="670" y="150" class="t3" text-anchor="middle">mean |SHAP|, same model,</text>
+  <text x="670" y="166" class="t3" text-anchor="middle">same pixels</text>
+</svg>
+  <p>For one formaldehyde field, the two descriptions land at opposite ends of the model's ranking. The paper asks whether this is a general property of attribution, whether the information in the data follows the same pattern, and what in the fitted model is robust to the choice.</p>
+</section>
+
+<section id="design">
+  <h2>Data and design</h2>
+  <p>We linked satellite-derived and gridded environmental measurements to life expectancy across 3,077 counties of the contiguous United States over 2003 to 2019, giving 52,309 county-year observations. The county-year is the unit of observation throughout, and every statement in this paper is a population-level association at that unit, not a statement about individuals.</p>
+<p>The work proceeds in four stages (Figure 1). The first acquires 18 sensing and reanalysis data sources, here called modalities, and reduces each to the county-year, emitting several summaries of every field from one pass over the same pixels. The second admits columns to modelling, fits a gradient-boosted model under county-grouped cross-validation and attributes it. The third asks whether attribution follows the summary statistic, compares the answer with mutual information and with matched refits, and calibrates it against a null, state deletion, the admission rules and eight attribution instruments. The fourth asks what survives: whether atmospheric lifetime tracks the duration advantage, which turning points pass a stability criterion fixed in advance and whether they hold across climate regions, and the structure of the model's error.</p>
+  
+<figure class="fig" id="fig1">
+  <a href="site/figures/Figure01_methodology.png" target="_blank" rel="noopener"><img src="site/figures/Figure01_methodology.png" alt="Study design in four stages" loading="lazy"></a>
+  <figcaption><span class="fignum">Figure 1.</span> <span class="figtitle">Study design.</span> The 18 sensing and reanalysis data sources are reduced to the county-year with several summaries per field (stage 1, blue), admitted to a gradient-boosted model tested on unseen counties and attributed (stage 2, blue). The census compares attribution with mutual information and with matched refits (stage 3, orange). The final stage tests what survives against atmospheric lifetime, regional splits of the country and the socioeconomic structure of the model's error (stage 4, green).</figcaption>
+</figure>
+  <h3>Outcome</h3>
+  <p>The outcome is county life expectancy at birth, from the small-area estimates of the Institute for Health Metrics and Evaluation (IHME) for 2000 to 2019. Life expectancy at birth is the average number of years a newborn would live if the death rates at each age seen in that county and year held for its whole life. These estimates borrow strength across neighbouring counties and adjacent years, and draw on county covariates in the small-area models, to stabilise rates where annual death counts are small. The outcome surface is therefore smoother than the underlying mortality record and partly informed by county characteristics, which matters for the neighbouring-county baseline and for the audit of Section 2.12 of the paper. We do not carry its published uncertainty into the fit.</p>
+  <h3>Two descriptions of one field</h3>
+  <p>Because the reference is one number for the whole country and period, a given value of \(D\) means the same share of time above the same ambient level in every county. It does not record how far above the reference a county goes, and it describes an ambient field rather than what people breathe. Duration is not a rescaled mean: two counties with the same annual mean differ in \(D\) whenever one has a few severe episodes and the other a persistent moderate background. We computed it at \(K = 75\) and \(K = 90\), so every species enters the model as a concentration and as two durations.</p>
+</section>
+
+<section id="methods">
+  <h2>Methods and equations</h2>
+  <p class="lede">The equations below are those of the manuscript (equations 1, 2 and A1) and the standard definitions of the quantities it reports. Symbols are defined beneath each one.</p>
+
+  <h3>Duration of a species above a national reference level</h3>
+  <div class="eq">\[ D^{(K)}_{c,i,t} = \frac{100}{S}\sum_{s=1}^{S}\mathbf{1}\!\left[x_{c,i,t}(s) > q_c^{(K)}\right] \qquad (1) \]</div>
+  <p>\(x_{c,i,t}(s)\) is the value of species \(c\) in county \(i\), year \(t\), at time step \(s\) of the \(S\) reanalysis time steps of the year; \(q_c^{(K)}\) is the \(K\)th percentile of that species over all counties, time steps and years; \(\mathbf{1}[\cdot]\) is one when its condition holds. \(D\) is in per cent of the year and was computed at \(K\) = 75 and 90. The concentration description is the annual mean, \(\bar x_{c,i,t} = S^{-1}\sum_s x_{c,i,t}(s)\).</p>
+
+  <h3>Night cooling efficiency, two constructions</h3>
+  <div class="eq">\[ \text{NCE}_{\text{tail}} = \frac{\text{LST}^{\text{day}}_{p90} - \text{LST}^{\text{night}}_{p10}}{\text{LST}^{\text{day}}_{p90}}, \qquad \text{NCE}_{\text{mean}} = \frac{\text{LST}^{\text{day}}_{\mu} - \text{LST}^{\text{night}}_{\mu}}{\text{LST}^{\text{day}}_{\mu}} \qquad (2) \]</div>
+  <p>LST is MODIS land-surface temperature in degrees Celsius; \(p90\) and \(p10\) are the 90th and 10th percentiles of the county's pixels and \(\mu\) their mean. NCE is an index, not a fraction of heat. The two constructions correlate at 0.959 over all county-years.</p>
+
+  <h3>Night-time wet-bulb temperature</h3>
+  <p>Wet-bulb temperature is computed with the empirical formula of Stull (2011), from air temperature \(T\) (°C) and relative humidity \(RH\) (%):</p>
+  <div class="eq">\[ T_w = T\arctan\!\left[0.151977\,(RH + 8.313659)^{1/2}\right] + \arctan(T + RH) - \arctan(RH - 1.676331) + 0.00391838\,RH^{3/2}\arctan(0.023101\,RH) - 4.686035 \]</div>
+  <p>For the night-time form, \(T\) is the annual-mean daily minimum temperature and the humidity is that of the minimum dew point \(T_d\), with \(RH = 100\,\exp\!\left(\tfrac{a T_d}{b + T_d}\right)\big/\exp\!\left(\tfrac{a T}{b + T}\right)\), \(a\) = 17.625 and \(b\) = 243.04 °C (as implemented in <code>engineered_features_v2.py</code>). The minimum dew point of a county is the annual-mean dew point of its driest 4 km PRISM cell, not the lowest daily value of the year.</p>
+
+  <h3>Model and skill</h3>
+  <p>The model is a gradient-boosted tree ensemble (XGBoost; Chen and Guestrin, 2016): a sum of \(K\) regression trees fitted in sequence, each to the errors of those before it,</p>
+  <div class="eq">\[ \hat y_i = \sum_{k=1}^{K} f_k(\mathbf{x}_i), \qquad \mathcal{L} = \sum_i \ell(y_i, \hat y_i) + \sum_k \Omega(f_k),\quad \Omega(f) = \gamma T_f + \tfrac{1}{2}\lambda \lVert w \rVert^2 \]</div>
+  <p>where \(T_f\) is the number of leaves of tree \(f\) and \(w\) its leaf values (the standard regularised objective of XGBoost). Skill is measured on counties held out by eight-fold county-grouped cross-validation:</p>
+  <div class="eq">\[ R^2 = 1 - \frac{\sum_i (y_i - \hat y_i)^2}{\sum_i (y_i - \bar y)^2}, \qquad \text{MAE} = \frac{1}{n}\sum_i \lvert y_i - \hat y_i \rvert, \qquad r_i = y_i - \hat y_i \]</div>
+  <p>with \(r_i\) the residual, observed minus predicted life expectancy. The settings were fixed before this study:</p>
+  <div class="tablewrap"><table><caption>The fitted learner. Settings of the XGBoost model and the out-of-fold skill of each learner compared on identical county-grouped folds.</caption><thead><tr><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td>Number of trees</td><td>1500</td></tr><tr><td>Maximum depth</td><td>8</td></tr><tr><td>Learning rate</td><td>0.0138</td></tr><tr><td>Row subsample</td><td>0.731</td></tr><tr><td>Column subsample per tree</td><td>0.712</td></tr><tr><td>Minimum child weight</td><td>9</td></tr><tr><td>L1 regularisation</td><td>0.254</td></tr><tr><td>L2 regularisation</td><td>0.68</td></tr><tr><td>Learner</td><td>Out-of-fold \(R^{2}\) (mean absolute error, years)</td></tr><tr><td>XGBoost</td><td>0.666 (1.033)</td></tr><tr><td>CatBoost</td><td>0.660 (1.046)</td></tr></tbody></table></div>
+
+  <h3>Attribution: Shapley additive explanations (SHAP)</h3>
+  <p>The attribution \(\phi_j\) of input \(j\) to one prediction is its Shapley value over the set of inputs \(N\):</p>
+  <div class="eq">\[ \phi_j = \sum_{S \subseteq N \setminus \{j\}} \frac{|S|!\,(|N| - |S| - 1)!}{|N|!}\,\bigl[v(S \cup \{j\}) - v(S)\bigr], \qquad v_{\text{int}}(S) = \mathbb{E}_{X_{\bar S}}\!\left[f(x_S, X_{\bar S})\right] \qquad (\text{A}1) \]</div>
+  <p>In the interventional form \(v_{\text{int}}\), the absent inputs \(X_{\bar S}\) are drawn from a background sample independently of the present ones, so an input is credited with what the model does with it. The attributions add up to the prediction:</p>
+  <div class="eq">\[ f(\mathbf{x}) = \mathbb{E}[f(X)] + \sum_{j \in N} \phi_j(\mathbf{x}), \qquad \mathbb{E}[f(X)] = 77.2\ \text{years} \]</div>
+  <p>The main attribution is SHapley Additive exPlanations (SHAP) in its interventional tree form, TreeSHAP. A SHAP value divides one prediction among the inputs by averaging, over all orders in which inputs could be added, the change each input makes when it is added. The interventional form fills an absent input from a background sample independently of the inputs present, so an input is credited with what it adds to the prediction given the others (Appendix A). We compute the production ranking out of fold. In each of the eight folds, the fold's model attributes 4,000 county-years of its held-out counties against a background of 1,000 county-years drawn from its training counties. A column's importance is its mean absolute SHAP value, in years of life expectancy, averaged over the folds, and its rank is its place among the 581. Two later experiments attribute the model fitted to all counties on their own samples, stated where they are used. These are the recomputation described below, on 6,000 county-years and the turning points of Section 2.10 of the paper on 20,000, both against a background of 500.</p>
+
+  <h3>Mutual information: what the data hold without a model</h3>
+  <p>Mutual information measures how much knowing one variable reduces uncertainty about another, in nats:</p>
+  <div class="eq">\[ I(X;Y) = \iint p(x,y)\,\ln\frac{p(x,y)}{p(x)\,p(y)}\,dx\,dy \;=\; H(Y) - H(Y \mid X), \qquad H(Y) = -\int p(y)\ln p(y)\,dy \]</div>
+  <p>It is zero when the two are independent and grows with any dependence, linear or not. It was estimated with the \(k\)-nearest-neighbour estimator of Kraskov, Stögbauer and Grassberger (\(k\) = 3),</p>
+  <div class="eq">\[ \hat I(X;Y) = \psi(k) + \psi(n) - \bigl\langle \psi(n_x + 1) + \psi(n_y + 1) \bigr\rangle \]</div>
+  <p>where \(\psi\) is the digamma function, \(n\) the number of observations, and \(n_x\), \(n_y\) the numbers of points within each observation's \(k\)th-neighbour distance in the \(x\) and \(y\) directions. Mutual information is marginal: it scores a column alone, before any model.</p>
+
+  <h3>The census and its reference distribution</h3>
+  <p>For each comparable field the census records whether its most attributed non-central summary is attributed more than its most attributed central one, and summarises the ratio of the two by its median with a bootstrap interval. A fair coin is the wrong reference for that count. A field usually offers more non-central summaries than central ones. As a result, the best of several non-central summaries beats the best of one or two central ones more often than half the time, even if the statistic does not matter. We therefore use exchangeability as the reference. If every summary of field \(i\) were equally likely to be the most attributed, the non-central side would lead with probability \(p_i = n_i^{\text{nc}}/n_i\), the share of the field's \(n_i\) summaries that are non-central. The count over fields then follows the Poisson-binomial distribution of independent draws with those probabilities, which we compute exactly. We then compare the same two columns of each field by MI. Because that comparison is between a fixed pair, a fair coin is its correct reference, and we test it with an exact two-sided sign test.</p>
+  <div class="eq">\[ p_i = \frac{n_i^{\text{nc}}}{n_i}, \qquad T = \sum_{i=1}^{47} B_i,\ \ B_i \sim \text{Bernoulli}(p_i), \qquad \mathbb{E}[T] = \sum_i p_i = 34.9 \]</div>
+  <p>\(n_i\) is the number of admitted summaries of field \(i\) and \(n_i^{\text{nc}}\) the number that are non-central. \(T\) follows a Poisson-binomial distribution, computed exactly; its central 95% range is 29 to 40. For the mutual-information comparison of a fixed pair, the reference is a fair coin, \(B \sim \text{Binomial}(n, \tfrac{1}{2})\), tested two-sided: \(p = \min\{1,\ 2\min[P(B \ge k),\,P(B \le k)]\}\).</p>
+  <p>Attribution divides credit, and a gap between two correlated columns could arise from the division rather than from the data. The census is therefore paired with an experiment that contains no attribution. We fit two models on the same county-years and folds, each with 47 columns: one receives each comparable field's central summary only, the other one non-central summary of the same fields. We fix the non-central summary by an order declared before any result was seen (the minimum where one exists, then the other quantiles, then spread). We then repeat the arm 5 times with the non-central summary drawn at random per field. If the two models predict equally well, the choice between the two kinds of description is free, and the fitted model's preference is one of several equally good ones.</p>
+
+  <h3>Atmospheric lifetime</h3>
+  <p>If duration carries information that concentration does not, one candidate reason is chemical. A species that is destroyed within hours rises and falls with its sources, so its annual mean averages a few large episodes with long clean periods, and the time spent above a level records the episodes directly. A species that persists for weeks is mixed into a regional background, and its mean describes that background well. Formaldehyde over the United States is produced largely in the warm season by the oxidation of isoprene emitted by vegetation, so its duration also records where and for how long that season lasts. We therefore paired every species' duration and concentration columns, 20 pairs over 13 species (Table A3; some species admitted only one of their two durations), and took the ratio of their attributions. We then tested whether the per-species median ratio falls as tropospheric lifetime rises, using lifetimes from the literature and a one-sided permutation test of Spearman's correlation over 20,000 permutations. Species, not pairs, are the unit, because the pairs of one species are not independent. We fixed in advance a boundary of 2 days between short-lived and longer-lived species, and then swept it over 7 values. We also perturbed the literature lifetimes by up to 0.5 orders of magnitude in 4,000 draws, and left each species out in turn.</p>
+  <div class="box-note"><h4>Lifetime, not half-life</h4><p>The atmospheric (here tropospheric) lifetime \(\tau\) of a species is the standard quantity of atmospheric chemistry: its burden divided by its removal rate, the e-folding time of its decay when sources stop. For removal by the hydroxyl radical, \(\tau = 1/(k_{\text{OH}}[\text{OH}])\). A half-life, the term of radioactive decay, is \(t_{1/2} = \tau\ln 2 \approx 0.69\,\tau\). The paper uses lifetimes from the literature (Seinfeld and Pandis; Atkinson and Arey; and others cited there).</p></div>
+  <p>The test statistic is Spearman's rank correlation, the Pearson correlation of ranks, \(\rho = \text{corr}\bigl(\text{rank}(\tau_c), \text{rank}(R_c)\bigr)\), between the lifetime \(\tau_c\) and the median duration-to-concentration importance ratio \(R_c\) of species \(c\). Its one-sided \(p\) value is the share of 20,000 random permutations of the ratios that give a correlation at least as negative as the observed one.</p>
+
+  <h3>Turning points and the stability rule</h3>
+  <p>A turning point is the value of a variable at which its contribution to the prediction changes sign. We locate it on the attribution curve, the plot of a variable's SHAP value against its own value, because that curve holds the other variables' contributions apart. We use a sample of 20,000 county-years, attributed by the model fitted to all counties against a background of 500 county-years. We place the observations in 45 equal-count bins of the variable between its 1st and 99th percentiles and take the median attribution in each bin. The located value is where the binned curve crosses zero, and where it crosses more than once we take the steepest crossing. SHAP values are centred at the expected prediction, \(\mathbb{E}[f(X)]\), which here is 77.2 years. A zero-crossing therefore denotes the threshold at which a variable's contribution changes from raising predicted county life expectancy above that level to lowering it below, or the reverse. It marks a change in the sign of a contribution, not by itself a transition from a protective to a harmful exposure. Under the interventional form, a variable's attributions average to zero over the background sample, so the crossing of a monotone curve falls where the variable's contribution equals its average, near the middle of its distribution. We report with each located value the share of county-years above it.</p>
+<p>Any estimator returns a number for any curve, including a flat one, so we fixed the criterion for believing a located value before any estimate was seen. A candidate is stable only if it meets three conditions over 5,000 bootstrap resamples of the county-years. A crossing must be found in at least 60% of resamples. The interval between the 2.5th and 97.5th percentiles of the located values must be narrower than 40% of the variable's observed range, and the full-sample value must lie inside that interval. We put eleven candidates through the criterion: the three nocturnal descriptions of moisture and cooling, their mean-form and warm-hour relatives, night-time surface temperature, minimum temperature, and the leading composition and land-use variables.</p>
+  <div class="eq">\[ x^{*}: \ \tilde m(x^{*}) = 0, \qquad \Pr_{\text{boot}}[\text{crossing found}] \ge 0.60, \qquad \frac{q_{97.5}(x^{*}) - q_{2.5}(x^{*})}{\max x - \min x} < 0.40, \qquad x^{*}_{\text{full}} \in [q_{2.5}, q_{97.5}] \]</div>
+  <p>\(\tilde m(x)\) is the median SHAP value in 45 equal-count bins of the variable between its 1st and 99th percentiles, and the quantiles are taken over 5,000 bootstrap resamples of the county-years.</p>
+
+  <h3>Residual geography and the socioeconomic audit</h3>
+  <div class="eq">\[ I = \frac{n}{\sum_{i\ne j} w_{ij}}\;\frac{\sum_{i\ne j} w_{ij}\,(\bar r_i - \bar r)(\bar r_j - \bar r)}{\sum_i (\bar r_i - \bar r)^2} \]</div>
+  <p>Here \(\bar r_i\) is the out-of-fold residual averaged within county \(i\), \(\bar r\) its average over counties, and \(w_{ij}\) the spatial weights of the four-nearest-neighbour graph. For the six pre-declared indicators, the Holm-adjusted \(p\) value of the \(k\)th smallest of \(m\) = 6 is \(\tilde p_{(k)} = \max_{j \le k} \min\{1,\,(m - j + 1)\,p_{(j)}\}\).</p>
+  <p>We averaged the out-of-fold residual (observed minus predicted life expectancy) within each county and measured its spatial structure by Moran's \(I\) against 999 permutations. Moran's \(I\) is near zero when a county's residual says nothing about those of its four nearest neighbours. We then predicted the county residual from the 314 socioeconomic columns with a histogram gradient-boosting learner under eight folds grouped by state. We gave the 581 environmental columns the model had used the same task, with the same learner and folds. Some County Health Rankings columns describe health behaviour and health status (smoking, obesity, physical inactivity) rather than socioeconomic conditions. We therefore repeated the audit without the County Health Rankings columns (298 remain) and with the American Community Survey columns alone. We named six indicators in advance (poverty, median household income, unemployment, uninsurance, bachelor's degree attainment and disability) and corrected their Spearman rank correlations with the residual for multiple testing by the Holm procedure. The audit asks only whether the model's error is socioeconomic; combining the two kinds of data in one model is a different question that this paper does not address.</p>
+</section>
+
+<section id="results">
+  <h2>Results</h2>
+  <h3>A model worth interrogating</h3>
+  <p>From the physical environment alone, the model predicted county life expectancy with out-of-fold \(R^{2}\) = 0.666 (95% interval 0.661 to 0.672) and a mean absolute error of 1.033 years (Figure 2A). It beat every baseline on identical folds, including the four nearest counties' own life expectancy (0.642), which is given the outcome the model never sees. Holding out whole states lowered skill to 0.509, which is the figure that applies to prediction in a region the model has not visited. CatBoost reached 0.660, so the choice of learner moves skill by less than one hundredth.</p>
+<p>The skill rises steeply with the number of counties seen and has nearly levelled off: 0.476 with a tenth of the counties, 0.660 with all of them, and 0.024 gained over the final quarter (Figure 2B). Error is concentrated in the shortest-lived counties, 6.56 years in the 153 county-years with life expectancy of 60 to 70 years against 0.83 in the populous middle of the distribution (Figure 2C). Shuffling the years within each county left skill at 0.632, while swapping whole series between counties removed it (−0.066). Almost all of what the model explains is the difference between counties, not the trajectory of one county through time (Figure 2D). The temporal checks agree. Leaving one year out gave a mean \(R^{2}\) of 0.974, and forward chaining over 14 steps gave 0.940, rising slowly from 0.912 to 0.952. Both keep every county in training, so they measure how faithfully a county's environment tracks its own level rather than skill on new counties.</p>
+  
+<figure class="fig" id="fig2">
+  <a href="site/figures/Figure02_performance.png" target="_blank" rel="noopener"><img src="site/figures/Figure02_performance.png" alt="Predictive performance of the environment-only model" loading="lazy"></a>
+  <figcaption><span class="fignum">Figure 2.</span> <span class="figtitle">Predictive performance of the environment-only model.</span> (A) Out-of-fold coefficient of determination (\(R^{2}\)) of the model (dark blue), of the model with whole states held out (light blue) and of five baselines (grey), all on the same county-grouped folds. (B) Learning curve: \(R^{2}\) as the share of counties used for training grows (four folds). (C) Mean absolute error, the average size of a miss in years, by observed life-expectancy bracket, with the number of county-years (\(n\)) in each. (D) \(R^{2}\) on the observed outcome (dark blue) and on three scrambled versions of it: years shuffled within each county (light blue), whole series swapped between counties and every row shuffled (grey).</figcaption>
+</figure>
+  <h3>One field, two descriptions</h3>
+  <p>The leading variable of the fitted model is the share of the year a county spends above the national 75th percentile of formaldehyde, with a mean absolute attribution of 0.3407 years. The annual mean of the same field from the same product ranks 196th of 581, at 0.004830 years, 70.5 times smaller (Figure 3A). The two constructions of night cooling efficiency, built from one MODIS product and correlated at 0.959, rank 2nd and 133rd, a factor of 20.3 (Figure 3B,D). In the full ranking each description sits in a different part of the curve: one among the handful of variables carrying most of the attribution, the other in the long tail (Figure 3C).</p>
+<p></p>
+  
+<figure class="fig" id="fig3">
+  <a href="site/figures/Figure03_two_descriptions.png" target="_blank" rel="noopener"><img src="site/figures/Figure03_two_descriptions.png" alt="Attribution of two descriptions of one field" loading="lazy"></a>
+  <figcaption><span class="fignum">Figure 3.</span> <span class="figtitle">One field, two descriptions.</span> (A) Mean absolute SHapley Additive exPlanations (SHAP) value, in years, of three descriptions of one formaldehyde field from the Copernicus Atmosphere Monitoring Service. These are time above the 75th and 90th percentiles (orange) and annual mean (blue), with their ranks among the 581 admitted variables (logarithmic axis). (B) The same for the tail (orange) and mean (blue) versions of night cooling efficiency (NCE) from one satellite land-surface temperature product. (C) The full ranking (grey line), with the four descriptions marked (HCHO, formaldehyde). (D) The two NCE versions against each other over all county-years: grey shading counts county-years per hexagonal cell, the dashed line marks equality and \(r\) is the Pearson correlation.</figcaption>
+</figure>
+  
+<figure class="fig" id="fig4">
+  <a href="site/figures/Figure04_drop_one_refit.png" target="_blank" rel="noopener"><img src="site/figures/Figure04_drop_one_refit.png" alt="Drop-one refit of night cooling efficiency" loading="lazy"></a>
+  <figcaption><span class="fignum">Figure 4.</span> <span class="figtitle">Drop-one refit of night cooling efficiency (NCE).</span> On the horizontal axes, Both means both versions are in the model, No tail means the tail form was removed and No mean means the mean form was removed. (A) Mean absolute SHapley Additive exPlanations value of the mean form of NCE in the first two models (blue bars); the dashed orange line marks the tail form's own value with both present (logarithmic axis). (B) The mean form's rank among all admitted variables in the same two models (blue dots joined by a grey line). (C) Out-of-fold coefficient of determination (\(R^{2}\)) of all three models (blue dots).</figcaption>
+</figure>
+  <h3>Attribution follows the description; information does not</h3>
+  <p>Two cases do not make a general effect, so we put the same question to every field with several summaries. Within a field, the most and the least attributed summaries differed by a median factor of 3.4 and by up to 93-fold. Across all 55 multi-summary fields (including the 8 that lack a central summary), the most attributed summary was an extreme quantile in 27, a measure of spread in 19 and a mean or median in only 9.</p>
+<p>In 38 of the 47 comparable fields, the best non-central summary was attributed more than the best central one (Figure 5A), by a median factor of 1.55 (95% interval 1.30 to 2.27). Against a fair coin that count would look decisive, but on average 74% of a field's summaries are non-central. If every summary were equally likely to be the one attributed most, 34.9 fields would favour a non-central summary (95% range 29 to 40), and the observed 38 is within that range (one-sided \(p\) = 0.20). In aggregate, the count is consistent with a draw among each field's summaries; on its own it cannot show that the choice is random.</p>
+<p>Mutual information does not behave that way (Figure 5B). For the same two summaries of each field, the non-central one carried more information about life expectancy in only 12 of the 47 fields. The central one did so in 35 (two-sided sign test \(p\) = 0.001), with a median ratio of 0.76. The two instruments named the same leader in 19 fields, fewer than half. Measured without a model, the data hold more information in the mean, and the summary the model credits most is usually the less informative one on its own.</p>
+<p>The matched refit shows what the model makes of that information (Figure 5C). Given only the central summary of each field, the model reached \(R^{2}\) = 0.6079; given only a non-central summary of the same fields, 0.5967, a difference of 0.0112. Drawing the non-central summary at random for each field, 5 times, gave 0.5960 to 0.6116, a range that contains both. The two models are near-equivalent members of one Rashomon set.</p>
+  
+<figure class="fig" id="fig5">
+  <a href="site/figures/Figure05_rashomon_census.png" target="_blank" rel="noopener"><img src="site/figures/Figure05_rashomon_census.png" alt="Attribution, information and skill across summaries" loading="lazy"></a>
+  <figcaption><span class="fignum">Figure 5.</span> <span class="figtitle">Attribution, information and skill across summaries.</span> (A) Mean absolute SHapley Additive exPlanations (SHAP) value of the central summary (mean or median) against the best non-central summary for each of the 47 comparable fields. Orange dots are fields where the non-central summary leads under SHAP, blue dots fields where the central one leads, and points above the dashed line of equality favour the non-central summary. (B) Mutual information (MI), in nats, of the same two summaries with life expectancy, with the same colours. (C) Out-of-fold coefficient of determination (\(R^{2}\)) of a model given only central summaries (blue bar) and of one given only non-central summaries (orange bar), each with 47 columns. Orange dots show 5 models with the non-central summary drawn at random per field, and the shaded band spans them. (D) \(R^{2}\) of models built from all admitted columns (grey), from satellite columns only (light blue) and from the remaining non-satellite columns, such as the reanalysis, climate-grid and soil columns (pink), with the number of columns.</figcaption>
+</figure>
+  <h3>A stable pattern, not an accident of the analysis</h3>
+  <p>Four decomposition instruments and total split gain gave counts in the same range (Figure 6A, Table A2). The counts were 38 of 47 under interventional SHAP as published and 33 when recomputed, 35 under path-dependent TreeSHAP, 35 when every row was attributed out of fold, and 32 under total split gain. Every one lies inside the range expected if summaries were interchangeable. Attribution computed on rows the model never saw gave the same answer as attribution on its training rows, so the pattern is not an artefact of in-sample fitting.</p>
+<p>Removing one state at a time from the attributed sample moved the count only between 33 and 35 (from 34 on the jackknife's own attributed sample; Figure 6B), so no single state drives it. The share of fields in which a non-central summary was attributed more did not differ between the two halves of the period (Fisher \(p\) = 0.81). Across the 40 placements of the admission rules, which admitted between 200 and 720 columns, the non-central summary led in 73% to 84% of countable fields (Figure 6C). Every coverage threshold between 0.881 and 0.982 admitted the identical set. Without the protected exemption, 545 columns are modelled, 43 of the 47 census fields remain, and the formaldehyde duration pair is broken. Restricted to the 8 fields whose two compared summaries are both protected, which no ordering of the correlation filter can alter, the non-central summary led in all 8.</p>
+<p>Loss-based permutation importance did not give a stable answer. Across 5 county-disjoint held-out splits, every fit predicted well (held-out \(R^{2}\) 0.631 to 0.663 for the production learner and 0.630 to 0.655 for the second). The production learner favoured the non-central summary in 25 to 31 fields and the second learner in 24 to 30. The count moved by up to 6 fields from one split to another and fell below the range expected for interchangeable summaries (29 to 40) in 3 of 5 splits for the production learner and 3 for the second, and never above it, the opposite direction from decomposition. Section 4.2 of the paper explains why this instrument cannot settle a comparison between correlated descriptions of one field.</p>
+<p></p>
+  
+<figure class="fig" id="fig6">
+  <a href="site/figures/Figure06_invariance.png" target="_blank" rel="noopener"><img src="site/figures/Figure06_invariance.png" alt="Stability of the census" loading="lazy"></a>
+  <figcaption><span class="fignum">Figure 6.</span> <span class="figtitle">Stability of the census.</span> (A) Number of the 47 comparable fields in which the non-central summary leads, under each method. Filled orange circles split a prediction among its inputs, open pink circles joined by a line are permutation importance on five held-out splits, and the light blue circle is mutual information, which needs no model. The grey band is the central 95% of the count expected if every summary of a field were equally likely to lead, and the dashed line its mean. (B) The same count after removing each state in turn (orange dots, sorted), with the same band and line. (C) Share of fields in which the non-central summary leads, in every setting of the admission rules, against the number of columns admitted, with the protected exemption on (orange dots) and off (grey squares). The dashed line is the share expected for interchangeable summaries and the dotted line one half.</figcaption>
+</figure>
+  <div class="tablewrap"><table><caption>The census count under each instrument: the number of the 47 comparable fields in which the non-central summary is credited with more than the central one. If every summary of a field were equally likely to lead, the expected count would be 34.9, with a 95% range of 29 to 40. Mutual information compares the two summaries the main attribution selected. Permutation importance is given as its range over five county-disjoint held-out splits.</caption><thead><tr><th>Instrument</th><th>What it measures</th><th>Non-central leads</th></tr></thead><tbody><tr><td>Interventional SHAP, main run</td><td>decomposes the prediction</td><td>38 of 47</td></tr><tr><td>Interventional SHAP, recomputed</td><td>decomposes the prediction</td><td>33 of 47</td></tr><tr><td>Path-dependent TreeSHAP</td><td>decomposes the prediction</td><td>35 of 47</td></tr><tr><td>Path-dependent TreeSHAP, out of fold</td><td>decomposes the prediction</td><td>35 of 47</td></tr><tr><td>Total split gain</td><td>counts tree use</td><td>32 of 47</td></tr><tr><td>Mutual information</td><td>marginal, no model</td><td>12 of 47</td></tr><tr><td>Permutation, production learner</td><td>loss when one column is broken</td><td>25 to 31 of 47</td></tr><tr><td>Permutation, second learner</td><td>loss when one column is broken</td><td>24 to 30 of 47</td></tr></tbody></table></div>
+</section>
+
+<section id="survives">
+  <h2>What survives</h2>
+  <h3>Atmospheric lifetime broadly tracks the duration advantage</h3>
+  <p>Tropospheric lifetime broadly tracks whether the model favours episodic duration over annual mean concentration (Spearman \(\rho\) = −0.42, one-sided permutation \(p\) = 0.077 across 13 species; Figure 7). Duration captured higher attribution for 5 of 6 short-lived species (lifetime under 2 days; median ratio 2.42), but for only 2 of 7 species persisting 2 days or longer (median ratio 0.46). The direction held at 7 of the 7 class boundaries tried, though the difference was significant at only 1. It held when each species was left out (correlations −0.55 to −0.30) and in 100% of 4,000 perturbations of the literature lifetimes. The evidence is consistent in direction and modest in strength. Formaldehyde, with a lifetime of hours, has the largest ratio. Ethane and ozone, which persist for weeks, are the clearest cases where the mean is the better description, while peroxyacetyl nitrate, long-lived aloft but short-lived near a warm surface, depends on which lifetime is used. Three species depart from the ordering: propane and the reanalysis fine particulate matter, longer-lived but favouring duration, and isoprene, short-lived with a ratio just below one (Table A3).</p>
+  
+<figure class="fig" id="fig7">
+  <a href="site/figures/Figure07_lifetime.png" target="_blank" rel="noopener"><img src="site/figures/Figure07_lifetime.png" alt="Atmospheric lifetime and the duration advantage" loading="lazy"></a>
+  <figcaption><span class="fignum">Figure 7.</span> <span class="figtitle">Atmospheric lifetime and the duration advantage.</span> (A) Median ratio of the duration to the concentration importance for each species, ordered by tropospheric lifetime in days (d, in brackets). Orange bars mark lifetimes under two days, blue bars two days or longer, black ticks the ratio for each duration percentile (75th or 90th), and the dashed line equal importance (logarithmic axis). (B) The same ratio against lifetime, one dot per species with the same colours, with the Spearman rank correlation and its permutation \(p\) value. (C) Share of species in which duration is more important, for short-lived (orange circles) and longer-lived (blue squares) species, as the boundary between the two classes is moved.</figcaption>
+</figure>
+  <div class="tablewrap"><table><caption>The species of the lifetime test, ordered by the tropospheric lifetime taken from the literature, with the number of duration and concentration pairs admitted for each, the median ratio of duration to concentration importance and whether duration was credited more. All series are from the atmospheric composition reanalysis. For nitric oxide the lifetime is that of that of nitric oxide and nitrogen dioxide together, because the two interconvert within minutes in daylight.</caption><thead><tr><th>Species</th><th>Lifetime (days)</th><th>Pairs</th><th>Median ratio</th><th>Duration favoured</th></tr></thead><tbody><tr><td>Hydroxyl radical</td><td>1\(\times 10^{-5}\)</td><td>1</td><td>1.14</td><td>yes</td></tr><tr><td>Isoprene</td><td>0.1</td><td>1</td><td>0.96</td><td>no</td></tr><tr><td>Formaldehyde</td><td>0.2</td><td>2</td><td>49.97</td><td>yes</td></tr><tr><td>Nitric oxide</td><td>0.2</td><td>1</td><td>3.24</td><td>yes</td></tr><tr><td>Nitrogen dioxide</td><td>0.25</td><td>2</td><td>1.60</td><td>yes</td></tr><tr><td>Hydrogen peroxide</td><td>1</td><td>1</td><td>10.57</td><td>yes</td></tr><tr><td>Sulphur dioxide</td><td>2</td><td>2</td><td>0.22</td><td>no</td></tr><tr><td>Nitric acid</td><td>5</td><td>1</td><td>0.90</td><td>no</td></tr><tr><td>Fine particulate matter (reanalysis)</td><td>7</td><td>2</td><td>1.60</td><td>yes</td></tr><tr><td>Propane</td><td>11</td><td>2</td><td>18.39</td><td>yes</td></tr><tr><td>Ozone</td><td>22</td><td>2</td><td>0.46</td><td>no</td></tr><tr><td>Peroxyacetyl nitrate</td><td>30</td><td>1</td><td>0.22</td><td>no</td></tr><tr><td>Ethane</td><td>60</td><td>2</td><td>0.33</td><td>no</td></tr></tbody></table></div>
+  <h3>Turning points that survive noise</h3>
+  <p>Of the 11 candidates, 10 passed the stability criterion (Figure 8A, Table A1). Three describe the moisture and night cooling. The minimum dew point, that of the county's driest cell, turned at 5.54 °C (95% interval 5.51 to 5.60). The nocturnal wet-bulb temperature turned at 7.41 °C (7.23 to 7.48) and the tail form of night cooling efficiency at 0.611 (0.608 to 0.613), each interval no wider than 1.2% of the variable's range. Each crossing lies near the middle of its variable's distribution, as expected for interventional attribution. Of the county-years, 52.7%, 38.5% and 54.8% lie above the dew-point, wet-bulb and night-cooling values, so each is a change of sign rather than a change of slope. Mean night-time surface temperature failed: its full-sample crossing at 5.20 °C lies outside its own bootstrap interval. Annual mean PM\(_{2.5}\) met the criterion only formally, with the widest interval, 33.8% of its range, and the full-sample value near its lower edge, and we do not interpret it.</p>
+<p>The procedure does not invent turning points in noise. Run on attribution permuted against its predictor, 40 times for each of the 11 candidates, it located a crossing in some draws but passed the criterion in 0 of 440. On curves raised until no crossing existed, it passed in 0 (Figure 8B). Nor do the located values move much under plausible measurement error. Adding Gaussian noise of 1% of a predictor's standard deviation shifted the located value by a median of 0.06 interval widths, and 5% by 0.24. Only at 10% did the median shift reach 0.50 and the largest exceed one width (1.90; Figure 8C).</p>
+  <div class="box-note warn"><h4>What a turning point is, and is not</h4><p>A turning point is where a variable's contribution to the prediction changes sign around the model's average prediction (77.2 years). It describes the fitted model. It is not a threshold of harm, and the paper does not interpret it as a causal or physiological limit.</p></div>
+  
+<figure class="fig" id="fig8">
+  <a href="site/figures/Figure08_turning_points.png" target="_blank" rel="noopener"><img src="site/figures/Figure08_turning_points.png" alt="Stability of the located turning points" loading="lazy"></a>
+  <figcaption><span class="fignum">Figure 8.</span> <span class="figtitle">Stability of the located turning points.</span> (A) Width of the 95% bootstrap interval of each turning point as a share of the variable's observed range: green bars pass all three conditions of the stability rule, the orange bar fails. The dashed line is the 40% limit (logarithmic axis). (B) The same procedure on contributions shuffled against their own variable, out of 40 shuffles: grey bars count shuffles in which a crossing was found, orange dots shuffles that passed the rule (all zero). (C) Shift of each turning point, in units of its interval width, when random noise of 1 to 10% of the variable's standard deviation is added. Pink lines are the three night-time variables, grey lines the others, the black line with dots the median of all 11, and the dashed line one interval width.</figcaption>
+</figure>
+  <div class="tablewrap"><table><caption>Every candidate turning point. The interval is the 2.5th to 97.5th percentile of the located value over the bootstrap resamples, and its width is given as a share of the variable's observed range. A candidate is stable when a crossing is found in at least 60% of resamples, the width is below 40% and the full-sample value lies inside the interval. A crossing was found in every resample for every candidate.</caption><thead><tr><th>Variable</th><th>Unit</th><th>Value</th><th>95% interval</th><th>Width (%)</th><th>Stable</th></tr></thead><tbody><tr><td>Minimum dew point</td><td>\(^{\circ}\)C</td><td>5.54</td><td>5.51 to 5.60</td><td>0.3</td><td>yes</td></tr><tr><td>NCE, tail form</td><td>dimensionless</td><td>0.611</td><td>0.608 to 0.613</td><td>0.5</td><td>yes</td></tr><tr><td>Formaldehyde, time above 75th percentile</td><td>% of year</td><td>27.54</td><td>27.43 to 27.78</td><td>0.7</td><td>yes</td></tr><tr><td>NCE, mean form</td><td>dimensionless</td><td>0.492</td><td>0.490 to 0.498</td><td>0.8</td><td>yes</td></tr><tr><td>Nocturnal wet-bulb temperature</td><td>\(^{\circ}\)C</td><td>7.41</td><td>7.23 to 7.48</td><td>1.2</td><td>yes</td></tr><tr><td>Formaldehyde to nitrogen dioxide ratio</td><td>dimensionless</td><td>0.291</td><td>0.288 to 0.297</td><td>1.3</td><td>yes</td></tr><tr><td>Cropland in corn</td><td>dimensionless</td><td>0.012</td><td>0.009 to 0.016</td><td>1.4</td><td>yes</td></tr><tr><td>Minimum daily minimum temperature</td><td>\(^{\circ}\)C</td><td>4.46</td><td>4.28 to 4.68</td><td>1.7</td><td>yes</td></tr><tr><td>Warm-hour wet-bulb temperature</td><td>\(^{\circ}\)C</td><td>12.27</td><td>12.04 to 12.55</td><td>3.1</td><td>yes</td></tr><tr><td>Mean night LST</td><td>\(^{\circ}\)C</td><td>5.20</td><td>5.23 to 7.84</td><td>13.2</td><td>no</td></tr><tr><td>Annual mean PM\(_{2.5}\)</td><td>10 \(\mu\)g m\(^{-3}\)</td><td>0.511</td><td>0.509 to 0.870</td><td>33.8</td><td>yes</td></tr></tbody></table></div>
+  <h3>Turning points that barely move with climate</h3>
+  <p>A turning point that reflected regional climate would move when the country is cut in two; the three turning points of moisture and night cooling barely did (Figure 9). We relocated them independently on either side of the 100th meridian, with 3,782 attributed county-years in the drier west against 16,213 in the east. Relocated in this way, the turning points for minimum dew point (5.54 °C) and nocturnal wet-bulb temperature (7.41 °C) drifted by only 0.32 and 0.22 °C, and at the median longitude by 0.18 and 0.23 °C. For all three variables the shift was at most 1.7% of the observed range at the 100th meridian and 1.1% at the median longitude.</p>
+<p>The test discriminates. Mean night-time surface temperature moved by 5.5% at the median longitude and 10.1% at the 100th meridian, and annual mean PM\(_{2.5}\) by 38.5% and 30.3%. The formaldehyde to nitrogen dioxide ratio moved by 24.8% at the median longitude but only 4.3% at the 100th meridian. The mean form of night cooling efficiency had no crossing west of the 100th meridian at all. Stability across the boundary is not unique to these three variables: minimum temperature, the formaldehyde duration and the corn fraction also moved little, while the variables above did not.</p>
+<p>Two further results bound the reading. Variables describing one night are strongly related in their raw values, the minimum dew point and the minimum temperature correlating at +0.952, but their attributions are nearly independent (\(r\) = +0.022). A turning point in one is therefore not a copy of a turning point in another. And within quartiles of temperature the dew-point crossing appears in 2 of 4, the temperate middle, and not in the coldest or warmest quarter.</p>
+  
+<figure class="fig" id="fig9">
+  <a href="site/figures/Figure09_climate_invariance.png" target="_blank" rel="noopener"><img src="site/figures/Figure09_climate_invariance.png" alt="Night-time turning points across climate regions" loading="lazy"></a>
+  <figcaption><span class="fignum">Figure 9.</span> <span class="figtitle">Night-time turning points across climate regions.</span> (A to C) Median SHapley Additive exPlanations (SHAP) value, in years, in equal-count bins (grey dots) against the minimum dew point, the night-time wet-bulb temperature and the tail form of night cooling efficiency (NCE). The pink vertical line is the located turning point, with its value printed, and the horizontal line is zero. (D) Size of the west minus east shift of every candidate's turning point, as a share of its observed range, with the country split at its median longitude (filled circles) and at the 100th meridian (open triangles). Pink marks the three night-time variables and grey the others, and shifts below 0.05% are drawn at 0.05% (logarithmic axis). The mean form of NCE has no crossing west of the 100th meridian and so has no triangle.</figcaption>
+</figure>
+  <h3>Where a physical model is blind</h3>
+  <p>The model's error is geographically structured (Figure 10A). County mean residuals had a standard deviation of 1.38 years and were weakly but significantly clustered (Moran's \(I\) = 0.032, \(p\) = 0.010). Life expectancy was overpredicted by 3 years or more in 52 counties, most of them in the northern Plains (South Dakota, North Dakota and Montana), the interior West and Southwest, and Virginia.</p>
+<p>The 314 socioeconomic columns that never entered the model predicted the county residual out of fold with \(R^{2}\) = 0.44, under folds grouped by state. The 581 environmental columns the model had used gave −0.17, no better than the mean (Figure 10B). The unmodelled residuals correlate with structural socioeconomic indicators (\(R^{2}\) = 0.44), indicating that what the physical layer misses reflects social determinants it never saw rather than environmental signal left in its own inputs. Over half of the residual variance remains unexplained. The result does not rest on the health-behaviour columns: without the County Health Rankings the socioeconomic columns gave \(R^{2}\) = 0.43, and the American Community Survey columns alone gave 0.43. All six pre-declared indicators were correlated with the residual in the expected direction, with absolute Spearman correlations from 0.19 to 0.35 (largest Holm-corrected \(p\) = 2.4 × 10<sup>−26</sup>; Figure 10C). The model overpredicts where poverty, unemployment and disability are high and underpredicts where income and education are high. The counties with the largest overprediction had median percentiles of 90 for poverty, 93 for unemployment and 17 for median household income. Removing the 154 counties with the largest residuals raised \(R^{2}\) to 0.761 and left 14 of the top 15 variables in place.</p>
+  
+<figure class="fig" id="fig10">
+  <a href="site/figures/Figure10_failure_geography.png" target="_blank" rel="noopener"><img src="site/figures/Figure10_failure_geography.png" alt="Geography of model error" loading="lazy"></a>
+  <figcaption><span class="fignum">Figure 10.</span> <span class="figtitle">Geography of model error.</span> (A) County mean out-of-fold residual, observed minus predicted life expectancy over 2003 to 2019: orange counties live shorter lives than their environment predicts, blue counties longer. (B) Out-of-fold coefficient of determination (\(R^{2}\)) for predicting the county residual from the 314 socioeconomic columns kept out of the model (grey bar) and from the 581 environmental columns in it (blue bar), with folds grouped by state. (C) Spearman correlation of the residual with six indicators chosen in advance: blue bars positive, orange bars negative.</figcaption>
+</figure>
+  <p class="small">The data behind panel C (3,077 counties: mean out-of-fold residual and the six indicators) are in <code>paper_final/derived/figure10c_residual_and_indicators.csv</code>; script 33 reproduces every bar. The indicators are columns of the archived data table and never entered the model.</p>
+  <h3>Conclusions</h3>
+  <p>We have shown that machine learning attribution rankings in environmental health reflect the physical environment and also the summary statistic chosen for each field. Across 47 satellite and gridded fields, a model of United States county life expectancy credited a non-central description in 38, about as often as a random draw among each field's summaries would. Mutual information favoured the mean in 35, and models built from either kind of description predicted almost equally well. The ranking is therefore a property of one model in a Rashomon set, not a measurement of the information in the data. It should be reported with the summary statistic as a stated choice, an information measure beside it and a matched refit to test it. Beneath that multiplicity, physical structure remains. (1) Atmospheric lifetime broadly tracks which description of a pollutant the model prefers. (2) Three turning points, in minimum dew point, night-time wet-bulb temperature and night cooling, are stable under noise and shift by at most 1.7% of their range across the 100th meridian. (3) The model's remaining error correlates with socioeconomic disadvantage it never saw.</p>
+</section>
+
+<section id="practice">
+  <h2>Recommendations and limitations</h2>
+  <p>Four practices follow for studies that use attribution to name environmental determinants. Report the summary statistic of every field as a choice, and where the reduction can emit several, keep them. Pair every attribution ranking with a model-free information measure, so that a reader can see whether the ranking reflects the data or the model's use of it. Test a ranking's central claim with a matched refit, which contains no attribution and therefore cannot be an artefact of how credit is divided. And avoid loss-based permutation importance for comparing correlated descriptions of one field; where it is used, report it over several held-out splits.</p>
+  <h3>Limitations</h3>
+  <p>The unit of analysis is the county, so every association is ecological and none describes individuals; a county mean averages over cities, industry and farmland at once. The outcome is a small-area estimate that borrows strength across neighbouring counties and years and draws on county covariates, so part of the socioeconomic signal in the residual audit may enter through the outcome itself. Its uncertainty was not propagated into the fit, and only counties with all seventeen years were kept. Attribution describes a fitted model and is not a causal effect of the variable attributed.</p>
+<p>The census rests on choices that are conventions rather than derivations. They are the grouping of columns into fields by their names, the division of summaries into central and non-central, and the treatment of the 47 fields as independent, although some are physically related. Its exchangeable reference assumes that every summary of a field is equally likely to lead, which is a null of no preference rather than a model of how trees choose among correlated columns. The comparison by mutual information uses the two summaries attribution selected, and it is marginal. It was estimated with a nearest-neighbour estimator over county-years that repeat each county seventeen times, so it measures association in the panel rather than between independent counties. The matched refit fixed the non-central summary by a declared order and drew it at random only 5 times. The satellite-only census rests on 18 fields.</p>
+<p>Loss-based permutation importance was unstable across splits, as discussed. An earlier single-split run of it reported 23 of 47 from a model reloaded across incompatible library versions whose held-out \(R^{2}\) was far below zero. That run came from a corrupted model load and is excluded, and the five-split analysis replaces it.</p>
+<p>The lifetime test rests on 13 species with lifetimes taken from the literature, and those lifetimes vary with season, altitude and oxidant levels. The species-level evidence is marginal, ozone and peroxyacetyl nitrate carry free-tropospheric lifetimes, and most species are model fields of the reanalysis rather than direct retrievals. The turning-point criterion uses two thresholds, 60% and 40%, that are our own conventions. The turning points are located on annual county summaries, not on exposures experienced by people, and as sign changes of interventional attribution they sit near the middle of each variable's distribution. The dew-point crossing appears in two of four temperature quartiles. The regional check was made at two boundaries only, with unequal halves at the 100th meridian and with one model attributing both halves, and several variables without a nocturnal reading also barely moved. Mean night-time surface temperature failed the criterion, and the PM\(_{2.5}\) values carry a constant factor of one tenth from extraction.</p>
+<p>Temporal validation kept every county in training and therefore measured persistence rather than skill on new places; the skill on new places is the county-grouped and state-grouped figure. The residual analysis shows that socioeconomic variables predict the model's error, not that they cause it, and the residual's spatial clustering, though significant, is weak. Products with short records, including every Sentinel mission, did not meet the coverage requirement over 2003 to 2019 and are absent from the model. Finally, the study covers the contiguous United States, and whether the census and the turning points hold elsewhere is untested.</p>
+</section>
+
+<section id="reproduce">
+  <h2>Reproduce</h2>
+  <div class="two">
+  <div>
+  <h3>Get the code and data</h3>
+  <pre><code>git clone https://github.com/albertfaiz/how-long-not-how-much.git
+cd how-long-not-how-much
+# from Zenodo (https://doi.org/10.5281/zenodo.23353493):
+#   Final_ML_Ready_Dataset.csv.zip  -> unzip at the repository root
+#   studyA_reference_frame.parquet  -> results_studyA_20260801_004313/</code></pre>
+  <h3>Run</h3>
+  <pre><code>conda env create -f environment.yml
+conda activate satsdoh
+bash run_all.sh   # scripts 01 to 34, constants, figures</code></pre>
+  </div>
+  <div>
+  <h3>Library versions</h3>
+  <p>The production model was fitted on the Juno cluster of the University of Texas at Dallas in Python 3.10.12. The analysis battery ran in Python 3.11.13 with XGBoost 3.0.2, SHAP 0.48.0, scikit-learn 1.7.1, NumPy 2.2.6, pandas 2.2.3, SciPy 1.16.1 and CatBoost 1.2.8. Every script is seeded. An earlier run under XGBoost 3.2.0 agreed except in the state hold-out \(R^2\) (0.504 against 0.509), Moran's \(I\) (0.035 against 0.032), the perturbation shifts (second decimal place) and the permutation counts (up to 6 fields in a split). No conclusion changed.</p>
+  <h3>Built-in checks</h3>
+  <p>Script 01 confirms the fitted model is identical across thread counts; script 10 reruns a script and compares its outputs by hash; script 32 checks the data files against each other cell by cell; <code>build_paper_constants.py</code> tests every sentence that describes a number in words against the regenerated value.</p>
+  </div>
+  </div>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2>
+  <p class="small">Standard terms are given their usual meaning. Terms defined in this study are marked (this study).</p>
+  <dl class="gloss">
+  <dt>Atmospheric (tropospheric) lifetime</dt><dd>Burden of a species divided by its removal rate; the e-folding time of its decay. Not the same as a half-life, which is \(\tau \ln 2\).</dd>
+  <dt>Reanalysis</dt><dd>A gridded reconstruction of past weather or composition from a numerical model corrected by observations (here ERA5 and the CAMS reanalysis).</dd>
+  <dt>Chemical transport model</dt><dd>A simulation of how gases and particles are emitted, carried, transformed and removed.</dd>
+  <dt>Aerosol optical depth</dt><dd>How much the particles in a vertical column dim sunlight; dimensionless.</dd>
+  <dt>PM<sub>2.5</sub></dt><dd>Particulate matter with aerodynamic diameter below 2.5 micrometres.</dd>
+  <dt>Land-surface temperature (LST)</dt><dd>The radiative temperature of the ground surface retrieved from thermal infrared, distinct from air temperature.</dd>
+  <dt>Dew point</dt><dd>The temperature to which air must cool at constant pressure and moisture to become saturated; a measure of the water the air holds.</dd>
+  <dt>Wet-bulb temperature</dt><dd>The lowest temperature evaporation can cool a wet surface to; it combines heat and humidity.</dd>
+  <dt>Duration, \(D\) (this study)</dt><dd>Share of the year, in per cent, that a species spends above a fixed national percentile (equation 1).</dd>
+  <dt>Night cooling efficiency, NCE</dt><dd>Day-to-night drop in land-surface temperature as a fraction of the daytime value (equation 2); introduced in the earlier nocturnal study and used here in two constructions.</dd>
+  <dt>Central and non-central summary (this study)</dt><dd>Central: the mean or the median of a field. Non-central: a quantile, the minimum or maximum, or a measure of spread.</dd>
+  <dt>Census (this study)</dt><dd>The field-by-field comparison, over all 47 comparable fields, of the best central and the best non-central summary.</dd>
+  <dt>Coefficient of determination, \(R^2\)</dt><dd>Share of the variation in the outcome that the predictions reproduce, measured here on held-out counties.</dd>
+  <dt>County-grouped cross-validation</dt><dd>Folds formed so that no county appears in both training and test data.</dd>
+  <dt>SHAP value</dt><dd>The Shapley value of an input for one prediction; the values of all inputs add up to the prediction minus the average prediction.</dd>
+  <dt>Interventional and path-dependent TreeSHAP</dt><dd>Two ways of filling absent inputs: independently from a background sample, or by following the tree structure, which approximates conditioning on the present inputs.</dd>
+  <dt>Permutation importance</dt><dd>The loss of held-out skill when one column is shuffled while all others stay intact.</dd>
+  <dt>Mutual information</dt><dd>Reduction in uncertainty (entropy) about one variable from knowing another; zero for independent variables; here in nats.</dd>
+  <dt>Predictive multiplicity and the Rashomon set</dt><dd>Many models fit the same data almost equally well yet attribute differently; the set of such near-optimal models is the Rashomon set (Breiman, 2001; Marx et al., 2020; Fisher et al., 2019).</dd>
+  <dt>Spearman rank correlation, \(\rho\)</dt><dd>Pearson correlation of the ranks; measures a monotone association and is less sensitive to extreme values than the Pearson correlation.</dd>
+  <dt>Permutation test</dt><dd>A \(p\) value from the share of random relabellings that give a statistic at least as extreme as the observed one.</dd>
+  <dt>Bootstrap</dt><dd>Resampling the observations with replacement to measure how much an estimate would vary.</dd>
+  <dt>Sign test</dt><dd>A test of whether one of two outcomes occurs more often than half the time, against a binomial distribution with probability one half.</dd>
+  <dt>Poisson-binomial distribution</dt><dd>The distribution of the number of successes in independent trials with different probabilities.</dd>
+  <dt>Moran's \(I\)</dt><dd>A measure of spatial autocorrelation: positive when neighbouring values are alike.</dd>
+  <dt>Holm procedure</dt><dd>A step-down correction of \(p\) values for testing several hypotheses at once.</dd>
+  <dt>Turning point (this study)</dt><dd>The value of a variable at which its SHAP contribution changes sign; a property of the fitted model.</dd>
+  </dl>
+</section>
+
+<section id="cite">
+  <h2>Cite</h2>
+  <pre><code>@article{Ahmad2026multiplicity,
+  author  = {Ahmad, Faiz and Lary, David J. and Ruwali, Shisir and Shrestha, Samyak and
+             Aker, Adam and Waczak, John and Niloy, Md Shaid Hasan and Patra, Rittik and
+             Awoyinka, Tunde Dare},
+  title   = {Predictive Multiplicity in Environmental Health: Information Theory Exposes
+             How Summary Statistics Shape Machine Learning Attribution},
+  journal = {Sensors},
+  year    = {2026},
+  note    = {Submitted}
+}</code></pre>
+  <p>Data: Zenodo, <a href="https://doi.org/10.5281/zenodo.23353493">https://doi.org/10.5281/zenodo.23353493</a>. Code: MIT licence. Data: CC BY 4.0.</p>
+  <h3>This work builds on</h3>
+  <ul>
+    <li>Ahmad, F. et al. Nighttime Thermal Patterns and County Life Expectancy. <em>Remote Sensing</em> 2026, 18, 2330. <a href="https://doi.org/10.3390/rs18142330">doi:10.3390/rs18142330</a></li>
+    <li>Shrestha, S. et al. The External Exposome and Life Expectancy: Formaldehyde as a Leading Predictor in U.S. Counties. <em>Air</em> 2026, 4, 10. <a href="https://doi.org/10.3390/air4020010">doi:10.3390/air4020010</a></li>
+    <li>Shrestha, S. et al. Atmospheric Exposures and Cardiovascular Mortality in United States Counties. <em>AI Sensors</em> 2026, 2, 8. <a href="https://doi.org/10.3390/aisens2030008">doi:10.3390/aisens2030008</a></li>
+    <li>Ruwali, S. et al. Estimating Life Expectancy in the U.S.: Identifying Environmental Determinants and Disparities (2003 to 2019). <em>Sensors</em> 2026, 26, 6478. <a href="https://doi.org/10.3390/s26206478">doi:10.3390/s26206478</a></li>
+  </ul>
+</section>
+
+</div></main>
+<footer><div class="wrap">Department of Physics, The University of Texas at Dallas. Page generated from the manuscript source by <code>site/build_site.py</code>; numbers from <code>paper_final/constants_*.tex</code>. All results are county-level associations from a fitted model.</div></footer>
+
+</body>
+</html>
