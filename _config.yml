@@ -1,0 +1,7 @@
+exclude:
+  - paper_final
+  - data_collection
+  - "*.py"
+  - "*.sh"
+  - environment.yml
+  - requirements.txt
