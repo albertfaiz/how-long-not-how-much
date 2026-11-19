@@ -1,0 +1,35 @@
+% tables_data.tex -- written by analysis/build_paper_constants.py
+% Column counts are read from the model's ranking; do not edit by hand.
+\begin{table}[H]
+\caption{Data sources and the outcome, with each product's native resolution and the number of its columns among the 581 the model sees. Single maps enter every year with the same value. The three Sentinel missions were acquired but none of their columns met the coverage gate.\label{tab:data}}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{3.7cm}>{\raggedright\arraybackslash}p{1.8cm}>{\raggedright\arraybackslash}p{1.8cm}r@{}}
+\toprule
+Source & Variables, for example & Spatial resolution & Time step & Columns \\
+\midrule
+MODIS land-surface temperature (Terra) & Day and night land-surface temperature & 1 km & 8-day & 11 \\
+MODIS vegetation indices & Normalised difference and enhanced vegetation indices & 500 m & 16-day & 10 \\
+Landsat 5 and 7 & Surface reflectance, vegetation indices & 30 m & 16-day revisit & 72 \\
+Sentinel-1 & Radar backscatter & 10 m & 6 to 12 days, from 2014 & 0 \\
+Sentinel-2 & Optical reflectance & 10 to 60 m & 5 days, from 2015 & 0 \\
+Sentinel-5P & Trace gases, aerosol index & About 5 km & Daily, from 2018 & 0 \\
+Satellite fine particulate matter & Ground-level PM$_{2.5}$ & About 1 km & Annual & 7 \\
+Night-time lights (DMSP, VIIRS) & Settlement brightness, rescaled within each sensor & About 1 km; 500 m & Annual & 7 \\
+Global Surface Water (JRC) & Water occurrence and class & 30 m & Annual & 6 \\
+Global Human Modification & Human pressure on land & 1 km & Single map & 5 \\
+Canopy height & Canopy height and cover & 1 m & Single map & 16 \\
+Cropland Data Layer (USDA) & Share of land in each crop & 30 m & Annual & 105 \\
+CAMS global reanalysis (EAC4) & Trace gases, aerosol optical depth, particulate matter & 0.75\textdegree{} (about 80 km) & 3-hourly & 67 \\
+ERA5 reanalysis & Humidity, pressure, wind, snow, terrain height & 0.25\textdegree{} (about 28 km) & Hourly & 18 \\
+PRISM & Air temperature, dew point, vapour-pressure deficit, precipitation & 4 km & Daily & 80 \\
+TerraClimate & Water balance, wind, solar radiation & About 4 km & Monthly & 40 \\
+OpenLandMap soil maps & Bulk density, texture, acidity, organic carbon & 250 m & Single map & 58 \\
+Gridded Livestock of the World & Density of each farm animal & About 10 km & Reference years, linear between & 28 \\
+Engineered from the above & Wet-bulb and heat indices, night cooling efficiency, species ratios & Of the inputs & Annual & 51 \\
+\midrule
+IHME small-area estimates & Life expectancy at birth, both sexes, all races (the outcome) & County & Annual & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+

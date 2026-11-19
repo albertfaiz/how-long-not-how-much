@@ -1,6 +1,8 @@
 {
-  "title": "Data and code for: How Long, Not How Much: Exposure Duration Outranks Concentration in an Eighteen-Modality Satellite and Reanalysis Fusion for United States County Life Expectancy",
-  "description": "<p>Exposure duration outranks concentration in predicting United States county life expectancy</p><p>This deposit contains the assembled county-year panel, the fitted model, every intermediate result table, and every figure for the study published in Sensors. The analysis code is at <a href='https://github.com/albertfaiz/how-long-not-how-much'>https://github.com/albertfaiz/how-long-not-how-much</a>.</p><p>Derived data are released under CC-BY-4.0. The original products remain under their providers' licenses.</p>",
+  "title": "How Long, Not How Much: Summarising Satellite and Gridded Data Reorders Machine Learning Predictors of U.S. County Life Expectancy",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
   "creators": [
     {
       "name": "Ahmad, Faiz",
@@ -14,15 +16,18 @@
     },
     {
       "name": "Ruwali, Shisir",
-      "affiliation": "Department of Physics, The University of Texas at Dallas"
+      "affiliation": "Department of Physics, The University of Texas at Dallas",
+      "orcid": "0009-0007-7357-1479"
     },
     {
       "name": "Shrestha, Samyak",
-      "affiliation": "Department of Physics, The University of Texas at Dallas"
+      "affiliation": "Department of Physics, The University of Texas at Dallas",
+      "orcid": "0009-0008-9351-3644"
     },
     {
       "name": "Aker, Adam",
-      "affiliation": "Department of Physics, The University of Texas at Dallas"
+      "affiliation": "Department of Physics, The University of Texas at Dallas",
+      "orcid": "0000-0002-0126-218X"
     },
     {
       "name": "Waczak, John",
@@ -30,32 +35,25 @@
       "orcid": "0000-0002-5910-0183"
     },
     {
-      "name": "Madushanka, Prabuddha",
-      "affiliation": "Department of Physics, The University of Texas at Dallas",
-      "orcid": "0000-0003-2657-3416"
-    }
-  ],
-  "upload_type": "dataset",
-  "access_right": "open",
-  "license": "cc-by-4.0",
-  "version": "1.0.0",
-  "language": "eng",
-  "keywords": [
-    "life expectancy",
-    "remote sensing",
-    "sensor fusion",
-    "explainable machine learning",
-    "atmospheric composition",
-    "exposure assessment",
-    "public health",
-    "county-level"
-  ],
-  "related_identifiers": [
+      "name": "Niloy, Md Shaid Hasan",
+      "affiliation": "Department of Physics, The University of Texas at Dallas"
+    },
     {
-      "identifier": "https://github.com/albertfaiz/how-long-not-how-much",
-      "relation": "isSupplementTo",
-      "resource_type": "software"
+      "name": "Patra, Rittik",
+      "affiliation": "Department of Physics, The University of Texas at Dallas"
+    },
+    {
+      "name": "Awoyinka, Tunde Dare",
+      "affiliation": "Department of Physics, The University of Texas at Dallas"
+    },
+    {
+      "name": "Wijeratne, Lakitha Omal Harindha",
+      "affiliation": "Department of Physics, The University of Texas at Dallas",
+      "orcid": "0000-0003-2688-648X"
+    },
+    {
+      "name": "Iqbal, Mazhar",
+      "affiliation": "Department of Physics, The University of Texas at Dallas"
     }
-  ],
-  "notes": "Generated 2026-08-09. Reproduction instructions are in docs/REPRODUCE.md in the linked repository."
+  ]
 }

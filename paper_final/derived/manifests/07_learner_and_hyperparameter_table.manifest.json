@@ -1,7 +1,7 @@
 {
- "script": "/Users/faizahmad/Desktop/satellite_sdoh/paper_final/analysis/07_learner_and_hyperparameter_table.py",
- "written_utc": "2026-10-11 00:57:33Z",
- "root": "/Users/faizahmad/Desktop/satellite_sdoh",
+ "script": "/sessions/rcw-015fvw8vykvncjwj5kajtost/mnt/satellite_sdoh/paper_final/analysis_final/07_learner_and_hyperparameter_table.py",
+ "written_utc": "2026-11-05 05:51:03Z",
+ "root": "/sessions/rcw-015fvw8vykvncjwj5kajtost/mnt/satellite_sdoh",
  "settings": {
   "SEED": 0,
   "N_FOLDS": 8,
@@ -23,32 +23,32 @@
    "tree_method": "hist",
    "enable_categorical": false
   },
-  "threads": 10,
+  "threads": 4,
   "study": "A"
  },
  "versions": {
-  "python": "3.11.13",
-  "platform": "Darwin arm64",
+  "python": "3.10.12",
+  "platform": "Linux aarch64",
   "numpy": "2.2.6",
-  "pandas": "2.2.3",
-  "scipy": "1.16.1",
-  "sklearn": "1.7.1",
-  "xgboost": "3.0.2",
-  "catboost": "1.2.8",
-  "shap": "0.48.0",
-  "pyarrow": "21.0.0",
-  "matplotlib": "3.10.5",
-  "joblib": "1.3.2"
+  "pandas": "2.3.3",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2",
+  "xgboost": "3.2.0",
+  "catboost": "absent",
+  "shap": "0.49.1",
+  "pyarrow": "25.0.1",
+  "matplotlib": "3.10.9",
+  "joblib": "1.6.0"
  },
  "git": "none",
  "inputs": {
-  "run_ml_satallite_and_SDOH.py": "6332ec420eeb9775",
+  "pipeline_core_v2.py": "90a56e59973cee18",
   "superset_311981.log": "f20536ccd75644d4"
  },
  "outputs": {
-  "learner_settings.csv": "5614b4a7bfd2b277",
-  "T5_learner_settings.tex": "a9de1701bf63327a",
-  "learner_settings.json": "ba2b9b5f620a83ed"
+  "learner_settings.csv": "51a423be36105148",
+  "T5_learner_settings.tex": "861bf667fd38fb0b",
+  "learner_settings.json": "be6233a49b7a80ba"
  },
  "notes": "settings-and-tournament table, not a search table"
 }

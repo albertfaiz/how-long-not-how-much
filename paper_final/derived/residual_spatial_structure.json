@@ -5,5 +5,13 @@
  "neighbours": 4,
  "permutations": 999,
  "null_mean": -2.775263176848905e-05,
- "null_sd": 0.012356694794614086
+ "null_sd": 0.012356694794614086,
+ "production": {
+  "morans_i": 0.036447424022414875,
+  "p_value": 0.007
+ },
+ "outcome": {
+  "morans_i": 0.6843965900965875,
+  "p_value": 0.001
+ }
 }

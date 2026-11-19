@@ -1,0 +1,150 @@
+{
+ "checks": [
+  {
+   "section": "2.5",
+   "statement": "The protected list covers the patterns the text names",
+   "status": "PASS",
+   "evidence": "PROTECT_PATTERNS in pipeline_core_v2.py; missing: none"
+  },
+  {
+   "section": "2.5",
+   "statement": "Of two unprotected columns the filter drops the later one, and of a mixed pair the unprotected one",
+   "status": "PASS",
+   "evidence": "redundancy_filter: loops a before b, victim = b unless b is protected"
+  },
+  {
+   "section": "2.5",
+   "statement": "The correlation cut is 0.98 and the filter never sees the outcome",
+   "status": "PASS",
+   "evidence": "redundancy_filter(X, corr_threshold=0.98, ...): X only"
+  },
+  {
+   "section": "2.5",
+   "statement": "The R2 interval resamples county-years with the predictions held fixed",
+   "status": "PASS",
+   "evidence": "bootstrap_r2_ci: rows drawn with replacement, no refit"
+  },
+  {
+   "section": "2.6",
+   "statement": "Five brackets 60-70, 70-74, 74-76.5, 76.5-79, 79-95, each including its lower bound",
+   "status": "PASS",
+   "evidence": "step 02: BRACKET_EDGES and pd.cut(..., right=False)"
+  },
+  {
+   "section": "2.6",
+   "statement": "Nearest-county baseline: same year, four nearest training counties, weighted by inverse distance",
+   "status": "PASS",
+   "evidence": "step 03 b_knn: training rows of the same year, haversine distance, 1/d weights"
+  },
+  {
+   "section": "2.7, 3.2",
+   "statement": "The influence refit drops the counties with the largest mean absolute out-of-fold residual and is attributed by path-dependent TreeSHAP; the tail form of NCE ranks first in it",
+   "status": "PASS",
+   "evidence": "step 23; influence_drop.json: arm worst_residual_5pct, top eng_night_cooling_eff, 14 of top 15 shared"
+  },
+  {
+   "section": "2.9",
+   "statement": "The class comparison is a one-sided Mann-Whitney test by species",
+   "status": "PASS",
+   "evidence": "step 25: mannwhitneyu(short, long, alternative='greater')"
+  },
+  {
+   "section": "2.9",
+   "statement": "Each lifetime is multiplied by ten raised to an independent uniform draw",
+   "status": "PASS",
+   "evidence": "step 25: one draw per species, VALUE_SPREAD_DEX each side"
+  },
+  {
+   "section": "3.3",
+   "statement": "The three species that persist three weeks or longer all favoured the mean",
+   "status": "PASS",
+   "evidence": "ethane 60 d, median ratio 0.33, ozone 22 d, median ratio 0.46, peroxyacetyl nitrate 30 d, median ratio 0.22"
+  },
+  {
+   "section": "2.10",
+   "statement": "The bootstrap resamples the attributed county-years and does not refit or redraw the background",
+   "status": "PASS",
+   "evidence": "step 06 analyse(): rows of the one attributed sample drawn with replacement"
+  },
+  {
+   "section": "2.10",
+   "statement": "The range is that between the 1st and 99th percentiles; 45 bins; a smoothing spline through the bin medians",
+   "status": "PASS",
+   "evidence": "step 06: TRIM_PCT, UnivariateSpline, BIN_STATISTIC"
+  },
+  {
+   "section": "3.4",
+   "statement": "Neither numerical limit decided any candidate: a crossing in every resample, every interval narrower than 40% of the range",
+   "status": "PASS",
+   "evidence": "turning_points.json: found_frac min 1.000; width_frac max 0.338 (11 candidates)"
+  },
+  {
+   "section": "3.4",
+   "statement": "Of the other six candidates four pass outright, night-time LST fails and PM2.5 passes only formally",
+   "status": "PASS",
+   "evidence": "stable: 10 of 11"
+  },
+  {
+   "section": "2.10",
+   "statement": "The regional shift is the absolute west-minus-east difference, as a share of the 1st-to-99th-percentile range",
+   "status": "PASS",
+   "evidence": "step 14: delta = |w - e|, span = p99 - p1"
+  },
+  {
+   "section": "3.5",
+   "statement": "For most candidates no permuted curve crossed zero",
+   "status": "PASS",
+   "evidence": "null_crossing.json: no permuted crossing for 8 of 11"
+  },
+  {
+   "section": "3.4",
+   "statement": "The night-time wet-bulb and ratio curves (Figure 6B, E) span less attribution than panels A, C and D",
+   "status": "PASS",
+   "evidence": "binned-median span (years): prism_tdmean_min 0.1440, eng_night_cooling_eff 0.5562, cams_fot_formaldehyde_above75th_percentile 0.8711, eng2_wetbulb_night 0.0060, eng2_hcho_no2_ratio 0.0049"
+  },
+  {
+   "section": "2.3",
+   "statement": "Night-time wet-bulb: annual-mean daily minimum with the driest-cell dew point; warm-hour form: annual-mean daily maximum with the mean dew point",
+   "status": "PASS",
+   "evidence": "engineered_features_v2.py: wetbulb_night, wetbulb_hot"
+  },
+  {
+   "section": "2.4",
+   "statement": "A 12 degC drop gives NCE 0.40 at 30 degC and 0.60 at 20 degC",
+   "status": "PASS",
+   "evidence": "12/30 = 0.40, 12/20 = 0.60"
+  },
+  {
+   "section": "2.3",
+   "statement": "Admitted ERA5 columns give humidity, pressure, wind, snow and terrain height; PRISM gives vapour-pressure deficit; TerraClimate has no VPD column",
+   "status": "PASS",
+   "evidence": "18 ERA5, 40 TerraClimate, 80 PRISM columns admitted"
+  },
+  {
+   "section": "2.3, 4.3",
+   "statement": "The driest cell is often on a county's highest ground",
+   "status": "PASS",
+   "evidence": "3077 counties: Spearman(min dew point, 90th-pct elevation) -0.79; Spearman(mean minus min dew point, relief p90-p10) 0.60"
+  },
+  {
+   "section": "2.11",
+   "statement": "Moran's I is the slope of the neighbours' mean residual on the county's own (row-standardised, four nearest)",
+   "status": "PASS",
+   "evidence": "step 13 residual_structure: I = sum(z * lag) / sum(z^2)"
+  },
+  {
+   "section": "3.6",
+   "statement": "Among the overpredicted counties, the Virginia units, Baltimore, St. Louis and Carson City are independent cities",
+   "status": "PASS",
+   "evidence": "52 counties overpredicted by 3 years or more; Virginia units [51520, 51580, 51640, 51690, 51730, 51760] (all FIPS >= 51500); Baltimore 24510, St. Louis 29510, Carson City 32510"
+  },
+  {
+   "section": "3.6",
+   "statement": "Overprediction where poverty, unemployment, uninsurance and disability are high; underprediction where income and education are high",
+   "status": "PASS",
+   "evidence": "Spearman rho: saipe_pct_pov -0.34, saipe_median_hh_income +0.35, unemployment_rate -0.29, acs_pct_uninsured -0.19, bachelor's_degree_or_higher_% +0.33, disability_rate -0.30"
+  }
+ ],
+ "n_checks": 24,
+ "n_fail": 0
+}

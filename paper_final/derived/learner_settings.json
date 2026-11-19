@@ -1,35 +1,36 @@
 {
  "params": {
+  "LGB": {
+   "n_estimators": 1200,
+   "learning_rate": 0.03,
+   "num_leaves": 127,
+   "min_child_samples": 40,
+   "subsample": 0.8,
+   "subsample_freq": 1,
+   "colsample_bytree": 0.7,
+   "reg_lambda": 1.0,
+   "n_jobs": -1,
+   "verbosity": -1
+  },
   "XGB": {
-   "n_estimators": 1500,
+   "n_estimators": 1200,
+   "learning_rate": 0.03,
    "max_depth": 8,
-   "learning_rate": 0.013832442448846112,
-   "subsample": 0.7311989040672405,
-   "colsample_bytree": 0.7116167224336398,
-   "min_child_weight": 9,
-   "reg_alpha": 0.2537815508265665,
-   "reg_lambda": 0.679657809075816
+   "min_child_weight": 10,
+   "subsample": 0.8,
+   "colsample_bytree": 0.7,
+   "reg_lambda": 1.0,
+   "n_jobs": -1,
+   "tree_method": "hist",
+   "enable_categorical": false
   },
   "CB": {
-   "iterations": 2000,
+   "iterations": 1200,
+   "learning_rate": 0.03,
    "depth": 8,
-   "learning_rate": 0.051178145982369534,
-   "l2_leaf_reg": 2.7970640394252375,
-   "random_strength": 0.11400863701127326
-  },
-  "RF": {
-   "n_estimators": 1000,
-   "max_depth": 25,
-   "min_samples_leaf": 2,
-   "max_features": 0.3
-  },
-  "LGB": {
-   "n_estimators": 1500,
-   "num_leaves": 127,
-   "learning_rate": 0.02,
-   "subsample": 0.8,
-   "colsample_bytree": 0.8,
-   "reg_lambda": 1.0
+   "l2_leaf_reg": 3.0,
+   "verbose": 0,
+   "allow_writing_files": false
   }
  },
  "scores": {
@@ -49,5 +50,7 @@
    "seconds": 522
   }
  },
- "winner": "XGBoost"
+ "winner": "XGBoost",
+ "source": "pipeline_core_v2.build_models",
+ "matches_saved_model": true
 }

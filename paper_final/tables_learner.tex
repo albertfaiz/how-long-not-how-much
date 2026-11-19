@@ -1,0 +1,26 @@
+% tables_learner.tex -- written by analysis/build_paper_constants.py
+% Do not edit by hand.
+
+\begin{table}[H]
+\caption{The fitted learner. Settings of the XGBoost model and the out-of-fold skill of each learner compared on identical county-grouped folds. Settings not listed are the library defaults.\label{tab:learner}}
+\centering\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+Setting & Value \\
+\midrule
+Number of trees & 1200 \\
+Maximum depth & 8 \\
+Learning rate & 0.03 \\
+Row subsample & 0.8 \\
+Column subsample per tree & 0.7 \\
+Minimum child weight & 10 \\
+L2 regularisation & 1 \\
+\midrule
+Learner & Out-of-fold $R^{2}$ (mean absolute error, years) \\
+\midrule
+XGBoost & 0.666 (1.033) \\
+CatBoost & 0.660 (1.046) \\
+\bottomrule
+\end{tabular}
+\end{table}
+

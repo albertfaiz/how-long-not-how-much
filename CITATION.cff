@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the paper and the data record."
-title: "Predictive Multiplicity in Environmental Health: code and results"
+title: "How Long, Not How Much: code and results"
+abstract: "Code, result files and figures for: How Long, Not How Much: Summarising Satellite and Gridded Data Reorders Machine Learning Predictors of U.S. County Life Expectancy."
 authors:
   - family-names: Ahmad
     given-names: Faiz
@@ -10,8 +11,10 @@ authors:
     orcid: "https://orcid.org/0000-0003-4265-9543"
   - family-names: Ruwali
     given-names: Shisir
+    orcid: "https://orcid.org/0009-0007-7357-1479"
   - family-names: Shrestha
     given-names: Samyak
+    orcid: "https://orcid.org/0009-0008-9351-3644"
   - family-names: Aker
     given-names: Adam
     orcid: "https://orcid.org/0000-0002-0126-218X"
@@ -24,7 +27,14 @@ authors:
     given-names: Rittik
   - family-names: Awoyinka
     given-names: Tunde Dare
+- family-names: "Wijeratne"
+    given-names: "Lakitha Omal Harindha"
+    orcid: "https://orcid.org/0000-0003-2688-648X"
+    affiliation: "Department of Physics, The University of Texas at Dallas"
+  - family-names: "Iqbal"
+    given-names: "Mazhar"
+    affiliation: "Department of Physics, The University of Texas at Dallas"
 license: MIT
-repository-code: "https://github.com/albertfaiz/predictive-multiplicity-environmental-health"
-date-released: 2026-10-13
-version: "1.0.0"
+repository-code: "https://github.com/albertfaiz/how-long-not-how-much"
+date-released: 2026-11-05
+version: "2.0.0"

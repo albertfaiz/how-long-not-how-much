@@ -1,0 +1,49 @@
+% tables_generated_slim.tex -- written by analysis/build_paper_constants.py
+% Do not edit by hand.
+
+\begin{table}[H]
+\caption{The species of the lifetime test, ordered by the atmospheric lifetime taken from the literature (the tropospheric burden divided by the removal rate, an e-folding time; the half-life is this lifetime times $\ln 2$), with the number of duration and concentration pairs admitted for each, the median ratio of duration to concentration importance and whether duration was credited more. All series are from the atmospheric composition reanalysis. For nitric oxide the lifetime is that of nitric oxide and nitrogen dioxide together, because the two interconvert within minutes in daylight.\label{tab:species}}
+\centering\footnotesize
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+Species & Lifetime (days) & Pairs & Median ratio & Duration favoured \\
+\midrule
+Hydroxyl radical & 1$\times 10^{-5}$ & 1 & 1.14 & yes \\
+Isoprene & 0.1 & 1 & 0.96 & no \\
+Formaldehyde & 0.2 & 2 & 49.97 & yes \\
+Nitric oxide & 0.2 & 1 & 3.24 & yes \\
+Nitrogen dioxide & 0.25 & 2 & 1.60 & yes \\
+Hydrogen peroxide & 1 & 1 & 10.57 & yes \\
+Sulphur dioxide & 2 & 2 & 0.22 & no \\
+Nitric acid & 5 & 1 & 0.90 & no \\
+Fine particulate matter (reanalysis) & 7 & 2 & 1.60 & yes \\
+Propane & 11 & 2 & 18.39 & yes \\
+Ozone & 22 & 2 & 0.46 & no \\
+Peroxyacetyl nitrate & 30 & 1 & 0.22 & no \\
+Ethane & 60 & 2 & 0.33 & no \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{Every candidate turning point. The interval is the 2.5th to 97.5th percentile of the located value over the bootstrap resamples, and its width is given as a share of the variable's observed range. A candidate is stable when a crossing is found in at least 60\% of resamples, the width is below 40\% and the full-sample value lies inside the interval. PM$_{2.5}$ is given in the product's native unit. A crossing was found in every resample for every candidate.\label{tab:turning}}
+\centering\footnotesize
+\begin{tabular}{@{}llrrrl@{}}
+\toprule
+Variable & Unit & Value & 95\% interval & Width (\%) & Stable \\
+\midrule
+Minimum dew point & $^{\circ}$C & 5.54 & 5.51 to 5.60 & 0.3 & yes \\
+NCE, tail form & dimensionless & 0.611 & 0.608 to 0.613 & 0.5 & yes \\
+Formaldehyde, time above 75th percentile & \% of year & 27.54 & 27.43 to 27.78 & 0.7 & yes \\
+NCE, mean form & dimensionless & 0.492 & 0.490 to 0.498 & 0.8 & yes \\
+Nocturnal wet-bulb temperature & $^{\circ}$C & 7.41 & 7.23 to 7.48 & 1.2 & yes \\
+Formaldehyde to nitrogen dioxide ratio & dimensionless & 0.291 & 0.288 to 0.297 & 1.3 & yes \\
+Cropland in corn & fraction of area & 0.012 & 0.009 to 0.016 & 1.4 & yes \\
+Minimum daily minimum temperature & $^{\circ}$C & 4.46 & 4.28 to 4.68 & 1.7 & yes \\
+Warm-hour wet-bulb temperature & $^{\circ}$C & 12.27 & 12.04 to 12.55 & 3.1 & yes \\
+Mean night LST & $^{\circ}$C & 5.20 & 5.23 to 7.84 & 13.2 & no \\
+Annual mean PM$_{2.5}$ & \textmu g\,m$^{-3}$ & 5.11 & 5.09 to 8.70 & 33.8 & yes \\
+\bottomrule
+\end{tabular}
+\end{table}
+

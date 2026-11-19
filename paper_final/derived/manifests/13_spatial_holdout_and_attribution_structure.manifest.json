@@ -1,6 +1,6 @@
 {
- "script": "/Users/faizahmad/Desktop/satellite_sdoh/paper_final/analysis/13_spatial_holdout_and_attribution_structure.py",
- "written_utc": "2026-10-11 04:37:15Z",
+ "script": "/Users/faizahmad/Desktop/satellite_sdoh/paper_final/analysis_final/13_spatial_holdout_and_attribution_structure.py",
+ "written_utc": "2026-11-11 23:31:47Z",
  "root": "/Users/faizahmad/Desktop/satellite_sdoh",
  "settings": {
   "SEED": 0,
@@ -31,21 +31,21 @@
   "numpy": "2.2.6",
   "pandas": "2.2.3",
   "scipy": "1.16.1",
-  "sklearn": "1.7.1",
+  "sklearn": "1.9.1",
   "xgboost": "3.0.2",
   "catboost": "1.2.8",
   "shap": "0.48.0",
   "pyarrow": "21.0.0",
   "matplotlib": "3.10.5",
-  "joblib": "1.3.2"
+  "joblib": "1.6.0"
  },
  "git": "none",
  "inputs": {},
  "outputs": {
-  "spatial_holdout.json": "72b4070e63d9f01f",
-  "residual_spatial_structure.json": "6a234eef17b4230d",
-  "multicollinearity.json": "aff62afdc13d244d",
-  "attribution_interactions.json": "9deedf3a2a841b72"
+  "spatial_holdout.json": "b7e2ccbc0d7d04b5",
+  "residual_spatial_structure.json": "77f9cecf31441f2e",
+  "multicollinearity.json": "a7775b3e3184eed0",
+  "attribution_interactions.json": "56d6393a825181a5"
  },
  "notes": "checks=holdout,moran,vif,interact"
 }
